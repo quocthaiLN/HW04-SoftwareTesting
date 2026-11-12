@@ -28,7 +28,7 @@ Chưa triển khai hoặc chạy fixture. Case FR-09 trong JSON là thiết kế
 
 ## Thiết kế test (requirements 6–9)
 
-`test-cases.json` có 45 cases DESIGNED: FR-02 có 14, FR-09 có 19, FR-17 có 12; mỗi case dự kiến chạy Chromium/Firefox/WebKit (135 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
+`test-cases.json` có 64 cases DESIGNED: FR-02 có 14, FR-09 có 19, FR-17 có 31; mỗi case dự kiến chạy Chromium/Firefox/WebKit (192 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
 
 Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon), text/value hoặc numeric equality (số tiền/fields), URL/attribute/storage/network contract (navigation, type=email, token/header). Counter và persistence có thêm read-only DB/API assertions hỗ trợ; hành động chính vẫn là UI. Chọn locator theo role/placeholder và scope form/table row; label hiện chưa gắn htmlFor nên không mặc định getByLabel hoạt động.
 
@@ -51,3 +51,7 @@ Giữ nguyên 12 cases FR-09 được user chấp nhận. Thêm TC13–TC18; TC1
 ### Chốt requirement 3 — 2026-11-13
 
 User chốt chặn trần discount=min(nominal,total), final=0 khi giảm vượt tổng; normalization chỉ payload; floor tiền giảm phần trăm. TC18 chuyển DESIGNED, thêm TC19 làm tròn: total=333333, percent=10, discount=33333, final=300000. Không thêm tổng 0/âm hoặc khoảng trắng giữa mã; checkout/usage/read-only tổng/API trực tiếp ngoài scope. REQ-03 DONE phần scope/thiết kế; mọi kết quả vẫn chỉ dự kiến, chưa chạy. Quyết định này thay thế các ghi chú pending ở đoạn lịch sử phía trên.
+
+## Session 002 — Requirement 4 review
+
+Giữ nguyên FR-17-TC01–TC12, bổ sung TC13–TC31 (19 cases) từ nguồn sinh viên; FR-17 có 31 cases. Chi tiết mapping EP/BVA và các chính sách cần xem xét ở fr17-case-review.md. Chỉ Create/Read/Delete qua UI, SUT thật; không Update. Không sao chép Actual/Pass/Fail của nguồn làm evidence. Ngày tương lai dùng ngày chạy +30 thay cho ngày cố định đã cũ. REQ-04 vẫn IN PROGRESS vì còn quyết định policy, chưa runtime.

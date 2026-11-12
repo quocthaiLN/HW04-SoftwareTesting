@@ -78,3 +78,12 @@
     5. Dong y, nhung nghiep vu tren ngoai scope hien tai
 - AI output: |
     Tool: OpenAI Codex. Chốt TC18 cap discount=80000/final=0 cho tổng 80000 và fixed 100000; chuyển DESIGNED. Thêm TC19 floor percent: 333333*10/100 thành discount=33333, final=300000. Chỉ assert normalization payload. Không thêm tổng 0/âm, khoảng trắng giữa mã hoặc nghiệp vụ ngoài scope. REQ-03 DONE phần thiết kế; 45 DESIGNED toàn suite, dự kiến 135 executions. Cập nhật review, checklist, scope, README và Session 002 progress; xác minh JSON/oracles/cases cũ, chưa chạy automation/runtime. Mock không chứng minh backend cap/floor. Commit thiết kế và export Git log; tiếp theo review REQ-04.
+
+- Date and time: 2026-11-13T00:16:47+07:00
+- User prompt: |
+    Session 2
+    - Requirement 4:
+      - Tham khao cac testcase sau va bo sung vao danh sach testcase hien tai
+    Tệp nguồn lưu nguyên văn tại references/fr17-user-testcases.txt.
+- AI output: |
+    Tool: OpenAI Codex. Giữ nguyên 12 cases FR-17, thêm 19 cases TC13–TC31. Đối chiếu 27 EP và 25 BVA trong fr17-case-review.md; tách API-only khỏi UI suite, ghi Q1–Q6 cần xem xét thay vì tự đặt policy. FR-17 có 31 cases, toàn suite 64 DESIGNED (14/19/31), dự kiến 192 executions. Phát hiện mâu thuẫn code alphabet với dấu _ trong nguồn; chuỗi ghi length 30 thực tế 29. FR-24 chỉ yêu cầu dialog xóa item khỏi giỏ, chưa đủ áp cho coupon. Cập nhật checklist/scope/progress/README và Git; REQ-04 IN PROGRESS. Xác minh JSON, IDs, giữ nguyên cases cũ, traceability và mapping; chưa chạy runtime, không sao chép Pass/Fail nguồn thành evidence.

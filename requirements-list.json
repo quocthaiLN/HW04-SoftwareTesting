@@ -1,7 +1,7 @@
 {
   "project": "HW04",
-  "version": "1.6",
-  "updated_at": "2026-11-13T00:12:20+07:00",
+  "version": "1.7",
+  "updated_at": "2026-11-13T00:16:47+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -17,7 +17,8 @@
     "Kết Session 001: user xác nhận HW02/group uniqueness; FR-09 mock hoàn toàn bằng page.route(), thay thế backend thật ở thiết kế trước; phạm vi evidence chỉ UI với API giả lập.",
     "Session 002: user chấp nhận FR-02-TC01–TC12; bổ sung TC13 che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế; FR-09/FR-17 giữ 12 mỗi feature.",
     "Session 002 REQ-03: 12 cases cũ được chấp nhận, thêm 6 cases; TC18 chờ chính sách cap/reject. Tổng 44 records, 43 DESIGNED và 1 pending. REQ-03 giữ IN PROGRESS.",
-    "Session 002: chốt Q1–Q6 theo user; TC18 DESIGNED, thêm TC19 floor. 45 cases DESIGNED (14/19/12), REQ-03 DONE ở mức thiết kế."
+    "Session 002: chốt Q1–Q6 theo user; TC18 DESIGNED, thêm TC19 floor. 45 cases DESIGNED (14/19/12), REQ-03 DONE ở mức thiết kế.",
+    "Session 002 REQ-04: giữ nguyên 12 cases, thêm 19 UI cases; FR-17 có 31, toàn suite 64. Không thêm Update; API-only và policy chưa chốt ghi riêng."
   ],
   "requirements": [
     {
@@ -56,12 +57,13 @@
     {
       "id": 4,
       "name": "FR-17 Create/Read/Delete scope",
-      "description": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json.",
-      "expected_output": "Scope + ít nhất 12 test cases FR-17; gap evidence",
+      "description": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong fr17-case-review.md.",
+      "expected_output": "Scope + 31 cases FR-17; mapping và danh sách cần xem xét",
       "source": "User Session 01; eshop-sut/README.md FR-17; api_specification.md §6.4",
       "mandatory": true,
-      "acceptance_criteria": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json.",
-      "status": "IN PROGRESS"
+      "acceptance_criteria": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong fr17-case-review.md.",
+      "status": "IN PROGRESS",
+      "evidence": "test-cases.json; fr17-case-review.md; references/fr17-user-testcases.txt. Chưa chạy runtime; các chính sách ngoài đặc tả đang chờ review."
     },
     {
       "id": 5,

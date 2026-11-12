@@ -965,6 +965,405 @@
         "firefox",
         "webkit"
       ]
+    },
+    {
+      "id": "FR-17-TC13",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Create fixed với đơn tối thiểu 0",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo fixed=50000, min=0, uses=3",
+      "expected": "Dòng mới đúng fixed=50000/min=0/uses=3; reload vẫn tồn tại",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC14",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Create ngày quá khứ và nhãn Hết hạn",
+      "precondition": "Admin thật; code riêng; percent=15,min=100000,uses=1",
+      "steps": "Tạo expiry=2020-01-01; kiểm tra dòng và reload",
+      "expected": "Coupon được tạo; cột Hết hạn hiển thị nhãn Hết hạn màu đỏ; không kiểm tra apply coupon",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC15",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Uppercase mã khi nhập trên admin",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Nhập summer2026 với hậu tố chữ/số duy nhất; quan sát input; tạo và kiểm tra payload",
+      "expected": "Input value và POST code đều uppercase; dòng mới lưu đúng mã uppercase",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC16",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Reset form sau khi tạo thành công",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Điền fixed=50000,min=200000,uses=3,expiry future; tạo mã",
+      "expected": "Dòng mới tồn tại; form reset code/discount/expiry rỗng, type=percent, min=0, uses=1",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC17",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên percent hợp lệ: 1%",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=1, min=200000, uses=1",
+      "expected": "Dòng mới hiển thị 1%; reload giữ đúng dữ liệu; không kiểm tra áp dụng/miễn phí checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC18",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên percent hợp lệ: 2%",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=2, min=200000, uses=1",
+      "expected": "Dòng mới hiển thị 2%; reload giữ đúng dữ liệu; không kiểm tra áp dụng/miễn phí checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC19",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên percent hợp lệ: 50%",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=50, min=200000, uses=1",
+      "expected": "Dòng mới hiển thị 50%; reload giữ đúng dữ liệu; không kiểm tra áp dụng/miễn phí checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC20",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên percent hợp lệ: 99%",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=99, min=200000, uses=1",
+      "expected": "Dòng mới hiển thị 99%; reload giữ đúng dữ liệu; không kiểm tra áp dụng/miễn phí checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC21",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên percent hợp lệ: 100%",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=100, min=200000, uses=1",
+      "expected": "Dòng mới hiển thị 100%; reload giữ đúng dữ liệu; không kiểm tra áp dụng/miễn phí checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC22",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên fixed dương: 1 đồng",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo fixed=1, min=200000, uses=1",
+      "expected": "Tạo thành công; dòng và dữ liệu sau reload giữ fixed=1",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC23",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Biên fixed dương: 2 đồng",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo fixed=2, min=200000, uses=1",
+      "expected": "Tạo thành công; dòng và dữ liệu sau reload giữ fixed=2",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC24",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Fixed không dương: 0",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo fixed=0, min=200000, uses=1",
+      "expected": "Validation hoặc lỗi nghiệp vụ từ chối; không có coupon mới sau reload; nếu HTML chặn thì không POST",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC25",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Fixed không dương: -50000",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo fixed=-50000, min=200000, uses=1",
+      "expected": "Validation hoặc lỗi nghiệp vụ từ chối; không có coupon mới sau reload; nếu HTML chặn thì không POST",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC26",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Đơn tối thiểu sát biên hợp lệ: 1 đồng",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=10,min=1,uses=1",
+      "expected": "Tạo thành công; dòng min=1, reload vẫn đúng",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC27",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Lượt dùng âm",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Nhập uses=-1; submit",
+      "expected": "HTML validation chặn; không POST và không thêm coupon",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC28",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Lượt dùng thập phân qua UI",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Nhập uses=1.5; submit",
+      "expected": "Validation từ chối số lượt không nguyên; không thêm coupon; chỉ kiểm tra đường UI, không gửi API thủ công",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC29",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Lượt dùng danh định: 10",
+      "precondition": "Admin thật; code riêng chưa tồn tại; các trường còn lại hợp lệ; expiry tương lai động (ngày chạy +30 ngày); cleanup sau test",
+      "steps": "Tạo percent=10,min=0,uses=10",
+      "expected": "Tạo thành công; dòng uses=10; reload giữ đúng",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC30",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Mã ngắn hợp lệ: 1 ký tự",
+      "precondition": "Admin thật; đảm bảo mã A chưa tồn tại bằng fixture cô lập, không xóa dữ liệu người khác; các trường hợp lệ",
+      "steps": "Tạo code=A,percent=10,min=0,uses=1,expiry tương lai",
+      "expected": "Tạo thành công; code đúng sau reload; cleanup mã riêng",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC31",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Mã ngắn hợp lệ: 2 ký tự",
+      "precondition": "Admin thật; đảm bảo mã AB chưa tồn tại bằng fixture cô lập, không xóa dữ liệu người khác; các trường hợp lệ",
+      "steps": "Tạo code=AB,percent=10,min=0,uses=1,expiry tương lai",
+      "expected": "Tạo thành công; code đúng sau reload; cleanup mã riêng",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
     }
   ],
   "feature_execution_modes": {

@@ -43,3 +43,11 @@
 - Commits: Commit thiết kế REQ-03 và log export trong Git history; không tính vào >=8 test-script commits.
 - Known risk or unresolved issue: Mock chỉ xác minh UI với response giả lập, không xác minh backend cap/floor. Không còn policy pending cho thiết kế REQ-03.
 - Next best step: Review requirement 4 (FR-17).
+
+### Requirement 4 — tiếp tục Session 002, 2026-11-13
+- Completed: Đối chiếu nguồn EP01–27 và BVA01–25; giữ nguyên TC01–12, thêm TC13–31 (19 UI cases): fixed min=0, expiry quá khứ, uppercase, reset, percent 1/2/50/99/100, fixed 1/2/0/âm, min=1, uses âm/thập phân/10, code dài 1/2. Tổng 64 DESIGNED (14/19/31), dự kiến 192 browser executions.
+- Verification run: Parse JSON, unique IDs, traceability/browser targets, 45 cases trước giữ nguyên; mapping nguồn đủ 27 EP +25 BVA; kiểm tra độ dài chuỗi BVA24 là 29, không phải 30. diff --check. Chưa runtime.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr17-case-review.md, references/fr17-user-testcases.txt, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Known risk or unresolved issue: REQ-04 IN PROGRESS; Q1–Q6 trong review cần chốt (dialog, code domain/length, percent range, used coupon deletion, duplicate error, security scope). API-only không đưa vào UI suite; không dùng Pass/Fail nguồn làm evidence.
+- Commits: Bước bổ sung testcase REQ-04 và export Git log; không tính vào >=8 test-script commits.
+- Next best step: Sinh viên review Q1–Q6; sau đó chốt scope/thiết kế FR-17 trước automation.
