@@ -1,3 +1,27 @@
+* commit d7cdc5000c8b054dbc2db329ce124300861dd643
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:22:44 2026 +0700
+| 
+|     HW04 [REQ-04] Finalize percent validation duplicate errors and UI access cases
+| 
+|  AI-Report-Audit.md     |  11 +++++
+|  PROGRESS.md            |   8 ++++
+|  README.md              |   2 +-
+|  fr17-case-review.md    |  46 +++++++++---------
+|  requirements-list.json |  17 +++----
+|  scope.md               |   6 ++-
+|  test-cases.json        | 119 +++++++++++++++++++++++++++++++++++++++++------
+|  7 files changed, 162 insertions(+), 47 deletions(-)
+| 
+* commit e0579f11ec3076d2ae2916cfc5ddacaea5b97a4c
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:18:49 2026 +0700
+| 
+|     HW04 [REQ-17] Refresh log after review correction
+| 
+|  git-log.txt | 20 ++++++++++++++++++++
+|  1 file changed, 20 insertions(+)
+| 
 * commit bcca4cbd5e04a2c46e14c4e17e80870b73f49548
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:49 2026 +0700
