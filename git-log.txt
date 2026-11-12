@@ -1,3 +1,22 @@
+* commit f22940bf5495ecfd38a4efa1e4a7287ec70b37a6
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:23:47 2026 +0700
+| 
+|     HW04 [REQ-22] Summarize session design decisions and remaining execution work
+| 
+|  AI-Report-Audit.md |  6 ++++++
+|  PROGRESS.md        | 11 +++++++++++
+|  2 files changed, 17 insertions(+)
+| 
+* commit dadeee8b73236a80b933e6cf71401f0ed62c2d5f
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:22:44 2026 +0700
+| 
+|     HW04 [REQ-17] Export log after requirement 4 confirmation
+| 
+|  git-log.txt | 24 ++++++++++++++++++++++++
+|  1 file changed, 24 insertions(+)
+| 
 * commit d7cdc5000c8b054dbc2db329ce124300861dd643
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:22:44 2026 +0700
