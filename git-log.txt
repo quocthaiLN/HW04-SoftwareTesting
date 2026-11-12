@@ -1,3 +1,27 @@
+* commit 99768c66a6c4516bac86e2fcd75aabd4bb91c4c0
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:13:20 2026 +0700
+| 
+|     HW04 [REQ-03] Finalize coupon cap and rounding policies and 19 cases
+| 
+|  AI-Report-Audit.md     | 10 ++++++++++
+|  PROGRESS.md            |  8 ++++++++
+|  README.md              |  2 +-
+|  fr09-case-review.md    | 36 +++++++++++++++++++-----------------
+|  requirements-list.json | 17 +++++++++--------
+|  scope.md               |  6 +++++-
+|  test-cases.json        | 28 +++++++++++++++++++++++++---
+|  7 files changed, 77 insertions(+), 30 deletions(-)
+| 
+* commit 80868fc0b1c46d8da2d191e1e130fbc444289176
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:07:29 2026 +0700
+| 
+|     HW04 [REQ-17] Export log after coupon case review
+| 
+|  git-log.txt | 25 +++++++++++++++++++++++++
+|  1 file changed, 25 insertions(+)
+| 
 * commit b990bf95d0c0d2780378773c48a88d45874f9293
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:07:29 2026 +0700
