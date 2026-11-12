@@ -16,15 +16,15 @@ Nguồn kiểm tra FR-17: `../eshop-sut/frontend-admin/src/App.jsx:612–777` ch
 
 `CartContext.jsx` giữ giỏ hàng trong React useState, không gọi GET `/api/cart`; mock endpoint đơn thuần không nạp được UI. POST `/api/cart` chỉ cập nhật backend cart, không đồng bộ state React.
 
-Phương án triển khai ở bước automation:
+Quyết định cuối Session 001: **FR-09 mock hoàn toàn bằng Playwright `page.route()`**, gồm login/auth, giỏ hàng và response áp dụng coupon. Quyết định này thay thế phương án login/coupon backend thật ở các trao đổi trước. FR-02 và FR-17 vẫn kiểm thử SUT thật.
 
-1. Login bằng Playwright `request.post('/api/login')` tới backend thật; đưa token vào browser localStorage trước khi mở trang. Chờ `/api/users/me` xác nhận auth sẵn sàng.
-2. Cài `page.route` trước navigation, match chính xác Vite module `/src/context/CartContext.jsx` (kể cả query). Fulfill module fixture giữ cùng exports CartProvider/useCart; khởi tạo cart từ JSON test data. Chỉ áp dụng cho dev server Vite và test FR-09. Đây là mock module request để setup React state, không phải mock REST cart đã được SUT sử dụng. Nếu chuyển sang production build cần đổi fixture, không coi setup này portable.
-3. Assert danh sách hàng và tổng trước khi apply. Cài fixture trước khi Checkout mount vì editableTotal chỉ nhận cartTotal lúc khởi tạo.
-4. `/api/apply-coupon` phải đi backend thật; click Áp dụng và assert số tiền/error trên UI. Không fulfill response coupon. Không click thanh toán hoặc gọi checkout/usage để thực hiện flow chính.
-5. Seed coupon/usage bằng DB fixture cục bộ trước case, cleanup sau case; usage đã dùng là precondition, không phải evidence checkout. Mỗi worker/browser có account/code riêng; nếu chưa có isolation DB thì chạy serial.
+1. Đăng ký routes trước navigation; mock login và `/api/users/me`, chuẩn bị token giả phù hợp frontend. Nếu cần UI login để tạo auth state, response login cũng được fulfill bằng route, không dùng APIRequestContext gọi backend.
+2. Mock request Vite module `/src/context/CartContext.jsx` (kể cả query), giữ exports CartProvider/useCart và khởi tạo cart từ JSON. Frontend không gọi REST cart nên chỉ mock `/api/cart` sẽ không đủ. Phương án module này phụ thuộc dev server Vite và cần proof-of-concept.
+3. Mock `/api/apply-coupon` theo từng fixture JSON (success/error); click Áp dụng và assert request payload, UI lỗi hoặc discount/final amount. Expected response được thiết kế độc lập theo yêu cầu. Không xem việc mock trả đúng số tiền là bằng chứng backend tính đúng.
+4. Assert cart và tổng tiền trước apply; không click thanh toán. Case quota/auth/expiry dùng response fixture, không seed DB hoặc chạy checkout.
+5. Kết quả FR-09 chỉ chứng minh hành vi UI với API giả lập; không chứng minh backend thực thi C1–C5 hoặc công thức giảm giá. Không ghi lỗi backend từ mock là bug SUT. Báo cáo phải công khai giới hạn coverage này; chưa có xác nhận của giảng viên rằng mock toàn phần đáp ứng mức end-to-end mong đợi của đề.
 
-Cần proof-of-concept fixture này trước khi mở rộng scripts; hiện mới là thiết kế, chưa khẳng định đã hoạt động.
+Chưa triển khai hoặc chạy fixture. Case FR-09 trong JSON là thiết kế điều kiện và expected UI; precondition coupon/user/usage được mô phỏng bằng route fixtures.
 
 ## Thiết kế test (requirements 6–9)
 
@@ -36,4 +36,4 @@ Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon)
 
 ## Chưa xác nhận
 
-Lựa chọn tương ứng HW02 và không trùng thành viên nhóm; public GitHub remote; bài giảng/AI review của sinh viên. Chưa có automation scripts, run reports, video, PDF hoặc submission hoàn chỉnh.
+Sinh viên đã xác nhận ba tính năng tương ứng HW02 và không trùng thành viên nhóm. Còn chờ public GitHub remote; bài giảng/AI review của sinh viên. Chưa có automation scripts, run reports, video, PDF hoặc submission hoàn chỉnh.

@@ -273,7 +273,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC02",
@@ -294,7 +295,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC03",
@@ -315,7 +317,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC04",
@@ -336,7 +339,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC05",
@@ -357,7 +361,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC06",
@@ -378,7 +383,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC07",
@@ -399,7 +405,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC08",
@@ -420,7 +427,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC09",
@@ -441,7 +449,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC10",
@@ -462,7 +471,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC11",
@@ -483,7 +493,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-09-TC12",
@@ -504,7 +515,8 @@
         "chromium",
         "firefox",
         "webkit"
-      ]
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
       "id": "FR-17-TC01",
@@ -758,5 +770,10 @@
         "webkit"
       ]
     }
-  ]
+  ],
+  "feature_execution_modes": {
+    "FR-02": "real SUT",
+    "FR-09": "fully mocked with page.route; UI coverage only",
+    "FR-17": "real SUT, Create/Read/Delete"
+  }
 }

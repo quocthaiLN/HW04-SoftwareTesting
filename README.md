@@ -29,3 +29,5 @@
 | Total | 100 | Pending |
 
 No execution or grading claims are made at the design stage. Markdown/PDF deliverables and real run evidence remain pending.
+
+Session 001 đã tổng kết. HW02/group uniqueness được sinh viên xác nhận. FR-09 dùng mock toàn phần bằng page.route(); kết quả tương lai chỉ chứng minh UI với API giả lập, không kiểm chứng backend. Xem scope.md.

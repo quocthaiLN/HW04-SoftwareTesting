@@ -28,3 +28,14 @@
     Frontend cart nằm trong React state, không đọc REST cart; mock /api/cart không thể nạp UI. Thiết kế page.route mock request Vite CartContext module làm fixture; login bằng API thật, coupon API thật, không checkout. Đây là phương án chưa chạy proof-of-concept.
     Tạo test-cases.json 36 cases (12 mỗi feature), scope.md, README và cập nhật checklist/progress cùng Session 001. Khởi tạo Git trong submission/, commit scope/design 6ee2ee9 và commit audit/progress tiếp theo. Export git log text; chưa có public remote.
     Xác minh JSON, traceability, số cases và browser targets; chưa chạy automation, chưa có bug xác nhận runtime. Commit docs không tính vào >=8 test-script commits. Các điểm nghi lỗi source chỉ được ghi là cần kiểm chứng. Bước tiếp theo triển khai fixture proof-of-concept và automation data-driven, sau đó chạy 3 browsers với attribution thật.
+
+- Date and time: 2026-11-12T23:38:21+07:00
+- User prompt: |
+    Sesssion 1:
+    - Xac nhan su dung Mock hoàn toàn bằng `page.route()`
+    - xác nhận HW02/group la uniqueness
+    - Tong ket session 01
+- AI output: |
+    Tool: OpenAI Codex. Đã cập nhật quyết định cuối Session 001: FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(), thay thế phương án backend thật trước đó; FR-02/FR-17 vẫn dùng SUT thật. Mock cart cần bridge module CartContext vì frontend không đọc REST cart. Evidence FR-09 chỉ chứng minh UI với API giả lập, không xác nhận backend C1–C5 hoặc phép tính.
+    Ghi nhận sinh viên xác nhận ba feature tương ứng HW02 và không trùng nhóm; requirement 1 DONE theo xác nhận này. Giữ FR-17 Create/Read/Delete, bỏ Update vì không hỗ trợ. Cập nhật scope, checklist, cases metadata, README, PROGRESS và audit; tổng kết cùng Session 001, không mở session mới.
+    Đầu ra phiên: 23 requirements, 36 cases thiết kế (12/feature), Git cục bộ trong submission/. Chưa chạy automation; chưa có runtime bug, HTML/PDF/video hoặc public remote. Bước tiếp theo là triển khai proof-of-concept route fixtures và data-driven scripts. Commit tổng kết là commit tài liệu, không tính vào >=8 test-script commits.

@@ -1,7 +1,7 @@
 {
   "project": "HW04",
-  "version": "1.2",
-  "updated_at": "2026-11-12T23:25:31+07:00",
+  "version": "1.3",
+  "updated_at": "2026-11-12T23:38:21+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -13,7 +13,8 @@
     "Tên ZIP cụ thể của đề HW04 ưu tiên hơn tên generic trong policies.",
     "Scope đã ghi nhận; chưa thiết kế/chạy tests hoặc xác nhận HW02/group.",
     "Session 001 update: bỏ Update FR-17 theo chỉ đạo user vì SUT không hỗ trợ; scope Create/Read/Delete.",
-    "Tài liệu nộp và Git root đặt tại submission/. Mock cart setup cần bridge CartContext vì frontend không fetch /api/cart."
+    "Tài liệu nộp và Git root đặt tại submission/. Mock cart setup cần bridge CartContext vì frontend không fetch /api/cart.",
+    "Kết Session 001: user xác nhận HW02/group uniqueness; FR-09 mock hoàn toàn bằng page.route(), thay thế backend thật ở thiết kế trước; phạm vi evidence chỉ UI với API giả lập."
   ],
   "requirements": [
     {
@@ -24,7 +25,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §5, pp.3–4",
       "mandatory": true,
       "acceptance_criteria": "Chọn FR-02 (A), FR-09 (B), FR-17 (C); xác nhận trùng HW02 hoặc khai lý do HW02 chưa có; không trùng thành viên nhóm.",
-      "status": "IN PROGRESS"
+      "status": "DONE",
+      "evidence": "User xác nhận Session 001: lựa chọn tương ứng HW02 và không trùng nhóm; scope.md."
     },
     {
       "id": 2,
@@ -39,11 +41,11 @@
     {
       "id": 3,
       "name": "FR-09 scope",
-      "description": "Setup login bằng Playwright APIRequestContext với backend thật; mock request/module bằng page.route để nạp cart vào React CartContext. Không mock /api/apply-coupon. UI áp dụng coupon kiểm C1–C5 và số tiền; không bấm thanh toán. Xem scope.md.",
+      "description": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md.",
       "expected_output": "Scope + ít nhất 12 test cases FR-09",
       "source": "User Session 01; eshop-sut/README.md FR-09",
       "mandatory": true,
-      "acceptance_criteria": "Setup login bằng Playwright APIRequestContext với backend thật; mock request/module bằng page.route để nạp cart vào React CartContext. Không mock /api/apply-coupon. UI áp dụng coupon kiểm C1–C5 và số tiền; không bấm thanh toán. Xem scope.md.",
+      "acceptance_criteria": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md.",
       "status": "IN PROGRESS"
     },
     {
