@@ -51,7 +51,7 @@ Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết k�
 | 20 | TC06 code rỗng; UI chặn không đồng nghĩa đã test backend HTTP 400 |
 | 21, 22 | TC30/31 code A/AB; fixture DB cô lập để không trùng hoặc xóa mã của người khác |
 | 23 | TC01 code unique danh định; không cố định SAVE20 có thể đã tồn tại |
-| 24, 25 | Độ dài 30/256 chờ Q2: chưa có maxLength trong đặc tả; chuỗi nguồn SUPER_SALE_BLACK_FRIDAY_2026_X thực tế dài 29, không phải 30 |
+| 24, 25 | Độ dài 30/256 chờ Q2: chưa có maxLength trong đặc tả; chuỗi nguồn SUPER_SALE_BLACK_FRIDAY_2026_X dài đúng 30 ký tự; chưa có đặc tả max length |
 
 ## Cần xem xét/xác nhận trước khi thêm
 
