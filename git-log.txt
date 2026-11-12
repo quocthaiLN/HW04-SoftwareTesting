@@ -1,3 +1,40 @@
+* commit ad84d02ee8a4f91c557bdd3411a9f1b60c9ea4b8
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Thu Nov 12 23:53:16 2026 +0700
+| 
+|     HW04 [REQ-02] Accept login cases and add masking and page identity checks
+| 
+|  AI-Report-Audit.md     | 11 +++++++++++
+|  PROGRESS.md            | 10 ++++++++++
+|  README.md              |  2 +-
+|  requirements-list.json | 18 ++++++++++--------
+|  scope.md               |  8 +++++++-
+|  test-cases.json        | 42 ++++++++++++++++++++++++++++++++++++++++++
+|  6 files changed, 81 insertions(+), 10 deletions(-)
+| 
+* commit 6107dcd449a6a8a6ab8d2049515544a86ad0122a
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Thu Nov 12 23:38:21 2026 +0700
+| 
+|     [REQ-01,03,14,22] Close Session 001 and confirm fully mocked coupon UI scope
+| 
+|  AI-Report-Audit.md     | 11 +++++++++++
+|  PROGRESS.md            | 14 +++++++++++---
+|  README.md              |  2 ++
+|  requirements-list.json | 14 ++++++++------
+|  scope.md               | 16 ++++++++--------
+|  test-cases.json        | 43 ++++++++++++++++++++++++++++++-------------
+|  6 files changed, 70 insertions(+), 30 deletions(-)
+| 
+* commit 0bbd805e6376d149464d3b02868f4e5028db612d
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Thu Nov 12 23:26:42 2026 +0700
+| 
+|     [REQ-17] Export current Git history snapshot
+| 
+|  git-log.txt | 25 +++++++++++++++++++++++++
+|  1 file changed, 25 insertions(+)
+| 
 * commit c2b9c683871cb26617086deb84480d06382d8d99
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:26:42 2026 +0700
