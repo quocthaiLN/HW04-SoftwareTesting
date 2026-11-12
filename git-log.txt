@@ -1,3 +1,28 @@
+* commit 562f612ce8da89b4eaa261c6027d50ed795ac7f0
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:18:31 2026 +0700
+| 
+|     HW04 [REQ-04] Add 19 admin coupon UI cases and review EP BVA coverage
+| 
+|  AI-Report-Audit.md                 |    9 +
+|  PROGRESS.md                        |    8 +
+|  README.md                          |    2 +-
+|  fr17-case-review.md                |   72 +
+|  references/fr17-user-testcases.txt | 2628 ++++++++++++++++++++++++++++++++++
+|  requirements-list.json             |   16 +-
+|  scope.md                           |    6 +-
+|  test-cases.json                    |  399 ++++++
+|  8 files changed, 3131 insertions(+), 9 deletions(-)
+| 
+* commit 2f18d6a371d0b31bd8d4e36275dc811bf343758f
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:13:20 2026 +0700
+| 
+|     HW04 [REQ-17] Export log after coupon scope confirmation
+| 
+|  git-log.txt | 24 ++++++++++++++++++++++++
+|  1 file changed, 24 insertions(+)
+| 
 * commit 99768c66a6c4516bac86e2fcd75aabd4bb91c4c0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:13:20 2026 +0700
