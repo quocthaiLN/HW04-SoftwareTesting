@@ -68,3 +68,13 @@
     Session 2: Requirment 3 — Chap nhan 12 testcase hien tai; Tham khao danh sach testcase sau va bo sung nhung edge case chua co, dong thoi dua ra nhung testcase can xem xet va xac nhan. Tệp đính kèm được lưu nguyên văn tại references/fr09-user-testcases.txt.
 - AI output: |
     Tool: OpenAI Codex. Đã giữ 12 cases, thêm TC13–TC18; TC18 chờ cap/reject. Mapping 21 cases nguồn và Q1–Q6 tại fr09-case-review.md; 44 records toàn suite, 43 DESIGNED và 1 pending. Cập nhật checklist/progress/scope/README; REQ-03 IN PROGRESS. Kiểm tra JSON, IDs, browser targets và giữ nguyên 38 cases cũ; chưa chạy runtime. Kết quả nguồn không dùng làm evidence suite. Commit thiết kế và export log; docs/data không tính vào 8 test-script commits.
+
+- Date and time: 2026-11-13T00:12:20+07:00
+- User prompt: |
+    1. chặn trần mức giảm bằng tổng tiền, trả **0**
+    2. chỉ payload.
+    3. Dong y
+    4. Khong (do ngoai tong tien la cua API thanh toan), ta chi test ket qua cua coupon
+    5. Dong y, nhung nghiep vu tren ngoai scope hien tai
+- AI output: |
+    Tool: OpenAI Codex. Chốt TC18 cap discount=80000/final=0 cho tổng 80000 và fixed 100000; chuyển DESIGNED. Thêm TC19 floor percent: 333333*10/100 thành discount=33333, final=300000. Chỉ assert normalization payload. Không thêm tổng 0/âm, khoảng trắng giữa mã hoặc nghiệp vụ ngoài scope. REQ-03 DONE phần thiết kế; 45 DESIGNED toàn suite, dự kiến 135 executions. Cập nhật review, checklist, scope, README và Session 002 progress; xác minh JSON/oracles/cases cũ, chưa chạy automation/runtime. Mock không chứng minh backend cap/floor. Commit thiết kế và export Git log; tiếp theo review REQ-04.

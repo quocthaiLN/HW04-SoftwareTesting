@@ -682,9 +682,31 @@
       ],
       "title": "Tiền sau áp dụng không âm khi giảm vượt tổng",
       "precondition": "Coupon fixed OVER100=100000; min=0; total=80000; active, future, còn lượt; auth mock hợp lệ",
-      "steps": "Áp dụng coupon; thiết kế fixture theo chính sách cần xác nhận trong fr09-case-review.md",
-      "expected": "Bất biến bắt buộc: không hiển thị final_amount hoặc Tổng thanh toán âm như kết quả áp dụng thành công. Oracle cụ thể (cap về 0 hoặc từ chối) và fixture chờ user xác nhận",
-      "status": "PENDING POLICY CONFIRMATION",
+      "steps": "Áp dụng coupon; mock success discount_amount=80000, final_amount=0 (chặn trần mức giảm bằng tổng tiền)",
+      "expected": "UI Tiết kiệm=80000, Thành tiền=0, Tổng thanh toán=0; không hiển thị số tiền âm; không checkout. Fixture thể hiện chính sách đã chốt, không chứng minh backend tính đúng.",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC19",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Làm tròn xuống tiền giảm phần trăm có phần lẻ",
+      "precondition": "Coupon percent=10%; min=300000; total=333333; active, future, còn lượt; auth mock hợp lệ",
+      "steps": "Áp dụng coupon; mock success discount_amount=33333, final_amount=300000",
+      "expected": "UI Tiết kiệm=33333, Thành tiền=300000, Tổng thanh toán=300000; tiền VND nguyên theo floor(333333*10/100); không checkout. Không xác minh công thức backend bằng mock.",
+      "status": "DESIGNED",
       "browsers": [
         "chromium",
         "firefox",

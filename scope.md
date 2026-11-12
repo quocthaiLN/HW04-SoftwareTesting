@@ -28,7 +28,7 @@ Chưa triển khai hoặc chạy fixture. Case FR-09 trong JSON là thiết kế
 
 ## Thiết kế test (requirements 6–9)
 
-`test-cases.json` có 44 records: FR-02 có 14, FR-09 có 18 (17 DESIGNED, 1 pending), FR-17 có 12; mỗi case dự kiến chạy Chromium/Firefox/WebKit (132 case executions nếu chốt toàn bộ 44 cases; hiện 129 cho 43 cases DESIGNED, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
+`test-cases.json` có 45 cases DESIGNED: FR-02 có 14, FR-09 có 19, FR-17 có 12; mỗi case dự kiến chạy Chromium/Firefox/WebKit (135 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
 
 Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon), text/value hoặc numeric equality (số tiền/fields), URL/attribute/storage/network contract (navigation, type=email, token/header). Counter và persistence có thêm read-only DB/API assertions hỗ trợ; hành động chính vẫn là UI. Chọn locator theo role/placeholder và scope form/table row; label hiện chưa gắn htmlFor nên không mặc định getByLabel hoạt động.
 
@@ -47,3 +47,7 @@ Static review `../eshop-sut/frontend-web/src/pages/Login.jsx` cho thấy heading
 ## Session 002 — Requirement 3
 
 Giữ nguyên 12 cases FR-09 được user chấp nhận. Thêm TC13–TC18; TC18 chỉ chốt bất biến final_amount >=0, còn chờ cap/reject nên chưa sẵn sàng automate. Mapping và các quyết định cần xác nhận nằm tại fr09-case-review.md. REQ-03 vẫn IN PROGRESS. Chỉ kiểm thử UI với page.route, không kiểm chứng công thức backend. Tài liệu tham khảo chứa kết quả chạy của nguồn gửi vào, không phải evidence thực thi của bài này.
+
+### Chốt requirement 3 — 2026-11-13
+
+User chốt chặn trần discount=min(nominal,total), final=0 khi giảm vượt tổng; normalization chỉ payload; floor tiền giảm phần trăm. TC18 chuyển DESIGNED, thêm TC19 làm tròn: total=333333, percent=10, discount=33333, final=300000. Không thêm tổng 0/âm hoặc khoảng trắng giữa mã; checkout/usage/read-only tổng/API trực tiếp ngoài scope. REQ-03 DONE phần scope/thiết kế; mọi kết quả vẫn chỉ dự kiến, chưa chạy. Quyết định này thay thế các ghi chú pending ở đoạn lịch sử phía trên.

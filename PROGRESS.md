@@ -35,3 +35,11 @@
 - Known risk or unresolved issue: Cần xác nhận Q1–Q6 trong review; mock chỉ chứng minh UI. Không dùng kết quả Pass/Fail của nguồn làm evidence suite.
 - Next best step: Chốt cap/reject, normalization, rounding và phạm vi case bổ sung; sau đó review REQ-04.
 - Commits: Bước thiết kế REQ-03 và export log trong Git history; không tính vào >=8 test-script commits.
+
+### Chốt requirement 3 — tiếp tục Session 002, 2026-11-13
+- Completed: User chốt cap discount bằng tổng, final=0; chỉ uppercase/trim payload; floor tiền giảm. TC18 DESIGNED, thêm TC19 floor. Không thêm tổng 0/âm hoặc khoảng trắng giữa mã; nghiệp vụ thanh toán/API trực tiếp ngoài scope. REQ-03 DONE ở mức thiết kế, REQ-04 chờ review. Tổng 45 DESIGNED (14/19/12), dự kiến 135 browser executions.
+- Verification run: JSON parse, IDs/traceability/browser targets; FR-09 TC01–TC17 và toàn bộ cases ngoài FR-09 không đổi so với Git HEAD; oracle TC18/TC19 khớp cap/floor. diff --check. Chưa automate/run runtime.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr09-case-review.md, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Commits: Commit thiết kế REQ-03 và log export trong Git history; không tính vào >=8 test-script commits.
+- Known risk or unresolved issue: Mock chỉ xác minh UI với response giả lập, không xác minh backend cap/floor. Không còn policy pending cho thiết kế REQ-03.
+- Next best step: Review requirement 4 (FR-17).
