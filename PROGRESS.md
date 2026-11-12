@@ -17,3 +17,13 @@
 - Verification: JSON hợp lệ; 12 cases/feature; source inspection. Chưa có script, browser run, runtime bug hoặc HTML/PDF/video.
 - Git trước commit tổng kết: 6ee2ee9, c2b9c68, 0bbd805. Commit tài liệu không tính vào 8 test-script commits. git-log.txt là snapshot, cần xuất lại trước nộp.
 - Bước đầu Session tiếp theo: proof-of-concept route fixtures FR-09 rồi triển khai data-driven tests. Giới hạn: mock toàn phần không kiểm chứng logic backend; public remote còn chờ.
+
+## Session 002
+- Date: 2026-11-12 (Asia/Ho_Chi_Minh)
+- Goal: Review requirements 2, 3, 4; bắt đầu requirement 2 theo chỉ đạo sinh viên.
+- Completed: [REQ-02] Giữ nguyên 12 cases được sinh viên chấp nhận; thêm FR-02-TC13 che mật khẩu và TC14 nhận diện trang Đăng nhập. Checklist REQ-02 DONE ở mức scope/thiết kế. Tổng 38 cases (14/12/12), dự kiến 114 executions trên 3 browsers.
+- Verification run: JSON parse, IDs duy nhất, traceability/browser targets; so sánh 12 cases FR-02 cũ với Git HEAD để xác nhận không đổi. Static review Login.jsx có heading Đăng Ký và password type=text; chưa chạy runtime.
+- Commits: Commit bước thiết kế REQ-02 trong lịch sử Git; docs/data-only, không tính vào >=8 test-script commits.
+- Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Known risk or unresolved issue: Chưa có automation/runtime evidence; hai dấu hiệu lỗi UI chỉ từ source. Requirements 3/4 chưa review trong Session 002.
+- Next best step: Review requirement 3 (FR-09), tiếp theo requirement 4 (FR-17); sau đó triển khai automation theo requirements 6–10.

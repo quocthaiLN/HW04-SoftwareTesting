@@ -39,3 +39,14 @@
     Tool: OpenAI Codex. Đã cập nhật quyết định cuối Session 001: FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(), thay thế phương án backend thật trước đó; FR-02/FR-17 vẫn dùng SUT thật. Mock cart cần bridge module CartContext vì frontend không đọc REST cart. Evidence FR-09 chỉ chứng minh UI với API giả lập, không xác nhận backend C1–C5 hoặc phép tính.
     Ghi nhận sinh viên xác nhận ba feature tương ứng HW02 và không trùng nhóm; requirement 1 DONE theo xác nhận này. Giữ FR-17 Create/Read/Delete, bỏ Update vì không hỗ trợ. Cập nhật scope, checklist, cases metadata, README, PROGRESS và audit; tổng kết cùng Session 001, không mở session mới.
     Đầu ra phiên: 23 requirements, 36 cases thiết kế (12/feature), Git cục bộ trong submission/. Chưa chạy automation; chưa có runtime bug, HTML/PDF/video hoặc public remote. Bước tiếp theo là triển khai proof-of-concept route fixtures và data-driven scripts. Commit tổng kết là commit tài liệu, không tính vào >=8 test-script commits.
+
+- Date and time: 2026-11-12T23:51:57+07:00
+- User prompt: |
+    Session 2:
+    - Thuc hien requirements 2, 3, 4
+    - Dau tien la requirement 2:
+      - Chap nhan 12 test case hien tai
+      - Bo sung test case: mat khau phai duoc an bang dau cham thay vi hien thi nhu plantext, giao dien phai hien thi dung la dang o trang Đăng nhập
+- AI output: |
+    Tool: OpenAI Codex. Giữ nguyên FR-02-TC01–TC12; bổ sung TC13 kiểm tra che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế: 14/12/12; dự kiến 114 executions. Cập nhật scope, checklist, README và Session 002 progress. REQ-02 DONE chỉ ở mức scope/thiết kế, automation chưa thực hiện.
+    Static review Login.jsx thấy heading Đăng Ký và password type=text; chưa chạy runtime, chưa tuyên bố bug được xác nhận. JSON/traceability và so sánh 12 cases cũ được xác minh. Requirements 3/4 vẫn chờ bước review tiếp theo của cùng session. Commit thiết kế không tính vào >=8 test-script commits.

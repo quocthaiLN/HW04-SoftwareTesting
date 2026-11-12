@@ -10,7 +10,7 @@
 | Metric | Current |
 | --- | --- |
 | Features selected | 3 |
-| Cases designed | 36 (12/feature) |
+| Cases designed | 38 (FR-02: 14; FR-09: 12; FR-17: 12) |
 | Cases automated / executed / passed / failed | 0 / 0 / 0 / 0 |
 | Browser runs | 0 |
 | Runtime-confirmed bugs | 0 |

@@ -28,7 +28,7 @@ Chưa triển khai hoặc chạy fixture. Case FR-09 trong JSON là thiết kế
 
 ## Thiết kế test (requirements 6–9)
 
-`test-cases.json` có 36 case: 12 mỗi feature; mỗi case dự kiến chạy Chromium/Firefox/WebKit (108 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
+`test-cases.json` có 38 case: FR-02 có 14, FR-09 và FR-17 có 12 mỗi feature; mỗi case dự kiến chạy Chromium/Firefox/WebKit (114 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
 
 Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon), text/value hoặc numeric equality (số tiền/fields), URL/attribute/storage/network contract (navigation, type=email, token/header). Counter và persistence có thêm read-only DB/API assertions hỗ trợ; hành động chính vẫn là UI. Chọn locator theo role/placeholder và scope form/table row; label hiện chưa gắn htmlFor nên không mặc định getByLabel hoạt động.
 
@@ -37,3 +37,9 @@ Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon)
 ## Chưa xác nhận
 
 Sinh viên đã xác nhận ba tính năng tương ứng HW02 và không trùng thành viên nhóm. Còn chờ public GitHub remote; bài giảng/AI review của sinh viên. Chưa có automation scripts, run reports, video, PDF hoặc submission hoàn chỉnh.
+
+## Session 002 — Requirement 2
+
+Sinh viên chấp nhận nguyên vẹn FR-02-TC01–TC12. Bổ sung TC13 kiểm tra mật khẩu được che bằng dấu chấm (type=password, giữ giá trị nhập; không submit), TC14 kiểm tra URL /login, tiêu đề Đăng nhập và form/nút Sign In hiển thị. Đây là hai tiêu chí do sinh viên bổ sung. TC13 cần quan sát trực quan khi chạy bên cạnh assertion type=password; glyph che cụ thể phụ thuộc browser/nền tảng.
+
+Static review `../eshop-sut/frontend-web/src/pages/Login.jsx` cho thấy heading là Đăng Ký và password input có type=text. Đây là nghi vấn cần xác minh runtime, chưa phải bug đã chạy và chưa có screenshot. Requirement 2 hoàn thành ở mức scope/thiết kế; automation và execution theo dõi riêng ở requirements 6–10. Requirement 3 và 4 vẫn chờ review Session 002.

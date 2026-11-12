@@ -255,6 +255,48 @@
       ]
     },
     {
+      "id": "FR-02-TC13",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Mật khẩu được che bằng dấu chấm",
+      "precondition": "Chưa đăng nhập; mở /login",
+      "steps": "Nhập TestMask123! vào ô mật khẩu; quan sát khi gõ; không submit",
+      "expected": "Input type=password; mật khẩu hiển thị dấu chấm che, không hiện TestMask123! dạng plaintext; giữ đúng giá trị nhập",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC14",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Giao diện nhận diện đúng trang Đăng nhập",
+      "precondition": "Context sạch, chưa đăng nhập",
+      "steps": "Đi tới /login; kiểm tra URL, tiêu đề và form",
+      "expected": "URL ở /login; heading Đăng nhập (không phân biệt hoa/thường), không ghi Đăng Ký; form email/mật khẩu và nút Sign In hiển thị",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
       "id": "FR-09-TC01",
       "feature": "FR-09",
       "requirement_ids": [

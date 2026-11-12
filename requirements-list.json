@@ -1,7 +1,7 @@
 {
   "project": "HW04",
-  "version": "1.3",
-  "updated_at": "2026-11-12T23:38:21+07:00",
+  "version": "1.4",
+  "updated_at": "2026-11-12T23:51:57+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -14,7 +14,8 @@
     "Scope đã ghi nhận; chưa thiết kế/chạy tests hoặc xác nhận HW02/group.",
     "Session 001 update: bỏ Update FR-17 theo chỉ đạo user vì SUT không hỗ trợ; scope Create/Read/Delete.",
     "Tài liệu nộp và Git root đặt tại submission/. Mock cart setup cần bridge CartContext vì frontend không fetch /api/cart.",
-    "Kết Session 001: user xác nhận HW02/group uniqueness; FR-09 mock hoàn toàn bằng page.route(), thay thế backend thật ở thiết kế trước; phạm vi evidence chỉ UI với API giả lập."
+    "Kết Session 001: user xác nhận HW02/group uniqueness; FR-09 mock hoàn toàn bằng page.route(), thay thế backend thật ở thiết kế trước; phạm vi evidence chỉ UI với API giả lập.",
+    "Session 002: user chấp nhận FR-02-TC01–TC12; bổ sung TC13 che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế; FR-09/FR-17 giữ 12 mỗi feature."
   ],
   "requirements": [
     {
@@ -31,12 +32,13 @@
     {
       "id": 2,
       "name": "FR-02 scope",
-      "description": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json.",
-      "expected_output": "Scope + ít nhất 12 test cases FR-02",
-      "source": "User Session 01; eshop-sut/README.md FR-02",
+      "description": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json. Mật khẩu được che bằng dấu chấm, không plaintext; giao diện nhận diện đúng trang Đăng nhập.",
+      "expected_output": "Scope + 14 test cases FR-02",
+      "source": "User Session 01; eshop-sut/README.md FR-02; User Session 002 (hai tiêu chí UI bổ sung)",
       "mandatory": true,
-      "acceptance_criteria": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json.",
-      "status": "IN PROGRESS"
+      "acceptance_criteria": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json. Mật khẩu được che bằng dấu chấm, không plaintext; giao diện nhận diện đúng trang Đăng nhập.",
+      "status": "DONE",
+      "evidence": "test-cases.json FR-02-TC01–TC14; scope.md. Hoàn thành scope/thiết kế; chưa automate hoặc chạy runtime (requirements 6–10)."
     },
     {
       "id": 3,
