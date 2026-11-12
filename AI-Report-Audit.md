@@ -98,3 +98,9 @@
     6. Co
 - AI output: |
     Tool: OpenAI Codex. Chốt REQ-04 theo xác nhận: không dialog, loại code format/length và used-coupon deletion; retire TC30/31. Percent nguyên 1–100, thêm TC32–35 và pin TC08/09 type=percent. Cụ thể hóa TC05 duplicate HTTP 400/409 + thông báo thân thiện, không SQL/stack trace. Thêm TC36/37 quyền user thường/không token qua UI. FR-17 có 35 cases; toàn suite 68 DESIGNED, dự kiến 204 executions. REQ-04 DONE phần thiết kế; cập nhật review/scope/checklist/progress/README, xác minh dữ liệu và diff, commit và export log. Chưa chạy automation/runtime; UI quyền không chứng minh endpoint role enforcement.
+
+- Date and time: 2026-11-13T00:23:25+07:00
+- User prompt: |
+    tong ket session 3
+- AI output: |
+    Tool: OpenAI Codex. Tổng kết phần việc của chat đang ghi Session 002, đồng thời ghi nhận user gọi phần tổng kết là Session 3; giữ lịch sử session nhất quán. Requirements 2–4 DONE phần thiết kế; FR-02/09/17 tương ứng 14/19/35 cases, tổng 68 DESIGNED, dự kiến 204 executions trên 3 browsers. Chốt cap/floor/normalization FR-09 và percent/duplicate/UI permission FR-17; TC30/31 retired. Đã xác minh dữ liệu/Git status và cập nhật tổng kết progress/audit, commit và export Git log. Chưa có automation/runtime evidence/HTML/PDF/video/public remote; docs/data commits không tính vào 8 test-script commits. Bước tiếp theo REQ-06–10, bắt đầu proof-of-concept fixture FR-09.

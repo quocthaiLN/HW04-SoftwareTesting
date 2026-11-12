@@ -59,3 +59,14 @@
 - Commits: Commit chốt REQ-04 và export log trong Git; không tính vào >=8 test-script commits.
 - Known risk or unresolved issue: Không còn policy pending của REQ-04; UI permission coverage không chứng minh endpoint role enforcement. Các yêu cầu automation/report/PDF/video/public remote còn chưa hoàn tất.
 - Next best step: Triển khai automation data-driven theo REQ-06–10 khi chuyển sang bước thực thi.
+
+### Tổng kết phiên — user gọi “Session 3”, lịch sử chat ghi Session 002
+
+- Date: 2026-11-13 (Asia/Ho_Chi_Minh). Giữ số Session 002 của cùng chat theo workflow; không tạo một session thực thi mới chỉ vì prompt tổng kết.
+- Goal: Review và chốt thiết kế requirements 2, 3, 4.
+- Completed: REQ-02 DONE thiết kế, FR-02 có 14 cases (thêm che mật khẩu/nhận diện trang login). REQ-03 DONE thiết kế, FR-09 có 19 cases, cap discount bằng tổng, final>=0, floor percent, normalization chỉ payload, mocked UI-only. REQ-04 DONE thiết kế, FR-17 có 35 cases Create/Read/Delete, percent nguyên 1–100, duplicate HTTP 400/409 + thông báo nghiệp vụ, quyền user/không token qua UI; loại dialog/code-format/length/used-coupon-delete. TC30/31 retired, không tái sử dụng IDs.
+- Verification run: JSON/counts/IDs/traceability/browser targets, kiểm tra thay đổi approved và diff whitespace; 68 DESIGNED (14/19/35), dự kiến 204 executions, thực tế 0 automated/executed, chưa có runtime bug/HTML evidence.
+- Commits: Các commit chính ad84d02 (REQ-02), b990bf9 và 99768c6 (REQ-03), 562f612 và d7cdc50 (REQ-04), cùng commits correction/audit/Git log. Tất cả là docs/data-only, chưa tính vào >=8 test-script commits.
+- Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, fr09-case-review.md, fr17-case-review.md, references/, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Known risk or unresolved issue: Mock FR-09 không xác minh backend cap/floor; UI permission không chứng minh endpoint role enforcement. Chưa automation/runtime/report/PDF/video/public remote; không tuyên bố bài nộp hoàn tất. Git log là snapshot trước commit export, cần xuất lại trước nộp.
+- Next best step: Chuyển sang REQ-06–10: proof-of-concept FR-09 page.route fixture, rồi data-driven scripts với dữ liệu JSON riêng, ba browser targets và HTML attribution thật. Xác minh runtime và phân biệt lỗi SUT/script/setup khi có kết quả.
