@@ -1,0 +1,25 @@
+* commit c2b9c683871cb26617086deb84480d06382d8d99
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Thu Nov 12 23:26:42 2026 +0700
+| 
+|     [REQ-14,22] Record Session 001 scope review and AI audit
+| 
+|  AI-Report-Audit.md | 30 ++++++++++++++++++++++++++++++
+|  PROGRESS.md        | 11 +++++++++++
+|  2 files changed, 41 insertions(+)
+| 
+* commit 6ee2ee935123c62d564d856ed60a7af9797b4976
+  Author: quocthaLN <quocthailenguyen41@gmail.com>
+  Date:   Thu Nov 12 23:26:12 2026 +0700
+  
+      [REQ-02,03,04,06,16] Define scoped features and 36 UI test cases
+  
+   .gitignore             |   7 +
+   AGENTS.md              |  66 ++++
+   README.md              |  31 ++
+   policies.md            |  40 +++
+   requirements-list.json | 254 ++++++++++++++++
+   scope.md               |  39 +++
+   skills-lock.json       |   0
+   test-cases.json        | 762 +++++++++++++++++++++++++++++++++++++++++++++++
+   8 files changed, 1199 insertions(+)
