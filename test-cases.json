@@ -1,0 +1,762 @@
+{
+  "student_id": "23120352",
+  "status": "DESIGN ONLY — not executed",
+  "cases": [
+    {
+      "id": "FR-02-TC01",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Login hợp lệ",
+      "precondition": "User riêng, attempts=0",
+      "steps": "Nhập email/password đúng; Sign In",
+      "expected": "Về trang chủ; token được lưu, user hiển thị",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC02",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Sai mật khẩu",
+      "precondition": "User riêng, attempts=0",
+      "steps": "Nhập password sai 1 lần",
+      "expected": "Lỗi chung; không token; attempts=1 (đọc DB fixture)",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC03",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Email không tồn tại",
+      "precondition": "Email không có DB",
+      "steps": "Login",
+      "expected": "Lỗi chung, không token; không lộ tồn tại user",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC04",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Email trống",
+      "precondition": "Trang login",
+      "steps": "Để email trống, submit",
+      "expected": "HTML validation chặn; không POST login",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC05",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Password trống",
+      "precondition": "Trang login",
+      "steps": "Điền email, bỏ password, submit",
+      "expected": "HTML validation chặn; không POST login",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC06",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Email sai format",
+      "precondition": "Trang login",
+      "steps": "Nhập abc, password bất kỳ, submit",
+      "expected": "Input type=email; invalid; không POST login",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC07",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Hai lần sai chưa khóa",
+      "precondition": "User riêng attempts=0",
+      "steps": "Sai 2 lần rồi login đúng",
+      "expected": "Hai lỗi; lần đúng thành công (ngưỡng chưa tới 3)",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC08",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Đủ ba lần sai bị khóa",
+      "precondition": "User riêng attempts=0",
+      "steps": "Sai 3 lần rồi login đúng ngay",
+      "expected": "Login đúng bị từ chối; không token",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC09",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Vẫn khóa trước 30 giây",
+      "precondition": "User riêng vừa khóa do 3 lần sai",
+      "steps": "Login đúng trước mốc 30 giây",
+      "expected": "Vẫn bị từ chối; locked_until không bị gia hạn bởi lần thử khi đang khóa",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC10",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Hết khóa sau 30 giây",
+      "precondition": "User riêng; ghi locked_until từ DB",
+      "steps": "Sai 3 lần; đợi tới 31 giây từ lần thứ 3 rồi login đúng",
+      "expected": "Thành công; không dùng page.clock để giả thời gian backend",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC11",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Thành công reset attempts",
+      "precondition": "User riêng attempts=0",
+      "steps": "Sai 1 lần; login đúng; đọc fixture DB",
+      "expected": "attempts=0, locked_until null",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-02-TC12",
+      "feature": "FR-02",
+      "requirement_ids": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "JWT gửi request xác thực",
+      "precondition": "User riêng attempts=0",
+      "steps": "Login đúng, reload cùng context; quan sát users/me",
+      "expected": "Authorization Bearer bằng token; UI vẫn nhận diện user",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC01",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Percent hợp lệ",
+      "precondition": "Active, future, min=300000, 10%, usage=0; total=500000",
+      "steps": "Apply coupon UI",
+      "expected": "Giảm 50000; cuối 450000",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC02",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Fixed hợp lệ",
+      "precondition": "Active, future, min=300000, fixed=50000; total=500000",
+      "steps": "Apply UI",
+      "expected": "Giảm 50000; cuối 450000",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC03",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Không tồn tại",
+      "precondition": "total=500000; mã không có DB",
+      "steps": "Apply UI",
+      "expected": "Lỗi; không hiển thị kết quả thành công",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC04",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Inactive",
+      "precondition": "Coupon is_active=0; còn lại hợp lệ",
+      "steps": "Apply UI",
+      "expected": "Bị từ chối",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC05",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Hết hạn",
+      "precondition": "Coupon expired_at=2020-01-01; còn lại hợp lệ",
+      "steps": "Apply UI",
+      "expected": "Bị từ chối",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC06",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Dưới ngưỡng 1 đồng",
+      "precondition": "min=300000; total=299999",
+      "steps": "Apply UI",
+      "expected": "Bị từ chối",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC07",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Đúng ngưỡng",
+      "precondition": "min=300000; total=300000; fixed=50000",
+      "steps": "Apply UI",
+      "expected": "Được chấp nhận; cuối 250000",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC08",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Trên ngưỡng 1 đồng",
+      "precondition": "min=300000; total=300001; fixed=50000",
+      "steps": "Apply UI",
+      "expected": "Được chấp nhận; cuối 250001",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC09",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Chưa đăng nhập",
+      "precondition": "Cart mock hợp lệ; không token; coupon hợp lệ",
+      "steps": "Mở checkout và Apply nếu UI cho phép",
+      "expected": "Bị chặn yêu cầu login hoặc apply bị từ chối; không thành công",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC10",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "JWT không hợp lệ",
+      "precondition": "Token invalid; coupon và cart hợp lệ",
+      "steps": "Apply khi auth invalid; quan sát logout/users/me",
+      "expected": "Không thể áp dụng thành công",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC11",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Còn một lượt",
+      "precondition": "max_uses_per_user=2; fixture usage=1; fixed=50000; total=500000",
+      "steps": "Apply UI",
+      "expected": "Thành công; cuối 450000; setup usage không qua checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-09-TC12",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Hết lượt",
+      "precondition": "max_uses_per_user=2; fixture usage=2; total=500000",
+      "steps": "Apply UI",
+      "expected": "Bị từ chối; không checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC01",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Create percent",
+      "precondition": "Admin thật; code unique; value=10,min=0,uses=1,future",
+      "steps": "Điền form và Tạo mã",
+      "expected": "Dòng mới đủ dữ liệu; reload vẫn tồn tại",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC02",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Create fixed",
+      "precondition": "Admin; unique code; value=50000,min=300000,uses=2,future",
+      "steps": "Tạo mã",
+      "expected": "Dòng mới đủ dữ liệu và còn sau reload",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC03",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Read fields",
+      "precondition": "Seed coupon đã biết",
+      "steps": "Mở tab Coupons",
+      "expected": "Code/type/value/min/expiry/uses khớp fixture",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC04",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Delete",
+      "precondition": "Seed coupon riêng",
+      "steps": "Xóa đúng dòng, reload",
+      "expected": "Dòng biến mất; GET danh sách không còn ID",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC05",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Duplicate code",
+      "precondition": "Seed code A",
+      "steps": "Tạo lại code A",
+      "expected": "Bị từ chối; chỉ một dòng A",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC06",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Code bắt buộc",
+      "precondition": "Admin; các trường khác hợp lệ",
+      "steps": "Bỏ code, submit",
+      "expected": "Không tạo coupon; validation",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC07",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Value bắt buộc",
+      "precondition": "Admin; các trường khác hợp lệ",
+      "steps": "Bỏ discount_value, submit",
+      "expected": "Không tạo coupon; validation",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC08",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Value bằng 0",
+      "precondition": "Admin; unique code; value=0",
+      "steps": "Tạo mã",
+      "expected": "Bị từ chối; danh sách không có code",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC09",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Value âm",
+      "precondition": "Admin; unique code; value=-1",
+      "steps": "Tạo mã",
+      "expected": "Bị từ chối; không persist",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC10",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Min order âm",
+      "precondition": "Admin; unique code; min=-1",
+      "steps": "Tạo mã",
+      "expected": "Bị từ chối; không persist",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC11",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Expiry bắt buộc",
+      "precondition": "Admin; các trường khác hợp lệ",
+      "steps": "Bỏ expired_at, submit",
+      "expected": "Validation chặn; không persist",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC12",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Uses dưới 1",
+      "precondition": "Admin; unique code; max_uses_per_user=0",
+      "steps": "Tạo mã",
+      "expected": "Validation chặn; không persist",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    }
+  ]
+}

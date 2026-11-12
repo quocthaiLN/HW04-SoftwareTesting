@@ -1,0 +1,254 @@
+{
+  "project": "HW04",
+  "version": "1.2",
+  "updated_at": "2026-11-12T23:25:31+07:00",
+  "status_values": [
+    "DONE",
+    "IN PROGRESS",
+    "NOT START"
+  ],
+  "reconciliation_notes": [
+    "IDs 1–3 trước đây chỉ là placeholder rỗng; giữ số và điền nội dung, thêm IDs từ 4.",
+    "Dùng requirements-list.json theo yêu cầu người dùng thay các biến thể tên checklist Markdown trong AGENTS.md.",
+    "Tên ZIP cụ thể của đề HW04 ưu tiên hơn tên generic trong policies.",
+    "Scope đã ghi nhận; chưa thiết kế/chạy tests hoặc xác nhận HW02/group.",
+    "Session 001 update: bỏ Update FR-17 theo chỉ đạo user vì SUT không hỗ trợ; scope Create/Read/Delete.",
+    "Tài liệu nộp và Git root đặt tại submission/. Mock cart setup cần bridge CartContext vì frontend không fetch /api/cart."
+  ],
+  "requirements": [
+    {
+      "id": 1,
+      "name": "Feature selection",
+      "description": "Chọn FR-02 (A), FR-09 (B), FR-17 (C); xác nhận trùng HW02 hoặc khai lý do HW02 chưa có; không trùng thành viên nhóm.",
+      "expected_output": "Main report: feature declaration",
+      "source": "2026.HW04.Automation Testing_En.pdf §5, pp.3–4",
+      "mandatory": true,
+      "acceptance_criteria": "Chọn FR-02 (A), FR-09 (B), FR-17 (C); xác nhận trùng HW02 hoặc khai lý do HW02 chưa có; không trùng thành viên nhóm.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 2,
+      "name": "FR-02 scope",
+      "description": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json.",
+      "expected_output": "Scope + ít nhất 12 test cases FR-02",
+      "source": "User Session 01; eshop-sut/README.md FR-02",
+      "mandatory": true,
+      "acceptance_criteria": "UI login hợp lệ/sai, HTML5 email, JWT; mỗi lần sai tăng đúng 1; khóa sau 3 lần sai liên tiếp, mở lại sau 30 giây. Xem scope.md và test-cases.json.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 3,
+      "name": "FR-09 scope",
+      "description": "Setup login bằng Playwright APIRequestContext với backend thật; mock request/module bằng page.route để nạp cart vào React CartContext. Không mock /api/apply-coupon. UI áp dụng coupon kiểm C1–C5 và số tiền; không bấm thanh toán. Xem scope.md.",
+      "expected_output": "Scope + ít nhất 12 test cases FR-09",
+      "source": "User Session 01; eshop-sut/README.md FR-09",
+      "mandatory": true,
+      "acceptance_criteria": "Setup login bằng Playwright APIRequestContext với backend thật; mock request/module bằng page.route để nạp cart vào React CartContext. Không mock /api/apply-coupon. UI áp dụng coupon kiểm C1–C5 và số tiền; không bấm thanh toán. Xem scope.md.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 4,
+      "name": "FR-17 Create/Read/Delete scope",
+      "description": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json.",
+      "expected_output": "Scope + ít nhất 12 test cases FR-17; gap evidence",
+      "source": "User Session 01; eshop-sut/README.md FR-17; api_specification.md §6.4",
+      "mandatory": true,
+      "acceptance_criteria": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 5,
+      "name": "Course preparation",
+      "description": "Ôn bài giảng automation; ghi quy trình và evidence từng task trong main report.",
+      "expected_output": "Process notes",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 p.4",
+      "mandatory": true,
+      "acceptance_criteria": "Ôn bài giảng automation; ghi quy trình và evidence từng task trong main report.",
+      "status": "NOT START"
+    },
+    {
+      "id": 6,
+      "name": "AI-first generation",
+      "description": "Dẫn AI từng bước tạo automation web bằng Playwright hoặc Selenium 4+ cho ít nhất 12 test cases mỗi feature (>=36 tổng); positive/negative/edge đều được tính.",
+      "expected_output": "Scripts + traceability cases/features",
+      "source": "2026.HW04.Automation Testing_En.pdf §§2,6,8 pp.1–5",
+      "mandatory": true,
+      "acceptance_criteria": "Dẫn AI từng bước tạo automation web bằng Playwright hoặc Selenium 4+ cho ít nhất 12 test cases mỗi feature (>=36 tổng); positive/negative/edge đều được tính.",
+      "status": "NOT START"
+    },
+    {
+      "id": 7,
+      "name": "External test data",
+      "description": "Data-driven: dữ liệu trong CSV/JSON riêng; không dùng inline arrays/objects hardcode làm test data.",
+      "expected_output": "Data files + scripts đọc dữ liệu",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
+      "mandatory": true,
+      "acceptance_criteria": "Data-driven: dữ liệu trong CSV/JSON riêng; không dùng inline arrays/objects hardcode làm test data.",
+      "status": "NOT START"
+    },
+    {
+      "id": 8,
+      "name": "Assertion patterns",
+      "description": "Dùng ít nhất 3 assertion patterns khác nhau, thể hiện trong scripts và report.",
+      "expected_output": "Assertion inventory và script references",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
+      "mandatory": true,
+      "acceptance_criteria": "Dùng ít nhất 3 assertion patterns khác nhau, thể hiện trong scripts và report.",
+      "status": "NOT START"
+    },
+    {
+      "id": 9,
+      "name": "Multi-browser execution",
+      "description": "Mỗi feature chạy trên 3 browsers Chromium/Firefox/WebKit hoặc Chrome/Edge/Firefox; >=9 feature-browser runs.",
+      "expected_output": "Execution matrix + actual results",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
+      "mandatory": true,
+      "acceptance_criteria": "Mỗi feature chạy trên 3 browsers Chromium/Firefox/WebKit hoặc Chrome/Edge/Firefox; >=9 feature-browser runs.",
+      "status": "NOT START"
+    },
+    {
+      "id": 10,
+      "name": "Authentic HTML reports",
+      "description": "Mỗi run tạo Allure/Playwright HTML report có Run by: {StudentID} và ISO timestamp; phải từ chạy thực tế, không AI-generated/fabricated.",
+      "expected_output": "HTML reports có attribution/time",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 p.4; §11 p.6",
+      "mandatory": true,
+      "acceptance_criteria": "Mỗi run tạo Allure/Playwright HTML report có Run by: {StudentID} và ISO timestamp; phải từ chạy thực tế, không AI-generated/fabricated.",
+      "status": "NOT START"
+    },
+    {
+      "id": 11,
+      "name": "Human review and gap analysis",
+      "description": "Sinh viên review/sửa mọi AI output; mô tả lỗi/missing cases/selectors/assertions/waits và nguyên nhân (prompt/model/feature); ghi case chưa automate và lý do.",
+      "expected_output": "Reviewed scripts + review/gap analysis",
+      "source": "2026.HW04.Automation Testing_En.pdf §2 pp.1–2; §6 p.4",
+      "mandatory": true,
+      "acceptance_criteria": "Sinh viên review/sửa mọi AI output; mô tả lỗi/missing cases/selectors/assertions/waits và nguyên nhân (prompt/model/feature); ghi case chưa automate và lý do.",
+      "status": "NOT START"
+    },
+    {
+      "id": 12,
+      "name": "Bug evidence",
+      "description": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
+      "expected_output": "Bug report + issue links + screenshots nếu có",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 p.4; §14 p.7",
+      "mandatory": true,
+      "acceptance_criteria": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
+      "status": "NOT START"
+    },
+    {
+      "id": 13,
+      "name": "Demo video",
+      "description": "Unlisted YouTube >=5 phút; giọng Việt của chính sinh viên; demo script end-to-end gồm multi-browser và HTML; giải thích >=1 fix AI; face-cam hoặc terminal whoami và hostname. Không tạo giả video/voice/evidence.",
+      "expected_output": "YouTube link + real authored video",
+      "source": "2026.HW04.Automation Testing_En.pdf §6 Task 2 p.5; §11 p.6",
+      "mandatory": true,
+      "acceptance_criteria": "Unlisted YouTube >=5 phút; giọng Việt của chính sinh viên; demo script end-to-end gồm multi-browser và HTML; giải thích >=1 fix AI; face-cam hoặc terminal whoami và hostname. Không tạo giả video/voice/evidence.",
+      "status": "NOT START"
+    },
+    {
+      "id": 14,
+      "name": "AI declaration and audit appendix",
+      "description": "Đính kèm AI Audit Report; khai I use AI tools for the following tasks và công cụ sử dụng. Mỗi interaction có tên tool, datetime, prompt, output. Log local đúng 3 phần datetime/user prompt/AI output; đặt tên tool trong AI output. Nếu không dùng AI phải khai rõ (không áp dụng phiên này).",
+      "expected_output": "AI-Report-Audit.md + PDF; appendix main report",
+      "source": "2026.HW04.Automation Testing_En.pdf §§8–9 pp.5–6; AGENTS.md workflow 4",
+      "mandatory": true,
+      "acceptance_criteria": "Đính kèm AI Audit Report; khai I use AI tools for the following tasks và công cụ sử dụng. Mỗi interaction có tên tool, datetime, prompt, output. Log local đúng 3 phần datetime/user prompt/AI output; đặt tên tool trong AI output. Nếu không dùng AI phải khai rõ (không áp dụng phiên này).",
+      "status": "NOT START"
+    },
+    {
+      "id": 15,
+      "name": "AI critique",
+      "description": "Một đoạn 200–300 từ: AI sai/thiên lệch/thiếu gì, vì sao bỏ sót, nguyên tắc hợp tác AI học được.",
+      "expected_output": "AI Critique Markdown + PDF",
+      "source": "2026.HW04.Automation Testing_En.pdf §10 p.6",
+      "mandatory": true,
+      "acceptance_criteria": "Một đoạn 200–300 từ: AI sai/thiên lệch/thiếu gì, vì sao bỏ sót, nguyên tắc hợp tác AI học được.",
+      "status": "NOT START"
+    },
+    {
+      "id": 16,
+      "name": "Public Git and qualifying commits",
+      "description": "Public GitHub repository, lịch sử có ý nghĩa >=8 commits có thay đổi .spec.js/.spec.ts hoặc test-script tương đương; docs-only không tính. Commit rõ từng bước và requirement IDs.",
+      "expected_output": "Public repo + >=8 qualifying commits",
+      "source": "2026.HW04.Automation Testing_En.pdf §12 p.6; AGENTS.md Git; policies.md",
+      "mandatory": true,
+      "acceptance_criteria": "Public GitHub repository, lịch sử có ý nghĩa >=8 commits có thay đổi .spec.js/.spec.ts hoặc test-script tương đương; docs-only không tính. Commit rõ từng bước và requirement IDs.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 17,
+      "name": "Git log export",
+      "description": "Xuất git log --graph --all --stat thành file text để nộp; không chế tạo history/log.",
+      "expected_output": "git-log.txt",
+      "source": "2026.HW04.Automation Testing_En.pdf §12 p.6; AGENTS.md",
+      "mandatory": true,
+      "acceptance_criteria": "Xuất git log --graph --all --stat thành file text để nộp; không chế tạo history/log.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 18,
+      "name": "Main report and local artifacts",
+      "description": "Main report Markdown + PDF gồm automation report, quy trình, review/gap analysis; repo chứa scripts/data/HTML; ZIP kèm HTML reports, repo link, video link, AI audit/critique Markdown+PDF, Git log, bugs nếu có, tài liệu hỗ trợ. Không phụ thuộc quá mức links.",
+      "expected_output": "Complete submission/ artifacts",
+      "source": "2026.HW04.Automation Testing_En.pdf §14 p.7; policies.md",
+      "mandatory": true,
+      "acceptance_criteria": "Main report Markdown + PDF gồm automation report, quy trình, review/gap analysis; repo chứa scripts/data/HTML; ZIP kèm HTML reports, repo link, video link, AI audit/critique Markdown+PDF, Git log, bugs nếu có, tài liệu hỗ trợ. Không phụ thuộc quá mức links.",
+      "status": "NOT START"
+    },
+    {
+      "id": 19,
+      "name": "README and self-assessment",
+      "description": "README có bảng tự chấm: feature A/B/C mỗi 25, video 15, Agent Skills 10, tổng 100; summary số features, cases automated/executed/passed/failed, browser runs, bugs và video link.",
+      "expected_output": "README.md with rubric + test summary",
+      "source": "2026.HW04.Automation Testing_En.pdf §§14–15 pp.7–8",
+      "mandatory": true,
+      "acceptance_criteria": "README có bảng tự chấm: feature A/B/C mỗi 25, video 15, Agent Skills 10, tổng 100; summary số features, cases automated/executed/passed/failed, browser runs, bugs và video link.",
+      "status": "NOT START"
+    },
+    {
+      "id": 20,
+      "name": "Packaging and submission",
+      "description": "Tên <StudentID>_HW04_AI_Automation_<SelfAssessedGrade>.zip; grade 000–100 đúng 3 chữ số. Moodle đúng hạn theo link; tối đa 20 files, mỗi file <=20MB theo policies. Thiếu tài liệu bắt buộc hoặc vi phạm quy định có thể bị 0.",
+      "expected_output": "Validated ZIP and submission checklist",
+      "source": "2026.HW04.Automation Testing_En.pdf §§14,17 pp.7–8; policies.md",
+      "mandatory": true,
+      "acceptance_criteria": "Tên <StudentID>_HW04_AI_Automation_<SelfAssessedGrade>.zip; grade 000–100 đúng 3 chữ số. Moodle đúng hạn theo link; tối đa 20 files, mỗi file <=20MB theo policies. Thiếu tài liệu bắt buộc hoặc vi phạm quy định có thể bị 0.",
+      "status": "NOT START"
+    },
+    {
+      "id": 21,
+      "name": "Individual integrity and oral defense",
+      "description": "Làm cá nhân; không sao chép kể cả prompts; review chịu trách nhiệm output. Chuẩn bị giải thích quy trình cho oral defense 5–7 phút nếu được chọn (30%).",
+      "expected_output": "Authorship evidence; defense preparation",
+      "source": "2026.HW04.Automation Testing_En.pdf §§1–2,13,17 pp.1–2,6–8",
+      "mandatory": true,
+      "acceptance_criteria": "Làm cá nhân; không sao chép kể cả prompts; review chịu trách nhiệm output. Chuẩn bị giải thích quy trình cho oral defense 5–7 phút nếu được chọn (30%).",
+      "status": "NOT START"
+    },
+    {
+      "id": 22,
+      "name": "Tracking and final reconciliation",
+      "description": "Giữ requirement IDs ổn định, ghi tiến độ/evidence/risks/commits theo cùng IDs trong PROGRESS; mỗi chat là một session; rà mọi mandatory item trước packaging, chưa verified thì không tuyên bố hoàn tất.",
+      "expected_output": "PROGRESS.md + reconciled checklist",
+      "source": "AGENTS.md workflow/checklist",
+      "mandatory": true,
+      "acceptance_criteria": "Giữ requirement IDs ổn định, ghi tiến độ/evidence/risks/commits theo cùng IDs trong PROGRESS; mỗi chat là một session; rà mọi mandatory item trước packaging, chưa verified thì không tuyên bố hoàn tất.",
+      "status": "IN PROGRESS"
+    },
+    {
+      "id": 23,
+      "name": "Reusable Agent Skill",
+      "description": "Khuyến khích tạo reusable skill data-driven/multi-browser và nộp cùng video demo dùng skill trọn một feature. Đây là mục khuyến khích, có 10 điểm rubric, không tự đánh dấu mandatory.",
+      "expected_output": "Skill files + YouTube skill demo",
+      "source": "2026.HW04.Automation Testing_En.pdf §7 p.5; §15 p.7",
+      "mandatory": false,
+      "acceptance_criteria": "Khuyến khích tạo reusable skill data-driven/multi-browser và nộp cùng video demo dùng skill trọn một feature. Đây là mục khuyến khích, có 10 điểm rubric, không tự đánh dấu mandatory.",
+      "status": "NOT START"
+    }
+  ],
+  "student": {
+    "id": "23120352",
+    "name": "Le Nguyen Quoc Thai"
+  }
+}
