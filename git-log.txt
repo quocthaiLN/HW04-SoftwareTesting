@@ -1,3 +1,28 @@
+* commit b990bf95d0c0d2780378773c48a88d45874f9293
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:07:29 2026 +0700
+| 
+|     HW04 [REQ-03] Review coupon edge cases and identify pending policy decisions
+| 
+|  AI-Report-Audit.md                 |   18 +
+|  PROGRESS.md                        |    8 +
+|  README.md                          |    2 +-
+|  fr09-case-review.md                |   43 +
+|  references/fr09-user-testcases.txt | 1594 ++++++++++++++++++++++++++++++++++
+|  requirements-list.json             |   16 +-
+|  scope.md                           |    6 +-
+|  test-cases.json                    |  132 +++
+|  8 files changed, 1810 insertions(+), 9 deletions(-)
+| 
+* commit 5fd67b72256a544df143892604d64c09a85b7cd4
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Thu Nov 12 23:53:16 2026 +0700
+| 
+|     HW04 [REQ-17] Refresh Git log after requirement 2 design
+| 
+|  git-log.txt | 37 +++++++++++++++++++++++++++++++++++++
+|  1 file changed, 37 insertions(+)
+| 
 * commit ad84d02ee8a4f91c557bdd3411a9f1b60c9ea4b8
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:53:16 2026 +0700
