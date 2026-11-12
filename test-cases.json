@@ -810,8 +810,8 @@
       ],
       "title": "Duplicate code",
       "precondition": "Seed code A",
-      "steps": "Tạo lại code A",
-      "expected": "Bị từ chối; chỉ một dòng A",
+      "steps": "Seed code A riêng; qua UI tạo lại code A với các trường khác hợp lệ; quan sát response và thông báo",
+      "expected": "POST bị từ chối bằng HTTP 400 hoặc 409; UI hiển thị lỗi nghiệp vụ rõ mã đã tồn tại, không lộ lỗi SQL/stack trace; chỉ một dòng A sau reload",
       "status": "DESIGNED",
       "browsers": [
         "chromium",
@@ -872,7 +872,7 @@
         9
       ],
       "title": "Value bằng 0",
-      "precondition": "Admin; unique code; value=0",
+      "precondition": "Admin; unique code; value=0; type=percent; các trường khác hợp lệ",
       "steps": "Tạo mã",
       "expected": "Bị từ chối; danh sách không có code",
       "status": "DESIGNED",
@@ -893,7 +893,7 @@
         9
       ],
       "title": "Value âm",
-      "precondition": "Admin; unique code; value=-1",
+      "precondition": "Admin; unique code; value=-1; type=percent; các trường khác hợp lệ",
       "steps": "Tạo mã",
       "expected": "Bị từ chối; không persist",
       "status": "DESIGNED",
@@ -1324,7 +1324,7 @@
       ]
     },
     {
-      "id": "FR-17-TC30",
+      "id": "FR-17-TC32",
       "feature": "FR-17",
       "requirement_ids": [
         4,
@@ -1333,10 +1333,10 @@
         8,
         9
       ],
-      "title": "Mã ngắn hợp lệ: 1 ký tự",
-      "precondition": "Admin thật; đảm bảo mã A chưa tồn tại bằng fixture cô lập, không xóa dữ liệu người khác; các trường hợp lệ",
-      "steps": "Tạo code=A,percent=10,min=0,uses=1,expiry tương lai",
-      "expected": "Tạo thành công; code đúng sau reload; cleanup mã riêng",
+      "title": "Percent không hợp lệ: 101",
+      "precondition": "Admin thật; code riêng; percent=101; min=0; uses=1; expiry ngày chạy +30",
+      "steps": "Tạo coupon qua UI với discount_value=101",
+      "expected": "Validation/lỗi nghiệp vụ từ chối vì percent phải là số nguyên 1–100; không có coupon mới sau reload; nếu HTML chặn thì không POST",
       "status": "DESIGNED",
       "browsers": [
         "chromium",
@@ -1345,7 +1345,7 @@
       ]
     },
     {
-      "id": "FR-17-TC31",
+      "id": "FR-17-TC33",
       "feature": "FR-17",
       "requirement_ids": [
         4,
@@ -1354,10 +1354,94 @@
         8,
         9
       ],
-      "title": "Mã ngắn hợp lệ: 2 ký tự",
-      "precondition": "Admin thật; đảm bảo mã AB chưa tồn tại bằng fixture cô lập, không xóa dữ liệu người khác; các trường hợp lệ",
-      "steps": "Tạo code=AB,percent=10,min=0,uses=1,expiry tương lai",
-      "expected": "Tạo thành công; code đúng sau reload; cleanup mã riêng",
+      "title": "Percent không hợp lệ: 120",
+      "precondition": "Admin thật; code riêng; percent=120; min=0; uses=1; expiry ngày chạy +30",
+      "steps": "Tạo coupon qua UI với discount_value=120",
+      "expected": "Validation/lỗi nghiệp vụ từ chối vì percent phải là số nguyên 1–100; không có coupon mới sau reload; nếu HTML chặn thì không POST",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC34",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Percent không hợp lệ: 0.5",
+      "precondition": "Admin thật; code riêng; percent=0.5; min=0; uses=1; expiry ngày chạy +30",
+      "steps": "Tạo coupon qua UI với discount_value=0.5",
+      "expected": "Validation/lỗi nghiệp vụ từ chối vì percent phải là số nguyên 1–100; không có coupon mới sau reload; nếu HTML chặn thì không POST",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC35",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Percent không hợp lệ: 1.5",
+      "precondition": "Admin thật; code riêng; percent=1.5; min=0; uses=1; expiry ngày chạy +30",
+      "steps": "Tạo coupon qua UI với discount_value=1.5",
+      "expected": "Validation/lỗi nghiệp vụ từ chối vì percent phải là số nguyên 1–100; không có coupon mới sau reload; nếu HTML chặn thì không POST",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC36",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Chặn user thường truy cập quản lý coupon",
+      "precondition": "Context sạch; user thật role=user; không có adminToken",
+      "steps": "Mở admin app; đăng nhập user thường qua UI; reload",
+      "expected": "UI từ chối quyền admin; không hiển thị form tạo hoặc nút xóa coupon; adminToken không được lưu; không POST/DELETE quản lý coupon; không thay đổi dữ liệu",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    {
+      "id": "FR-17-TC37",
+      "feature": "FR-17",
+      "requirement_ids": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Chặn truy cập coupon khi chưa đăng nhập",
+      "precondition": "Context sạch; không token admin; không đăng nhập",
+      "steps": "Mở admin app và reload; thử tới trang quản lý qua navigation nếu có",
+      "expected": "Hiển thị đăng nhập hoặc thông báo cần xác thực; không hiển thị form tạo/nút xóa coupon; không POST/DELETE quản lý coupon; không thay đổi dữ liệu",
       "status": "DESIGNED",
       "browsers": [
         "chromium",
@@ -1370,5 +1454,10 @@
     "FR-02": "real SUT",
     "FR-09": "fully mocked with page.route; UI coverage only",
     "FR-17": "real SUT, Create/Read/Delete"
-  }
+  },
+  "retired_case_ids": [
+    "FR-17-TC30",
+    "FR-17-TC31"
+  ],
+  "retirement_reason": "User Session 002 loại kiểm thử định dạng/độ dài code vì spec không yêu cầu; không tái sử dụng IDs."
 }

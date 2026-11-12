@@ -87,3 +87,14 @@
     Tệp nguồn lưu nguyên văn tại references/fr17-user-testcases.txt.
 - AI output: |
     Tool: OpenAI Codex. Giữ nguyên 12 cases FR-17, thêm 19 cases TC13–TC31. Đối chiếu 27 EP và 25 BVA trong fr17-case-review.md; tách API-only khỏi UI suite, ghi Q1–Q6 cần xem xét thay vì tự đặt policy. FR-17 có 31 cases, toàn suite 64 DESIGNED (14/19/31), dự kiến 192 executions. Phát hiện mâu thuẫn code alphabet với dấu _ trong nguồn; chuỗi length 30 được xác minh đúng 30 sau khi sửa nhận định đếm ban đầu. FR-24 chỉ yêu cầu dialog xóa item khỏi giỏ, chưa đủ áp cho coupon. Cập nhật checklist/scope/progress/README và Git; REQ-04 IN PROGRESS. Xác minh JSON, IDs, giữ nguyên cases cũ, traceability và mapping; chưa chạy runtime, không sao chép Pass/Fail nguồn thành evidence.
+
+- Date and time: 2026-11-13T00:21:26+07:00
+- User prompt: |
+    1. Khong
+    2. Loai bo testcase nay vi spec khong yeu cau
+    3. Co
+    4. Loai bo testcase nay
+    5. Co
+    6. Co
+- AI output: |
+    Tool: OpenAI Codex. Chốt REQ-04 theo xác nhận: không dialog, loại code format/length và used-coupon deletion; retire TC30/31. Percent nguyên 1–100, thêm TC32–35 và pin TC08/09 type=percent. Cụ thể hóa TC05 duplicate HTTP 400/409 + thông báo thân thiện, không SQL/stack trace. Thêm TC36/37 quyền user thường/không token qua UI. FR-17 có 35 cases; toàn suite 68 DESIGNED, dự kiến 204 executions. REQ-04 DONE phần thiết kế; cập nhật review/scope/checklist/progress/README, xác minh dữ liệu và diff, commit và export log. Chưa chạy automation/runtime; UI quyền không chứng minh endpoint role enforcement.

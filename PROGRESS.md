@@ -51,3 +51,11 @@
 - Known risk or unresolved issue: REQ-04 IN PROGRESS; Q1–Q6 trong review cần chốt (dialog, code domain/length, percent range, used coupon deletion, duplicate error, security scope). API-only không đưa vào UI suite; không dùng Pass/Fail nguồn làm evidence.
 - Commits: Bước bổ sung testcase REQ-04 và export Git log; không tính vào >=8 test-script commits.
 - Next best step: Sinh viên review Q1–Q6; sau đó chốt scope/thiết kế FR-17 trước automation.
+
+### Chốt requirement 4 — tiếp tục Session 002, 2026-11-13
+- Completed: User chốt Q1–Q6. Bỏ TC30/31 độ dài code (retire IDs); không dialog/code-format/used-coupon-delete. Percent nguyên 1–100: pin TC08/09 type, thêm TC32–35 (101/120/0.5/1.5). TC05 HTTP 400/409 + lỗi trùng thân thiện. TC36/37 kiểm tra quyền user thường/không token qua UI. REQ-04 DONE phần thiết kế; 68 DESIGNED (14/19/35), dự kiến 204 executions.
+- Verification run: JSON/IDs/traceability/browser targets; so sánh với Git HEAD: chỉ bỏ 30/31, sửa 05/08/09, thêm 32–37; FR-02/09 và cases khác giữ nguyên. diff --check. Chưa runtime/automation.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr17-case-review.md, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Commits: Commit chốt REQ-04 và export log trong Git; không tính vào >=8 test-script commits.
+- Known risk or unresolved issue: Không còn policy pending của REQ-04; UI permission coverage không chứng minh endpoint role enforcement. Các yêu cầu automation/report/PDF/video/public remote còn chưa hoàn tất.
+- Next best step: Triển khai automation data-driven theo REQ-06–10 khi chuyển sang bước thực thi.

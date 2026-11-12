@@ -10,7 +10,7 @@
 | Metric | Current |
 | --- | --- |
 | Features selected | 3 |
-| Cases designed | 64 (FR-02: 14; FR-09: 19; FR-17: 31); tất cả DESIGNED |
+| Cases designed | 68 (FR-02: 14; FR-09: 19; FR-17: 35); tất cả DESIGNED |
 | Cases automated / executed / passed / failed | 0 / 0 / 0 / 0 |
 | Browser runs | 0 |
 | Runtime-confirmed bugs | 0 |

@@ -28,7 +28,7 @@ Chưa triển khai hoặc chạy fixture. Case FR-09 trong JSON là thiết kế
 
 ## Thiết kế test (requirements 6–9)
 
-`test-cases.json` có 64 cases DESIGNED: FR-02 có 14, FR-09 có 19, FR-17 có 31; mỗi case dự kiến chạy Chromium/Firefox/WebKit (192 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
+`test-cases.json` có 68 cases DESIGNED: FR-02 có 14, FR-09 có 19, FR-17 có 35; mỗi case dự kiến chạy Chromium/Firefox/WebKit (204 case executions, 9 feature-browser combinations). Status DESIGNED không đồng nghĩa automated/passed. Dữ liệu JSON này là thiết kế; lúc triển khai phải bổ sung giá trị input/fixture cụ thể vào JSON riêng, không hardcode data vào scripts.
 
 Ba nhóm assertion dự kiến: DOM state/visibility (lỗi, nút, dòng coupon), text/value hoặc numeric equality (số tiền/fields), URL/attribute/storage/network contract (navigation, type=email, token/header). Counter và persistence có thêm read-only DB/API assertions hỗ trợ; hành động chính vẫn là UI. Chọn locator theo role/placeholder và scope form/table row; label hiện chưa gắn htmlFor nên không mặc định getByLabel hoạt động.
 
@@ -55,3 +55,7 @@ User chốt chặn trần discount=min(nominal,total), final=0 khi giảm vượ
 ## Session 002 — Requirement 4 review
 
 Giữ nguyên FR-17-TC01–TC12, bổ sung TC13–TC31 (19 cases) từ nguồn sinh viên; FR-17 có 31 cases. Chi tiết mapping EP/BVA và các chính sách cần xem xét ở fr17-case-review.md. Chỉ Create/Read/Delete qua UI, SUT thật; không Update. Không sao chép Actual/Pass/Fail của nguồn làm evidence. Ngày tương lai dùng ngày chạy +30 thay cho ngày cố định đã cũ. REQ-04 vẫn IN PROGRESS vì còn quyết định policy, chưa runtime.
+
+### Chốt requirement 4 — 2026-11-13
+
+User loại dialog xóa, code format/length, used-coupon deletion. Retire TC30/31, không tái sử dụng IDs. Chốt percent nguyên 1–100; TC08/09 pin percent; thêm TC32–35: 101/120/0.5/1.5. TC05 yêu cầu HTTP 400/409 và thông báo trùng mã thân thiện. Thêm TC36/37 kiểm tra user thường và không token qua UI; không kiểm chứng API role enforcement bằng request trực tiếp. FR-17 có 35 cases, toàn suite 68 DESIGNED, dự kiến 204 executions. REQ-04 DONE phần thiết kế; đoạn này thay thế các ghi chú pending trước đó.

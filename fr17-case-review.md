@@ -1,6 +1,6 @@
 # FR-17 — Đối chiếu testcase Session 002
 
-Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết kế tham khảo; không dùng Actual Result/Pass/Fail của nguồn làm evidence. Chưa chạy automation. Giữ nguyên TC01–TC12; thêm 19 cases TC13–TC31. FR-17 có 31 DESIGNED; toàn suite 64 DESIGNED (14/19/31), dự kiến 192 executions trên 3 browsers.
+Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết kế tham khảo; không dùng Actual Result/Pass/Fail của nguồn làm evidence. Chưa chạy automation. Sau xác nhận: TC05/08/09 cụ thể hóa oracle/type; TC30/31 bị loại và retire IDs. Thêm TC32–37. FR-17 có 35 DESIGNED; toàn suite 68 DESIGNED (14/19/35), dự kiến 204 executions trên 3 browsers.
 
 ## Mapping EP
 
@@ -10,15 +10,15 @@ Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết k�
 | 02 | TC13 fixed/min=0/uses=3 (TC02 cũ min=300000) |
 | 03 | TC14 tạo expiry quá khứ và nhãn Hết hạn |
 | 04 | TC03 read fields; không phụ thuộc đúng 4 seed rows vì DB có thể có dữ liệu khác |
-| 05 | TC04 delete/reload; không thêm bắt buộc dialog khi chưa chốt |
-| 06 | Chờ quyết định dialog/cancel, Q1 |
+| 05 | TC04 delete/reload; không yêu cầu dialog theo user |
+| 06 | Loại theo user, không dialog/cancel |
 | 07 | TC15 uppercase cả input value và payload trên admin (khác FR-09 chỉ payload) |
-| 08 | TC05 duplicate đã có; HTTP status/message cụ thể chờ Q5 |
+| 08 | TC05 duplicate đã có; chốt HTTP 400/409 và thông báo nghiệp vụ thân thiện, không SQL/stack trace |
 | 09 | TC06 code required |
-| 10, 11 | Quy tắc khoảng trắng và ký tự mã chờ Q2 |
+| 10, 11 | Loại kiểm thử định dạng mã theo user |
 | 12 | API-only invalid type; không đưa vào UI suite, select chỉ có percent/fixed |
-| 13 | TC08/09 cũ giá trị 0/âm; chưa cụ thể type trong thiết kế cũ, giữ nguyên; coverage percent cụ thể cần chốt Q3 rồi hoàn thiện data |
-| 14 | Percent >100 chờ Q3 |
+| 13 | TC08/09 pin type=percent: 0/-1 bị từ chối |
+| 14 | TC32/33 percent=101/120; TC34/35 percent=0.5/1.5 bị từ chối |
 | 15 | TC07 discount required |
 | 16 | TC24/25 fixed=0/-50000, bổ sung type cụ thể |
 | 17 | TC10 min=-1 đã có |
@@ -28,16 +28,16 @@ Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết k�
 | 21 | TC12 uses=0 đã có; TC27 uses=-1 bổ sung; không gán Fail API cho validation UI |
 | 22 | TC28 uses=1.5 qua UI; không khẳng định đã kiểm tra endpoint trực tiếp |
 | 23, 24 | API-only DELETE ID không tồn tại/sai; UI chỉ có nút trên dòng có ID thật |
-| 25 | Xóa coupon có lịch sử chờ Q4 (từ chối hay soft delete) |
-| 26, 27 | Access control FR-12/SEC-03: đề xuất xem xét riêng Q6; các case UI hiện dùng admin thật |
+| 25 | Loại xóa coupon có lịch sử theo user |
+| 26, 27 | TC36/37 chặn user thường/không token qua UI; không test endpoint trực tiếp |
 
 ## Mapping BVA
 
 | Nguồn TC_ADM_BVA_* | Xử lý |
 | --- | --- |
-| 01 | TC08 giá trị 0 đã có; cần pin type percent trong data khi triển khai |
+| 01 | TC08 percent=0 |
 | 02–06 | TC17–TC21 percent=1,2,50,99,100; chỉ tạo/lưu/hiển thị, không assert miễn phí checkout |
-| 07 | Percent=101 chờ Q3 |
+| 07 | TC32 percent=101 bị từ chối |
 | 08 | TC24 fixed=0 |
 | 09, 10 | TC22/23 fixed=1/2 đồng, dùng đúng đơn vị biên, không thay bằng 1000/2000 |
 | 11 | TC02 fixed=50000 đã có |
@@ -49,20 +49,22 @@ Nguồn nguyên văn: references/fr17-user-testcases.txt. Chỉ dùng thiết k�
 | 17, 18 | TC01 uses=1 và TC02 uses=2 đã có |
 | 19 | TC29 uses=10 |
 | 20 | TC06 code rỗng; UI chặn không đồng nghĩa đã test backend HTTP 400 |
-| 21, 22 | TC30/31 code A/AB; fixture DB cô lập để không trùng hoặc xóa mã của người khác |
+| 21, 22 | TC30/31 bị loại theo user vì không kiểm thử độ dài mã; IDs retired |
 | 23 | TC01 code unique danh định; không cố định SAVE20 có thể đã tồn tại |
-| 24, 25 | Độ dài 30/256 chờ Q2: chưa có maxLength trong đặc tả; chuỗi nguồn SUPER_SALE_BLACK_FRIDAY_2026_X dài đúng 30 ký tự; chưa có đặc tả max length |
+| 24, 25 | Loại kiểm thử độ dài mã theo user |
 
-## Cần xem xét/xác nhận trước khi thêm
+## Quyết định đã chốt — 2026-11-13
 
-| ID | Vấn đề | Đề xuất / căn cứ |
-| --- | --- | --- |
-| Q1 | Có bắt buộc confirm/cancel khi xóa coupon? | README FR-24 chỉ yêu cầu dialog khi xóa item khỏi giỏ. Không mặc định áp dụng cho coupon; nếu user muốn thêm, tạo hai case Confirm và Cancel. |
-| Q2 | Code cho phép ký tự gì và dài tối đa bao nhiêu? | Nguồn EP11 chỉ cho chữ/số nhưng BVA24 dùng dấu _. Cần chốt khoảng trắng, dấu _, dấu -, min/max length; chưa có căn cứ coi 256 tự động invalid. Sau khi chốt mới thiết kế biên L-1/L/L+1 chính xác. |
-| Q3 | Percent bắt buộc số nguyên 1–100 hay chỉ >0 như README FR-17? | Nguồn đề xuất 1–100. Cần chốt để thêm 101/120 bị từ chối và phân hoạch 0<x<1; không tự đặt giới hạn từ lỗi source. Các giá trị 1–100 đã thêm là hợp lệ dưới cả hai cách hiểu. |
-| Q4 | Xóa coupon đã có coupon_usage: từ chối hay soft delete? | Chưa có chính sách trong FR-17. Đề xuất từ chối xóa vật lý để giữ lịch sử; cần user chốt trước khi thiết kế oracle cụ thể. Seed usage bằng fixture, không tự mở rộng test checkout. |
-| Q5 | Duplicate cần lỗi nghiệp vụ thân thiện và HTTP 409/400 cụ thể? | TC05 hiện chỉ chốt từ chối, một dòng duy nhất. Không tự kết luận 500 là bug mới từ kết quả nguồn; có thể bổ sung contract nếu user muốn. |
-| Q6 | Có thêm kiểm tra quyền user/không token qua UI vào scope FR-17? | Đây là FR-12/SEC-03. Nếu mở rộng, test navigation/redirect và không cho create/delete qua UI; endpoint trực tiếp là lớp bổ sung riêng cần chốt. |
+| ID | User xác nhận / tác động |
+| --- | --- |
+| Q1 | Không dialog khi xóa coupon; không thêm confirm/cancel. |
+| Q2 | Loại kiểm thử định dạng/độ dài mã vì spec không yêu cầu; retire TC30/31. Code required/unique và uppercase vẫn giữ. |
+| Q3 | Percent là số nguyên 1–100. Thêm TC32–35 cho 101/120/0.5/1.5; TC08/09 pin percent 0/-1. |
+| Q4 | Loại case xóa coupon đã có lịch sử. |
+| Q5 | TC05 duplicate: HTTP 400 hoặc 409, thông báo nghiệp vụ rõ trùng mã, không lộ SQL/stack trace, dữ liệu không nhân đôi. Chấp nhận hai status theo đề xuất đã duyệt; không chốt chuỗi thông báo nguyên văn. |
+| Q6 | Thêm TC36 user thường / TC37 không token qua UI: chặn quyền quản lý coupon, không create/delete; không mở rộng API trực tiếp. |
+
+Không còn policy pending cho thiết kế REQ-04. Quyền qua UI không chứng minh endpoint kiểm tra role đúng; giới hạn này phải được công khai khi báo cáo.
 
 ## Quy tắc thực thi sau này
 
