@@ -1,3 +1,23 @@
+* commit bcca4cbd5e04a2c46e14c4e17e80870b73f49548
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:18:49 2026 +0700
+| 
+|     HW04 [REQ-04] Correct source code length observation after verification
+| 
+|  AI-Report-Audit.md  | 2 +-
+|  PROGRESS.md         | 2 +-
+|  fr17-case-review.md | 2 +-
+|  3 files changed, 3 insertions(+), 3 deletions(-)
+| 
+* commit bf0f5cb03cec7e5841e0c6e17cb038d9ac06ec62
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 00:18:31 2026 +0700
+| 
+|     HW04 [REQ-17] Export log after admin coupon case expansion
+| 
+|  git-log.txt | 25 +++++++++++++++++++++++++
+|  1 file changed, 25 insertions(+)
+| 
 * commit 562f612ce8da89b4eaa261c6027d50ed795ac7f0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:31 2026 +0700
