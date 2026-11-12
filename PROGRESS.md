@@ -27,3 +27,11 @@
 - Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: Chưa có automation/runtime evidence; hai dấu hiệu lỗi UI chỉ từ source. Requirements 3/4 chưa review trong Session 002.
 - Next best step: Review requirement 3 (FR-09), tiếp theo requirement 4 (FR-17); sau đó triển khai automation theo requirements 6–10.
+
+### Requirement 3 — tiếp tục Session 002, 2026-11-13
+- Completed: Chấp nhận và giữ nguyên FR-09-TC01–TC12. Đối chiếu 21 cases nguồn trong fr09-case-review.md, thêm TC13–TC18: trống, whitespace-only, lowercase payload, trim payload, giảm bằng tổng, giảm vượt tổng. TC18 chờ cap/reject; 43 DESIGNED + 1 pending toàn suite. REQ-03 vẫn IN PROGRESS; REQ-04 chưa review.
+- Verification run: Parse JSON, uniqueness, mapping/browser targets, so sánh toàn bộ 38 cases trước với Git HEAD không đổi; diff whitespace check. Chưa chạy runtime/automation.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr09-case-review.md, references/fr09-user-testcases.txt, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Known risk or unresolved issue: Cần xác nhận Q1–Q6 trong review; mock chỉ chứng minh UI. Không dùng kết quả Pass/Fail của nguồn làm evidence suite.
+- Next best step: Chốt cap/reject, normalization, rounding và phạm vi case bổ sung; sau đó review REQ-04.
+- Commits: Bước thiết kế REQ-03 và export log trong Git history; không tính vào >=8 test-script commits.

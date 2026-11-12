@@ -1,7 +1,7 @@
 {
   "project": "HW04",
-  "version": "1.4",
-  "updated_at": "2026-11-12T23:51:57+07:00",
+  "version": "1.5",
+  "updated_at": "2026-11-13T00:03:50+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -15,7 +15,8 @@
     "Session 001 update: bỏ Update FR-17 theo chỉ đạo user vì SUT không hỗ trợ; scope Create/Read/Delete.",
     "Tài liệu nộp và Git root đặt tại submission/. Mock cart setup cần bridge CartContext vì frontend không fetch /api/cart.",
     "Kết Session 001: user xác nhận HW02/group uniqueness; FR-09 mock hoàn toàn bằng page.route(), thay thế backend thật ở thiết kế trước; phạm vi evidence chỉ UI với API giả lập.",
-    "Session 002: user chấp nhận FR-02-TC01–TC12; bổ sung TC13 che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế; FR-09/FR-17 giữ 12 mỗi feature."
+    "Session 002: user chấp nhận FR-02-TC01–TC12; bổ sung TC13 che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế; FR-09/FR-17 giữ 12 mỗi feature.",
+    "Session 002 REQ-03: 12 cases cũ được chấp nhận, thêm 6 cases; TC18 chờ chính sách cap/reject. Tổng 44 records, 43 DESIGNED và 1 pending. REQ-03 giữ IN PROGRESS."
   ],
   "requirements": [
     {
@@ -43,12 +44,13 @@
     {
       "id": 3,
       "name": "FR-09 scope",
-      "description": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md.",
-      "expected_output": "Scope + ít nhất 12 test cases FR-09",
+      "description": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0.",
+      "expected_output": "Scope + 18 cases FR-09 (17 DESIGNED, 1 chờ chính sách); review mapping tài liệu tham khảo",
       "source": "User Session 01; eshop-sut/README.md FR-09",
       "mandatory": true,
-      "acceptance_criteria": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md.",
-      "status": "IN PROGRESS"
+      "acceptance_criteria": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0.",
+      "status": "IN PROGRESS",
+      "evidence": "test-cases.json; fr09-case-review.md. TC18 và các đề xuất mở rộng chờ xác nhận, chưa chạy automation."
     },
     {
       "id": 4,

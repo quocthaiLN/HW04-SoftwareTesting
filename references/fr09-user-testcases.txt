@@ -1,0 +1,1594 @@
+est Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+Đánh giá
+(Pass /
+Fail)
+TC_CP_EP_01
+Áp dụng
+EC_CP_01, code =
+User
+- HTTP
+- HTTP
+Fail
+thành
+EC_CP_08, "SAVE10"total_amount
+test@eshop.com
+200 OK-
+200 OK-
+công mã
+EC_CP_10, =
+đã đăng
+dis-
+dis-
+giảm theo EC_CP_14, 30,000,000 nhập,
+user_id
+giỏ
+count_amount
+count_amount
+%
+EC_CP_16, = 2
+hàng có 1
+=-
+=
+(percent) EC_CP_19,
+iPhone 15
+3,000,000 270,000,000
+lần đầu
+EC_CP_22,OUT_CP_02, Pro Max
+₫ (0 <
+₫ (bị âm
+tiên
+OUT_CP_07,
+(30 tr),
+𝐷 < 𝑀 )- do
+(Nominal
+OUT_CP_10,
+chưa từng
+backend
+fi-
+Valid)
+OUT_CP_17,
+dùng mã
+tính to-
+nal_amount
+OUT_CP_20
+SAVE10 =
+tal_amount
+(𝑈𝑢𝑠𝑒𝑑 =
+27,000,000 * (1 -
+0)
+₫ (𝐹 > 0)- coupon.discount_value
+UI: Banner thay vì
+chia 100)-
+xanh “Áp
+fi-
+dụng
+nal_amount
+thành
+=
+công!
+300,000,000
+Giảm
+₫ (bị đội
+10%”,
+lên gấp 10
+Tổng
+lần)- UI:
+thanh
+Banner
+toán:
+xanh “Áp
+27,000,000
+dụng
+₫
+thành
+công!
+Giảm
+10%”, Tiết
+kiệm: -
+270,000,000
+₫, Thành
+tiền:
+300,000,000
+₫, Tổng
+thanh
+toán:
+300,000,000
+₫
+13Test Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_02
+Áp dụng
+thành
+công mã
+giảm số
+tiền cố
+định
+(fixed)
+lần đầu
+tiên
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+User đã
+Đúng như
+EC_CP_01, code =
+- HTTP
+đăng
+kỳ vọng
+EC_CP_08, "BIG-
+200 OK-
+nhập,
+EC_CP_10, BUY"total_amount
+dis-
+chưa dùng count_amount
+EC_CP_14, =
+user_id = 50,000
+EC_CP_16, 30,000,000 mã
+EC_CP_20,OUT_CP_02,
+=2
+BIGBUY, ₫ (0 <
+OUT_CP_07,
+đơn hàng
+𝐷 < 𝑀 )-
+OUT_CP_10,
+30 triệu (> fi-
+OUT_CP_17,
+500k)
+nal_amount
+OUT_CP_20
+=
+29,950,000
+₫ (𝐹 > 0)-
+UI: Banner
+xanh “Áp
+dụng
+thành
+công!
+Giảm
+50,000 ₫”,
+Tổng
+thanh
+toán:
+Đánh giá
+(Pass /
+Fail)
+Pass
+29,950,000
+₫ (Khớp
+TC_CP_EP_03
+Áp dụng
+thành
+công mã
+có giới
+hạn 2 lần
+ở lần sử
+dụng thứ
+2 (0 <
+𝑈𝑢𝑠𝑒𝑑 <
+𝑈𝑚𝑎𝑥 )
+ảnh minh
+họa)
+Đúng như
+- HTTP
+User đã
+EC_CP_01, code =
+kỳ vọng
+200 OK-
+đăng
+"VIP100"total_amount
+EC_CP_08,
+dis-
+nhập, đã
+EC_CP_10, =
+count_amount
+dùng mã
+EC_CP_14, 1,000,000user_id
+VIP100 = 100,000
+EC_CP_17, = 2
+EC_CP_20,OUT_CP_02, đúng 1 lần ₫- fi-
+nal_amount
+trước đó
+OUT_CP_07,
+= 900,000
+(𝑈𝑢𝑠𝑒𝑑 =
+OUT_CP_10,
+1, 𝑈𝑚𝑎𝑥 = ₫- Cho
+OUT_CP_17,
+2)
+phép áp
+OUT_CP_20
+dụng hợp
+lệ lần 2
+14
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+TC_CP_EP_04
+Áp dụng
+EC_CP_01, code =
+Đơn hàng
+- HTTP
+- HTTP
+thành
+EC_CP_08,
+"SAVE10"total_amount
+có
+tổng
+200 OK-
+400 Bad
+công mã
+EC_CP_11, =
+tiền đúng
+dis-
+Request
+khi tổng
+EC_CP_14, 300,000user_id
+300,000 ₫ count_amount
+(thay vì
+đơn hàng
+EC_CP_16, = 2
+(𝑚𝑖𝑛_𝑜𝑟𝑑𝑒𝑟_=
+𝑎𝑚𝑜𝑢𝑛𝑡
+30,000 = HTTP 200
+vừa đúng
+EC_CP_19,OUT_CP_02, 300, 000
+₫ (10%)-
+OK)- Body:
+bằng
+OUT_CP_07,
+₫), user
+fi-
+{
+ngưỡng
+OUT_CP_10,
+chưa dùng nal_amount
+error:
+tối thiểu
+OUT_CP_17,
+mã
+= 270,000 "Đơn
+(𝑀 =
+OUT_CP_20
+₫(Tuân
+hàng
+𝑚𝑖𝑛_𝑜𝑟𝑑𝑒𝑟_𝑎𝑚𝑜𝑢𝑛𝑡)
+thủ đặc tả chưa
+C3: 𝑀 ≥
+đủ giá
+𝑚𝑖𝑛_𝑜𝑟𝑑𝑒𝑟) trị
+Đánh giá
+(Pass /
+Fail)
+Fail
+tối
+thiểu
+300,000
+₫ để áp
+dụng
+mã
+này" }-
+Không áp
+dụng được
+mã do
+backend
+dùng toán
+tử > thay
+vì >=
+(total_amount
+>
+coupon.min_order_amou
+dis-
+count_amount
+TC_CP_EP_05
+Từ chối áp
+dụng do
+mã giảm
+giá không
+tồn tại
+trong hệ
+thống
+EC_CP_02, code =
+User đã
+- HTTP
+EC_CP_08, "IN-
+đăng
+404 Not
+EC_CP_10, VALID99"total_amount
+nhập,
+Found-
+EC_CP_14, =
+nhập mã
+Body: {
+EC_CP_16,OUT_CP_01,
+30,000,000 không
+user_id
+có
+error:
+OUT_CP_15,= 2
+trong
+"Mã
+OUT_CP_18,
+CSDL
+giảm
+OUT_CP_20
+giá
+= 0 ₫, UI
+báo lỗi đỏ
+Đúng như
+kỳ vọng
+không
+tồn
+tại
+hoặc
+đã bị
+vô
+hiệu
+hóa" }-
+dis-
+count_amount
+= 0 ₫, UI
+báo lỗi đỏ
+15
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+- HTTP
+Mã
+TC_CP_EP_06
+Từ chối áp EC_CP_03, code =
+EC_CP_08, "INAC-
+INAC-
+404 Not
+dụng do
+EC_CP_10, TIVE50"total_amount
+TIVE50 Found-
+mã đã bị
+Body: {
+Admin vô
+EC_CP_14, =
+có trong
+hiệu hóa
+EC_CP_16,OUT_CP_01,
+30,000,000 DB
+user_id
+nhưng
+error:
+𝑖𝑠_𝑎𝑐𝑡𝑖𝑣𝑒 = "Mã
+(𝑖𝑠_𝑎𝑐𝑡𝑖𝑣𝑒 =OUT_CP_15,= 2
+0)
+OUT_CP_18,
+0
+giảm
+giá
+OUT_CP_20
+Kết quả
+thực tế
+(Actual
+Result)
+Đúng như
+kỳ vọng
+Đánh giá
+(Pass /
+Fail)
+Pass
+không
+tồn
+tại
+hoặc
+đã bị
+vô
+hiệu
+hóa" }-
+dis-
+count_amount
+TC_CP_EP_07
+Từ chối áp
+dụng do
+để trống
+mã giảm
+giá gửi tới
+API
+Gửi
+code =
+EC_CP_04,OUT_CP_01,
+request
+OUT_CP_14,""total_amount
+API không
+OUT_CP_18,=
+mã
+user_id
+OUT_CP_20 30,000,000 truyền
+code
+=2
+16
+= 0 ₫, giữ
+nguyên
+tổng tiền
+- HTTP
+400 Bad
+Request-
+Body: {
+error:
+"Vui
+lòng
+nhập
+mã
+giảm
+giá" }
+Đúng như
+kỳ vọng
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_08
+Từ chối áp
+dụng do
+mã chỉ
+chứa các
+ký tự
+khoảng
+trắng gửi
+tới API
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+code = " Gửi
+EC_CP_05,OUT_CP_01,
+OUT_CP_14,"total_amount
+request
+OUT_CP_18,=
+API chứa
+OUT_CP_20 30,000,000 chuỗi
+user_id
+toàn
+=2
+khoảng
+trắng
+Kết quả kỳ
+vọng
+(Expected
+Output)Kết quả
+thực tế
+(Actual
+Result)
+- HTTP
+400 Bad
+Request-
+Body: {- HTTP
+404 Not
+Found
+(thay vì
+HTTP 400
+Bad
+Request)-
+Body: {
+error:
+"Vui
+lòng
+nhập
+mã
+giảm
+giá" }
+Đánh giá
+(Pass /
+Fail)
+Fail
+error:
+"Mã
+giảm
+giá
+không
+tồn
+tại
+hoặc
+đã bị
+vô
+hiệu
+hóa" }
+(do
+backend
+không
+trim()
+khoảng
+trắng
+chuỗi
+code,
+truy vấn
+CSDL tìm
+kiếm mã
+"
+TC_CP_EP_09
+Từ chối áp
+dụng do
+mã giảm
+giá đã quá
+hạn sử
+dụng
+(𝑇𝑛𝑜𝑤 >
+𝑇𝑒𝑥𝑝 )
+Mã EX-
+- HTTP
+EC_CP_09, code =
+400 Bad
+PIRED
+EC_CP_01, "EX-
+Request-
+EC_CP_10, PIRED"total_amount
+có hạn
+dùng
+Body: {
+EC_CP_14, =
+2020-
+error:
+EC_CP_16,OUT_CP_01,
+30,000,000user_id
+01-01
+"Mã
+OUT_CP_12,= 2
+(quá khứ)
+giảm
+OUT_CP_18,
+giá đã
+OUT_CP_20
+hết
+hạn" }-
+dis-
+count_amount
+= 0 ₫, UI
+hiển thị lỗi
+đỏ
+17
+"
+không
+thấy)
+Đúng như
+kỳ vọng
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+TC_CP_EP_10
+Từ chối áp EC_CP_12, code =
+Tổng đơn
+- HTTP
+dụng do
+EC_CP_01,
+"SAVE10"total_amount
+hàng
+400 Bad
+đơn hàng
+EC_CP_08, =
+250,000 ₫ Request-
+chưa đạt
+EC_CP_14, 250,000user_id
+(nhỏ hơn
+Body: {
+giá trị tối
+EC_CP_16,OUT_CP_01,
+=2
+ngưỡng
+error:
+thiểu
+OUT_CP_11,
+300,000 ₫ "Đơn
+(𝑀 <
+OUT_CP_18,
+của
+hàng
+𝑚𝑖𝑛_𝑜𝑟𝑑𝑒𝑟_𝑎𝑚𝑜𝑢𝑛𝑡
+OUT_CP_20
+)
+SAVE10) chưa
+Kết quả
+thực tế
+(Actual
+Result)
+Đúng như
+kỳ vọng
+Đánh giá
+(Pass /
+Fail)
+Pass
+đủ giá
+trị
+tối
+thiểu
+300,000
+₫ để áp
+dụng
+mã
+này" }-
+dis-
+count_amount
+TC_CP_EP_11
+Từ chối áp
+dụng do
+tổng đơn
+hàng bằng
+0 hoặc âm
+= 0 ₫, UI
+báo lỗi đỏ
+Giỏ hàng
+- HTTP
+EC_CP_13, code =
+rỗng
+hoặc
+400 Bad
+"SAVE10"total_amount
+EC_CP_01,
+đơn hàng
+Request-
+EC_CP_08, =
+Từ chối do
+EC_CP_14, 0user_id có giá trị
+𝑀 =0
+0<
+=2
+EC_CP_16,OUT_CP_01,
+300, 000
+OUT_CP_11,
+₫; 𝐷 = 0
+OUT_CP_18,
+₫
+OUT_CP_20
+18
+Đúng như
+kỳ vọng
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_12
+Từ chối áp
+dụng do
+người
+dùng chưa
+đăng nhập
+tài khoản
+(C4)
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Khách
+- Hệ thống
+EC_CP_15, code =
+EC_CP_01,
+"SAVE10"total_amount
+vãng
+lai
+từ chối áp
+chưa đăng dụng mã
+EC_CP_08, =
+30,000,000 nhập,
+user_id hoặc
+EC_CP_10,OUT_CP_01,
+chuyển
+OUT_CP_16,= null
+không có
+OUT_CP_18,
+JWT Token
+hướng yêu
+cầu đăng
+OUT_CP_20
+nhập
+trước khi
+checkout
+Kết quả
+thực tế
+(Actual
+Result)
+Đánh giá
+(Pass /
+Fail)
+- Hệ thống Fail
+không từ
+chối áp
+dụng và
+không
+chuyển
+hướng
+đăng
+nhập-
+Backend
+trả về
+HTTP 200
+OK và vẫn
+cho phép
+áp dụng
+mã cho
+khách
+vãng lai
+(user_id
+= null)
+do API
+/api/apply-
+coupon
+TC_CP_EP_13
+Từ chối áp
+dụng do
+người
+dùng đã
+sử dụng
+hết số lượt
+quy định
+(𝑈𝑢𝑠𝑒𝑑 ≥
+𝑈𝑚𝑎𝑥 )
+EC_CP_18, code =
+User
+- HTTP
+EC_CP_01, "SAVE10"total_amount
+test@eshop.com
+400 Bad
+EC_CP_08, =
+đã từng
+Request-
+EC_CP_10, 30,000,000 đặt
+user_id
+đơn và Body: {
+EC_CP_14,OUT_CP_01,
+dùng mã
+=2
+error:
+OUT_CP_13,
+SAVE10 "Bạn
+OUT_CP_18,
+1 lần trước đã sử
+OUT_CP_20
+đó
+dụng
+(𝑈𝑢𝑠𝑒𝑑 =
+mã này
+1, 𝑈𝑚𝑎𝑥 = 1 lần
+1)
+(đã
+đạt
+giới
+hạn)"
+}- 𝐷 = 0
+₫; UI báo
+lỗi đỏ
+(Khớp ảnh
+minh họa)
+19
+không yêu
+cầu xác
+thực JWT-
+UI hiển thị
+thông tin
+áp dụng
+mã thành
+công cho
+khách
+chưa đăng
+nhập
+Đúng như
+kỳ vọng
+PassTest Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_14
+Tự động
+chuẩn hóa
+chữ in hoa
+khi người
+dùng
+nhập chữ
+thường
+trên giao
+diện Web
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Trạng thái
+ban đầu
+(Setup /
+Given)Kết quả kỳ
+vọng
+(Expected
+Output)
+EC_CP_06, Người
+Trang
+EC_CP_01, dùng gõ:
+/check-
+EC_CP_08, "save10" out, User
+EC_CP_10, trên ô
+đã đăng
+EC_CP_14, input UI
+nhập
+EC_CP_16,OUT_CP_02,
+OUT_CP_07,
+OUT_CP_10,
+OUT_CP_17- UI tự
+động biến
+đổi thành
+Đầu vào
+cụ thể
+(Inputs)
+Kết quả
+thực tế
+(Actual
+Result)
+Đánh giá
+(Pass /
+Fail)
+Fail
+- Ô input
+trên UI
+không tự
+"SAVE10" động biến
+đổi thành
+trong ô
+input và
+"SAVE10"
+trong
+(state
+request
+coupon-
+payload
+Code vẫn
+gửi đi- Áp
+lưu chữ
+thường
+dụng
+thành
+"save10",
+công
+chỉ hiển
+thị trực
+quan qua
+CSS
+upper-
+case),
+request
+payload
+gửi đi có
+biến đổi
+thành
+"SAVE10"-
+Áp dụng
+không
+thành
+công như
+kỳ vọng
+do
+backend
+tính mã %
+ra số tiền
+giảm âm
+(discount_amount
+= -
+270,000,000
+₫, fi-
+nal_amount
+=
+300,000,000
+₫)
+20Test Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_15
+Tự động
+cắt bỏ
+khoảng
+trắng thừa
+đầu/cuối
+khi nhập
+mã trên UI
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+EC_CP_07, Người
+EC_CP_01, dùng gõ:
+EC_CP_08, "
+EC_CP_10, BIGBUY
+EC_CP_14, " trên ô
+EC_CP_16,OUT_CP_02,
+input UI
+OUT_CP_07,
+OUT_CP_10,
+OUT_CP_17
+Trạng thái
+ban đầu
+(Setup /
+Given)Kết quả kỳ
+vọng
+(Expected
+Output)Kết quả
+thực tế
+(Actual
+Result)
+Trang- UI tự
+động trim
+chuỗi
+thành- Ô input
+trên UI
+không tự
+động trim
+khoảng
+trắng
+(state
+/check-
+out, User
+đã đăng
+nhập
+"BIG-
+BUY"- Áp
+dụng
+thành
+công giảm
+50,000 ₫
+Đánh giá
+(Pass /
+Fail)
+Fail
+coupon-
+Code vẫn
+giữ
+nguyên
+chuỗi "
+BIGBUY
+"), nhưng
+UI đã tự
+động trim
+thành
+"BIG-
+BUY"
+trong
+request
+payload
+gửi đi- Áp
+dụng
+thành
+công giảm
+50,000 ₫
+(HTTP 200
+OK, dis-
+count_amount
+= 50,000
+₫, fi-
+nal_amount
+=
+29,950,000
+₫)(Ghi
+chú: Nếu
+tiêu chí
+chỉ tính
+việc UI
+trim dữ
+liệu trước
+khi gửi API
+theo Giả
+định 1.3
+thì Pass;
+nếu yêu
+cầu cập
+nhật lại
+hiển thị
+trong ô
+input thì
+Fail — cần
+kiểm thử
+tay)
+21Test Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+TC_CP_EP_16
+Kiểm tra
+trạng thái
+vô hiệu
+hóa
+(Disabled)
+của nút
+“Áp dụng”
+khi ô input
+rỗng trên
+UIEC_CP_21
+Khảo sát
+nút “Áp
+dụng” khi
+ô mã rỗng
+TC_CP_EP_17
+Kiểm tra
+ghi nhận
+lịch sử sử
+dụng vào
+CSDL sau
+khi Xác
+Nhận
+Thanh
+Toán
+thành
+côngEC_CP_01,OUT_CP_19
+Bấm nút
+“Xác Nhận
+Thanh
+Toán” sau
+khi đã áp
+dụng mã
+Trạng thái
+ban đầu
+(Setup /
+Given)Kết quả kỳ
+vọng
+(Expected
+Output)Kết quả
+thực tế
+(Actual
+Result)Mở trang- Nút “Áp
+dụng” có
+thuộc tínhĐúng như
+kỳ vọngPass
+Đúng như
+kỳ vọngPass
+/check-
+out ban
+đầu
+Đơn hàng
+áp dụng
+mã thành
+công trên
+UI
+BIGBUY
+Đánh giá
+(Pass /
+Fail)
+dis-
+abled-
+Nút mờ
+(opacity
+50%),
+không thể
+click
+(Khớp ảnh
+minh họa)
+- Gọi API
+POST
+/api/coupon-
+usage-
+Thêm 1
+bản ghi
+mới vào
+bảng
+coupon_usage
+với
+coupon_id
+và
+user_id-
+TC_CP_EP_18
+Kiểm tra
+tính bất
+biến
+(Read-
+only) của
+trường
+“Tổng tiền
+thanh
+toán” trên
+UI
+EC_CP_23
+Khảo sát
+thẻ <in-
+put>
+Mở trang
+/check-
+out
+Tổng tiền
+thanh
+toán trên
+UI
+Hiển thị
+màn hình
+“Thanh
+toán
+thành
+công!”
+- Trường
+tổng tiền
+phải ở chế
+độ
+read-
+only
+hoặc
+dis-
+abled,
+không cho
+phép
+người
+dùng sửa
+giá trị đơn
+hàng
+(Ràng
+buộc
+FR-08)
+22
+- Trường
+tổng tiền
+là thẻ
+Fail
+<input
+type="number">
+thông
+thường,
+không có
+thuộc tính
+read-
+Only
+hoặc
+dis-
+abled-
+Người
+dùng có
+thể tự do
+chỉnh sửa
+tùy ý giá
+trị tổng
+tiền thanh
+toán
+(editableTotal)Test Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_19
+Kiểm tra
+số tiền
+được giảm
+bằng
+100% giá
+trị đơn
+hàng
+(𝐷 = 𝑀 )
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+EC_CP_01, code =
+Thiết lập
+- HTTP
+- HTTP
+EC_CP_08,
+"VIP100"total_amount
+đơn
+hàng
+200 OK-
+400 Bad
+EC_CP_11, =
+thử
+dis-
+Request
+EC_CP_14, 100,000user_id
+nghiệm
+count_amount
+(thay vì
+EC_CP_16, = 2
+đúng
+= 100,000 HTTP 200
+EC_CP_20,OUT_CP_03, 100,000 ₫ ₫
+OK)- Body:
+OUT_CP_08,
+(với mã
+(𝐷 = 𝑀 )- {
+OUT_CP_10,
+giảm cố
+fi-
+error:
+OUT_CP_17
+định
+nal_amount
+"Đơn
+100,000
+=0₫
+hàng
+₫)
+(𝐹 = 0)-
+chưa
+Đơn hàng
+đủ giá
+được miễn trị
+phí thanh
+tối
+toán hoàn thiểu
+toàn
+300,000
+Đánh giá
+(Pass /
+Fail)
+Fail
+₫ để áp
+dụng
+mã
+này" }
+(do mã
+VIP100
+trong
+CSDL có
+min_order_amount
+=
+300,000
+₫ trong
+khi đơn
+hàng là
+100,000
+₫)- Đơn
+hàng
+không
+được giảm
+giá
+(discount_amount
+= 0 ₫)
+23Test Case
+ID
+Mục tiêu
+kiểm thử
+TC_CP_EP_20
+Kiểm tra
+số tiền
+giảm danh
+định vượt
+quá tổng
+đơn hàng
+(𝐷 > 𝑀 )
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+- HTTP
+EC_CP_01, code =
+Giả lập
+- HTTP
+EC_CP_08,
+"VIP100"total_amount
+đơn
+hàng
+200 OK-
+400 Bad
+EC_CP_14, =
+80,000 ₫
+Số tiền
+Request
+EC_CP_16, 80,000user_id
+áp mã
+giảm thực (thay vì
+EC_CP_20,OUT_CP_04,
+=2
+giảm
+tế bị chặn
+HTTP 200
+OUT_CP_08,
+100,000 ₫ trần:
+OK)- Body:
+OUT_CP_10,
+dis-
+{
+OUT_CP_17
+count_amount
+error:
+= 80,000
+"Đơn
+₫
+hàng
+(𝐷 = 𝑀 )- chưa
+Đánh giá
+(Pass /
+Fail)
+Fail
+fi-
+đủ giá
+nal_amount
+trị
+=0₫
+tối
+(𝐹 = 0)-
+thiểu
+Tuyệt đối
+300,000
+không để
+₫ để áp
+fina
+dụng
+l_amount mã
+ra số âm
+này" }
+(-20,000
+₫)
+(do đơn
+80,000 ₫ <
+min_order_amount
+=
+300,000
+₫ của
+VIP100)-
+Mã nguồn
+backend
+không có
+logic chặn
+trần số
+tiền giảm
+(discount_amount
+=
+coupon.discount_value
+không gán
+𝐷=𝑀
+khi
+𝐷 > 𝑀 ),
+nếu bỏ
+qua
+min_order
+thì fi-
+nal_amount
+sẽ bị âm
+(80,000
+-
+100,000
+= -
+20,000
+₫)
+24Test Case
+ID
+Mục tiêu
+kiểm thử
+Các phân
+hoạch bao
+phủ (Input
+& Output
+ECs)
+Đầu vào
+cụ thể
+(Inputs)
+Trạng thái
+ban đầu
+(Setup /
+Given)
+Kết quả kỳ
+vọng
+(Expected
+Output)
+Kết quả
+thực tế
+(Actual
+Result)
+Đánh giá
+(Pass /
+Fail)
+TC_CP_EP_21
+Kiểm tra
+- HTTP
+EC_CP_01, code =
+Đơn hàng
+- HTTP
+Fail
+làm tròn
+200 OK-
+EC_CP_08,
+"SAVE10"total_amount
+có
+giá trị
+200 OK-
+số nguyên EC_CP_10, =
+dis-
+số tiền lẻ
+dis-
+(Math.floor)
+count_amount
+EC_CP_14, 333,333user_id
+chia 10 ra
+count_amount
+đối với số
+= 33,333
+EC_CP_16, = 2
+số thập
+=
+tiền giảm
+EC_CP_19,OUT_CP_06, phân:
+₫ (làm
+-2,999,997
+có phần lẻ OUT_CP_07,
+333, 333× tròn
+₫ (bị âm
+thập phân OUT_CP_10,
+10% =
+xuống số
+do công
+OUT_CP_17
+33, 333.3 nguyên
+thức sai
+₫
+nhỏ hơn
+Math.floor(333333
+qua
+* (1 -
+Math.floor
+)-
+10))
+thay vì
+fi-
+chia 100)-
+nal_amount
+fi-
+= 300,000 nal_amount
+₫- Đảm
+bảo toàn
+bộ số tiền
+là số
+nguyên
+VND
+=
+3,333,330
+₫ (bị đội
+lên thay vì
+còn
+300,000
+₫)- Không
+làm tròn
+giảm giá
+theo tỷ lệ
+10% như
+kỳ vọng

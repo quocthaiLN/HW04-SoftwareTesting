@@ -561,6 +561,138 @@
       "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
     },
     {
+      "id": "FR-09-TC13",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Mã coupon trống",
+      "precondition": "Cart=500000; user mock hợp lệ; context mới",
+      "steps": "Để code rỗng; quan sát nút Áp dụng",
+      "expected": "Nút disabled; không POST apply-coupon; tổng tiền giữ 500000; không kết quả thành công",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC14",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Mã chỉ chứa khoảng trắng",
+      "precondition": "Cart=500000; user mock hợp lệ",
+      "steps": "Nhập ba dấu cách vào code",
+      "expected": "Nút disabled; không POST apply-coupon; tổng tiền giữ 500000",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC15",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Chuẩn hóa mã chữ thường trong request",
+      "precondition": "Coupon fixed BIGBUY=50000, min=300000; total=500000; auth mock hợp lệ",
+      "steps": "Nhập bigbuy; Áp dụng; kiểm tra payload và UI",
+      "expected": "Request code=BIGBUY; fixture success discount=50000, final=450000; UI hiển thị đúng; không yêu cầu đổi DOM input value",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC16",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Trim khoảng trắng đầu/cuối trong request",
+      "precondition": "Coupon fixed BIGBUY=50000, min=300000; total=500000; auth mock hợp lệ",
+      "steps": "Nhập \"  BIGBUY  \"; Áp dụng; kiểm tra payload và UI",
+      "expected": "Request code=BIGBUY; fixture success discount=50000, final=450000; UI hiển thị đúng; không yêu cầu đổi DOM input value",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC17",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Giảm đúng bằng tổng đơn hàng",
+      "precondition": "Coupon fixed FREE100=100000; min=0; total=100000; active, future, còn lượt; auth mock hợp lệ",
+      "steps": "Áp dụng coupon; mock success discount_amount=100000, final_amount=0",
+      "expected": "UI Tiết kiệm=100000, Thành tiền=0, Tổng thanh toán=0; không checkout",
+      "status": "DESIGNED",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
+      "id": "FR-09-TC18",
+      "feature": "FR-09",
+      "requirement_ids": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "title": "Tiền sau áp dụng không âm khi giảm vượt tổng",
+      "precondition": "Coupon fixed OVER100=100000; min=0; total=80000; active, future, còn lượt; auth mock hợp lệ",
+      "steps": "Áp dụng coupon; thiết kế fixture theo chính sách cần xác nhận trong fr09-case-review.md",
+      "expected": "Bất biến bắt buộc: không hiển thị final_amount hoặc Tổng thanh toán âm như kết quả áp dụng thành công. Oracle cụ thể (cap về 0 hoặc từ chối) và fixture chờ user xác nhận",
+      "status": "PENDING POLICY CONFIRMATION",
+      "browsers": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion"
+    },
+    {
       "id": "FR-17-TC01",
       "feature": "FR-17",
       "requirement_ids": [

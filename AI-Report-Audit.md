@@ -50,3 +50,21 @@
 - AI output: |
     Tool: OpenAI Codex. Giữ nguyên FR-02-TC01–TC12; bổ sung TC13 kiểm tra che mật khẩu và TC14 nhận diện trang Đăng nhập. Tổng 38 cases thiết kế: 14/12/12; dự kiến 114 executions. Cập nhật scope, checklist, README và Session 002 progress. REQ-02 DONE chỉ ở mức scope/thiết kế, automation chưa thực hiện.
     Static review Login.jsx thấy heading Đăng Ký và password type=text; chưa chạy runtime, chưa tuyên bố bug được xác nhận. JSON/traceability và so sánh 12 cases cũ được xác minh. Requirements 3/4 vẫn chờ bước review tiếp theo của cùng session. Commit thiết kế không tính vào >=8 test-script commits.
+
+- Date and time: 2026-11-13T00:03:50+07:00 (thời điểm ghi audit cho chuỗi trao đổi)
+- User prompt: |
+    Session 2: Requirement 3 — Chap nhan 12 test case hien tai; Bo sung: de trong coupons, coupon chua khoan trang, gia tien duoc giam khong < 0
+- AI output: |
+    Tool: OpenAI Codex. Đã kiểm tra source; diễn giải ban đầu discount_amount >=0; chưa sửa file trước khi bị ngắt.
+
+- Date and time: 2026-11-13T00:03:50+07:00 (thời điểm ghi audit cho chuỗi trao đổi)
+- User prompt: |
+    Session 2: Requirement 3 — Chap nhan 12 test case hien tai; Bo sung: de trong coupons, coupon chua khoan trang, gia tien sau khi ap dung khong < 0
+- AI output: |
+    Tool: OpenAI Codex. Đã sửa diễn giải thành final_amount >=0 theo user. Chưa sửa file trước khi bị ngắt.
+
+- Date and time: 2026-11-13T00:03:50+07:00 (thời điểm ghi audit cho chuỗi trao đổi)
+- User prompt: |
+    Session 2: Requirment 3 — Chap nhan 12 testcase hien tai; Tham khao danh sach testcase sau va bo sung nhung edge case chua co, dong thoi dua ra nhung testcase can xem xet va xac nhan. Tệp đính kèm được lưu nguyên văn tại references/fr09-user-testcases.txt.
+- AI output: |
+    Tool: OpenAI Codex. Đã giữ 12 cases, thêm TC13–TC18; TC18 chờ cap/reject. Mapping 21 cases nguồn và Q1–Q6 tại fr09-case-review.md; 44 records toàn suite, 43 DESIGNED và 1 pending. Cập nhật checklist/progress/scope/README; REQ-03 IN PROGRESS. Kiểm tra JSON, IDs, browser targets và giữ nguyên 38 cases cũ; chưa chạy runtime. Kết quả nguồn không dùng làm evidence suite. Commit thiết kế và export log; docs/data không tính vào 8 test-script commits.
