@@ -1,7 +1,7 @@
 const { test, expect } = require('./fixtures/real-sut');
 const { LoginPage } = require('./pages/login');
 const { read, shared, unique, resolveTemplate } = require('./helpers/data');
-for (const record of read('fr02').filter(r => ['success','wrong','missing','empty-email','empty-password','format','mask','heading'].includes(r.scenario))) {
+for (const record of read('fr02')) {
   test(`${record.id} ${record.scenario}`, async ({ page, db, testUser }) => {
     const login = new LoginPage(page);
     const requests = [];
@@ -37,6 +37,45 @@ for (const record of read('fr02').filter(r => ['success','wrong','missing','empt
       await expect.soft(login.email).toBeVisible();
       await expect.soft(login.password).toBeVisible();
       await expect(page.getByRole('heading', { name: new RegExp(shared.expected.loginHeading, 'i'), exact: true })).toBeVisible();
+    } else if (['two-then-success','lock','lock-deadline','unlock','reset','jwt'].includes(scenario)) {
+      const attempts = scenario === 'two-then-success' ? shared.expected.two : (['reset','jwt'].includes(scenario) ? (scenario === 'reset' ? shared.expected.one : shared.expected.zero) : shared.expected.threshold);
+      for (let i = 0; i < attempts; i++) {
+        const response = await login.login(testUser.email, shared.wrongPassword);
+        expect(shared.expected.failureStatus).toContain(response.status());
+        await expect(page.getByText(shared.expected.error, { exact: true })).toBeVisible();
+      }
+      const thirdAttemptAt = Date.now();
+      const before = await db.get('SELECT login_attempts,locked_until FROM users WHERE id=?', [testUser.id]);
+      await test.info().attach('lock-state-before', { body: JSON.stringify({ ...before, observedAt: new Date(thirdAttemptAt).toISOString() }), contentType: 'application/json' });
+      if (scenario === 'unlock') {
+        // Real backend time: a specific business deadline, not a UI stabilization sleep.
+        await new Promise(resolve => setTimeout(resolve, Math.max(shared.expected.zero, thirdAttemptAt + shared.expected.unlockWaitMs - Date.now())));
+      }
+      const response = await login.login(testUser.email, testUser.password);
+      if (scenario === 'lock' || scenario === 'lock-deadline') {
+        expect(shared.expected.unauthorizedStatus).toContain(response.status());
+        await expect(page.getByText(shared.expected.error, { exact: true })).toBeVisible();
+        expect(await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey)).toBe(shared.null);
+        const after = await db.get('SELECT login_attempts,locked_until FROM users WHERE id=?', [testUser.id]);
+        expect.soft(after.locked_until).toBe(before.locked_until);
+        // Allow request/SQLite scheduling jitter, without accepting a different duration policy.
+        expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+      } else {
+        expect(response.status()).toBe(shared.expected.successStatus);
+        await expect(page).toHaveURL('/');
+        await expect(page.getByRole('link', { name: new RegExp(testUser.name) })).toBeVisible();
+        if (scenario === 'reset') {
+          await expect.poll(() => db.get('SELECT login_attempts,locked_until FROM users WHERE id=?', [testUser.id])).toEqual({ login_attempts: shared.expected.zero, locked_until: shared.null });
+        }
+        if (scenario === 'jwt') {
+          const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);
+          const requestPromise = page.waitForRequest(r => new URL(r.url()).pathname === '/api/users/me');
+          await page.reload();
+          const request = await requestPromise;
+          expect(request.headers().authorization).toBe(`Bearer ${token}`);
+          await expect(page.getByRole('link', { name: new RegExp(testUser.name) })).toBeVisible();
+        }
+      }
     } else throw new Error(`Unimplemented scenario: ${scenario}`);
   });
 }
