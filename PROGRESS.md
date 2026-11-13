@@ -146,3 +146,12 @@
 - Files or artifacts updated: session-004-summary.md, session-004-review.md, requirements-list.json, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: Human review toàn bộ và các deliverables cuối còn chờ; scope UI mock/permission UI giữ nguyên.
 - Next best step: Tiếp tục review/gap analysis còn lại của REQ-11.
+
+### Chốt REQ-11 — Session 004
+- Date: 2026-11-13T16:50:15+07:00.
+- Goal: Ghi nhận xác nhận human review còn lại của sinh viên.
+- Completed: Sinh viên đồng ý selectors/assertions/waits/missing cases/gap analysis và xác nhận đã bổ sung ở testcase design. Kết hợp refactor đã chấp nhận, REQ-11 DONE. Trạng thái IN PROGRESS trước đó là lịch sử.
+- Verification run: Đối chiếu xác nhận user với test-cases.json và review notes; không thay đổi/chạy lại tests. Evidence hồi quy150pass54fail0skip giữ nguyên.
+- Files or artifacts updated: checklist, session-004-review.md, session-004-summary.md, audit/progress và Git log.
+- Known risk or unresolved issue: Coverage FR09 mocked/permission UI giữ nguyên; các requirements khác không tự chuyển DONE.
+- Next best step: Tiếp tục các deliverables báo cáo/publication còn lại theo checklist.

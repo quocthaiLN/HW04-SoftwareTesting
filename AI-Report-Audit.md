@@ -169,3 +169,15 @@
     Dong y voi chinh sua nay, tong ket session 4
 - AI output: |
     Tool: OpenAI Codex. Ghi nhận sinh viên đồng ý refactor Conditional Test Logic; tổng kết Session004 trong session-004-summary.md và cập nhật review/progress/checklist. Hạng mục sửa đã được chấp nhận; REQ11 tổng thể IN PROGRESS vì chưa xác nhận review mọi output. Kết quả đã chạy:68cases204executions150pass54fail0skip,204 ID/browser keys khớp baseline0status differences. Không chạy tests lại; giữ evidence Session003/004 riêng, source/data SUT và thay đổi sinh viên. Xuất Git log và commit docs-only. Các bước report/publication/PDF/video/đóng gói còn chờ.
+
+- Date and time: 2026-11-13T16:50:15+07:00
+- User prompt: |
+    Hoan thanh requirement nay chua?
+- AI output: |
+    Tool: OpenAI Codex. Trả lời REQ-11 còn IN PROGRESS ở thời điểm hỏi: refactor Conditional Test Logic đã chấp nhận, còn xác nhận review selectors/assertions/waits/missing cases/gap analysis.
+
+- Date and time: 2026-11-13T16:50:15+07:00
+- User prompt: |
+    Dong y voi cac thanh phan selectors, assertions, waits, missing cases và gap analysis do da duoc toi bo sung o phan testcase design roi
+- AI output: |
+    Tool: OpenAI Codex. Ghi nhận xác nhận human review của sinh viên đối với các thành phần còn lại và testcase design. Cập nhật REQ-11 DONE, reconcile summary/review/progress/checklist; giữ lịch sử IN PROGRESS có chú thích. Không sửa hoặc chạy lại suite, không mở rộng coverage. Commit tài liệu và xuất Git log; giữ user changes có sẵn.

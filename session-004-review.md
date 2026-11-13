@@ -42,3 +42,7 @@ validate passed; enumeration exact68 IDs mỗi project/204 total; syntax/diff ch
 ## Xác nhận của sinh viên
 
 2026-11-13T16:40:44+07:00: sinh viên đồng ý với chỉnh sửa Conditional Test Logic và yêu cầu tổng kết Session 4. Hạng mục refactor này đã được chấp nhận; không suy rộng thành review toàn bộ suite. REQ-11 tổng thể tiếp tục IN PROGRESS.
+
+## Chốt REQ-11
+
+2026-11-13T16:50:15+07:00: sinh viên xác nhận đồng ý selectors, assertions, waits, missing cases và gap analysis vì đã bổ sung ở phần testcase design (test-cases.json). Kết hợp với feedback/refactor Conditional Test Logic đã chấp nhận, REQ-11 chuyển DONE. Các ghi chú IN PROGRESS ở trên phản ánh trạng thái trước xác nhận này. Đây là xác nhận human review của sinh viên, không phải AI tự nhận đã thực hiện review thay sinh viên. Không bổ sung test hay mở rộng coverage backend ngoài scope đã chốt.

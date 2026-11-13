@@ -2,7 +2,7 @@
 
 Ngày: 2026-11-13. Phạm vi: REQ-11 — human review và xử lý Conditional Test Logic.
 
-Sinh viên phát hiện anti-pattern và đã xác nhận đồng ý với phần refactor. Hạng mục sửa Conditional Test Logic đã hoàn tất và được chấp nhận. REQ-11 tổng thể vẫn IN PROGRESS vì xác nhận này giới hạn ở thay đổi vừa review, chưa xác nhận review mọi AI output/selectors/assertions/waits.
+Sinh viên phát hiện anti-pattern và đã xác nhận đồng ý với phần refactor. Hạng mục sửa Conditional Test Logic đã hoàn tất và được chấp nhận. Sau xác nhận bổ sung của sinh viên về selectors/assertions/waits/missing cases/gap analysis đã được bổ sung trong testcase design, REQ-11 tổng thể chuyển DONE.
 
 ## Kết quả thay đổi
 
@@ -37,4 +37,4 @@ Không phát sinh case mới hoặc nhóm defect mới từ so sánh hồi quy n
 
 ## Bàn giao
 
-Phần sửa Conditional Test Logic đã được sinh viên chấp nhận. Tiếp tục REQ-11 ở các nội dung chưa xác nhận review toàn bộ; sau đó hoàn thiện Issues/public Git, main report/PDF, AI critique, demo/video, tự chấm và đóng gói theo checklist. Không tuyên bố toàn bộ bài nộp hoàn tất. Giữ nguyên các thay đổi/xóa file có sẵn của sinh viên.
+REQ-11 đã hoàn tất theo human review và xác nhận bổ sung của sinh viên. Tiếp theo hoàn thiện Issues/public Git, main report/PDF, AI critique, demo/video, tự chấm và đóng gói theo checklist. Không tuyên bố toàn bộ bài nộp hoàn tất. Giữ nguyên các thay đổi/xóa file có sẵn của sinh viên.
