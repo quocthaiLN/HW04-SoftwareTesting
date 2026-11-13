@@ -57,7 +57,13 @@
     "expiredColor": "rgb(239, 68, 68)",
     "duplicateMessagePattern": "đã tồn tại|trùng|already exists|duplicate",
     "forbiddenLeakPattern": "SQLITE|INSERT INTO|stack|Error:",
-    "notAdminMessage": "Bạn không phải là admin!"
+    "notAdminMessage": "Bạn không phải là admin!",
+    "savingsPrefix": "Tiết kiệm: ",
+    "finalPrefix": "Thành tiền: ",
+    "totalPrefix": "Tổng thanh toán: ",
+    "currencySuffix": " ₫",
+    "percentSuffix": "%",
+    "usesSuffix": " lần"
   },
   "duplicateStatuses": [
     400,

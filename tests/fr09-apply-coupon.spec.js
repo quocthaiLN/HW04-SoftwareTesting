@@ -18,17 +18,17 @@ for (const record of read('fr09')) {
     if (record.scenario === 'empty') {
       await expect(apply).toBeDisabled();
       await expect(page.getByText('Tiết kiệm:')).toHaveCount(shared.expected.zero);
-      await expect(page.getByText('Tổng thanh toán:')).toContainText(money(record.expected.final));
+      await expect(page.getByText('Tổng thanh toán:')).toHaveText(shared.ui.totalPrefix + money(record.expected.final) + shared.ui.currencySuffix);
     } else {
       await apply.click();
       if (record.scenario === 'success') {
-        await expect(page.getByText('Tiết kiệm:')).toContainText(money(record.expected.discount));
-        await expect(page.getByText('Thành tiền:')).toContainText(money(record.expected.final));
-        await expect(page.getByText('Tổng thanh toán:')).toContainText(money(record.expected.final));
+        await expect(page.getByText('Tiết kiệm:')).toHaveText(shared.ui.savingsPrefix + money(record.expected.discount) + shared.ui.currencySuffix);
+        await expect(page.getByText('Thành tiền:')).toHaveText(shared.ui.finalPrefix + money(record.expected.final) + shared.ui.currencySuffix);
+        await expect(page.getByText('Tổng thanh toán:')).toHaveText(shared.ui.totalPrefix + money(record.expected.final) + shared.ui.currencySuffix);
       } else if (record.scenario === 'error') {
         await expect(page.getByText(record.expected.error, { exact: true })).toBeVisible();
         await expect(page.getByText('Tiết kiệm:')).toHaveCount(shared.expected.zero);
-        await expect(page.getByText('Tổng thanh toán:')).toContainText(money(record.expected.final));
+        await expect(page.getByText('Tổng thanh toán:')).toHaveText(shared.ui.totalPrefix + money(record.expected.final) + shared.ui.currencySuffix);
       } else throw new Error(`Unimplemented scenario ${record.scenario}`);
       expect(couponFixture.calls.apply.map(call => call.body)).toEqual([{ code: record.expected.code, total_amount: record.expected.total, user_id: record.expected.user_id }]);
       if (record.authMode === 'valid') expect(couponFixture.calls.apply[shared.expected.zero].authorization).toBe(`Bearer ${record.token}`);
