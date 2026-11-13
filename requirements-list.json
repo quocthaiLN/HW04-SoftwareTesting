@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T15:06:04+07:00",
+  "updated_at": "2026-11-13T15:10:10+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -22,7 +22,8 @@
     "Session 002 chốt REQ-04: bỏ TC30/31, giữ IDs retired; thêm TC32–37, cụ thể hóa TC05/08/09. 68 DESIGNED (14/19/35), REQ-04 DONE phần thiết kế; không còn policy pending.",
     "Session 003: REQ-05 ghi DONE theo xác nhận sinh viên đã hoàn tất chuẩn bị; bổ sung preparation-notes.md từ skill mới, không tuyên bố AI đã đọc bài giảng. Kế hoạch REQ-06–09 chuyển sang playwright-cli/core/pom; giữ FR-09 mock theo user dù trái quy tắc skill; trạng thái triển khai chưa đổi.",
     "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi.",
-    "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed."
+    "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed.",
+    "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history."
   ],
   "requirements": [
     {
@@ -157,7 +158,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 p.4; §14 p.7",
       "mandatory": true,
       "acceptance_criteria": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
-      "status": "NOT START"
+      "status": "IN PROGRESS",
+      "evidence": "bug-reports.md: 9 nhóm lỗi runtime và screenshots/HTML evidence; chưa tạo GitHub Issues."
     },
     {
       "id": 13,
@@ -177,7 +179,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §§8–9 pp.5–6; AGENTS.md workflow 4",
       "mandatory": true,
       "acceptance_criteria": "Đính kèm AI Audit Report; khai I use AI tools for the following tasks và công cụ sử dụng. Mỗi interaction có tên tool, datetime, prompt, output. Log local đúng 3 phần datetime/user prompt/AI output; đặt tên tool trong AI output. Nếu không dùng AI phải khai rõ (không áp dụng phiên này).",
-      "status": "NOT START"
+      "status": "IN PROGRESS",
+      "evidence": "AI-Report-Audit.md đã log các interactions tới tổng kết Session 003; PDF và appendix main report còn chờ."
     },
     {
       "id": 15,
@@ -197,7 +200,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §12 p.6; AGENTS.md Git; policies.md",
       "mandatory": true,
       "acceptance_criteria": "Public GitHub repository, lịch sử có ý nghĩa >=8 commits có thay đổi .spec.js/.spec.ts hoặc test-script tương đương; docs-only không tính. Commit rõ từng bước và requirement IDs.",
-      "status": "IN PROGRESS"
+      "status": "IN PROGRESS",
+      "evidence": "9 commits thay đổi .spec.js có ý nghĩa, ghi trong session-003-summary.md; public GitHub remote còn chờ."
     },
     {
       "id": 17,
@@ -207,7 +211,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §12 p.6; AGENTS.md",
       "mandatory": true,
       "acceptance_criteria": "Xuất git log --graph --all --stat thành file text để nộp; không chế tạo history/log.",
-      "status": "IN PROGRESS"
+      "status": "DONE",
+      "evidence": "git-log.txt export từ git log --graph --all --stat; snapshot lịch sử thật, xuất lại trước đóng gói cuối. Commit 282c750 subject REQ-19 thực chất thuộc REQ-17."
     },
     {
       "id": 18,
@@ -217,7 +222,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §14 p.7; policies.md",
       "mandatory": true,
       "acceptance_criteria": "Main report Markdown + PDF gồm automation report, quy trình, review/gap analysis; repo chứa scripts/data/HTML; ZIP kèm HTML reports, repo link, video link, AI audit/critique Markdown+PDF, Git log, bugs nếu có, tài liệu hỗ trợ. Không phụ thuộc quá mức links.",
-      "status": "NOT START"
+      "status": "IN PROGRESS",
+      "evidence": "Có automation-report.md, scripts/data/9 HTML reports và artifacts cục bộ; main report hoàn chỉnh/PDF/review/video/repo links và đóng gói còn chờ."
     },
     {
       "id": 19,
@@ -227,7 +233,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §§14–15 pp.7–8",
       "mandatory": true,
       "acceptance_criteria": "README có bảng tự chấm: feature A/B/C mỗi 25, video 15, Agent Skills 10, tổng 100; summary số features, cases automated/executed/passed/failed, browser runs, bugs và video link.",
-      "status": "NOT START"
+      "status": "IN PROGRESS",
+      "evidence": "README.md có test summary thực và bảng rubric; chưa tự chấm điểm/video link. Không coi bảng Pending là self-assessment hoàn tất."
     },
     {
       "id": 20,

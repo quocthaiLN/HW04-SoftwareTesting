@@ -143,3 +143,10 @@
     Đã automate đủ 68 cases/204 registrations, external shared/per-feature JSON, validator, >=3 assertion patterns. 9 commits thay đổi spec có ý nghĩa. Matrix final 9 tổ hợp: 150 pass/54 fail/0 skipped, 9 nhóm lỗi runtime. FR-09 chỉ UI mock; FR-02/17 thật, không checkout hoặc direct endpoint security tests.
     Batch đầu giữ nguyên149pass/55fail, gồm một WebKit actionability timeout chưa gọi lỗi SUT. Self-review siết currency substring thành exact text và sửa title HTML có attribution/ISO runtime; chạy final trên code chốt. Mở 9 reports cục bộ để xác minh/chụp screenshot. Automatic approval review từ chối broad localhost artifacts server vì rủi ro trace credentials/tokens; dùng local file inspection thành công, không bypass bằng server khác.
     Cập nhật checklist6–10 DONE theo evidence, test cases per-browser results, README/scope/progress/audit và tài liệu chạy/giải thích/defects. Không tự nhận student human review, GitHub publication/Issues/PDF/video hoặc toàn bộ bài nộp hoàn tất. Giữ thay đổi/xóa file sẵn có.
+
+- Date and time: 2026-11-13T15:10:10+07:00
+- User prompt: |
+    Tổng kết session 3
+- AI output: |
+    Tool: OpenAI Codex. Đã tổng kết cùng Session 003 tại session-003-summary.md và PROGRESS.md. REQ-06–10 DONE, 68 cases/204 executions/9 runs, 150pass/54fail/0skipped; 9 HTML reports verified và 9 nhóm lỗi runtime. FR-09 chỉ UI mocked. Giữ riêng batch đầu149/55 có một WebKit timeout. Có9 qualifying spec commits; evidence2866501/log282c750.
+    Đối chiếu checklist: REQ-12/14/18/19 IN PROGRESS vì có local outputs nhưng thiếu phần còn lại; REQ-17 DONE theo log export; REQ-16 còn chờ public remote. Subject282c750 ghi REQ-19 nhưng nội dung thuộc REQ-17, ghi correction không rewrite history. Human review, Issues/publication, PDF/main report, critique/video, tự chấm/đóng gói còn chờ. Không chạy tests lại; cập nhật audit/checklist/progress/Git log và commit docs-only; giữ thay đổi sinh viên có sẵn.
