@@ -1,6 +1,6 @@
 # Bug reports — Sessions 003–005
 
-Findings từ Session003; GitHub Issues đã tạo và xác minh ở Session005 bên dưới; không mở rộng sang kiểm tra backend coupon apply hoặc endpoint role enforcement. Expected dựa scope/cases đã duyệt. Evidence paths cuối cùng sẽ được liên kết trong automation-report.md và artifacts/session003-final/execution-matrix.json. Các nhóm dưới đã xuất hiện ở cả Chromium/Firefox/WebKit trong batch đầu.
+Findings từ Session003; GitHub Issues đã tạo và xác minh ở Session005 bên dưới; không mở rộng sang kiểm tra backend coupon apply hoặc endpoint role enforcement. Expected dựa scope/cases đã duyệt. Evidence paths cuối cùng sẽ được liên kết trong automation-report.md và artifacts/session004-refactor/execution-matrix.json. Các nhóm dưới đã xuất hiện ở cả Chromium/Firefox/WebKit trong batch đầu.
 
 | ID | Case IDs | Expected | Actual runtime | Mức ảnh hưởng |
 | --- | --- | --- | --- | --- |
@@ -22,7 +22,7 @@ FR-17: fixture tạo admin test và login setup API thật, mở admin app/tab M
 
 ## Phân loại riêng lỗi thực thi
 
-Batch session003-full có FR-09-TC07/WebKit timeout tại actionability click (8 giây), trước request apply. Chưa có bằng chứng đây là lỗi SUT; không cộng vào 9 defect groups. Trong batch đó có mở browser khác để kiểm tra report khi WebKit đang chạy; mất foreground/animation scheduling là giả thuyết, chưa xác minh nguyên nhân. Batch final không mở thêm browser quan sát trong lúc tests chạy; giữ kết quả gốc để đối chiếu.
+Batch session003-full có FR-09-TC07/WebKit timeout tại actionability click (8 giây), trước request apply. Chưa có bằng chứng đây là lỗi SUT; không cộng vào 9 defect groups. Trong batch đó có mở browser khác để kiểm tra report khi WebKit đang chạy; mất foreground/animation scheduling là giả thuyết, chưa xác minh nguyên nhân. Batch final không mở thêm browser quan sát trong lúc tests chạy; kết quả cũ đã được xóa trong cleanup, lịch sử ghi trong Git/audit.
 
 ## Review AI đã sửa
 
@@ -30,19 +30,19 @@ Assertion tiền ban đầu dùng toContainText có thể nhận nhầm số dà
 
 ## Final evidence
 
-Batch session003-final: 150 pass/54 fail/0 skipped. FR-09 đạt57/57; timeout batch đầu không lặp lại, nguyên nhân gốc vẫn chưa kết luận.
+Batch session004-refactor: 150 pass/54 fail/0 skipped. FR-09 đạt57/57; timeout batch đầu không lặp lại, nguyên nhân gốc vẫn chưa kết luận.
 
 | Bug | Case | Screenshot | Report |
 | --- | --- | --- | --- |
-| BUG-01 | FR-02-TC02 / Chromium | [Actual screenshot](artifacts/evidence/BUG-01.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
-| BUG-02 | FR-02-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-02.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
-| BUG-03 | FR-02-TC06 / Chromium | [Actual screenshot](artifacts/evidence/BUG-03.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
-| BUG-04 | FR-02-TC13 / Chromium | [Actual screenshot](artifacts/evidence/BUG-04.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
-| BUG-05 | FR-02-TC14 / Chromium | [Actual screenshot](artifacts/evidence/BUG-05.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
-| BUG-06 | FR-17-TC05 / Chromium | [Actual screenshot](artifacts/evidence/BUG-06.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
-| BUG-07 | FR-17-TC32 / Chromium | [Actual screenshot](artifacts/evidence/BUG-07.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
-| BUG-08 | FR-17-TC24 / Chromium | [Actual screenshot](artifacts/evidence/BUG-08.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
-| BUG-09 | FR-17-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-09.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
+| BUG-01 | FR-02-TC02 / Chromium | [Actual screenshot](artifacts/evidence/BUG-01.png) | [Actual report](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| BUG-02 | FR-02-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-02.png) | [Actual report](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| BUG-03 | FR-02-TC06 / Chromium | [Actual screenshot](artifacts/evidence/BUG-03.png) | [Actual report](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| BUG-04 | FR-02-TC13 / Chromium | [Actual screenshot](artifacts/evidence/BUG-04.png) | [Actual report](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| BUG-05 | FR-02-TC14 / Chromium | [Actual screenshot](artifacts/evidence/BUG-05.png) | [Actual report](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| BUG-06 | FR-17-TC05 / Chromium | [Actual screenshot](artifacts/evidence/BUG-06.png) | [Actual report](artifacts/session004-refactor-fr17-chromium/html/index.html) |
+| BUG-07 | FR-17-TC32 / Chromium | [Actual screenshot](artifacts/evidence/BUG-07.png) | [Actual report](artifacts/session004-refactor-fr17-chromium/html/index.html) |
+| BUG-08 | FR-17-TC24 / Chromium | [Actual screenshot](artifacts/evidence/BUG-08.png) | [Actual report](artifacts/session004-refactor-fr17-chromium/html/index.html) |
+| BUG-09 | FR-17-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-09.png) | [Actual report](artifacts/session004-refactor-fr17-chromium/html/index.html) |
 
 Screenshot duplicate được chụp sau alert đã được đóng; xem dialog text/response trong lỗi runner và trace, không suy ra nội dung alert từ ảnh bảng. Các ảnh được copy từ output runner, không tạo/sửa hình.
 
@@ -50,7 +50,7 @@ Screenshot duplicate được chụp sau alert đã được đóng; xem dialog 
 
 Đối chiếu đề §6 p.4 và §14 p.7; hoàn tất REQ-12 lúc 2026-11-13T17:11:43+07:00. Đã tạo và mở kiểm tra từng Issue, mỗi Issue có một screenshot gốc từ runner. [Danh sách Issues](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues); ảnh xác minh danh sách: [session005-github-issues.png](artifacts/evidence/session005-github-issues.png).
 
-Các kết quả Session003/004 là evidence đã chạy, không phải lượt chạy mới. Playwright Test 1.65.0; Node v24.21.0; Linux; Chromium 158.0.8127.18 / Firefox 159.0 / WebKit 27.2 (artifacts/preflight.json). Test revision Session004: `3cd7cc68e83c3f3417b31a02a47231df5f3e54e0`. SUT nguyên trạng, backend/SQLite cô lập, ports API3000/web5173/admin5174. FR-02/17 không mock API. Setup và cleanup theo RUNNING.md; dữ liệu trong data/shared.json và data/fr02.json/data/fr17.json.
+Các kết quả Session003/004 là evidence đã chạy, không phải lượt chạy mới. Playwright Test 1.65.0; Node v24.21.0; Linux; Chromium 158.0.8127.18 / Firefox 159.0 / WebKit 27.2 (artifacts/session004-refactor/execution-matrix.json). Test revision Session004: `3cd7cc68e83c3f3417b31a02a47231df5f3e54e0`. SUT nguyên trạng, backend/SQLite cô lập, ports API3000/web5173/admin5174. FR-02/17 không mock API. Setup và cleanup theo RUNNING.md; dữ liệu trong data/shared.json và data/fr02.json/data/fr17.json.
 
 Policy integer percent 1–100, fixed>0 và min>=0 theo testcase design/scope đã được sinh viên chốt. Severity dưới đây là đề xuất của báo cáo, chưa phải đánh giá của maintainer. Status Open, chưa sửa SUT. 54 executions fail = 18 case IDs × 3 browsers; được gộp thành 9 defect groups, không báo thành 54 bugs.
 
@@ -312,3 +312,7 @@ npx playwright test tests/fr17-coupons.spec.js --project=chromium --grep "FR-17-
 - FR-09 chỉ UI mocked, không có defect backend được khẳng định. Permission UI không chứng minh endpoint role enforcement.
 - Ảnh BUG-06 không có alert đã đóng; BUG-07–09 chỉ thấy phần đầu trang, row cần kiểm tra ở ngoài viewport. Đã ghi giới hạn ngay trên Issue; dùng runner/trace làm evidence quyết định. Không chỉnh hay tạo ảnh SUT bằng AI.
 - [Manifest cục bộ](artifacts/evidence/session005-bug-evidence.json) lưu mapping case/browser, Issue, attachment và SHA256 ảnh; các file local là nguồn evidence tự chứa, không phụ thuộc link online để mô tả bug.
+
+## Migration evidence — Session005 cleanup
+
+Theo yêu cầu sinh viên, artifact Session003 đã xóa; bộ runtime hiện hành là Session004. Các ảnh BUG-01–09 cục bộ được copy nguyên bản từ attachments Session004 (manifest ghi nguồn và SHA256). Ảnh trên GitHub Issues vẫn là ảnh đã upload trước cleanup; không thay thế lịch sử issue. Các nhắc Session003/batch cũ ở trên là ghi chép lịch sử, không phải evidence còn giữ.

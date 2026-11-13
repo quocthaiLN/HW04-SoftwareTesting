@@ -190,3 +190,13 @@
     - Thuc hien requirement 12
 - AI output: |
     Tool: OpenAI Codex; áp dụng task-planning. Đọc repo instructions/policies/đề gốc và evidence Session003/004. Hoàn thiện 9 bug reports tự chứa (steps, input, expected, actual, proposed severity, evidence limits); tạo GitHub Issues #1–#9 trên quocthaiLN/HW04-SoftwareTesting qua browser đã đăng nhập, upload mỗi Issue một screenshot runner gốc và UI-verify ảnh. Lưu ảnh danh sách và manifest case/browser/issue/attachment/SHA256; 18caseIDs×3=54failures mapping đủ 9groups. Tách timeout WebKit và lỗi AI test/report khỏi SUT defects. Không chạy lại tests/sửa SUT/đổi expected; baseline150pass54fail0skip giữ nguyên. REQ-12 DONE; README/automation-report/checklist/progress cập nhật, commit docs/evidence riêng và xuất log thật. Giới hạn BUG06 ảnh sau alert, BUG07–09 row ngoài viewport đã ghi ngay trên Issues; runner/trace xác minh chi tiết. Public remote/PDF/video và yêu cầu khác vẫn tách riêng, không tự đánh DONE. Giữ thay đổi sinh viên có sẵn.
+
+- Date and time: 2026-11-13T17:24:42+07:00
+- User prompt: |
+    Session 5
+    - Lam sach thu muc submission
+      - Loai bo cac file session-00x-<name>.md, implementation-notes.md, assertion-inventory.md
+      - Loai bo cac artifact cua session 3, chi su dung cac artifact cua session 4
+      - Tao file main report .md
+- AI output: |
+    Tool: OpenAI Codex. Xóa tài liệu phiên và artifact Session003/PoC/smoke; giữ runtime Session004 và evidence publication Session005. Gom nội dung kiến trúc/assertions/review/gaps vào main-report.md; cập nhật test-cases bằng record Session004 thật, local BUG screenshots bằng ảnh runner Session004, giữ riêng hash ảnh upload GitHub cũ. Cập nhật current links/README/automation report/checklist; audit/progress giữ lịch sử. Mở 9 HTML Session004 xác minh attribution/ISO đạt; validate và mapping/link/hash checks. Không sửa SUT hoặc tạo kết quả mới. Commit cleanup/report và xuất log; PDF/video và các yêu cầu khác chưa tự đánh hoàn tất.

@@ -166,3 +166,12 @@
 - Files or artifacts updated: bug-reports.md, artifacts/evidence/session005-bug-evidence.json, session005-github-issues.png, requirements-list.json, README.md, automation-report.md, AI-Report-Audit.md, PROGRESS.md, git-log.txt.
 - Known risk or unresolved issue: BUG-06 ảnh sau alert; BUG-07–09 ảnh không thấy row ngoài viewport, runner/trace là bằng chứng quyết định và giới hạn đã ghi trên Issue. Git remote publication là REQ-16 riêng, chưa kiểm chứng; git ls-remote bị lỗi quyền SSH config hệ thống, không ảnh hưởng tạo Issues qua browser. Giữ sửa header PROGRESS và các xóa/skills sẵn có của sinh viên.
 - Next best step: Tiếp tục yêu cầu báo cáo/PDF/public repository/video theo checklist; không tự nhận hoàn tất cả bài.
+
+### Dọn submission và tạo main report — tiếp tục Session005
+- Date: 2026-11-13T17:24:42+07:00.
+- Goal: Xóa tài liệu phiên trung gian/artifacts Session003, dùng Session004 và tạo main report Markdown.
+- Completed: Xóa session-00x-*.md, implementation-notes.md, assertion-inventory.md; gom kiến trúc/assertion/review/gaps vào main-report.md. Chỉ giữ runtime batch Session004; giữ evidence GitHub publication Session005. test-cases.json lấy execution records thật Session004; local BUG images copy từ Session004, manifest phân biệt hash ảnh GitHub lịch sử. Cập nhật links/checklist/README/RUNNING/automation report.
+- Verification run: 9 HTML Session004 browser-verified Run by+ISO; validate68cases/204registrations; mapping54failures/ảnh/links kiểm tra riêng. Không chạy lại SUT tests hoặc chỉnh report HTML.
+- Commits: Commit cleanup/report riêng và snapshot Git log sau đó; docs/evidence-only.
+- Known risk or unresolved issue: Audit/progress và comparison.json giữ lịch sử file/baseline đã xóa; muốn tái so baseline phải khôi phục Git. GitHub Issues giữ ảnh upload ban đầu, không tự thay bằng ảnh local mới. PDF/video/publication/self-assessment chưa tự hoàn tất.
+- Next best step: Sinh viên review main-report.md; hoàn thiện các deliverables còn lại theo checklist.

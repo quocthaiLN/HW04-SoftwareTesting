@@ -1,6 +1,6 @@
 # Chạy automation
 
-Node.js >=20, npm, SUT dependencies và ba browser engines cần có. Suite dùng Playwright Test 1.65.0; CLI discovery 0.1.24 (pin trong lockfile). Đọc artifacts/preflight.json để biết browser versions của lần chạy đã lưu.
+Node.js >=20, npm, SUT dependencies và ba browser engines cần có. Suite dùng Playwright Test 1.65.0; CLI discovery 0.1.24 (pin trong lockfile). Đọc artifacts/session004-refactor/execution-matrix.json để biết browser versions của lần chạy đã lưu.
 
 ```bash
 cd submission
@@ -29,14 +29,8 @@ PW_RUN_ID=my-fr09-run npx playwright test tests/fr09-apply-coupon.spec.js --proj
 
 HTML report là output thật của Playwright, không chỉnh tay. Mở file html/index.html trực tiếp để xem summary; attachment/trace một số tính năng cần viewer của Playwright. Reports mới có attribution + ISO trong title; reports trước khi sửa config có custom metadata, xem bằng hash `#?show-metadata-other` rồi mở Metadata. Không phục vụ toàn bộ artifacts qua localhost. Traces chỉ có account test giả lập/tạo riêng, nhưng vẫn cần review nội dung trước public publication.
 
-CLI discovery: cấu hình browserName chromium và executablePath từ require('@playwright/test').chromium.executablePath() trong file local .playwright/cli.config.json; dùng named session riêng. Snapshot trước mỗi thao tác, không copy refs vào spec; đóng session của mình khi xong. Các snapshots quan sát thật được lưu artifacts/cli-*.yaml.
+CLI discovery: cấu hình browserName chromium và executablePath từ require('@playwright/test').chromium.executablePath() trong file local .playwright/cli.config.json; dùng named session riêng. Snapshot trước mỗi thao tác, không copy refs vào spec; đóng session của mình khi xong. Snapshots discovery cũ đã được xóa theo yêu cầu cleanup; khi discovery mới cần lưu output mới.
 
-Giới hạn: FR-09 là UI mocked coverage; FR-02/17 backend thật. Code/fixtures/POM không chứa test data hardcode; JSON ngoài là nguồn dữ liệu. Human review, public remote/Issues, main report/PDF/video là các bước riêng chưa được tự nhận hoàn tất.
+Giới hạn: FR-09 là UI mocked coverage; FR-02/17 backend thật. Code/fixtures/POM không chứa test data hardcode; JSON ngoài là nguồn dữ liệu. Human review và Issues đã hoàn tất; main-report.md đã có bản Markdown. Public remote/PDF/video vẫn theo checklist.
 
-Sau refactor có thể so coverage/status của hai batch đã hoàn tất theo từng ID/browser (không phụ thuộc thứ tự hoặc tên describe):
-
-```bash
-node scripts/compare-matrices.js artifacts/session003-final/execution-matrix.json artifacts/session004-refactor/execution-matrix.json
-```
-
-Lệnh trả exit 1 nếu coverage hoặc status thay đổi; cần phân tích nguyên nhân thay vì mặc định mọi khác biệt đều là lỗi test.
+Evidence hiện hành: artifacts/session004-refactor/execution-matrix.json. comparison.json ghi phép so lịch sử với baseline đã xóa; muốn lặp phép so phải khôi phục baseline từ Git hoặc chạy batch mới với ID riêng.

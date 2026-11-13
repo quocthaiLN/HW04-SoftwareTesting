@@ -38,4 +38,4 @@ Evidence tương lai cần thu: CLI observations đã che secrets; JSON validati
 
 ## Kết quả chuẩn bị
 
-Đã có đối chiếu ba skill với phạm vi và kế hoạch chi tiết tại session-003-plan.md. Chưa cài package, chạy CLI/browser hoặc tạo runtime evidence trong lượt này.
+Đã có đối chiếu ba skill với phạm vi và kế hoạch chi tiết tại main-report.md. Chưa cài package, chạy CLI/browser hoặc tạo runtime evidence trong lượt này.

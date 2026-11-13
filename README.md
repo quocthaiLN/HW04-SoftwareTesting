@@ -1,11 +1,13 @@
 # HW04 — Automation Testing
 
+[Main report](main-report.md) — phạm vi, kết quả, review/gaps, assertion patterns và evidence hiện hành.
+
 - Student ID: 23120352
 - Name: Le Nguyen Quoc Thai
 - Features: FR-02 Login/lockout; FR-09 Apply coupon; FR-17 Create/Read/Delete coupons (Update không có trong SUT).
 - Scope: [scope.md](scope.md); cases: [test-cases.json](test-cases.json); requirements: [requirements-list.json](requirements-list.json).
 
-## Test summary — Session 003 actual execution
+## Test summary — Session 004 actual execution
 
 | Metric | Current |
 | --- | --- |
@@ -19,7 +21,7 @@
 | Demo video | Pending |
 | Public GitHub repository | Pending |
 
-Final batch: session003-final. [Execution report](automation-report.md), [matrix](artifacts/session003-final/execution-matrix.json), [running instructions](RUNNING.md), [assertion inventory](assertion-inventory.md), [implementation explanation](implementation-notes.md), [defects](bug-reports.md).
+Final batch: session004-refactor. [Execution report](automation-report.md), [matrix](artifacts/session004-refactor/execution-matrix.json), [running instructions](RUNNING.md), [assertion inventory](main-report.md), [implementation explanation](main-report.md), [defects](bug-reports.md).
 
 FR-09 is UI mocked coverage; FR-02/17 use an unchanged isolated real backend. Counts above refer to the final matrix, excluding prior PoC/smoke and first-batch executions. Student human review completed in Session004 (REQ-11); bug reporting completed in Session005 (REQ-12).
 

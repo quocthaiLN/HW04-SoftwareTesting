@@ -1,0 +1,65 @@
+[
+  {
+    "runId": "session004-refactor-fr02-chromium",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:24:37.518Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:24:37.518Z",
+    "checkedAt": "2026-11-13T10:23:56.533Z"
+  },
+  {
+    "runId": "session004-refactor-fr02-firefox",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:25:34.081Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:25:34.081Z",
+    "checkedAt": "2026-11-13T10:23:56.825Z"
+  },
+  {
+    "runId": "session004-refactor-fr02-webkit",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:26:45.395Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:26:45.395Z",
+    "checkedAt": "2026-11-13T10:23:57.128Z"
+  },
+  {
+    "runId": "session004-refactor-fr09-chromium",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:27:44.675Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:27:44.675Z",
+    "checkedAt": "2026-11-13T10:23:57.431Z"
+  },
+  {
+    "runId": "session004-refactor-fr09-firefox",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:27:54.178Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:27:54.178Z",
+    "checkedAt": "2026-11-13T10:23:57.804Z"
+  },
+  {
+    "runId": "session004-refactor-fr09-webkit",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:28:08.803Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:28:08.803Z",
+    "checkedAt": "2026-11-13T10:23:58.128Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-chromium",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:28:24.015Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:28:24.015Z",
+    "checkedAt": "2026-11-13T10:23:58.494Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-firefox",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:29:23.557Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:29:23.557Z",
+    "checkedAt": "2026-11-13T10:23:58.850Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-webkit",
+    "attributionAndISOVisible": true,
+    "timestamp": "2026-11-13T09:30:47.397Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:30:47.397Z",
+    "checkedAt": "2026-11-13T10:23:59.203Z"
+  }
+]

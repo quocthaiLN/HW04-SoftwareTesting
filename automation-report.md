@@ -1,40 +1,23 @@
-# Automation execution — Session 003
+# Automation execution — Session 004
 
-Run by: 23120352. Batch session003-final; started 2026-11-13T07:57:22.707Z, ended 2026-11-13T08:04:59.793Z. Test-code revision: 676a70eac061864b2779e26fe9efe55bc3ffbc9c.
+Run by: 23120352. Batch `session004-refactor`; started 2026-11-13T09:24:37.173Z, ended 2026-11-13T09:32:10.786Z. Test revision `3cd7cc68e83c3f3417b31a02a47231df5f3e54e0`.
 
-## Results
-
-68 automated cases, 204 matrix executions, 150 passed, 54 failed, 0 skipped; 9 feature-browser runs. 50 cases passed on all three engines. Counts refer to this matrix; prior PoC/smoke/batch results are separate historical evidence.
+68 cases, 204 executions, 150 pass / 54 fail / 0 skipped; 9 feature-browser runs. 50 cases pass on all three engines.
 
 | Feature | Browser | Cases | Pass | Fail | Skip | Report |
-| --- | --- | --- | --- | --- | --- | --- |
-| FR-02 | chromium | 14 | 6 | 8 | 0 | [HTML](artifacts/session003-final-fr02-chromium/html/index.html) |
-| FR-02 | firefox | 14 | 6 | 8 | 0 | [HTML](artifacts/session003-final-fr02-firefox/html/index.html) |
-| FR-02 | webkit | 14 | 6 | 8 | 0 | [HTML](artifacts/session003-final-fr02-webkit/html/index.html) |
-| FR-09 | chromium | 19 | 19 | 0 | 0 | [HTML](artifacts/session003-final-fr09-chromium/html/index.html) |
-| FR-09 | firefox | 19 | 19 | 0 | 0 | [HTML](artifacts/session003-final-fr09-firefox/html/index.html) |
-| FR-09 | webkit | 19 | 19 | 0 | 0 | [HTML](artifacts/session003-final-fr09-webkit/html/index.html) |
-| FR-17 | chromium | 35 | 25 | 10 | 0 | [HTML](artifacts/session003-final-fr17-chromium/html/index.html) |
-| FR-17 | firefox | 35 | 25 | 10 | 0 | [HTML](artifacts/session003-final-fr17-firefox/html/index.html) |
-| FR-17 | webkit | 35 | 25 | 10 | 0 | [HTML](artifacts/session003-final-fr17-webkit/html/index.html) |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| FR02 | chromium | 14 | 6 | 8 | 0 | [HTML](artifacts/session004-refactor-fr02-chromium/html/index.html) |
+| FR02 | firefox | 14 | 6 | 8 | 0 | [HTML](artifacts/session004-refactor-fr02-firefox/html/index.html) |
+| FR02 | webkit | 14 | 6 | 8 | 0 | [HTML](artifacts/session004-refactor-fr02-webkit/html/index.html) |
+| FR09 | chromium | 19 | 19 | 0 | 0 | [HTML](artifacts/session004-refactor-fr09-chromium/html/index.html) |
+| FR09 | firefox | 19 | 19 | 0 | 0 | [HTML](artifacts/session004-refactor-fr09-firefox/html/index.html) |
+| FR09 | webkit | 19 | 19 | 0 | 0 | [HTML](artifacts/session004-refactor-fr09-webkit/html/index.html) |
+| FR17 | chromium | 35 | 25 | 10 | 0 | [HTML](artifacts/session004-refactor-fr17-chromium/html/index.html) |
+| FR17 | firefox | 35 | 25 | 10 | 0 | [HTML](artifacts/session004-refactor-fr17-firefox/html/index.html) |
+| FR17 | webkit | 35 | 25 | 10 | 0 | [HTML](artifacts/session004-refactor-fr17-webkit/html/index.html) |
 
-All reports are real Playwright output. Attribution and ISO timestamp come from runner configuration at runtime; no report contents were hand-edited. Open local html/index.html; reports contain screenshots/traces for failures.
+[Matrix](artifacts/session004-refactor/execution-matrix.json); [main report](main-report.md); [bugs](bug-reports.md); [running instructions](RUNNING.md).
 
-## Scope and interpretation
+FR-02/17: unchanged real backend and isolated SQLite. FR-09: UI/payload with mocked auth/cart/apply-coupon, no backend formula or checkout coverage. UI permission cases do not establish direct endpoint enforcement. Failures remain genuine outcomes; no expected values changed to make tests green.
 
-FR-02/17 use the real unchanged SUT backend copied into an isolated runtime/SQLite. FR-09 mocks auth/cart/apply-coupon using page.route and a Vite CartContext module response; it proves UI/payload contracts with fixture responses, not backend coupon rules. No checkout. Permission cases exercise UI only, not direct endpoint role enforcement.
-
-Failures remain visible and are grouped in [bug-reports.md](bug-reports.md). Do not equate number of failed executions with number of unique defects. This Session003 execution report is historical. Human review completed in Session004; Session005 created GitHub Issues #1–#9 with screenshots (see bug-reports.md). Public repository publication remains tracked separately under REQ-16. An earlier batch had one WebKit actionability timeout, documented separately; see original artifacts/session003-full/execution-matrix.json.
-
-## REQ-06–09 evidence
-
-- REQ-06: 68 cases mapped by stable IDs in tests/fr02-login.spec.js, fr09-apply-coupon.spec.js, fr17-coupons.spec.js; generated in small steps documented by script commits and AI audit.
-- REQ-07: data/shared.json and per-feature JSON hold inputs, setup, mock response and expected. Validator checks IDs/schema/handlers; dynamic values resolve templates/offsets. No inline test data in scripts/fixtures/helpers/POM.
-- REQ-08: [assertion-inventory.md](assertion-inventory.md) maps text, attribute/value, URL, state/count, polling and network patterns to actual scenarios.
-- REQ-09: this table and [matrix](artifacts/session003-final/execution-matrix.json) record 9 real feature-browser runs and every case result. Versions/readiness/source hashes: [preflight](artifacts/preflight.json).
-
-## Process and review
-
-[RUNNING.md](RUNNING.md) covers setup/reproduction; [implementation-notes.md](implementation-notes.md) explains JSON → fixtures → UI/POM → assertions → reports/matrix. CLI snapshots in artifacts/cli-*.yaml show real locator discovery. Backend startup/DB reset is isolated; original source was not fixed to make tests pass. Browser lifecycle is sequential, workers=1, retries=0; no fixed UI sleeps. TC10 waits for a real 31-second business deadline.
-
-AI self-review strengthened currency checks from substring to exact text using external display oracles; improved visible report attribution; classified runtime defects separately from automation/environment failures. Student human review and final main-report/PDF/video/public GitHub work remain pending.
+HTML/JSON/trace are real Playwright outputs. Session003 artifacts were removed at the student's request; Session004 is the sole retained runtime batch. GitHub Issues #1–#9 keep the screenshots originally uploaded in Session005; local BUG images now come from Session004.

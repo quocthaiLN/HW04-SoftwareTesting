@@ -46,7 +46,7 @@ Static review `../eshop-sut/frontend-web/src/pages/Login.jsx` cho thấy heading
 
 ## Session 002 — Requirement 3
 
-Giữ nguyên 12 cases FR-09 được user chấp nhận. Thêm TC13–TC18; TC18 chỉ chốt bất biến final_amount >=0, còn chờ cap/reject nên chưa sẵn sàng automate. Mapping và các quyết định cần xác nhận nằm tại fr09-case-review.md. REQ-03 vẫn IN PROGRESS. Chỉ kiểm thử UI với page.route, không kiểm chứng công thức backend. Tài liệu tham khảo chứa kết quả chạy của nguồn gửi vào, không phải evidence thực thi của bài này.
+Giữ nguyên 12 cases FR-09 được user chấp nhận. Thêm TC13–TC18; TC18 chỉ chốt bất biến final_amount >=0, còn chờ cap/reject nên chưa sẵn sàng automate. Mapping và các quyết định cần xác nhận nằm tại scope.md. REQ-03 vẫn IN PROGRESS. Chỉ kiểm thử UI với page.route, không kiểm chứng công thức backend. Tài liệu tham khảo chứa kết quả chạy của nguồn gửi vào, không phải evidence thực thi của bài này.
 
 ### Chốt requirement 3 — 2026-11-13
 
@@ -54,7 +54,7 @@ User chốt chặn trần discount=min(nominal,total), final=0 khi giảm vượ
 
 ## Session 002 — Requirement 4 review
 
-Giữ nguyên FR-17-TC01–TC12, bổ sung TC13–TC31 (19 cases) từ nguồn sinh viên; FR-17 có 31 cases. Chi tiết mapping EP/BVA và các chính sách cần xem xét ở fr17-case-review.md. Chỉ Create/Read/Delete qua UI, SUT thật; không Update. Không sao chép Actual/Pass/Fail của nguồn làm evidence. Ngày tương lai dùng ngày chạy +30 thay cho ngày cố định đã cũ. REQ-04 vẫn IN PROGRESS vì còn quyết định policy, chưa runtime.
+Giữ nguyên FR-17-TC01–TC12, bổ sung TC13–TC31 (19 cases) từ nguồn sinh viên; FR-17 có 31 cases. Chi tiết mapping EP/BVA và các chính sách cần xem xét ở scope.md. Chỉ Create/Read/Delete qua UI, SUT thật; không Update. Không sao chép Actual/Pass/Fail của nguồn làm evidence. Ngày tương lai dùng ngày chạy +30 thay cho ngày cố định đã cũ. REQ-04 vẫn IN PROGRESS vì còn quyết định policy, chưa runtime.
 
 ### Chốt requirement 4 — 2026-11-13
 
@@ -62,4 +62,4 @@ User loại dialog xóa, code format/length, used-coupon deletion. Retire TC30/3
 
 ## Execution update — Session 003, 2026-11-13
 
-Các đoạn design-only/chưa chạy phía trên là lịch sử. Hiện 68 cases đã automate và thực thi trên ba browsers: 204 lượt, 150 pass/54 fail/0 skipped trong batch final. Xem automation-report.md, bug-reports.md và artifacts/session003-final/execution-matrix.json. FR-09 vẫn chỉ UI mocked, không kiểm chứng backend coupon rules. SUT source không bị sửa để làm tests pass. Student human review/publication/main report/PDF/video còn ở các bước riêng.
+Các đoạn design-only/chưa chạy phía trên là lịch sử. Hiện 68 cases đã automate và thực thi trên ba browsers: 204 lượt, 150 pass/54 fail/0 skipped trong batch final. Xem automation-report.md, bug-reports.md và artifacts/session004-refactor/execution-matrix.json. FR-09 vẫn chỉ UI mocked, không kiểm chứng backend coupon rules. SUT source không bị sửa để làm tests pass. Student human review/publication/main report/PDF/video còn ở các bước riêng.

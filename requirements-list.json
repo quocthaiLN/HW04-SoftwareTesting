@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T17:11:43+07:00",
+  "updated_at": "2026-11-13T17:24:42+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -24,10 +24,11 @@
     "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi.",
     "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed.",
     "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history.",
-    "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem session-004-review.md.",
-    "Tổng kết Session004: sinh viên chấp nhận refactor Conditional Test Logic; hạng mục sửa hoàn tất, REQ-11 tổng thể IN PROGRESS vì chưa xác nhận review toàn bộ outputs. Regression204keys0status differences; xem session-004-summary.md.",
-    "Session004: sinh viên xác nhận đồng ý selectors/assertions/waits/missing cases/gap analysis vì đã bổ sung ở testcase design. Cùng xác nhận refactor Conditional Test Logic trước đó, REQ-11 DONE theo human review; xem test-cases.json và session-004-review.md. Không suy thành coverage backend ngoài scope.",
-    "Session005 REQ-12 DONE: 9 GitHub Issues có screenshot đã UI-verified; full Markdown reports, mapping54failures và giới hạn screenshot ghi rõ. Evidence runtime dùng lại Session003/004; không tự chuyển REQ-16/publication thành DONE."
+    "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem main-report.md.",
+    "Tổng kết Session004: sinh viên chấp nhận refactor Conditional Test Logic; hạng mục sửa hoàn tất, REQ-11 tổng thể IN PROGRESS vì chưa xác nhận review toàn bộ outputs. Regression204keys0status differences; xem main-report.md.",
+    "Session004: sinh viên xác nhận đồng ý selectors/assertions/waits/missing cases/gap analysis vì đã bổ sung ở testcase design. Cùng xác nhận refactor Conditional Test Logic trước đó, REQ-11 DONE theo human review; xem test-cases.json và main-report.md. Không suy thành coverage backend ngoài scope.",
+    "Session005 REQ-12 DONE: 9 GitHub Issues có screenshot đã UI-verified; full Markdown reports, mapping54failures và giới hạn screenshot ghi rõ. Evidence runtime dùng lại Session003/004; không tự chuyển REQ-16/publication thành DONE.",
+    "Session005 cleanup: xóa tài liệu session-00x/implementation-notes/assertion-inventory và artifacts Session003/PoC/smoke. Main-report.md gom nội dung; test-cases execution_results lấy record thật Session004; ảnh bug local chuyển sang Session004, GitHub attachments giữ lịch sử. Verify 9 HTML Session004 attribution/ISO đạt. Audit/progress giữ tham chiếu lịch sử đến file đã xóa."
   ],
   "requirements": [
     {
@@ -56,23 +57,23 @@
       "id": 3,
       "name": "FR-09 scope",
       "description": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0. User đã chốt: cap discount bằng total, final=0; uppercase/trim chỉ payload; floor tiền giảm phần trăm. Không thêm case tổng 0/âm, khoảng trắng giữa mã; nghiệp vụ thanh toán ngoài scope.",
-      "expected_output": "Scope + 19 cases FR-09 đã chốt; mapping và quyết định trong fr09-case-review.md",
+      "expected_output": "Scope + 19 cases FR-09 đã chốt; mapping và quyết định trong scope.md",
       "source": "User Session 01; eshop-sut/README.md FR-09",
       "mandatory": true,
       "acceptance_criteria": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0. User đã chốt: cap discount bằng total, final=0; uppercase/trim chỉ payload; floor tiền giảm phần trăm. Không thêm case tổng 0/âm, khoảng trắng giữa mã; nghiệp vụ thanh toán ngoài scope.",
       "status": "DONE",
-      "evidence": "User xác nhận Session 002; test-cases.json TC01–TC19 và fr09-case-review.md. Hoàn thành scope/thiết kế; chưa automate hoặc chạy runtime (requirements 6–10)."
+      "evidence": "User xác nhận Session 002; test-cases.json TC01–TC19 và scope.md. Hoàn thành scope/thiết kế; chưa automate hoặc chạy runtime (requirements 6–10)."
     },
     {
       "id": 4,
       "name": "FR-17 Create/Read/Delete scope",
-      "description": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong fr17-case-review.md. User chốt: không dialog; loại code format/length và used-coupon delete; percent nguyên 1–100; duplicate HTTP 400/409 + lỗi thân thiện; thêm quyền user/unauth qua UI.",
+      "description": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong scope.md. User chốt: không dialog; loại code format/length và used-coupon delete; percent nguyên 1–100; duplicate HTTP 400/409 + lỗi thân thiện; thêm quyền user/unauth qua UI.",
       "expected_output": "Scope +35 cases FR-17 DESIGNED; mapping/quyết định đã chốt",
       "source": "User Session 01; eshop-sut/README.md FR-17; api_specification.md §6.4",
       "mandatory": true,
-      "acceptance_criteria": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong fr17-case-review.md. User chốt: không dialog; loại code format/length và used-coupon delete; percent nguyên 1–100; duplicate HTTP 400/409 + lỗi thân thiện; thêm quyền user/unauth qua UI.",
+      "acceptance_criteria": "Kiểm thử UI admin Create/Read/Delete và validation. Không thực hiện Update vì UI và backend SUT không hỗ trợ, theo user Session 001. Xem scope.md và test-cases.json. Session 002: đối chiếu EP01–27/BVA01–25; giữ TC01–12, bổ sung UI cases TC13–31. Các chính sách chưa đủ căn cứ và API-only ghi riêng trong scope.md. User chốt: không dialog; loại code format/length và used-coupon delete; percent nguyên 1–100; duplicate HTTP 400/409 + lỗi thân thiện; thêm quyền user/unauth qua UI.",
       "status": "DONE",
-      "evidence": "User Session 002; test-cases.json và fr17-case-review.md. TC30/31 retired, thêm TC32–37; hoàn thành scope/thiết kế, chưa automate/run runtime (REQ-06–10)."
+      "evidence": "User Session 002; test-cases.json và scope.md. TC30/31 retired, thêm TC32–37; hoàn thành scope/thiết kế, chưa automate/run runtime (REQ-06–10)."
     },
     {
       "id": 5,
@@ -94,7 +95,7 @@
       "mandatory": true,
       "acceptance_criteria": "Dẫn AI từng bước tạo automation web bằng Playwright hoặc Selenium 4+ cho ít nhất 12 test cases mỗi feature (>=36 tổng); positive/negative/edge đều được tính.",
       "status": "DONE",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "planning_reference": "main-report.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
       "evidence": "68 automated cases (14/19/35), 204 registrations; tests/*.spec.js, stable IDs, stepwise script commits and AI audit. Student human review tracked separately."
     },
     {
@@ -106,7 +107,7 @@
       "mandatory": true,
       "acceptance_criteria": "Data-driven: toàn bộ test data trong CSV/JSON riêng; tuyệt đối không hardcode trong spec, fixture, helper, POM hoặc PoC. Bao gồm input/setup/seed/mock response/expected/test credentials/biên và tham số thời gian nghiệp vụ. Dữ liệu động resolve từ template/quy tắc trong file ngoài; không inline defaults hoặc fallback hardcode. Validator kiểm tra dữ liệu/mapping; review code đối chiếu nguồn dữ liệu, thiếu trường phải báo lỗi.",
       "status": "DONE",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "planning_reference": "main-report.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
       "evidence": "data/shared.json + fr02/fr09/fr17.json; scripts/validate-test-data.js passed; inputs/seed/mock/expected external, no literal fill/test credentials/numeric business oracles found in reviewed test code."
     },
     {
@@ -118,8 +119,8 @@
       "mandatory": true,
       "acceptance_criteria": "Dùng ít nhất 3 assertion patterns khác nhau, thể hiện trong scripts và report.",
       "status": "DONE",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
-      "evidence": "assertion-inventory.md maps text, attributes/values, URL, state/count, polling DB and payload/status assertions to real scripts; executed across 3 engines."
+      "planning_reference": "main-report.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "main-report.md maps text, attributes/values, URL, state/count, polling DB and payload/status assertions to real scripts; executed across 3 engines."
     },
     {
       "id": 9,
@@ -130,8 +131,8 @@
       "mandatory": true,
       "acceptance_criteria": "Mỗi feature chạy trên 3 browsers Chromium/Firefox/WebKit hoặc Chrome/Edge/Firefox; >=9 feature-browser runs.",
       "status": "DONE",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
-      "evidence": "artifacts/session003-final/execution-matrix.json: 9 real feature-browser runs, 204 executed, 150 passed/54 failed/0 skipped. Failures retained; no blocked cases."
+      "planning_reference": "main-report.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "artifacts/session004-refactor/execution-matrix.json: 9 real feature-browser runs, 204 executed, 150 passed/54 failed/0 skipped. Failures retained; no blocked cases."
     },
     {
       "id": 10,
@@ -142,7 +143,7 @@
       "mandatory": true,
       "acceptance_criteria": "Mỗi run tạo Allure/Playwright HTML report có Run by: {StudentID} và ISO timestamp; phải từ chạy thực tế, không AI-generated/fabricated.",
       "status": "DONE",
-      "evidence": "9 genuine Playwright HTML reports, visible Run by: 23120352 + actual ISO in title, verified by opening local reports; artifacts/session003-final/report-verification.json and report-verified.png per run."
+      "evidence": "9 genuine Session004 Playwright HTML reports; opened locally and verified visible Run by:23120352 + ISO timestamp. artifacts/session004-refactor/report-verification.json and report-verified.png per run."
     },
     {
       "id": 11,
@@ -163,7 +164,7 @@
       "mandatory": true,
       "acceptance_criteria": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
       "status": "DONE",
-      "evidence": "Session005: bug-reports.md có 9 báo cáo chi tiết; GitHub Issues #1–#9 trên quocthaiLN/HW04-SoftwareTesting đã tạo và UI-verified từng Issue có screenshot. artifacts/evidence/session005-bug-evidence.json đối chiếu 18 failing IDs ×3 browsers=54 executions; ảnh danh sách session005-github-issues.png. Timeout/script/setup phân loại riêng; không chạy lại tests hoặc sửa SUT."
+      "evidence": "9 detailed Markdown reports in bug-reports.md and GitHub Issues #1–#9 with screenshots. Current local screenshots copied unchanged from Session004; manifest retains separate hashes for original GitHub attachment and current local image. Mapping 18IDs×3=54 failures verified. See main-report.md."
     },
     {
       "id": 13,
@@ -205,7 +206,7 @@
       "mandatory": true,
       "acceptance_criteria": "Public GitHub repository, lịch sử có ý nghĩa >=8 commits có thay đổi .spec.js/.spec.ts hoặc test-script tương đương; docs-only không tính. Commit rõ từng bước và requirement IDs.",
       "status": "IN PROGRESS",
-      "evidence": "9 commits thay đổi .spec.js có ý nghĩa, ghi trong session-003-summary.md; public GitHub remote còn chờ."
+      "evidence": "9 commits thay đổi .spec.js có ý nghĩa, ghi trong main-report.md; public GitHub remote còn chờ."
     },
     {
       "id": 17,

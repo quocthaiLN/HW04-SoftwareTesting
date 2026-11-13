@@ -2,7 +2,7 @@
   "requirement": 12,
   "verified_at": "2026-11-13T17:11:43+07:00",
   "method": "GitHub browser UI: created issue page URL and one attached image observed per issue; final issues list observed with all 9 titles.",
-  "test_execution": "Existing session003-final and session004-refactor results; no new SUT test run in Session005.",
+  "test_execution": "Current retained runtime evidence: session004-refactor; GitHub Issues created in Session005 originally attached Session003 screenshots.",
   "matrix": "artifacts/session004-refactor/execution-matrix.json",
   "test_revision": "3cd7cc68e83c3f3417b31a02a47231df5f3e54e0",
   "issues": [
@@ -11,7 +11,7 @@
       "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/1",
       "attachment_url": "https://github.com/user-attachments/assets/6b6f06b8-2e8c-494b-8533-2bb58525a5cc",
       "screenshot": "artifacts/evidence/BUG-01.png",
-      "screenshot_sha256": "286ffea78728524aa667c503d88366a5770acff985f41a312442e65f3d29ada5",
+      "screenshot_sha256": "e4595e6c44cdcf2853fd0c50199d3725d3d4f969555bc1ed22b985f3e401a1fb",
       "case_ids": [
         "FR-02-TC02",
         "FR-02-TC07"
@@ -54,14 +54,17 @@
           "run_id": "session004-refactor-fr02-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "286ffea78728524aa667c503d88366a5770acff985f41a312442e65f3d29ada5",
+      "screenshot_source": "artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-02",
       "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/2",
       "attachment_url": "https://github.com/user-attachments/assets/f5d4fb00-beaf-478e-99c0-0ad15bfa5fb6",
       "screenshot": "artifacts/evidence/BUG-02.png",
-      "screenshot_sha256": "9353a0fab9300c08362f7e401c9dbdf58d23c1c60edc0e8f3da31454dcd94eec",
+      "screenshot_sha256": "1b3b31f94161f1c02cdef5d0c7bac475b04e00d92e0b3de444a1f370049c1f41",
       "case_ids": [
         "FR-02-TC08",
         "FR-02-TC09",
@@ -123,7 +126,10 @@
           "run_id": "session004-refactor-fr02-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "9353a0fab9300c08362f7e401c9dbdf58d23c1c60edc0e8f3da31454dcd94eec",
+      "screenshot_source": "artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-03",
@@ -154,7 +160,10 @@
           "run_id": "session004-refactor-fr02-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "38dd7d47e0f959e4dd9774665d168cda0fbc7ebb71d3f033bdb03d2dc84855e0",
+      "screenshot_source": "artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC06-format-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-04",
@@ -185,7 +194,10 @@
           "run_id": "session004-refactor-fr02-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "b6425c7e78e1b44f7eeeaec3940cde8b72096f6ef9d63fe25a5b3c5438924684",
+      "screenshot_source": "artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-05",
@@ -216,7 +228,10 @@
           "run_id": "session004-refactor-fr02-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "f7acd69258b5b11aca4cf5fcb2a8418100cf9df35311838525f21206ea7ca9fb",
+      "screenshot_source": "artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-06",
@@ -247,14 +262,17 @@
           "run_id": "session004-refactor-fr17-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "0d3275cb575a2070b33297390c876cd6497e85fa9b7da0f2a9c080ecd54a3748",
+      "screenshot_source": "artifacts/session004-refactor-fr17-chromium/test-results/fr17-coupons-FR17---duplic-b043c-7-TC05-FR-17-TC05-duplicate-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-07",
       "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/7",
       "attachment_url": "https://github.com/user-attachments/assets/31d9146d-dda2-4422-a5af-2fbc22581eef",
       "screenshot": "artifacts/evidence/BUG-07.png",
-      "screenshot_sha256": "c28d555bf721698e046d62ab8aebee1611ede717c07e257a2cc25acc5eaeb7b2",
+      "screenshot_sha256": "14bced8a2bf93e3c3551ef19b37f0bb27f9d41e37c80779963b05880af533668",
       "case_ids": [
         "FR-17-TC08",
         "FR-17-TC09",
@@ -373,7 +391,10 @@
           "run_id": "session004-refactor-fr17-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "c28d555bf721698e046d62ab8aebee1611ede717c07e257a2cc25acc5eaeb7b2",
+      "screenshot_source": "artifacts/session004-refactor-fr17-chromium/test-results/fr17-coupons-FR17---server-0134c-R-17-TC32-FR-17-TC32-reject-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-08",
@@ -423,7 +444,10 @@
           "run_id": "session004-refactor-fr17-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "d1e2f9932cadd355fb92f0afeebb17c706a5af50a57669d81ae49dcc623a527e",
+      "screenshot_source": "artifacts/session004-refactor-fr17-chromium/test-results/fr17-coupons-FR17---server-15dae-R-17-TC24-FR-17-TC24-reject-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     },
     {
       "bug_id": "BUG-09",
@@ -454,7 +478,11 @@
           "run_id": "session004-refactor-fr17-webkit"
         }
       ],
-      "image_observed_on_issue": true
+      "image_observed_on_issue": true,
+      "github_attachment_original_sha256": "14bced8a2bf93e3c3551ef19b37f0bb27f9d41e37c80779963b05880af533668",
+      "screenshot_source": "artifacts/session004-refactor-fr17-chromium/test-results/fr17-coupons-FR17---server-80da2-R-17-TC10-FR-17-TC10-reject-chromium/test-failed-1.png",
+      "local_screenshot_batch": "session004-refactor"
     }
-  ]
+  ],
+  "evidence_migrated_at": "2026-11-13T17:23:41+07:00"
 }
