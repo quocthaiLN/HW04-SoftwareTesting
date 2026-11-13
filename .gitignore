@@ -9,3 +9,5 @@ playwright/.auth/
 .playwright-cli/
 artifacts/**/test-results/
 artifacts/**/cli-profile/
+
+.playwright/
