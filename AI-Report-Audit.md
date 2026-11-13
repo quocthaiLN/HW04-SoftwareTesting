@@ -104,3 +104,24 @@
     tong ket session 3
 - AI output: |
     Tool: OpenAI Codex. Tổng kết phần việc của chat đang ghi Session 002, đồng thời ghi nhận user gọi phần tổng kết là Session 3; giữ lịch sử session nhất quán. Requirements 2–4 DONE phần thiết kế; FR-02/09/17 tương ứng 14/19/35 cases, tổng 68 DESIGNED, dự kiến 204 executions trên 3 browsers. Chốt cap/floor/normalization FR-09 và percent/duplicate/UI permission FR-17; TC30/31 retired. Đã xác minh dữ liệu/Git status và cập nhật tổng kết progress/audit, commit và export Git log. Chưa có automation/runtime evidence/HTML/PDF/video/public remote; docs/data commits không tính vào 8 test-script commits. Bước tiếp theo REQ-06–10, bắt đầu proof-of-concept fixture FR-09.
+
+- Date and time: 2026-11-13T00:53:21+07:00
+- User prompt: |
+    Session 3: Sử dụng playwright-skill để thực hiện requirement 6–9; nêu rõ những gì skill chưa đề cập/chưa khớp lộ trình; trình bày kế hoạch chi tiết. Skill được cung cấp đầy đủ trong prompt, nguồn /home/le-nguyen-quoc-thai/.agents/skills/playwright-skill/SKILL.md. Người dùng xác nhận phần chuẩn bị đã hoàn tất và không đưa phần đó vào báo cáo.
+- AI output: |
+    Tool: OpenAI Codex. I use AI tools for the following tasks: đọc/đối chiếu yêu cầu, skill và source; lập kế hoạch automation REQ-06–09, cập nhật hồ sơ.
+    Đã tạo session-003-plan.md: 68 cases data-driven, 3 browsers, 204 executions dự kiến; gap inline data, executor vs runner, /tmp vs Git, browser setup, locator priorities, state/DB, Vite module mock, backend clock, evidence và review. Dùng run.js cho PoC, Playwright Test cho suite; >=3 assertion patterns, external JSON, ma trận và artifacts thực.
+    Đã đối chiếu đề và source; Node v24.21.0. detectDevServers chưa chạy được vì thiếu playwright. Source có dấu hiệu login +2/180 giây và DB reset startup; chưa runtime nên không tuyên bố bug. Chưa cài dependency, viết test hoặc chạy browser. Cập nhật progress/checklist planning_reference, giữ REQ-06–09 NOT START triển khai. Không sửa dữ liệu test được duyệt hoặc thay đổi/xóa file có sẵn; chưa commit thay đổi lẫn với người dùng.
+
+- Date and time: 2026-11-13T14:16:01+07:00
+- User prompt: |
+    Session 3:
+    - Thuc hien requirement 5 voi skill moi
+    - Phan tich skill playwright-cli (submission/skills/.agents/skills/playwright-cli/), playwright-core (submission/skills/.agents/skills/playwright-core/), playwright-pom (submission/skills/.agents/skills/playwright-pom/) de thuc hien requirement 6-9
+      - Neu ro nhung gi skill chua de cap hoac chua khop voi lo trinh thuc hien hien tai
+      - Trinh bay ke hoach chi tiet de thuc hien requirement 6-9
+- AI output: |
+    Tool: OpenAI Codex. I use AI tools for the following tasks: đọc/phân tích skill, chuẩn bị workflow và điều chỉnh kế hoạch requirements 5–9.
+    Đọc ba SKILL.md và guides liên quan. Bổ sung preparation-notes.md; cập nhật REQ-05 DONE dựa trên xác nhận sinh viên trước đó, không tuyên bố AI đã đọc bài giảng vì workspace chưa có. Không tự thêm mục REQ-05 vào main report.
+    Kế hoạch mới: CLI snapshot/discovery/debug → Core Playwright Test với external JSON/fixtures/assertions/3 browser projects → POM có chọn lọc cho UI, không đặt DB lifecycle trong POM. Nêu xung đột cấm mock own API với FR-09 và giữ scope user; inline data trái đề, retry/trace defaults, state leakage, clock backend, networkidle, cleanup khi process chết, global latest và link ../core sai đường dẫn.
+    Giữ 68 cases/204 lượt dự kiến, 9 tổ hợp; baseline retries=0, trace retain-on-failure; 10 bước triển khai, files/inventory/acceptance/Git milestones trong session-003-plan.md. Chưa cài dependencies, chạy CLI/browser hoặc tạo runtime evidence; REQ-06–09 chưa triển khai. Cập nhật checklist/progress/audit và commit tài liệu riêng, không stage thay đổi/xóa file có sẵn của sinh viên.
