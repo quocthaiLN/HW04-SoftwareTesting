@@ -118,3 +118,21 @@
 - Files or artifacts updated: session-003-summary.md, PROGRESS.md, AI-Report-Audit.md, requirements-list.json, git-log.txt.
 - Known risk or unresolved issue: Human review, public remote/Issues, main report/PDF, critique/video, tự chấm/đóng gói còn chờ; không tuyên bố bài nộp hoàn tất. FR-09 không chứng minh backend rules; một WebKit timeout batch đầu không lặp ở final nhưng chưa kết luận nguyên nhân.
 - Next best step: Sinh viên thực hiện REQ-11 human review rồi hoàn thiện Issues/publication và report deliverables theo checklist.
+
+### Giải thích cấu trúc suite — Session 003
+- Date: 2026-11-13T15:34:23+07:00.
+- Goal: Giải thích vị trí data, entry points, output và các thành phần automation.
+- Completed: Đối chiếu code thực tế và cung cấp sơ đồ luồng, lệnh chạy, đường dẫn outputs và ví dụ FR-09-TC01. Không thay đổi trạng thái checklist.
+- Verification run: Chỉ đọc code/tài liệu; không chạy tests lại.
+- Files or artifacts updated: AI-Report-Audit.md, PROGRESS.md.
+- Next best step: Sinh viên dùng cấu trúc này để human review suite.
+
+## Session 004
+- Date: 2026-11-13T16:33:13+07:00.
+- Goal: REQ-11 xử lý human review về Conditional Test Logic.
+- Completed: Tách callbacks theo hành vi trên3specs, data-driven chỉ cùng hình dạng; bỏ branch theo observed validity. Fixtures/helper luồng cố định, không chuyển scenario dispatcher. REQ-11 IN PROGRESS; chưa xác nhận review mọi output.
+- Verification run: validate; exact68IDs×3; batch session004-refactor9runs204executions150pass54fail0skip. Case/browser comparison với session003-final0differences. DB cleanup chỉ seed2users4coupons; dừng đúng SUT owner. Giới hạn kết luận theo các ca đã chạy.
+- Commits: 3cd7cc6 code; af7b682 review/comparison; evidence/docs commit sau kiểm chứng.
+- Files or artifacts updated: tests/*.spec.js, scripts/compare-matrices.js, session-004-review.md, implementation-notes.md, RUNNING.md, artifacts/session004-refactor*, checklist/audit/progress.
+- Known risk or unresolved issue: Lỗi SUT giữ nguyên; human review chưa toàn bộ; FR09 UI mock và permission UI scope giữ nguyên. Không thêm/bỏ case, không sửa SUT/data. Giữ user changes sẵn có.
+- Next best step: Sinh viên review các callback đã tách và gap analysis trong session-004-review.md để tiếp tục REQ-11.

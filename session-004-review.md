@@ -31,4 +31,10 @@ Không thêm/bỏ case. Phạm vi chưa automate vẫn như trước: FR-09 back
 
 ## Kiểm chứng
 
-Đang chạy batch session004-refactor trên test-code commit 3cd7cc6; evidence Session003 giữ nguyên. Kết quả được bổ sung sau khi batch thực sự hoàn tất.
+Batch session004-refactor hoàn tất trên test-code commit 3cd7cc6: 204 executions, 150 pass, 54 fail, 0 skipped; 9 runs. So từng feature/browser/ID với session003-final: 204 keys khớp, 0 status differences (comparison.json). FR-02 mỗi engine 6/8; FR-09 19/0; FR-17 25/10. Không quan sát status regression trong các ca đã chạy; cùng status không chứng minh tương đương mọi hành vi ngoài suite.
+
+validate passed; enumeration exact68 IDs mỗi project/204 total; syntax/diff checks passed. Comparison tool được kiểm tra identical input exit0 và thay status có chủ ý trong /tmp exit1 (không trộn vào evidence runtime). DB cleanup chỉ còn2 users/4 coupons seed; SUT owner process đã được yêu cầu dừng đúng PID. HTML/JSON/console/attachments của batch mới giữ nguyên output Playwright. Không tự nhận đã browser-verify9 HTML mới như batch Session003.
+
+Đường dẫn evidence hồi quy độc lập: artifacts/session004-refactor/execution-matrix.json và các thư mục session004-refactor-<feature>-<browser>/. automation-report.md và test-cases.json vẫn ghi batch Session003; không ghi đè lịch sử này bằng summarize-run khi review refactor. Kết quả batch mới được lưu tại summary.json/comparison.json bên cạnh matrix.
+
+Điều chỉnh oracle validation: HTML group khẳng định checkValidity() false trước submit và không POST; server group khẳng định checkValidity() true trước POST. DB persistence vẫn kiểm tra theo expected JSON. Trong HTML group, DB row count kiểm tra cả blank code; không dùng điều kiện code rỗng để bỏ assertion. Các kiểm tra này làm rõ contract đã có, không đổi dữ liệu expected.

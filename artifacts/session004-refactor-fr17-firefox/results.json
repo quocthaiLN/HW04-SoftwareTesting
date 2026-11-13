@@ -1,0 +1,2349 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr17-coupons.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T09:29:23.557Z",
+      "runId": "session004-refactor-fr17-firefox",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:29:23.557Z",
+          "runId": "session004-refactor-fr17-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:29:23.557Z",
+          "runId": "session004-refactor-fr17-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:29:23.557Z",
+          "runId": "session004-refactor-fr17-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:29:23.557Z",
+          "runId": "session004-refactor-fr17-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/html",
+          "open": "never",
+          "title": "Run by: 23120352 | 2026-11-13T09:29:23.557Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr17-coupons.spec.js",
+      "file": "fr17-coupons.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR17 - create",
+          "file": "fr17-coupons.spec.js",
+          "line": 93,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC01",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC01 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2086,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:23.880Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-44a3c335d783f424e531",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC02",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC02 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1090,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:26.591Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-67e7c76a789281445402",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC13",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC13 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1039,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:27.692Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-3a58f86980fa083538e9",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC14",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC14 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1157,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:28.738Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-cc999aa86c663c2326e1",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC17",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC17 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1069,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:29.902Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-8994bbbec4dc77694181",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC18",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC18 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1061,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:30.979Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-99690fa304d3c7c34193",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC19",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC19 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1161,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:32.050Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-0c4a273e539c16cfbc0e",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC20",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC20 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1108,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:33.220Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-c7d8f799c79db237e9b6",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC21",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC21 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1064,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:34.335Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-56cbcfaa28c62a4c52f7",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC22",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC22 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1684,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:35.408Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-ea3be9ee78fa90ef9448",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC23",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC23 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1029,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:37.099Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-7b9164b426ad2abbd987",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC26",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC26 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1034,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:38.136Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-7c4ef7dd8bbdb7a8c633",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC29",
+              "file": "fr17-coupons.spec.js",
+              "line": 95,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC29 create",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1043,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:39.176Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-74844ad360eabd080729",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 99,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - read",
+          "file": "fr17-coupons.spec.js",
+          "line": 115,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC03",
+              "file": "fr17-coupons.spec.js",
+              "line": 117,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC03 read",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1038,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:40.227Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-412ff62f87468afffe8b",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 121,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - uppercase",
+          "file": "fr17-coupons.spec.js",
+          "line": 139,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC15",
+              "file": "fr17-coupons.spec.js",
+              "line": 141,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC15 uppercase",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1148,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:41.273Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-7d887fa225d538005c18",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 145,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - reset",
+          "file": "fr17-coupons.spec.js",
+          "line": 163,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC16",
+              "file": "fr17-coupons.spec.js",
+              "line": 165,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC16 reset",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1203,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:42.427Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-4fab861fa890e404f102",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 169,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - delete",
+          "file": "fr17-coupons.spec.js",
+          "line": 192,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC04",
+              "file": "fr17-coupons.spec.js",
+              "line": 194,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC04 delete",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 993,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:43.637Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-b0eba0487142b7161ef6",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 198,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - duplicate",
+          "file": "fr17-coupons.spec.js",
+          "line": 226,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC05",
+              "file": "fr17-coupons.spec.js",
+              "line": 228,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC05 duplicate",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 1003,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:260:47",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 47,
+                              "line": 260
+                            },
+                            "snippet": " \u001b[90m 258 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 259 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 260 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39mduplicateStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 261 |\u001b[39m         \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 262 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 263 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mforbiddenLeakPattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 47,
+                                "line": 260
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m\n\n  258 |           contentType: 'application/json'\n  259 |         });\n> 260 |         expect.soft(shared.duplicateStatuses).toContain(response.status());\n      |                                               ^\n  261 |         await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  262 |         expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n  263 |         expect.soft(dialogs.join(' ')).not.toMatch(new RegExp(shared.ui.forbiddenLeakPattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:260:47"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 40,
+                                "line": 262
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/đã tồn tại|trùng|already exists|duplicate/i\u001b[39m\nReceived string:  \u001b[31m\"Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code\"\u001b[39m\n\n  260 |         expect.soft(shared.duplicateStatuses).toContain(response.status());\n  261 |         await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n> 262 |         expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n      |                                        ^\n  263 |         expect.soft(dialogs.join(' ')).not.toMatch(new RegExp(shared.ui.forbiddenLeakPattern, 'i'));\n  264 |         await coupons.reload();\n  265 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:262:40"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 44,
+                                "line": 263
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: not \u001b[32m/SQLITE|INSERT INTO|stack|Error:/i\u001b[39m\nReceived string:      \u001b[31m\"Lỗi: \u001b[7mSQLITE\u001b[27m_CONSTRAINT: UNIQUE constraint failed: coupons.code\"\u001b[39m\n\n  261 |         await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  262 |         expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n> 263 |         expect.soft(dialogs.join(' ')).not.toMatch(new RegExp(shared.ui.forbiddenLeakPattern, 'i'));\n      |                                            ^\n  264 |         await coupons.reload();\n  265 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  266 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:263:44"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:44.637Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjUwMCwiYm9keSI6IntcImVycm9yXCI6XCJTUUxJVEVfQ09OU1RSQUlOVDogVU5JUVVFIGNvbnN0cmFpbnQgZmFpbGVkOiBjb3Vwb25zLmNvZGVcIn0ifQ=="
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---duplic-b043c-7-TC05-FR-17-TC05-duplicate-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---duplic-b043c-7-TC05-FR-17-TC05-duplicate-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---duplic-b043c-7-TC05-FR-17-TC05-duplicate-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 47,
+                            "line": 260
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-b110bc93a4b550722cb9",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 232,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - HTML validation",
+          "file": "fr17-coupons.spec.js",
+          "line": 272,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC06",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC06 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1744,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:46.245Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-831682747043f698b2a6",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC07",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC07 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 875,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:48.497Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-8a6e8de9365210c7c8d9",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC11",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC11 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 848,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:49.382Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-3e42e4365693e58d91d0",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC12",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC12 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 902,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:50.238Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-28fcf4298a19d884f41b",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC27",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC27 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 867,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:51.148Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-17b5e6eb299343ab4ca8",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC28",
+              "file": "fr17-coupons.spec.js",
+              "line": 274,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC28 reject",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 949,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:52.023Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-9f849a77fc71e8f4d37a",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 278,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - server validation",
+          "file": "fr17-coupons.spec.js",
+          "line": 303,
+          "column": 12,
+          "specs": [],
+          "suites": [
+            {
+              "title": "FR-17-TC08",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC08 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4027,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 50}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW4B3E270B3B134470BBF79BFBAF61430B', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW4B3E270B3B134470BBF79BFBAF61430B', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW4B3E270B3B134470BBF79BFBAF61430B', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:52.981Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjUwfSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-a5d9d-R-17-TC08-FR-17-TC08-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-a5d9d-R-17-TC08-FR-17-TC08-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-a5d9d-R-17-TC08-FR-17-TC08-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-d3984b107e305bdf867e",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC09",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC09 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4780,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 51}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW839419D524074D309F99C213423C35E0', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW839419D524074D309F99C213423C35E0', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW839419D524074D309F99C213423C35E0', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:29:57.568Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjUxfSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-58dcf-R-17-TC09-FR-17-TC09-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-58dcf-R-17-TC09-FR-17-TC09-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-58dcf-R-17-TC09-FR-17-TC09-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-da4fb74621673a01cc5c",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC10",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC10 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4756,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 52}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HWFF27488DC16145D493B1B1FD9396727F', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HWFF27488DC16145D493B1B1FD9396727F', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HWFF27488DC16145D493B1B1FD9396727F', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:03.365Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjUyfSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-80da2-R-17-TC10-FR-17-TC10-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-80da2-R-17-TC10-FR-17-TC10-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-80da2-R-17-TC10-FR-17-TC10-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-a7c6e8ddea81133a154a",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC24",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC24 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4786,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 53}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW4803B0680D33488B81A99605740355F4', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW4803B0680D33488B81A99605740355F4', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW4803B0680D33488B81A99605740355F4', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:09.179Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjUzfSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-15dae-R-17-TC24-FR-17-TC24-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-15dae-R-17-TC24-FR-17-TC24-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-15dae-R-17-TC24-FR-17-TC24-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-759665add6f51337eaf8",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC25",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC25 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4763,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 54}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HWCDEC0B52A8CD4570AC6247033539A1AD', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HWCDEC0B52A8CD4570AC6247033539A1AD', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HWCDEC0B52A8CD4570AC6247033539A1AD', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:15.008Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjU0fSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-42219-R-17-TC25-FR-17-TC25-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-42219-R-17-TC25-FR-17-TC25-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-42219-R-17-TC25-FR-17-TC25-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-b3d524627e73beb58838",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC32",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC32 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4764,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 55}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HWD29472D1927A4C858F24FB4E469323AE', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HWD29472D1927A4C858F24FB4E469323AE', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HWD29472D1927A4C858F24FB4E469323AE', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:20.793Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjU1fSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-0134c-R-17-TC32-FR-17-TC32-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-0134c-R-17-TC32-FR-17-TC32-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-0134c-R-17-TC32-FR-17-TC32-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-247be0273c1523b0cc20",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC33",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC33 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4756,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 56}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW45B28C09453C44B8A3B2DD0F49A1F8D9', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW45B28C09453C44B8A3B2DD0F49A1F8D9', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW45B28C09453C44B8A3B2DD0F49A1F8D9', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:26.585Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjU2fSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-e1746-R-17-TC33-FR-17-TC33-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-e1746-R-17-TC33-FR-17-TC33-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-e1746-R-17-TC33-FR-17-TC33-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-d557923d300bf943a076",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC34",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC34 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 8,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4795,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 57}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW9790597F50C54A459999E3DBC6D94ADC', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW9790597F50C54A459999E3DBC6D94ADC', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW9790597F50C54A459999E3DBC6D94ADC', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:32.432Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjU3fSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-733d5-R-17-TC34-FR-17-TC34-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-733d5-R-17-TC34-FR-17-TC34-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-733d5-R-17-TC34-FR-17-TC34-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-3b497ea654fec3f695bb",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "title": "FR-17-TC35",
+              "file": "fr17-coupons.spec.js",
+              "line": 305,
+              "column": 16,
+              "specs": [
+                {
+                  "title": "FR-17-TC35 reject",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [
+                        {
+                          "workerIndex": 9,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 4733,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                              "column": 45,
+                              "line": 336
+                            },
+                            "snippet": " \u001b[90m 334 |\u001b[39m           contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 335 |\u001b[39m         })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 336 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 337 |\u001b[39m         \u001b[36mawait\u001b[39m coupons\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 338 |\u001b[39m         \u001b[36mconst\u001b[39m persisted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mall(\u001b[32m'SELECT id FROM coupons WHERE code=?'\u001b[39m\u001b[33m,\u001b[39m [savedCode])\u001b[33m;\u001b[39m\n \u001b[90m 339 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(persisted)\u001b[33m.\u001b[39mtoHaveLength(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mrowCount)\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 45,
+                                "line": 336
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  334 |           contentType: 'application/json'\n  335 |         });\n> 336 |         expect.soft(shared.invalidStatuses).toContain(response.status());\n      |                                             ^\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:336:45"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 32,
+                                "line": 339
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 58}]\u001b[39m\n\n  337 |         await coupons.reload();\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n      |                                ^\n  340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  341 |       });\n  342 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:339:32"
+                            },
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                                "column": 46,
+                                "line": 340
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW6FB10166D1924DC89B7C0FD2BF2C93A8', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW6FB10166D1924DC89B7C0FD2BF2C93A8', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW6FB10166D1924DC89B7C0FD2BF2C93A8', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  338 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  339 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 340 |         await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n      |                                              ^\n  341 |       });\n  342 |     });\n  343 |   }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:340:46"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:30:38.282Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "creation-response",
+                              "contentType": "application/json",
+                              "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjU4fSJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-de40d-R-17-TC35-FR-17-TC35-reject-firefox/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-de40d-R-17-TC35-FR-17-TC35-reject-firefox/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr17-firefox/test-results/fr17-coupons-FR17---server-de40d-R-17-TC35-FR-17-TC35-reject-firefox/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                            "column": 45,
+                            "line": 336
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "fc5103c6032a05bd1109-bce882f9f4a6e292d4ef",
+                  "file": "fr17-coupons.spec.js",
+                  "line": 309,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "FR17 - user-permission",
+          "file": "fr17-coupons.spec.js",
+          "line": 345,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR-17-TC36 user-permission",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1580,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:30:44.065Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc5103c6032a05bd1109-a104a4ae836d3c907202",
+              "file": "fr17-coupons.spec.js",
+              "line": 347,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "FR17 - anonymous",
+          "file": "fr17-coupons.spec.js",
+          "line": 397,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR-17-TC37 anonymous",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 529,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:30:46.121Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc5103c6032a05bd1109-4dec31600031ffd082bd",
+              "file": "fr17-coupons.spec.js",
+              "line": 399,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T09:29:23.559Z",
+    "duration": 83396.52399999999,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}

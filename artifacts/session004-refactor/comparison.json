@@ -1,0 +1,6 @@
+{
+  "baseline": "artifacts/session003-final/execution-matrix.json",
+  "candidate": "artifacts/session004-refactor/execution-matrix.json",
+  "compared": 204,
+  "differences": []
+}

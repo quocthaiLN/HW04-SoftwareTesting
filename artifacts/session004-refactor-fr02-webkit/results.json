@@ -1,0 +1,1037 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr02-login.spec.js",
+      "--project=webkit"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T09:26:45.395Z",
+      "runId": "session004-refactor-fr02-webkit",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:26:45.395Z",
+          "runId": "session004-refactor-fr02-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:26:45.395Z",
+          "runId": "session004-refactor-fr02-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:26:45.395Z",
+          "runId": "session004-refactor-fr02-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T09:26:45.395Z",
+          "runId": "session004-refactor-fr02-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit",
+          "launchOptions": {
+            "executablePath": "/tmp/hw04-webkit-launch.sh"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/html",
+          "open": "never",
+          "title": "Run by: 23120352 | 2026-11-13T09:26:45.395Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr02-login.spec.js",
+      "file": "fr02-login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR02 - Login",
+          "file": "fr02-login.spec.js",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR-02-TC01 success",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1318,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:45.691Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-7449644e4b7741bca794",
+              "file": "fr02-login.spec.js",
+              "line": 45,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC02 wrong",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3569,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:71:128",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 128,
+                          "line": 71
+                        },
+                        "snippet": " \u001b[90m 69 |\u001b[39m     }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m     expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(key \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(key)\u001b[33m,\u001b[39m shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mtokenKey))\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mnull)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m db\u001b[33m.\u001b[39mget(\u001b[32m'SELECT login_attempts FROM users WHERE id=?'\u001b[39m\u001b[33m,\u001b[39m [testUser\u001b[33m.\u001b[39mid]))\u001b[33m.\u001b[39mlogin_attempts)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   test(title(\u001b[32m'missing'\u001b[39m)\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({\n \u001b[90m 74 |\u001b[39m     page\u001b[33m,\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 128,
+                            "line": 71
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate\n\n  69 |     })).toBeVisible();\n  70 |     expect(await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey)).toBe(shared.null);\n> 71 |     await expect.poll(async () => (await db.get('SELECT login_attempts FROM users WHERE id=?', [testUser.id])).login_attempts).toBe(shared.expected.one);\n     |                                                                                                                                ^\n  72 |   });\n  73 |   test(title('missing'), async ({\n  74 |     page,\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:71:128"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:47.263Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 128,
+                        "line": 71
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-a609f30c95dc96079a7a",
+              "file": "fr02-login.spec.js",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC03 missing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 708,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:51.201Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-f135fc60b0ce56dd86f0",
+              "file": "fr02-login.spec.js",
+              "line": 73,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC04 empty-email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 644,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:52.050Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-b77b5a38d9f6e6a8e7a6",
+              "file": "fr02-login.spec.js",
+              "line": 86,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC05 empty-password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 631,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:52.705Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-608270a743a876557aac",
+              "file": "fr02-login.spec.js",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC06 format",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3612,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveAttribute\" locator('main form').locator('input').first() with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').first()\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"abc\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveAttribute\" locator('main form').locator('input').first() with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').first()\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"abc\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:128:36",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 36,
+                          "line": 128
+                        },
+                        "snippet": " \u001b[90m 126 |\u001b[39m     \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mfill(shared\u001b[33m.\u001b[39minvalidEmail\u001b[33m,\u001b[39m testUser\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\n \u001b[90m 127 |\u001b[39m     \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39msubmit\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 128 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(login\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39memailType)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 129 |\u001b[39m     expect(\u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39memail\u001b[33m.\u001b[39mevaluate(el \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidity\u001b[33m.\u001b[39mvalid))\u001b[33m.\u001b[39mtoBeFalsy()\u001b[33m;\u001b[39m\n \u001b[90m 130 |\u001b[39m     expect(requests)\u001b[33m.\u001b[39mtoHaveLength(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mzero)\u001b[33m;\u001b[39m\n \u001b[90m 131 |\u001b[39m   })\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 36,
+                            "line": 128
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').first()\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveAttribute\" locator('main form').locator('input').first() with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').first()\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"abc\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n  126 |     await login.fill(shared.invalidEmail, testUser.password);\n  127 |     await login.submit.click();\n> 128 |     await expect.soft(login.email).toHaveAttribute('type', shared.expected.emailType);\n      |                                    ^\n  129 |     expect(await login.email.evaluate(el => el.validity.valid)).toBeFalsy();\n  130 |     expect(requests).toHaveLength(shared.expected.zero);\n  131 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:128:36"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 65,
+                            "line": 129
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeFalsy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mtrue\u001b[39m\n\n  127 |     await login.submit.click();\n  128 |     await expect.soft(login.email).toHaveAttribute('type', shared.expected.emailType);\n> 129 |     expect(await login.email.evaluate(el => el.validity.valid)).toBeFalsy();\n      |                                                                 ^\n  130 |     expect(requests).toHaveLength(shared.expected.zero);\n  131 |   });\n  132 |   test(title('mask'), async ({\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:129:65"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:53.342Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC06-format-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC06-format-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC06-format-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 36,
+                        "line": 128
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-9f89472c1243ee05ef26",
+              "file": "fr02-login.spec.js",
+              "line": 116,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC13 mask",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3610,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('main form').locator('input').nth(1) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').nth(1)\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"TestMask123!\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('main form').locator('input').nth(1) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').nth(1)\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"TestMask123!\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:140:34",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 34,
+                          "line": 140
+                        },
+                        "snippet": " \u001b[90m 138 |\u001b[39m     \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mpassword\u001b[33m.\u001b[39mfill(shared\u001b[33m.\u001b[39mmaskPassword)\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(login\u001b[33m.\u001b[39mpassword)\u001b[33m.\u001b[39mtoHaveValue(shared\u001b[33m.\u001b[39mmaskPassword)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 140 |\u001b[39m     \u001b[36mawait\u001b[39m expect(login\u001b[33m.\u001b[39mpassword)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mpasswordType)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 141 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 142 |\u001b[39m   test(title(\u001b[32m'heading'\u001b[39m)\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({\n \u001b[90m 143 |\u001b[39m     page\u001b[33m,\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 34,
+                            "line": 140
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('main form').locator('input').nth(1)\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('main form').locator('input').nth(1) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('main form').locator('input').nth(1)\u001b[22m\n\u001b[2m    10 × locator resolved to <input required=\"\" type=\"text\" value=\"TestMask123!\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n  138 |     await login.password.fill(shared.maskPassword);\n  139 |     await expect.soft(login.password).toHaveValue(shared.maskPassword);\n> 140 |     await expect(login.password).toHaveAttribute('type', shared.expected.passwordType);\n      |                                  ^\n  141 |   });\n  142 |   test(title('heading'), async ({\n  143 |     page,\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:140:34"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:26:57.300Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 34,
+                        "line": 140
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-695d84e8cf508210b3e9",
+              "file": "fr02-login.spec.js",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC14 heading",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3573,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Đăng nhập/i })\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Đăng nhập/i }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Đăng nhập/i })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Đăng nhập/i })\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Đăng nhập/i }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Đăng nhập/i })\u001b[22m\n\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:154:9",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 9,
+                          "line": 154
+                        },
+                        "snippet": " \u001b[90m 152 |\u001b[39m       name\u001b[33m:\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mloginHeading\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 153 |\u001b[39m       exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 154 |\u001b[39m     }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 155 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 156 |\u001b[39m   test(title(\u001b[32m'two-then-success'\u001b[39m)\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({\n \u001b[90m 157 |\u001b[39m     page\u001b[33m,\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 9,
+                            "line": 154
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Đăng nhập/i })\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Đăng nhập/i }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Đăng nhập/i })\u001b[22m\n\n\n  152 |       name: new RegExp(shared.expected.loginHeading, 'i'),\n  153 |       exact: true\n> 154 |     })).toBeVisible();\n      |         ^\n  155 |   });\n  156 |   test(title('two-then-success'), async ({\n  157 |     page,\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:154:9"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:27:01.414Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 9,
+                        "line": 154
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-cf48318c9286ce413ed6",
+              "file": "fr02-login.spec.js",
+              "line": 142,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC07 two-then-success",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 962,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:163:11",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 31,
+                          "line": 30
+                        },
+                        "snippet": " \u001b[90m 28 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'FR02 - Login'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 29 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m authenticated(page\u001b[33m,\u001b[39m testUser\u001b[33m,\u001b[39m response) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39msuccessStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m 33 |\u001b[39m       name\u001b[33m:\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(testUser\u001b[33m.\u001b[39mname)"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 31,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n\n  28 | test.describe('FR02 - Login', () => {\n  29 |   async function authenticated(page, testUser, response) {\n> 30 |     expect(response.status()).toBe(shared.expected.successStatus);\n     |                               ^\n  31 |     await expect(page).toHaveURL('/');\n  32 |     await expect(page.getByRole('link', {\n  33 |       name: new RegExp(testUser.name)\n    at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:163:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:27:05.460Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 31,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-4b9d9be56a34fe25d54f",
+              "file": "fr02-login.spec.js",
+              "line": 156,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC10 unlock",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 32096,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:182:11",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                          "column": 31,
+                          "line": 30
+                        },
+                        "snippet": " \u001b[90m 28 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'FR02 - Login'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 29 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m authenticated(page\u001b[33m,\u001b[39m testUser\u001b[33m,\u001b[39m response) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39msuccessStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m 33 |\u001b[39m       name\u001b[33m:\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(testUser\u001b[33m.\u001b[39mname)"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 31,
+                            "line": 30
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n\n  28 | test.describe('FR02 - Login', () => {\n  29 |   async function authenticated(page, testUser, response) {\n> 30 |     expect(response.status()).toBe(shared.expected.successStatus);\n     |                               ^\n  31 |     await expect(page).toHaveURL('/');\n  32 |     await expect(page.getByRole('link', {\n  33 |       name: new RegExp(testUser.name)\n    at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:182:11"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:27:06.908Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "lock-state-before",
+                          "contentType": "application/json",
+                          "body": "eyJsb2dpbl9hdHRlbXB0cyI6NCwibG9ja2VkX3VudGlsIjoiMjAyNi0xMS0xM1QwOTozMDowNy43MDVaIiwib2JzZXJ2ZWRBdCI6IjIwMjYtMTEtMTNUMDk6Mjc6MDcuODUxWiJ9"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-webkit/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-webkit/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                        "column": 31,
+                        "line": 30
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-aba8041e3408bd67845c",
+              "file": "fr02-login.spec.js",
+              "line": 165,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC11 reset",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1056,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:27:39.491Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-dcb5afad9f9615179b30",
+              "file": "fr02-login.spec.js",
+              "line": 184,
+              "column": 3
+            },
+            {
+              "title": "FR-02-TC12 jwt",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 996,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T09:27:40.691Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36e8ed8fabc5844095a0-044601e032fdd57749eb",
+              "file": "fr02-login.spec.js",
+              "line": 197,
+              "column": 3
+            }
+          ],
+          "suites": [
+            {
+              "title": "lockout",
+              "file": "fr02-login.spec.js",
+              "line": 214,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "FR-02-TC08 lock",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 952,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                              "column": 100,
+                              "line": 241
+                            },
+                            "snippet": " \u001b[90m 239 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(after\u001b[33m.\u001b[39mlocked_until)\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mlocked_until)\u001b[33m;\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[90m// Allow request/SQLite scheduling jitter, without accepting a different duration policy.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mround((\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m(before\u001b[33m.\u001b[39mlocked_until)\u001b[33m.\u001b[39mgetTime() \u001b[33m-\u001b[39m thirdAttemptAt) \u001b[33m/\u001b[39m \u001b[35m1000\u001b[39m))\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mlockSeconds)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                                "column": 100,
+                                "line": 241
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m\n\n  239 |         expect.soft(after.locked_until).toBe(before.locked_until);\n  240 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.\n> 241 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);\n      |                                                                                                    ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:27:41.698Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "lock-state-before",
+                              "contentType": "application/json",
+                              "body": "eyJsb2dpbl9hdHRlbXB0cyI6NCwibG9ja2VkX3VudGlsIjoiMjAyNi0xMS0xM1QwOTozMDo0Mi4yOTNaIiwib2JzZXJ2ZWRBdCI6IjIwMjYtMTEtMTNUMDk6Mjc6NDIuNDA5WiJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-webkit/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-webkit/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-webkit/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 100,
+                            "line": 241
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "36e8ed8fabc5844095a0-86a2cedaf39773bff840",
+                  "file": "fr02-login.spec.js",
+                  "line": 216,
+                  "column": 7
+                },
+                {
+                  "title": "FR-02-TC09 lock-deadline",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 1093,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100",
+                            "location": {
+                              "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                              "column": 100,
+                              "line": 241
+                            },
+                            "snippet": " \u001b[90m 239 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(after\u001b[33m.\u001b[39mlocked_until)\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mlocked_until)\u001b[33m;\u001b[39m\n \u001b[90m 240 |\u001b[39m         \u001b[90m// Allow request/SQLite scheduling jitter, without accepting a different duration policy.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 241 |\u001b[39m         expect\u001b[33m.\u001b[39msoft(\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mround((\u001b[36mnew\u001b[39m \u001b[33mDate\u001b[39m(before\u001b[33m.\u001b[39mlocked_until)\u001b[33m.\u001b[39mgetTime() \u001b[33m-\u001b[39m thirdAttemptAt) \u001b[33m/\u001b[39m \u001b[35m1000\u001b[39m))\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mlockSeconds)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 242 |\u001b[39m       })\u001b[33m;\u001b[39m\n \u001b[90m 243 |\u001b[39m     }\n \u001b[90m 244 |\u001b[39m   })\u001b[33m;\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                                "column": 100,
+                                "line": 241
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31m180\u001b[39m\n\n  239 |         expect.soft(after.locked_until).toBe(before.locked_until);\n  240 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.\n> 241 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);\n      |                                                                                                    ^\n  242 |       });\n  243 |     }\n  244 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-11-13T09:27:42.993Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "lock-state-before",
+                              "contentType": "application/json",
+                              "body": "eyJsb2dpbl9hdHRlbXB0cyI6NCwibG9ja2VkX3VudGlsIjoiMjAyNi0xMS0xM1QwOTozMDo0My44MzRaIiwib2JzZXJ2ZWRBdCI6IjIwMjYtMTEtMTNUMDk6Mjc6NDMuOTU3WiJ9"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-webkit/test-failed-1.png"
+                            },
+                            {
+                              "name": "error-context",
+                              "contentType": "text/markdown",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-webkit/error-context.md"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session004-refactor-fr02-webkit/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-webkit/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js",
+                            "column": 100,
+                            "line": 241
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "36e8ed8fabc5844095a0-523ad8a5fba677d45bb7",
+                  "file": "fr02-login.spec.js",
+                  "line": 216,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T09:26:45.397Z",
+    "duration": 58892.533,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

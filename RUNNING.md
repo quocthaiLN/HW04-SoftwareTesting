@@ -32,3 +32,11 @@ HTML report là output thật của Playwright, không chỉnh tay. Mở file ht
 CLI discovery: cấu hình browserName chromium và executablePath từ require('@playwright/test').chromium.executablePath() trong file local .playwright/cli.config.json; dùng named session riêng. Snapshot trước mỗi thao tác, không copy refs vào spec; đóng session của mình khi xong. Các snapshots quan sát thật được lưu artifacts/cli-*.yaml.
 
 Giới hạn: FR-09 là UI mocked coverage; FR-02/17 backend thật. Code/fixtures/POM không chứa test data hardcode; JSON ngoài là nguồn dữ liệu. Human review, public remote/Issues, main report/PDF/video là các bước riêng chưa được tự nhận hoàn tất.
+
+Sau refactor có thể so coverage/status của hai batch đã hoàn tất theo từng ID/browser (không phụ thuộc thứ tự hoặc tên describe):
+
+```bash
+node scripts/compare-matrices.js artifacts/session003-final/execution-matrix.json artifacts/session004-refactor/execution-matrix.json
+```
+
+Lệnh trả exit 1 nếu coverage hoặc status thay đổi; cần phân tích nguyên nhân thay vì mặc định mọi khác biệt đều là lỗi test.

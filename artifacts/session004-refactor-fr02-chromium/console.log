@@ -1,0 +1,328 @@
+
+Running 14 tests using 1 worker
+
+(node:129777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/fr02-login.spec.js:45:3 › FR02 - Login › FR-02-TC01 success (1.0s)
+  ✘   2 [chromium] › tests/fr02-login.spec.js:59:3 › FR02 - Login › FR-02-TC02 wrong (3.4s)
+(node:130039) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [chromium] › tests/fr02-login.spec.js:73:3 › FR02 - Login › FR-02-TC03 missing (448ms)
+  ✓   4 [chromium] › tests/fr02-login.spec.js:86:3 › FR02 - Login › FR-02-TC04 empty-email (430ms)
+  ✓   5 [chromium] › tests/fr02-login.spec.js:101:3 › FR02 - Login › FR-02-TC05 empty-password (394ms)
+  ✘   6 [chromium] › tests/fr02-login.spec.js:116:3 › FR02 - Login › FR-02-TC06 format (3.4s)
+(node:130364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 [chromium] › tests/fr02-login.spec.js:132:3 › FR02 - Login › FR-02-TC13 mask (3.4s)
+(node:130553) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 [chromium] › tests/fr02-login.spec.js:142:3 › FR02 - Login › FR-02-TC14 heading (3.4s)
+(node:130840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [chromium] › tests/fr02-login.spec.js:156:3 › FR02 - Login › FR-02-TC07 two-then-success (569ms)
+(node:131014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 [chromium] › tests/fr02-login.spec.js:165:3 › FR02 - Login › FR-02-TC10 unlock (31.7s)
+(node:131359) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [chromium] › tests/fr02-login.spec.js:184:3 › FR02 - Login › FR-02-TC11 reset (516ms)
+  ✓  12 [chromium] › tests/fr02-login.spec.js:197:3 › FR02 - Login › FR-02-TC12 jwt (517ms)
+  ✘  13 [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC08 lock (591ms)
+(node:131633) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC09 lock-deadline (649ms)
+
+
+  1) [chromium] › tests/fr02-login.spec.js:59:3 › FR02 - Login › FR-02-TC02 wrong ──────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+    Call Log:
+    - Timeout 3000ms exceeded while waiting on the predicate
+
+      69 |     })).toBeVisible();
+      70 |     expect(await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey)).toBe(shared.null);
+    > 71 |     await expect.poll(async () => (await db.get('SELECT login_attempts FROM users WHERE id=?', [testUser.id])).login_attempts).toBe(shared.expected.one);
+         |                                                                                                                                ^
+      72 |   });
+      73 |   test(title('missing'), async ({
+      74 |     page,
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:71:128
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC02-wrong-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/fr02-login.spec.js:116:3 › FR02 - Login › FR-02-TC06 format ────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('main form').locator('input').first()
+    Expected: "email"
+    Received: "text"
+    Timeout:  3000ms
+
+    Call log:
+      - Expect "soft toHaveAttribute" locator('main form').locator('input').first() with timeout 3000ms
+      - waiting for locator('main form').locator('input').first()
+        10 × locator resolved to <input required="" type="text" value="abc" class="w-full border p-2 rounded"/>
+           - unexpected value "text"
+
+
+      126 |     await login.fill(shared.invalidEmail, testUser.password);
+      127 |     await login.submit.click();
+    > 128 |     await expect.soft(login.email).toHaveAttribute('type', shared.expected.emailType);
+          |                                    ^
+      129 |     expect(await login.email.evaluate(el => el.validity.valid)).toBeFalsy();
+      130 |     expect(requests).toHaveLength(shared.expected.zero);
+      131 |   });
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:128:36
+
+    Error: expect(received).toBeFalsy()
+
+    Received: true
+
+      127 |     await login.submit.click();
+      128 |     await expect.soft(login.email).toHaveAttribute('type', shared.expected.emailType);
+    > 129 |     expect(await login.email.evaluate(el => el.validity.valid)).toBeFalsy();
+          |                                                                 ^
+      130 |     expect(requests).toHaveLength(shared.expected.zero);
+      131 |   });
+      132 |   test(title('mask'), async ({
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:129:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC06-format-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC06-format-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC06-format-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC06-format-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/fr02-login.spec.js:132:3 › FR02 - Login › FR-02-TC13 mask ──────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('main form').locator('input').nth(1)
+    Expected: "password"
+    Received: "text"
+    Timeout:  3000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('main form').locator('input').nth(1) with timeout 3000ms
+      - waiting for locator('main form').locator('input').nth(1)
+        10 × locator resolved to <input required="" type="text" value="TestMask123!" class="w-full border p-2 rounded"/>
+           - unexpected value "text"
+
+
+      138 |     await login.password.fill(shared.maskPassword);
+      139 |     await expect.soft(login.password).toHaveValue(shared.maskPassword);
+    > 140 |     await expect(login.password).toHaveAttribute('type', shared.expected.passwordType);
+          |                                  ^
+      141 |   });
+      142 |   test(title('heading'), async ({
+      143 |     page,
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:140:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC13-mask-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests/fr02-login.spec.js:142:3 › FR02 - Login › FR-02-TC14 heading ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Đăng nhập/i })
+    Expected: visible
+    Timeout: 3000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Đăng nhập/i }) with timeout 3000ms
+      - waiting for getByRole('heading', { name: /Đăng nhập/i })
+
+
+      152 |       name: new RegExp(shared.expected.loginHeading, 'i'),
+      153 |       exact: true
+    > 154 |     })).toBeVisible();
+          |         ^
+      155 |   });
+      156 |   test(title('two-then-success'), async ({
+      157 |     page,
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:154:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC14-heading-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests/fr02-login.spec.js:156:3 › FR02 - Login › FR-02-TC07 two-then-success ──────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+      28 | test.describe('FR02 - Login', () => {
+      29 |   async function authenticated(page, testUser, response) {
+    > 30 |     expect(response.status()).toBe(shared.expected.successStatus);
+         |                               ^
+      31 |     await expect(page).toHaveURL('/');
+      32 |     await expect(page.getByRole('link', {
+      33 |       name: new RegExp(testUser.name)
+        at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:163:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC07-two-then-success-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests/fr02-login.spec.js:165:3 › FR02 - Login › FR-02-TC10 unlock ────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+      28 | test.describe('FR02 - Login', () => {
+      29 |   async function authenticated(page, testUser, response) {
+    > 30 |     expect(response.status()).toBe(shared.expected.successStatus);
+         |                               ^
+      31 |     await expect(page).toHaveURL('/');
+      32 |     await expect(page.getByRole('link', {
+      33 |       name: new RegExp(testUser.name)
+        at authenticated (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:30:31)
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:182:11
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-FR-02-TC10-unlock-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC08 lock ────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 180
+
+      239 |         expect.soft(after.locked_until).toBe(before.locked_until);
+      240 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.
+    > 241 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+          |                                                                                                    ^
+      242 |       });
+      243 |     }
+      244 |   });
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC08-lock-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC09 lock-deadline 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 180
+
+      239 |         expect.soft(after.locked_until).toBe(before.locked_until);
+      240 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.
+    > 241 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+          |                                                                                                    ^
+      242 |       });
+      243 |     }
+      244 |   });
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:241:100
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session004-refactor-fr02-chromium/test-results/fr02-login-FR02---Login-lockout-FR-02-TC09-lock-deadline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    [chromium] › tests/fr02-login.spec.js:59:3 › FR02 - Login › FR-02-TC02 wrong ───────────────────
+    [chromium] › tests/fr02-login.spec.js:116:3 › FR02 - Login › FR-02-TC06 format ─────────────────
+    [chromium] › tests/fr02-login.spec.js:132:3 › FR02 - Login › FR-02-TC13 mask ───────────────────
+    [chromium] › tests/fr02-login.spec.js:142:3 › FR02 - Login › FR-02-TC14 heading ────────────────
+    [chromium] › tests/fr02-login.spec.js:156:3 › FR02 - Login › FR-02-TC07 two-then-success ───────
+    [chromium] › tests/fr02-login.spec.js:165:3 › FR02 - Login › FR-02-TC10 unlock ─────────────────
+    [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC08 lock ─────────
+    [chromium] › tests/fr02-login.spec.js:216:7 › FR02 - Login › lockout › FR-02-TC09 lock-deadline 
+  6 passed (56.1s)

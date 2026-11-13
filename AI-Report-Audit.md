@@ -150,3 +150,16 @@
 - AI output: |
     Tool: OpenAI Codex. Đã tổng kết cùng Session 003 tại session-003-summary.md và PROGRESS.md. REQ-06–10 DONE, 68 cases/204 executions/9 runs, 150pass/54fail/0skipped; 9 HTML reports verified và 9 nhóm lỗi runtime. FR-09 chỉ UI mocked. Giữ riêng batch đầu149/55 có một WebKit timeout. Có9 qualifying spec commits; evidence2866501/log282c750.
     Đối chiếu checklist: REQ-12/14/18/19 IN PROGRESS vì có local outputs nhưng thiếu phần còn lại; REQ-17 DONE theo log export; REQ-16 còn chờ public remote. Subject282c750 ghi REQ-19 nhưng nội dung thuộc REQ-17, ghi correction không rewrite history. Human review, Issues/publication, PDF/main report, critique/video, tự chấm/đóng gói còn chờ. Không chạy tests lại; cập nhật audit/checklist/progress/Git log và commit docs-only; giữ thay đổi sinh viên có sẵn.
+
+- Date and time: 2026-11-13T15:34:23+07:00
+- User prompt: |
+    Giai thich cau truc bo test: Data duoc luu o dau, su dung nhu the nao; Script chay test chinh; Ket qua duoc xuat tai dau; Va cac thanh phan khac tao nen bo test.
+- AI output: |
+    Tool: OpenAI Codex. Đối chiếu package/config, helpers/specs, matrix/summarizer và tài liệu hiện tại. Giải thích JSON → helper → fixture → UI/POM → assertions → reports; phân biệt npm test (Playwright) với npm run matrix (9 tổ hợp), SUT chạy riêng. Chỉ rõ artifacts theo run/batch, HTML/JSON/log/trace/screenshot và script tổng hợp riêng. Ví dụ FR-09-TC01 dùng input/response/expected ngoài JSON; nêu giới hạn UI mocked. Không chạy lại tests hoặc thay đổi code test.
+
+- Date and time: 2026-11-13T16:33:13+07:00
+- User prompt: |
+    Session 4: Requirements 11: mã nguồn hiện tại của script điều phối chạy test đang rơi vào anti pattern Conditional Test Logic (theo xUnit Test Patterns (Meszaros)). Giữ data-driven cho các kịch bản cùng hình dạng, tách test riêng cho các kịch bản khác hành vi. Ví dụ chỉ là gợi ý và cần đánh giá cách triển khai phù hợp.
+- AI output: |
+    Tool: OpenAI Codex. Áp dụng task-planning, playwright-core/pom và implementation-explain. Phát hiện dispatcher cả3specs và FR17 chọn nhánh theo validity thực tế. Refactor callback theo hành vi, nhóm homogeneous records lúc đăng ký; không chuyển dispatcher sang helper. Fixture login/coupon/admin/seed quản lý lifecycle; helper chỉ luồng cố định. JSON và SUT không đổi. REQ11 IN PROGRESS theo feedback human thật, không nhận đã review hết outputs.
+    Commit code3cd7cc6; review/comparison af7b682. Validate và exact enumeration68 IDs×3 đạt. Batch session004-refactor 9runs/204executions:150pass54fail0skip; so từng ID/browser với session003-final:0 khác biệt status. Lỗi SUT giữ expected. DB cleanup2users4coupons seed, dừng owner PID. Lưu matrix/summary/comparison/HTML/logs/attachments mới, giữ nguyên evidence Session003; không tuyên bố browser-verify HTML mới. Tài liệu session-004-review.md ghi nguyên nhân AI, thay đổi, giới hạn, gaps. Giữ thay đổi/xóa file có sẵn của sinh viên.

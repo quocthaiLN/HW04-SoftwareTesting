@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-11-13T09:32:36.610Z",
+  "users": [
+    {
+      "email": "admin@eshop.com"
+    },
+    {
+      "email": "test@eshop.com"
+    }
+  ],
+  "coupons": [
+    {
+      "code": "BIGBUY"
+    },
+    {
+      "code": "EXPIRED"
+    },
+    {
+      "code": "SAVE10"
+    },
+    {
+      "code": "VIP100"
+    }
+  ]
+}
