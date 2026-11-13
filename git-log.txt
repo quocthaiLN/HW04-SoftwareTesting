@@ -1,3 +1,28 @@
+* commit 4696f6434a3ae605b1565e37c98cc11c2ac80354
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 17:12:12 2026 +0700
+| 
+|     [HW04][REQ-12] Document nine defects and verify screenshot-backed GitHub Issues
+| 
+|  AI-Report-Audit.md                              |   9 +
+|  PROGRESS.md                                     |  11 +
+|  README.md                                       |   4 +-
+|  artifacts/evidence/session005-bug-evidence.json | 460 ++++++++++++++++++++++
+|  artifacts/evidence/session005-github-issues.png | Bin 0 -> 54021 bytes
+|  automation-report.md                            |   2 +-
+|  bug-reports.md                                  | 271 ++++++++++++-
+|  requirements-list.json                          |   9 +-
+|  8 files changed, 757 insertions(+), 9 deletions(-)
+| 
+* commit e1064e2b849246f1484a4341c82badfc59691d42
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 16:50:43 2026 +0700
+| 
+|     [REQ-17] Refresh log after human review completion
+| 
+|  git-log.txt | 22 ++++++++++++++++++++++
+|  1 file changed, 22 insertions(+)
+| 
 * commit b2e765224a4f43f9ad44cb91925bd9ce1be0993a
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:50:42 2026 +0700

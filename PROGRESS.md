@@ -162,7 +162,7 @@
 - Goal: Thực hiện REQ-12 — bug evidence trong Markdown và GitHub Issues có screenshot.
 - Completed: 9 báo cáo chi tiết với steps/input/expected/actual/severity đề xuất/giới hạn evidence; tạo Issues #1–#9 trên quocthaiLN/HW04-SoftwareTesting, upload ảnh runner gốc và UI-verify từng Issue có ảnh. REQ-12 DONE. Phân loại riêng timeout/script/report/setup.
 - Verification run: Đọc đề gốc/policies/instructions và evidence Session003/004; 18 failing IDs ×3 browsers=54 executions được mapping đủ vào 9 groups; SHA256 của cả 9 ảnh khớp file runner gốc; npm run validate đạt68cases/204registrations, git diff --check đạt; browser xác minh từng issue và danh sách cuối. Không chạy lại suite; giữ150pass54fail0skip.
-- Commits: Commit riêng REQ-12 báo cáo/evidence/checklist, sau đó xuất Git log; docs-only, không tính vào >=8 test-script commits.
+- Commits: 4696f64 — REQ-12 báo cáo/evidence/checklist; commit xuất Git log riêng sau đó. Docs-only, không tính vào >=8 test-script commits. git-log.txt là snapshot trước commit export.
 - Files or artifacts updated: bug-reports.md, artifacts/evidence/session005-bug-evidence.json, session005-github-issues.png, requirements-list.json, README.md, automation-report.md, AI-Report-Audit.md, PROGRESS.md, git-log.txt.
 - Known risk or unresolved issue: BUG-06 ảnh sau alert; BUG-07–09 ảnh không thấy row ngoài viewport, runner/trace là bằng chứng quyết định và giới hạn đã ghi trên Issue. Git remote publication là REQ-16 riêng, chưa kiểm chứng; git ls-remote bị lỗi quyền SSH config hệ thống, không ảnh hưởng tạo Issues qua browser. Giữ sửa header PROGRESS và các xóa/skills sẵn có của sinh viên.
 - Next best step: Tiếp tục yêu cầu báo cáo/PDF/public repository/video theo checklist; không tự nhận hoàn tất cả bài.
