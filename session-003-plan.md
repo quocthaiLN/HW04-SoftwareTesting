@@ -121,3 +121,7 @@ CLI discovery → Playwright Test suite thay cho run.js của skill cũ. Core qu
 3. Các phần còn lại của kế hoạch được sinh viên chấp nhận. Không còn quyết định scope/phương án cần xác nhận trước preflight và triển khai.
 
 Nghiệm thu REQ-07 bổ sung: đối chiếu mọi giá trị input/setup/mock/expected trong code với file dữ liệu; validator kiểm tra trường bắt buộc và mapping; review thủ công để phát hiện hardcode kể cả trong helpers/POM. Thiếu dữ liệu phải báo lỗi, không fallback về giá trị hardcode.
+
+## Thực thi đã bắt đầu — 2026-11-13
+
+Đã tạo runner, JSON, fixtures/POM/helpers, đủ 68 cases/204 registrations và matrix orchestration. PoC module CartContext chạy trên cả 3 browsers. Không dùng run_servers.sh vì killall node; backend copy nguyên trạng/DB riêng trong /tmp. WebKit dùng thư viện extract cục bộ do sudo cần mật khẩu. Batch đầu giữ tại session003-full; sau self-review assertions/HTML title, chạy batch session003-final trên code chốt. Kết quả chính thức xem automation-report.md và matrix; không suy ra status Pass từ mục kế hoạch này.
