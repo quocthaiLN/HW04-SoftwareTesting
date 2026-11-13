@@ -21,6 +21,12 @@ function connect() {
 const test = base.extend({
   apiURL: [apiURL, { option: true }], adminURL: [adminURL, { option: true }],
   db: async ({}, use) => { const db = connect(); try { await use(db); } finally { await db.close(); } },
+  adminUser: async ({ db }, use) => {
+    const user = { ...shared.adminUser, email: resolveTemplate(shared.adminUser.emailTemplate, unique()) };
+    const created = await db.run('INSERT INTO users(name,email,password,role,login_attempts,locked_until) VALUES(?,?,?,?,?,?)', [user.name, user.email, user.password, user.role, user.login_attempts, user.locked_until]);
+    user.id = created.id;
+    try { await use(user); } finally { await db.run('DELETE FROM users WHERE id=? AND email=?', [user.id, user.email]); }
+  },
   testUser: async ({ db }, use) => {
     const user = { ...shared.user, email: resolveTemplate(shared.user.emailTemplate, unique()) };
     const created = await db.run('INSERT INTO users(name,email,password,role,login_attempts,locked_until) VALUES(?,?,?,?,?,?)', [user.name, user.email, user.password, user.role, user.login_attempts, user.locked_until]);
