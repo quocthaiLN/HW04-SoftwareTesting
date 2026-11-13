@@ -1,3 +1,4 @@
+require('./validate-test-data');
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
@@ -6,7 +7,9 @@ const root = path.resolve(__dirname, '..');
 const batch = process.env.PW_BATCH_ID || new Date().toISOString().replace(/[:.]/g, '-');
 const matrixPath = path.join(root, 'artifacts', batch, 'execution-matrix.json');
 fs.mkdirSync(path.dirname(matrixPath), { recursive: true });
-const matrix = { batch, startedAt: new Date().toISOString(), studentId: '23120352', expectedCases: 0, runs: [] };
+const { execFileSync } = require('node:child_process');
+const revision = execFileSync('git', ['rev-parse','HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+const matrix = { batch, revision, startedAt: new Date().toISOString(), studentId: '23120352', expectedCases: 0, runs: [] };
 const write = () => fs.writeFileSync(matrixPath, JSON.stringify(matrix, null, 2) + '\n');
 const specs = { fr02: 'fr02-login.spec.js', fr09: 'fr09-apply-coupon.spec.js', fr17: 'fr17-coupons.spec.js' };
 function collect(suite, result = []) {
