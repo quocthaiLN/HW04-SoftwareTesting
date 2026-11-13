@@ -163,3 +163,9 @@
 - AI output: |
     Tool: OpenAI Codex. Áp dụng task-planning, playwright-core/pom và implementation-explain. Phát hiện dispatcher cả3specs và FR17 chọn nhánh theo validity thực tế. Refactor callback theo hành vi, nhóm homogeneous records lúc đăng ký; không chuyển dispatcher sang helper. Fixture login/coupon/admin/seed quản lý lifecycle; helper chỉ luồng cố định. JSON và SUT không đổi. REQ11 IN PROGRESS theo feedback human thật, không nhận đã review hết outputs.
     Commit code3cd7cc6; review/comparison af7b682. Validate và exact enumeration68 IDs×3 đạt. Batch session004-refactor 9runs/204executions:150pass54fail0skip; so từng ID/browser với session003-final:0 khác biệt status. Lỗi SUT giữ expected. DB cleanup2users4coupons seed, dừng owner PID. Lưu matrix/summary/comparison/HTML/logs/attachments mới, giữ nguyên evidence Session003; không tuyên bố browser-verify HTML mới. Tài liệu session-004-review.md ghi nguyên nhân AI, thay đổi, giới hạn, gaps. Giữ thay đổi/xóa file có sẵn của sinh viên.
+
+- Date and time: 2026-11-13T16:40:44+07:00
+- User prompt: |
+    Dong y voi chinh sua nay, tong ket session 4
+- AI output: |
+    Tool: OpenAI Codex. Ghi nhận sinh viên đồng ý refactor Conditional Test Logic; tổng kết Session004 trong session-004-summary.md và cập nhật review/progress/checklist. Hạng mục sửa đã được chấp nhận; REQ11 tổng thể IN PROGRESS vì chưa xác nhận review mọi output. Kết quả đã chạy:68cases204executions150pass54fail0skip,204 ID/browser keys khớp baseline0status differences. Không chạy tests lại; giữ evidence Session003/004 riêng, source/data SUT và thay đổi sinh viên. Xuất Git log và commit docs-only. Các bước report/publication/PDF/video/đóng gói còn chờ.

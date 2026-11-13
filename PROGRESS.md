@@ -136,3 +136,13 @@
 - Files or artifacts updated: tests/*.spec.js, scripts/compare-matrices.js, session-004-review.md, implementation-notes.md, RUNNING.md, artifacts/session004-refactor*, checklist/audit/progress.
 - Known risk or unresolved issue: Lỗi SUT giữ nguyên; human review chưa toàn bộ; FR09 UI mock và permission UI scope giữ nguyên. Không thêm/bỏ case, không sửa SUT/data. Giữ user changes sẵn có.
 - Next best step: Sinh viên review các callback đã tách và gap analysis trong session-004-review.md để tiếp tục REQ-11.
+
+### Tổng kết Session 004 — đã chấp nhận refactor
+- Date: 2026-11-13T16:40:44+07:00.
+- Goal: Ghi nhận sinh viên chấp nhận chỉnh sửa và tổng kết phiên.
+- Completed: Conditional Test Logic refactor được sinh viên chấp nhận; summary tại session-004-summary.md. REQ-11 tổng thể IN PROGRESS do phạm vi xác nhận chỉ phần sửa này.
+- Verification run: Đối chiếu evidence batch204executions150pass54fail0skip, so ID/browser0differences; không chạy lại tests trong lượt tổng kết.
+- Commits: 3cd7cc6/af7b682/e1a4116; log7930901; summary docs commit riêng.
+- Files or artifacts updated: session-004-summary.md, session-004-review.md, requirements-list.json, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Known risk or unresolved issue: Human review toàn bộ và các deliverables cuối còn chờ; scope UI mock/permission UI giữ nguyên.
+- Next best step: Tiếp tục review/gap analysis còn lại của REQ-11.

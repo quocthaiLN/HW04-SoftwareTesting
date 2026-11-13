@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T16:33:13+07:00",
+  "updated_at": "2026-11-13T16:40:44+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -24,7 +24,8 @@
     "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi.",
     "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed.",
     "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history.",
-    "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem session-004-review.md."
+    "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem session-004-review.md.",
+    "Tổng kết Session004: sinh viên chấp nhận refactor Conditional Test Logic; hạng mục sửa hoàn tất, REQ-11 tổng thể IN PROGRESS vì chưa xác nhận review toàn bộ outputs. Regression204keys0status differences; xem session-004-summary.md."
   ],
   "requirements": [
     {

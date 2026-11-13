@@ -38,3 +38,7 @@ validate passed; enumeration exact68 IDs mỗi project/204 total; syntax/diff ch
 Đường dẫn evidence hồi quy độc lập: artifacts/session004-refactor/execution-matrix.json và các thư mục session004-refactor-<feature>-<browser>/. automation-report.md và test-cases.json vẫn ghi batch Session003; không ghi đè lịch sử này bằng summarize-run khi review refactor. Kết quả batch mới được lưu tại summary.json/comparison.json bên cạnh matrix.
 
 Điều chỉnh oracle validation: HTML group khẳng định checkValidity() false trước submit và không POST; server group khẳng định checkValidity() true trước POST. DB persistence vẫn kiểm tra theo expected JSON. Trong HTML group, DB row count kiểm tra cả blank code; không dùng điều kiện code rỗng để bỏ assertion. Các kiểm tra này làm rõ contract đã có, không đổi dữ liệu expected.
+
+## Xác nhận của sinh viên
+
+2026-11-13T16:40:44+07:00: sinh viên đồng ý với chỉnh sửa Conditional Test Logic và yêu cầu tổng kết Session 4. Hạng mục refactor này đã được chấp nhận; không suy rộng thành review toàn bộ suite. REQ-11 tổng thể tiếp tục IN PROGRESS.
