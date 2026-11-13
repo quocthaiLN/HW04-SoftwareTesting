@@ -1,30 +1,361 @@
+* commit e1a41163c15dc120c4e20518b66216cc5d26312d
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 16:33:23 2026 +0700
+| 
+|     [REQ-11] Preserve refactor regression evidence and human-review findings
+| 
+|  AI-Report-Audit.md                                |   13 +
+|  PROGRESS.md                                       |   18 +
+|  RUNNING.md                                        |    8 +
+|  .../session004-refactor-fr02-chromium/console.log |  328 ++
+|  .../154e9fc75c950e7b5fa049f7181bc1b10d597fac.zip  |  Bin 0 -> 101074 bytes
+|  .../21b3976039d1cd69c8dcacb31422d6c768e1f9d3.png  |  Bin 0 -> 42278 bytes
+|  .../243e23376ab4bb531a6c6f4d0ab78b26fae0ca7e.png  |  Bin 0 -> 42860 bytes
+|  .../3ff8cfbd1e90676713bf47d74c2081e401dd5772.png  |  Bin 0 -> 36909 bytes
+|  .../415cdacbe2884adb12d60ef87d1d8b339833829c.zip  |  Bin 0 -> 357649 bytes
+|  .../4bc265a552c316dcdf9ab82a3387e5f29c666b47.zip  |  Bin 0 -> 84677 bytes
+|  .../54d4e29b0c2466d1b78185a88f6002732f89e9fe.zip  |  Bin 0 -> 177048 bytes
+|  .../552e2445e5da7bf99fe0fa357522dda916da927a.png  |  Bin 0 -> 42858 bytes
+|  .../59934e7923b727e70a2a076c850eea9bfacebfba.png  |  Bin 0 -> 29714 bytes
+|  .../5a4623ffbd3948459a43f45e82dff0201c749648.md   |  190 +
+|  .../5eda92b096c4d438ed48a2d864d29819d1ed5e43.zip  |  Bin 0 -> 189284 bytes
+|  .../73de03487043c768bd662c39db1beab90f50509e.zip  |  Bin 0 -> 348577 bytes
+|  .../74f6e885c732c7c8a9fcca7603e66d9e7f4a6c94.md   |  166 +
+|  .../78c3c21f01102cd4a25ae49d271e1f183557107e.md   |  245 ++
+|  .../7c94209ebe22abbe284140424f6458db89463b1f.png  |  Bin 0 -> 28498 bytes
+|  .../9ccdd3bb798d015b0afbad98c18b21e21722c243.md   |  234 +
+|  .../9e55fd2463fb071b50aab2ff519f38cb0361fea4.md   |  166 +
+|  .../a3271dc317c724f98f860c678a7bf715702b5e4e.png  |  Bin 0 -> 42360 bytes
+|  .../a5fb0f86bb44878ea87e46a02a21955271a5096a.md   |  190 +
+|  .../dd1f9531bb213d1b66d73fc734e9cb784a21b2f2.zip  |  Bin 0 -> 285174 bytes
+|  .../e9635ae43a83d9fb4c868362574c7a657304d3a8.png  |  Bin 0 -> 42632 bytes
+|  .../ec139f311adb33d911850dc1b27ad1f8aa119963.md   |  239 +
+|  .../ed0879b941657eb9753fafcb18453c734bb43b23.md   |  251 ++
+|  .../fe5c98bd34bf502a185585841218ff4ba6c86d34.zip  |  Bin 0 -> 376112 bytes
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../results.json                                  | 1034 +++++
+|  .../session004-refactor-fr02-firefox/console.log  |  328 ++
+|  .../091b830c411d0edb890a7767c20b413ba2c3ba4c.png  |  Bin 0 -> 32985 bytes
+|  .../0ac53f99619cb26520843c4f0573682279967406.png  |  Bin 0 -> 45919 bytes
+|  .../0e9feab1da0182ff01bb2b891bd2933ff8c0fa77.png  |  Bin 0 -> 46466 bytes
+|  .../1a21aad28423a0125b60ad09c870850ea1ef6a05.png  |  Bin 0 -> 46146 bytes
+|  .../1a296f0085b959aae1550c6dd769d09fbb940f65.md   |  234 +
+|  .../1b4f9be778241cf9bbaaea467b956982db67ce86.png  |  Bin 0 -> 41364 bytes
+|  .../1c6c042dad44d2f7070d6b24ab16f66e397fa75e.zip  |  Bin 0 -> 67334 bytes
+|  .../30ec3e61859daecaff98797d0221f2d946bf9d47.png  |  Bin 0 -> 46282 bytes
+|  .../4a203064c6c03cec74dbb2771767121d1e15c95b.zip  |  Bin 0 -> 71085 bytes
+|  .../5476cd3011326322ed3b03926ac6e0df79b0b895.md   |  166 +
+|  .../55829c207d18c3b560d952f16ce2116eecbc3aba.png  |  Bin 0 -> 35546 bytes
+|  .../62be0ec39fee5fba16d9beca3c1890bfb005a672.zip  |  Bin 0 -> 69542 bytes
+|  .../78c3c21f01102cd4a25ae49d271e1f183557107e.md   |  245 ++
+|  .../7a46493bc9be78732e2e63f3b3594d1d0ee18cc2.png  |  Bin 0 -> 46397 bytes
+|  .../7fcaf624abc6efcdda89c8da0474220d39b7dfe9.zip  |  Bin 0 -> 71243 bytes
+|  .../88756b4774e35974a17f2382ad9b0ab04040741d.zip  |  Bin 0 -> 71688 bytes
+|  .../b747d8d20a918d66da5c41892ea229697bdbb288.md   |  166 +
+|  .../d046d00eb7764579274006ac59ae7132ac76c06e.zip  |  Bin 0 -> 62368 bytes
+|  .../d2f5ee4425a8ca20d07db9d3ae2f3c77763409ae.zip  |  Bin 0 -> 52054 bytes
+|  .../d6b44a1d4edd5e4b09f0cd0b88277620cb60dfc7.md   |  190 +
+|  .../da30517cd41d648b58adfadc713aba7be18736f7.zip  |  Bin 0 -> 55195 bytes
+|  .../e05f851183b8d4bbadb27eb6235b1cfebfc7d0b2.md   |  190 +
+|  .../ec139f311adb33d911850dc1b27ad1f8aa119963.md   |  239 +
+|  .../ed0879b941657eb9753fafcb18453c734bb43b23.md   |  251 ++
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../session004-refactor-fr02-firefox/results.json | 1034 +++++
+|  .../session004-refactor-fr02-webkit/console.log   |  328 ++
+|  .../0135e22378f8f6b24f9491ac1f5b9ce12bd4e231.png  |  Bin 0 -> 95596 bytes
+|  .../03fc6ae7041fba0f45896f82d44d5822c82a128c.png  |  Bin 0 -> 65581 bytes
+|  .../05205d7a91129b194f53e1cafd00e6d83ec328d3.md   |  190 +
+|  .../2283c1b3f2f8ad0cb9035ff6f67d85ca039ab5f6.zip  |  Bin 0 -> 340636 bytes
+|  .../3257d74f2a0de9a9e07f5ee1c0b6104909075b3a.png  |  Bin 0 -> 95898 bytes
+|  .../3526fd77abb83ae2c4efd3de5741c46ab3bffea2.png  |  Bin 0 -> 97177 bytes
+|  .../39a2436c5ee5ab954241c634153293fb0fd9ac2a.png  |  Bin 0 -> 84187 bytes
+|  .../48ceebdfd9338c971829084a4a7fbb0c0c55eb0d.md   |  166 +
+|  .../598cb02759205d79e3f340739b914efd0fb1ccf2.png  |  Bin 0 -> 95769 bytes
+|  .../78c3c21f01102cd4a25ae49d271e1f183557107e.md   |  245 ++
+|  .../8fae9910f4c80440e1bd8273d92b7823e5a5d6a6.zip  |  Bin 0 -> 363413 bytes
+|  .../91b419be081ea8135de2a152a9c554520690cc0c.zip  |  Bin 0 -> 123331 bytes
+|  .../92b71ca902db4a5371c3dcadc61f4f478f5cfda4.zip  |  Bin 0 -> 315298 bytes
+|  .../a18531c705f1e85f090e934d3ed3be8813da6d71.md   |  234 +
+|  .../a275d0eb6132f5b106881aae3177dd5a53b31014.zip  |  Bin 0 -> 181095 bytes
+|  .../a5f274e46d78518003170f83d254bf5f662a5cce.png  |  Bin 0 -> 72710 bytes
+|  .../aaa9732d420ba9c1adada49dbd2eb35d91533b84.md   |  190 +
+|  .../b8c956c9d5f5db3e212e4496372d1c0ddb8d7d81.zip  |  Bin 0 -> 156123 bytes
+|  .../c401be6f2917758d4e263d06b568b14ab063cadc.md   |  166 +
+|  .../ec139f311adb33d911850dc1b27ad1f8aa119963.md   |  239 +
+|  .../ec94c60bae826c1431603b4f8f25bf8fd335af43.zip  |  Bin 0 -> 87078 bytes
+|  .../ed0879b941657eb9753fafcb18453c734bb43b23.md   |  251 ++
+|  .../f3373b6b05ef8b4f71c60315d29aa564f6631938.zip  |  Bin 0 -> 341637 bytes
+|  .../f9ffae345ee998f6cd10cd3a34f4d17faf079133.png  |  Bin 0 -> 95933 bytes
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../session004-refactor-fr02-webkit/results.json  | 1037 +++++
+|  .../session004-refactor-fr09-chromium/console.log |   26 +
+|  .../html/index.html                               |   49 +
+|  .../results.json                                  |  997 +++++
+|  .../session004-refactor-fr09-firefox/console.log  |   26 +
+|  .../html/index.html                               |   49 +
+|  .../session004-refactor-fr09-firefox/results.json |  997 +++++
+|  .../session004-refactor-fr09-webkit/console.log   |   26 +
+|  .../html/index.html                               |   49 +
+|  .../session004-refactor-fr09-webkit/results.json  | 1000 +++++
+|  .../session004-refactor-fr17-chromium/console.log |  744 ++++
+|  .../03a6ea490a3ccb62ed623875a0e909d582e8669e.zip  |  Bin 0 -> 606919 bytes
+|  .../21eb1d0d6c95c987495067b0d304c8dfbea3bf90.zip  |  Bin 0 -> 610067 bytes
+|  .../28d34d89ba93e4c7ea9543e69bf692644b42381d.zip  |  Bin 0 -> 580793 bytes
+|  .../3bfc84767f0448d90fce5fef7e2a5aa5db4f1872.md   |  327 ++
+|  .../5d06fca7c163d8538604d6c0f0e956ae6eff14a8.zip  |  Bin 0 -> 609901 bytes
+|  .../60bbf1f6cc9e0129670b3bf6f788b7356d7eed52.png  |  Bin 0 -> 80196 bytes
+|  .../63bd71ebb0dc7e8bdca2f5ffcec8059cb48b1832.md   |  335 ++
+|  .../684fb50276e7b7a1eb67e5fc2940d7c666dce362.png  |  Bin 0 -> 79996 bytes
+|  .../8060ad333e715985f6e350d8dc4f233a409967a7.zip  |  Bin 0 -> 513554 bytes
+|  .../95aaea9f964934ce93d1c357e00fbca371e9e78e.md   |  335 ++
+|  .../a6b1de9047ffa8e1cd86fc8923b767af35d3ab25.md   |  335 ++
+|  .../abf699d70fab633d7ed2d2eb9ec03c7cd1f6fd9c.png  |  Bin 0 -> 80197 bytes
+|  .../ade3c941e9fc5ba0476adc212c823a440eda5cf9.zip  |  Bin 0 -> 494332 bytes
+|  .../af1e6012cc29195e1ff04bef7cc8613950943300.png  |  Bin 0 -> 80563 bytes
+|  .../b056e79a4b0a8358c1e94879954c57b348014c35.md   |  335 ++
+|  .../c015a2ead37b39e4f85494d3caa71cf5e12b318d.zip  |  Bin 0 -> 467945 bytes
+|  .../c3fde813433b0d1c31bac0f2c2e8a61d222ade82.md   |  335 ++
+|  .../caa95b0ed002d81b8f2ff542af6381b4a4d30370.md   |  335 ++
+|  .../cf16b87734607e94ce62b44e9065abffd8958f7c.md   |  335 ++
+|  .../d96e50f738dee88aaa19a171cf061da7d4f93295.md   |  335 ++
+|  .../d9ea917d249e50e8f5a722279a42aff480598943.zip  |  Bin 0 -> 572700 bytes
+|  .../edcea667d5dbe37e5e8384c29b0abb0505959275.zip  |  Bin 0 -> 620867 bytes
+|  .../f5b71874d7461c78e7217c8ff5e597c314356b10.zip  |  Bin 0 -> 584438 bytes
+|  .../f7de8947d6bec5134c39f3b22dbe3f5f50a3ee70.md   |  335 ++
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../results.json                                  | 2349 ++++++++++
+|  .../session004-refactor-fr17-firefox/console.log  |  744 ++++
+|  .../000a7709cfb8a7dd96853431a0cbecd8a4e1bbb6.zip  |  Bin 0 -> 129455 bytes
+|  .../27f80a31a232cc58d20c5c193a05fab98f0db90e.zip  |  Bin 0 -> 129735 bytes
+|  .../2e00237d8c25669993e861b30f7c5f7d7b920549.zip  |  Bin 0 -> 129769 bytes
+|  .../2e00af8e533efe725af10bebac5902e2c521a025.md   |  335 ++
+|  .../313f1ed3f2dc80578e0f6e83eee52d83d3a63b9e.md   |  335 ++
+|  .../35fbf9791240eb0aa99e186b7d81e035aac19bde.md   |  327 ++
+|  .../45d02f5134a1527fc864f39b3b2941b6c6bd26a8.zip  |  Bin 0 -> 129623 bytes
+|  .../502f50016f2c7ea3a4d510c3361362dd1f0fa6e1.md   |  335 ++
+|  .../6105617357189259e06bc63b8774b2d8a48e6d22.zip  |  Bin 0 -> 129467 bytes
+|  .../6709827171d86074f612716075de4c768f08f4d4.zip  |  Bin 0 -> 129346 bytes
+|  .../6acc43ad292b8cb38084861bfa6a30af3137c34b.md   |  335 ++
+|  .../738474e00b316d6616778379fc5b34fed9aa07d4.zip  |  Bin 0 -> 129449 bytes
+|  .../75b0690a3622ce27b6abb4765fa1d8f98960c110.md   |  335 ++
+|  .../794e811ef19aa17294a1232a04bbe35e98ce8bb8.zip  |  Bin 0 -> 128820 bytes
+|  .../7c8a54aa06e61d8f7acb50b98137aac23daa790d.md   |  335 ++
+|  .../7dd9605365af96f86af9ca22bab0fbf2883c11fc.zip  |  Bin 0 -> 129880 bytes
+|  .../a9076f218f03d88793259d7dc130c50ebed1ddc5.md   |  335 ++
+|  .../b2357c76697d84e5cbf0e7d5ea53fa2880cc730d.png  |  Bin 0 -> 84396 bytes
+|  .../c051cfb617cb8fe2dc22e58cc3529a2b3cc19068.md   |  335 ++
+|  .../d414f3492684946175dc1a8816a299baba08669f.png  |  Bin 0 -> 84235 bytes
+|  .../e1f90f07d10e1aa7ba14627eaec352e16dc61882.zip  |  Bin 0 -> 129683 bytes
+|  .../f8f8ea6fd9c37f26bd990e984835e4b5e8aa145f.md   |  335 ++
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../session004-refactor-fr17-firefox/results.json | 2349 ++++++++++
+|  .../session004-refactor-fr17-webkit/console.log   |  744 ++++
+|  .../131373637b39a47e6ec6a3ead52e84da13226b3a.md   |  335 ++
+|  .../2dad3687e7f7d21bc946ab852cd1fd199fd009d6.md   |  335 ++
+|  .../471855185e89d783236c8c26c2e92bd46dcbab8f.md   |  335 ++
+|  .../62da5ac5774225dbd81f274976b0cb51106156f4.zip  |  Bin 0 -> 628346 bytes
+|  .../7dfc586c7d76fe883cd6e46f11d014239b87a754.zip  |  Bin 0 -> 707999 bytes
+|  .../8758275505751a6acaa4b7749100ee9972a682c7.zip  |  Bin 0 -> 703460 bytes
+|  .../891372bde29f035e36ab5de6f383145dcaedf7ec.zip  |  Bin 0 -> 667487 bytes
+|  .../8c7ac2db4b71ee40d1fc2131f6049d0799e35e4b.md   |  335 ++
+|  .../8d11b2e6e0748f413af46da5376cef2ddb02f4a2.zip  |  Bin 0 -> 711111 bytes
+|  .../93c25e95a9dcddb31f38764b76e6cd9a98b9671b.png  |  Bin 0 -> 155017 bytes
+|  .../9624f04283cac484c3365fadce339252f71c9d25.zip  |  Bin 0 -> 667109 bytes
+|  .../998d33cb4637637c94312458a83b1f09b844f383.md   |  335 ++
+|  .../aa63d145a2bb72e6fddf937cb57a90126deea66f.png  |  Bin 0 -> 154954 bytes
+|  .../b5b6068c3a3451bf1abe6cd34face7f9bc545c71.zip  |  Bin 0 -> 705342 bytes
+|  .../b756d78c65e566060193115d6890f6881543ad64.zip  |  Bin 0 -> 740032 bytes
+|  .../bbc1a3114b6cc8012720bf7f022a90e5ff70d655.zip  |  Bin 0 -> 855294 bytes
+|  .../c4623eb29a21764abe6119f092c08e2a74390444.md   |  327 ++
+|  .../cb61ef707cafb253f969c8eb4c8d44139b320a99.md   |  335 ++
+|  .../cd3f7552c946a721abe43b4a09532e4c1a39bcc8.md   |  335 ++
+|  .../d95179ce1a5c07e1a5c243e08d3d00fac12ff967.zip  |  Bin 0 -> 703674 bytes
+|  .../e6c230b2a223054b9eba9584d07208bd6c92ed33.md   |  335 ++
+|  .../ea67c3dde51fc9f167a3b90c8af0d673329cd482.md   |  335 ++
+|  .../html/index.html                               |   49 +
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../session004-refactor-fr17-webkit/results.json  | 2352 ++++++++++
+|  .../session004-refactor/cleanup-verification.json |   25 +
+|  artifacts/session004-refactor/comparison.json     |    6 +
+|  .../session004-refactor/execution-matrix.json     | 4381 +++++++++++++++++++
+|  .../session004-refactor/registration-check.json   |   10 +
+|  artifacts/session004-refactor/summary.json        |   17 +
+|  implementation-notes.md                           |    6 +
+|  requirements-list.json                            |    2 +-
+|  session-004-review.md                             |    8 +-
+|  292 files changed, 38443 insertions(+), 2 deletions(-)
+| 
+* commit af7b682604314052eb1631de6b024db2324e6d7f
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 16:25:37 2026 +0700
+| 
+|     [REQ-11] Record human review and add case-level regression comparison
+| 
+|  requirements-list.json      |  5 +++--
+|  scripts/compare-matrices.js | 26 ++++++++++++++++++++++++++
+|  session-004-review.md       | 34 ++++++++++++++++++++++++++++++++++
+|  3 files changed, 63 insertions(+), 2 deletions(-)
+| 
+* commit 3cd7cc68e83c3f3417b31a02a47231df5f3e54e0
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 16:24:26 2026 +0700
+| 
+|     [REQ-11] Separate test behaviors and retain homogeneous data-driven groups
+| 
+|  tests/fr02-login.spec.js        | 306 +++++++++++++++++------
+|  tests/fr09-apply-coupon.spec.js | 259 +++++++++++++++++---
+|  tests/fr17-coupons.spec.js      | 500 +++++++++++++++++++++++++++++++-------
+|  3 files changed, 873 insertions(+), 192 deletions(-)
+| 
+* commit f6a6c381960127399f09a0c5ca4423ec040034bd
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 15:11:44 2026 +0700
+| 
+|     [REQ-17] Refresh log after Session 003 summary
+| 
+|  git-log.txt | 21 +++++++++++++++++++++
+|  1 file changed, 21 insertions(+)
+| 
 * commit 8c7cb704462bbfcf1b5591b5af04f0292bd8516f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:11:43 2026 +0700
-|
+| 
 |     [REQ-17,22] Summarize Session 003 and reconcile actual completion evidence
-|
+| 
 |  AI-Report-Audit.md     |  7 +++++++
 |  PROGRESS.md            | 10 ++++++++++
 |  requirements-list.json | 23 +++++++++++++++--------
 |  session-003-summary.md | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 80 insertions(+), 8 deletions(-)
-|
+| 
 * commit 282c750136c3316cbf5e3598a28da6360cc9d601
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:07:16 2026 +0700
-|
+| 
 |     [REQ-19] Export execution and script commit history
-|
+| 
 |  git-log.txt | 957 +++++++++++++++++++++++++++++++++++++++++++++++++++++++---
 |  1 file changed, 907 insertions(+), 50 deletions(-)
-|
+| 
 * commit 2866501edb98e23d518f98555bbff1d3cb197ca9
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:07:16 2026 +0700
-|
+| 
 |     [REQ-06,07,08,09,10] Preserve 204 real executions, verified reports and defect evidence
-|
+| 
 |  AI-Report-Audit.md                                |   10 +
 |  PROGRESS.md                                       |   38 +
 |  README.md                                         |   20 +-
@@ -695,140 +1026,140 @@
 |  scripts/verify-reports.js                         |   31 +
 |  test-cases.json                                   | 1961 +++++++-
 |  669 files changed, 70435 insertions(+), 233 deletions(-)
-|
+| 
 * commit 0c25eee985b4e9fd3d46f1f8a4864ea4c5fbbad1
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:00:03 2026 +0700
-|
+| 
 |     [REQ-06,09] Document observed defects and summarize only actual matrix results
-|
+| 
 |  bug-reports.md           | 29 +++++++++++++++++++++++++++++
 |  scripts/summarize-run.js | 41 +++++++++++++++++++++++++++++++++++++++++
 |  session-003-plan.md      |  4 ++++
 |  3 files changed, 74 insertions(+)
-|
+| 
 * commit 676a70eac061864b2779e26fe9efe55bc3ffbc9c
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:56:48 2026 +0700
-|
+| 
 |     [REQ-06,09] Document reproducible isolated SUT and browser setup
-|
+| 
 |  .gitignore |  2 ++
 |  RUNNING.md | 34 ++++++++++++++++++++++++++++++++++
 |  2 files changed, 36 insertions(+)
-|
+| 
 * commit ae9e66270a58f09222e5e7118129429dc235c575
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:55:28 2026 +0700
-|
+| 
 |     [REQ-07,09,10] Validate complete external oracles and show runtime attribution in report title
-|
+| 
 |  playwright.config.js          |  5 +++--
 |  scripts/run-matrix.js         |  5 ++++-
 |  scripts/validate-test-data.js | 24 ++++++++++++++++++++++--
 |  3 files changed, 29 insertions(+), 5 deletions(-)
-|
+| 
 * commit ecad404827a1682df20feb815d7cad714a108a78
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:54:45 2026 +0700
-|
+| 
 |     [REQ-07,08] Strengthen exact currency assertions using external display oracles
-|
+| 
 |  data/shared.json                | 10 ++++++++--
 |  tests/fr09-apply-coupon.spec.js | 10 +++++-----
 |  tests/pages/coupons.js          |  6 +++---
 |  3 files changed, 16 insertions(+), 10 deletions(-)
-|
+| 
 * commit 984902f9706dabdb0674306105cc95c0fe188596
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:51:02 2026 +0700
-|
+| 
 |     [REQ-08,09] Record assertion inventory and orchestrate attributable browser matrix
-|
+| 
 |  assertion-inventory.md          | 17 ++++++++++++++++
 |  implementation-notes.md         | 14 +++++++++++++
 |  scripts/preflight.js            | 27 ++++++++++++++++++++++++++
 |  scripts/prepare-webkit-local.js | 18 +++++++++++++++++
 |  scripts/run-matrix.js           | 41 +++++++++++++++++++++++++++++++++++++++
 |  5 files changed, 117 insertions(+)
-|
+| 
 * commit 945cf44e3b5454d3f64c8eba90fcbc30b4b603f2
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:47:59 2026 +0700
-|
+| 
 |     [REQ-06,08] Verify coupon deletion and UI authorization without admin token
-|
+| 
 |  tests/fr17-coupons.spec.js | 42 +++++++++++++++++++++++++++++++++++++++---
 |  1 file changed, 39 insertions(+), 3 deletions(-)
-|
+| 
 * commit cf436b6ed8fd0f21fdc12aaea33f0eee26ed1a2e
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:47:29 2026 +0700
-|
+| 
 |     [REQ-06,08] Exercise FR-17 form rejection, duplicate and numeric boundaries
-|
+| 
 |  data/shared.json           |  4 ++++
 |  tests/fr17-coupons.spec.js | 33 +++++++++++++++++++++++++++++++--
 |  tests/pages/coupons.js     |  1 +
 |  3 files changed, 36 insertions(+), 2 deletions(-)
-|
+| 
 * commit ffe21bb95987721f0645906e09ebbcca187f9bb2
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:46:51 2026 +0700
-|
+| 
 |     [REQ-06,08] Add coupon POM and FR-17 Create Read persistence checks
-|
+| 
 |  data/shared.json           | 15 ++++++++++++---
 |  tests/fixtures/real-sut.js |  6 ++++++
 |  tests/fr17-coupons.spec.js | 40 ++++++++++++++++++++++++++++++++++++++++
 |  tests/pages/coupons.js     | 40 ++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 98 insertions(+), 3 deletions(-)
-|
+| 
 * commit 661c1ae99b78c28af873631fa04ba6f84b6cb381
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:45:51 2026 +0700
-|
+| 
 |     [REQ-06,08] Add FR-09 auth, error, empty and payload assertions
-|
+| 
 |  playwright.config.js            |  2 +-
 |  tests/fr09-apply-coupon.spec.js | 39 ++++++++++++++++++++++++++++++---------
 |  2 files changed, 31 insertions(+), 10 deletions(-)
-|
+| 
 * commit ae36e9e5517b713d035c2dbc013a5eea200d724e
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:45:19 2026 +0700
-|
+| 
 |     [REQ-06,08] Cover FR-09 success, boundary, cap and rounding UI contracts
-|
+| 
 |  tests/fr09-apply-coupon.spec.js | 4 +++-
 |  1 file changed, 3 insertions(+), 1 deletion(-)
-|
+| 
 * commit 3caf495ac3a0b4d33019f08a2bf6755a1ff6b841
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:44:40 2026 +0700
-|
+| 
 |     [REQ-06,08] Add real-time lockout, reset and JWT scenarios for FR-02
-|
+| 
 |  tests/fr02-login.spec.js | 41 ++++++++++++++++++++++++++++++++++++++++-
 |  1 file changed, 40 insertions(+), 1 deletion(-)
-|
+| 
 * commit 622c2214bc20e9a36f2cbe35f649bd1072f620a8
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:44:03 2026 +0700
-|
+| 
 |     [REQ-06,08] Automate FR-02 login and HTML validation with isolated users
-|
+| 
 |  tests/fixtures/real-sut.js | 31 +++++++++++++++++++++++++++++++
 |  tests/fr02-login.spec.js   | 42 ++++++++++++++++++++++++++++++++++++++++++
 |  tests/pages/login.js       | 19 +++++++++++++++++++
 |  3 files changed, 92 insertions(+)
-|
+| 
 * commit d995b457f521b43197e678139e7d475a782a0055
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:43:15 2026 +0700
-|
+| 
 |     [REQ-06,07,08] Prove FR-09 mocked cart and coupon UI using external JSON
-|
+| 
 |  .gitignore                      |    4 +
 |  data/fr02.json                  |   72 +++
 |  data/fr09.json                  | 1001 +++++++++++++++++++++++++++++++++++++
@@ -843,64 +1174,64 @@
 |  tests/fr09-apply-coupon.spec.js |   17 +
 |  tests/helpers/data.js           |   15 +
 |  13 files changed, 1897 insertions(+)
-|
+| 
 * commit e65d332178109b08534d8f41c7a7f5d788b3cdf6
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:37:13 2026 +0700
-|
+| 
 |     [REQ-07] Confirm strict external test data and approved workflow
-|
+| 
 |  AI-Report-Audit.md     | 8 ++++++++
 |  requirements-list.json | 9 +++++----
 |  session-003-plan.md    | 8 ++++++++
 |  3 files changed, 21 insertions(+), 4 deletions(-)
-|
+| 
 * commit 6b8fba324f0af6fd565ffe47fed2ffcbcf859977
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:18:33 2026 +0700
-|
+| 
 |     [REQ-05,06,07,08,09] Prepare new Playwright skills workflow and execution plan
-|
+| 
 |  AI-Report-Audit.md     |  21 +++++++++
 |  preparation-notes.md   |  41 +++++++++++++++++
 |  requirements-list.json |  20 ++++++---
 |  session-003-plan.md    | 115 +++++++++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 190 insertions(+), 7 deletions(-)
-|
+| 
 * commit ab12eb084f28de0b0b47d2761bb9e9ee40957fd9
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:23:47 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Export Git log for session summary
-|
+| 
 |  git-log.txt | 19 +++++++++++++++++++
 |  1 file changed, 19 insertions(+)
-|
+| 
 * commit f22940bf5495ecfd38a4efa1e4a7287ec70b37a6
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:23:47 2026 +0700
-|
+| 
 |     HW04 [REQ-22] Summarize session design decisions and remaining execution work
-|
+| 
 |  AI-Report-Audit.md |  6 ++++++
 |  PROGRESS.md        | 11 +++++++++++
 |  2 files changed, 17 insertions(+)
-|
+| 
 * commit dadeee8b73236a80b933e6cf71401f0ed62c2d5f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:22:44 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Export log after requirement 4 confirmation
-|
+| 
 |  git-log.txt | 24 ++++++++++++++++++++++++
 |  1 file changed, 24 insertions(+)
-|
+| 
 * commit d7cdc5000c8b054dbc2db329ce124300861dd643
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:22:44 2026 +0700
-|
+| 
 |     HW04 [REQ-04] Finalize percent validation duplicate errors and UI access cases
-|
+| 
 |  AI-Report-Audit.md     |  11 +++++
 |  PROGRESS.md            |   8 ++++
 |  README.md              |   2 +-
@@ -909,42 +1240,42 @@
 |  scope.md               |   6 ++-
 |  test-cases.json        | 119 +++++++++++++++++++++++++++++++++++++++++------
 |  7 files changed, 162 insertions(+), 47 deletions(-)
-|
+| 
 * commit e0579f11ec3076d2ae2916cfc5ddacaea5b97a4c
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:49 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Refresh log after review correction
-|
+| 
 |  git-log.txt | 20 ++++++++++++++++++++
 |  1 file changed, 20 insertions(+)
-|
+| 
 * commit bcca4cbd5e04a2c46e14c4e17e80870b73f49548
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:49 2026 +0700
-|
+| 
 |     HW04 [REQ-04] Correct source code length observation after verification
-|
+| 
 |  AI-Report-Audit.md  | 2 +-
 |  PROGRESS.md         | 2 +-
 |  fr17-case-review.md | 2 +-
 |  3 files changed, 3 insertions(+), 3 deletions(-)
-|
+| 
 * commit bf0f5cb03cec7e5841e0c6e17cb038d9ac06ec62
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:31 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Export log after admin coupon case expansion
-|
+| 
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-|
+| 
 * commit 562f612ce8da89b4eaa261c6027d50ed795ac7f0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:31 2026 +0700
-|
+| 
 |     HW04 [REQ-04] Add 19 admin coupon UI cases and review EP BVA coverage
-|
+| 
 |  AI-Report-Audit.md                 |    9 +
 |  PROGRESS.md                        |    8 +
 |  README.md                          |    2 +-
@@ -954,22 +1285,22 @@
 |  scope.md                           |    6 +-
 |  test-cases.json                    |  399 ++++++
 |  8 files changed, 3131 insertions(+), 9 deletions(-)
-|
+| 
 * commit 2f18d6a371d0b31bd8d4e36275dc811bf343758f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:13:20 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Export log after coupon scope confirmation
-|
+| 
 |  git-log.txt | 24 ++++++++++++++++++++++++
 |  1 file changed, 24 insertions(+)
-|
+| 
 * commit 99768c66a6c4516bac86e2fcd75aabd4bb91c4c0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:13:20 2026 +0700
-|
+| 
 |     HW04 [REQ-03] Finalize coupon cap and rounding policies and 19 cases
-|
+| 
 |  AI-Report-Audit.md     | 10 ++++++++++
 |  PROGRESS.md            |  8 ++++++++
 |  README.md              |  2 +-
@@ -978,22 +1309,22 @@
 |  scope.md               |  6 +++++-
 |  test-cases.json        | 28 +++++++++++++++++++++++++---
 |  7 files changed, 77 insertions(+), 30 deletions(-)
-|
+| 
 * commit 80868fc0b1c46d8da2d191e1e130fbc444289176
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:07:29 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Export log after coupon case review
-|
+| 
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-|
+| 
 * commit b990bf95d0c0d2780378773c48a88d45874f9293
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:07:29 2026 +0700
-|
+| 
 |     HW04 [REQ-03] Review coupon edge cases and identify pending policy decisions
-|
+| 
 |  AI-Report-Audit.md                 |   18 +
 |  PROGRESS.md                        |    8 +
 |  README.md                          |    2 +-
@@ -1003,22 +1334,22 @@
 |  scope.md                           |    6 +-
 |  test-cases.json                    |  132 +++
 |  8 files changed, 1810 insertions(+), 9 deletions(-)
-|
+| 
 * commit 5fd67b72256a544df143892604d64c09a85b7cd4
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:53:16 2026 +0700
-|
+| 
 |     HW04 [REQ-17] Refresh Git log after requirement 2 design
-|
+| 
 |  git-log.txt | 37 +++++++++++++++++++++++++++++++++++++
 |  1 file changed, 37 insertions(+)
-|
+| 
 * commit ad84d02ee8a4f91c557bdd3411a9f1b60c9ea4b8
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:53:16 2026 +0700
-|
+| 
 |     HW04 [REQ-02] Accept login cases and add masking and page identity checks
-|
+| 
 |  AI-Report-Audit.md     | 11 +++++++++++
 |  PROGRESS.md            | 10 ++++++++++
 |  README.md              |  2 +-
@@ -1026,13 +1357,13 @@
 |  scope.md               |  8 +++++++-
 |  test-cases.json        | 42 ++++++++++++++++++++++++++++++++++++++++++
 |  6 files changed, 81 insertions(+), 10 deletions(-)
-|
+| 
 * commit 6107dcd449a6a8a6ab8d2049515544a86ad0122a
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:38:21 2026 +0700
-|
+| 
 |     [REQ-01,03,14,22] Close Session 001 and confirm fully mocked coupon UI scope
-|
+| 
 |  AI-Report-Audit.md     | 11 +++++++++++
 |  PROGRESS.md            | 14 +++++++++++---
 |  README.md              |  2 ++
@@ -1040,32 +1371,32 @@
 |  scope.md               | 16 ++++++++--------
 |  test-cases.json        | 43 ++++++++++++++++++++++++++++++-------------
 |  6 files changed, 70 insertions(+), 30 deletions(-)
-|
+| 
 * commit 0bbd805e6376d149464d3b02868f4e5028db612d
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:26:42 2026 +0700
-|
+| 
 |     [REQ-17] Export current Git history snapshot
-|
+| 
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-|
+| 
 * commit c2b9c683871cb26617086deb84480d06382d8d99
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:26:42 2026 +0700
-|
+| 
 |     [REQ-14,22] Record Session 001 scope review and AI audit
-|
+| 
 |  AI-Report-Audit.md | 30 ++++++++++++++++++++++++++++++
 |  PROGRESS.md        | 11 +++++++++++
 |  2 files changed, 41 insertions(+)
-|
+| 
 * commit 6ee2ee935123c62d564d856ed60a7af9797b4976
   Author: quocthaLN <quocthailenguyen41@gmail.com>
   Date:   Thu Nov 12 23:26:12 2026 +0700
-
+  
       [REQ-02,03,04,06,16] Define scoped features and 36 UI test cases
-
+  
    .gitignore             |   7 +
    AGENTS.md              |  66 ++++
    README.md              |  31 ++
