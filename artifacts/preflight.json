@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-11-13T07:48:49.887Z",
+  "node": "v24.21.0",
+  "runner": "1.65.0",
+  "cli": "0.1.24",
+  "platform": "linux",
+  "display": ":0",
+  "browsers": {
+    "chromium": {
+      "version": "158.0.8127.18",
+      "executable": "/home/le-nguyen-quoc-thai/.cache/ms-playwright/chromium-1254/chrome-linux64/chrome"
+    },
+    "firefox": {
+      "version": "159.0",
+      "executable": "/home/le-nguyen-quoc-thai/.cache/ms-playwright/firefox-1572/firefox/firefox"
+    },
+    "webkit": {
+      "version": "27.2",
+      "executable": "/tmp/hw04-webkit-launch.sh"
+    }
+  },
+  "services": {
+    "web": {
+      "url": "http://localhost:5173/login",
+      "status": 200
+    },
+    "admin": {
+      "url": "http://localhost:5174",
+      "status": 200
+    },
+    "api": {
+      "url": "http://localhost:3000/api/products",
+      "status": 200
+    }
+  },
+  "sourceHashes": {
+    "server.js": "47573ce5a6bf9a894748d2bb56cc8d1659ad7acd033fdd6db6b3e4d9473eb487",
+    "database.js": "3366420632bb9c982905b22e3969f69515e39e7a37a4f84eba56ead7e94afed8"
+  }
+}

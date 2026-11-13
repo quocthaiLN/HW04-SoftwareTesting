@@ -5,17 +5,23 @@
 - Features: FR-02 Login/lockout; FR-09 Apply coupon; FR-17 Create/Read/Delete coupons (Update không có trong SUT).
 - Scope: [scope.md](scope.md); cases: [test-cases.json](test-cases.json); requirements: [requirements-list.json](requirements-list.json).
 
-## Test summary (design stage)
+## Test summary — Session 003 actual execution
 
 | Metric | Current |
 | --- | --- |
 | Features selected | 3 |
-| Cases designed | 68 (FR-02: 14; FR-09: 19; FR-17: 35); tất cả DESIGNED |
-| Cases automated / executed / passed / failed | 0 / 0 / 0 / 0 |
-| Browser runs | 0 |
-| Runtime-confirmed bugs | 0 |
+| Cases automated | 68 (FR-02: 14; FR-09: 19; FR-17: 35) |
+| Case-browser executions | 204 |
+| Passed / failed / skipped | 150 / 54 / 0 |
+| Cases passing all 3 engines | 50 / 68 |
+| Feature-browser runs | 9 (Chromium/Firefox/WebKit × 3 features) |
+| Runtime defect groups | 9; local reports, GitHub Issues pending |
 | Demo video | Pending |
 | Public GitHub repository | Pending |
+
+Final batch: session003-final. [Execution report](automation-report.md), [matrix](artifacts/session003-final/execution-matrix.json), [running instructions](RUNNING.md), [assertion inventory](assertion-inventory.md), [implementation explanation](implementation-notes.md), [defects](bug-reports.md).
+
+FR-09 is UI mocked coverage; FR-02/17 use an unchanged isolated real backend. Counts above refer to the final matrix, excluding prior PoC/smoke and first-batch executions. Student human review is pending.
 
 ## Self-assessment
 
@@ -28,6 +34,6 @@
 | Agent Skills | 10 | Pending |
 | Total | 100 | Pending |
 
-No execution or grading claims are made at the design stage. Markdown/PDF deliverables and real run evidence remain pending.
+Execution evidence is available above; grading/self-assessment, final main report/PDF and video remain pending.
 
-Session 001 đã tổng kết. HW02/group uniqueness được sinh viên xác nhận. FR-09 dùng mock toàn phần bằng page.route(); kết quả tương lai chỉ chứng minh UI với API giả lập, không kiểm chứng backend. Xem scope.md.
+Session 001 đã tổng kết. HW02/group uniqueness được sinh viên xác nhận. FR-09 dùng mock toàn phần bằng page.route(); kết quả chỉ chứng minh UI với API giả lập, không kiểm chứng backend. Xem scope.md.

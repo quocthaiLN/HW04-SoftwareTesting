@@ -133,3 +133,13 @@
     3. Dong y cac phan con lai
 - AI output: |
     Tool: OpenAI Codex. Ghi nhận giữ ngoại lệ FR-09 và chấp nhận các phần còn lại của kế hoạch. Cập nhật REQ-07: toàn bộ test data JSON/CSV riêng, không hardcode trong spec/fixtures/helpers/POM/PoC; dữ liệu động resolve từ quy tắc/template bên ngoài, không fallback hardcode. Bổ sung nghiệm thu validator và review nguồn dữ liệu. Cập nhật kế hoạch/checklist/progress/audit; chưa chạy browser/tests trong lượt chốt quyết định.
+
+- Date and time: 2026-11-13T15:06:04+07:00
+- User prompt: |
+    Bat dau thuc hien ke hoach
+- AI output: |
+    Tool: OpenAI Codex. I use AI tools for the following tasks: triển khai automation theo playwright-cli/core/pom, tạo dữ liệu JSON, fixtures/POM/helpers/config/runner, chạy và phân tích tests, cập nhật hồ sơ.
+    Cài local Playwright Test1.65.0/CLI0.1.24, mở Chromium/Firefox/WebKit; dùng backend source copy nguyên trạng/DB riêng vì database.js reset bảng. Không dùng run_servers.sh killall node. WebKit thiếu libs/sudo yêu cầu mật khẩu; tải/extract libs vào /tmp và dùng launcher với binary gốc. CLI snapshots login/checkout/admin login; PoC FR-09 pass ba engines.
+    Đã automate đủ 68 cases/204 registrations, external shared/per-feature JSON, validator, >=3 assertion patterns. 9 commits thay đổi spec có ý nghĩa. Matrix final 9 tổ hợp: 150 pass/54 fail/0 skipped, 9 nhóm lỗi runtime. FR-09 chỉ UI mock; FR-02/17 thật, không checkout hoặc direct endpoint security tests.
+    Batch đầu giữ nguyên149pass/55fail, gồm một WebKit actionability timeout chưa gọi lỗi SUT. Self-review siết currency substring thành exact text và sửa title HTML có attribution/ISO runtime; chạy final trên code chốt. Mở 9 reports cục bộ để xác minh/chụp screenshot. Automatic approval review từ chối broad localhost artifacts server vì rủi ro trace credentials/tokens; dùng local file inspection thành công, không bypass bằng server khác.
+    Cập nhật checklist6–10 DONE theo evidence, test cases per-browser results, README/scope/progress/audit và tài liệu chạy/giải thích/defects. Không tự nhận student human review, GitHub publication/Issues/PDF/video hoặc toàn bộ bài nộp hoàn tất. Giữ thay đổi/xóa file sẵn có.

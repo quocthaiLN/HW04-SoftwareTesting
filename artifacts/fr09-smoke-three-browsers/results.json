@@ -1,0 +1,391 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/.bin/playwright",
+      "test",
+      "tests/fr09-apply-coupon.spec.js",
+      "--grep",
+      "FR-09-TC01"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T07:45:54.981Z",
+      "runId": "fr09-smoke-three-browsers",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:45:54.981Z",
+          "runId": "fr09-smoke-three-browsers",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit",
+          "launchOptions": {
+            "executablePath": "/tmp/hw04-webkit-launch.sh"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/fr09-smoke-three-browsers/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-apply-coupon.spec.js",
+      "file": "fr09-apply-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "FR-09-TC01 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 781,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:45:55.344Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2213,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:45:56.737Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1470,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:46:00.356Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-bd7278299aa6e9cd2a67",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T07:45:54.984Z",
+    "duration": 7162.732999999999,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

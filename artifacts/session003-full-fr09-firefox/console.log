@@ -1,0 +1,26 @@
+
+Running 19 tests using 1 worker
+
+(node:54276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC01 success [UI mocked] (1.8s)
+  ✓   2 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC02 success [UI mocked] (704ms)
+  ✓   3 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC03 error [UI mocked] (574ms)
+  ✓   4 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC04 error [UI mocked] (649ms)
+  ✓   5 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC05 error [UI mocked] (587ms)
+  ✓   6 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC06 error [UI mocked] (672ms)
+  ✓   7 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC07 success [UI mocked] (649ms)
+  ✓   8 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC08 success [UI mocked] (654ms)
+  ✓   9 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC09 error [UI mocked] (776ms)
+  ✓  10 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC10 error [UI mocked] (986ms)
+  ✓  11 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC11 success [UI mocked] (561ms)
+  ✓  12 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC12 error [UI mocked] (562ms)
+  ✓  13 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC13 empty [UI mocked] (570ms)
+  ✓  14 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC14 empty [UI mocked] (560ms)
+  ✓  15 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC15 success [UI mocked] (587ms)
+  ✓  16 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC16 success [UI mocked] (652ms)
+  ✓  17 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC17 success [UI mocked] (604ms)
+  ✓  18 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC18 success [UI mocked] (591ms)
+  ✓  19 [firefox] › tests/fr09-apply-coupon.spec.js:4:3 › FR-09-TC19 success [UI mocked] (577ms)
+
+  19 passed (14.6s)

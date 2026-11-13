@@ -27,3 +27,21 @@ Batch session003-full có FR-09-TC07/WebKit timeout tại actionability click (8
 ## Review AI đã sửa
 
 Assertion tiền ban đầu dùng toContainText có thể nhận nhầm số dài hơn hoặc chuỗi có 0. Đã sửa toHaveText với prefixes/suffixes từ JSON và chạy lại suite. Custom metadata trong reporter 1.65 mặc định ẩn fields khác nếu không bật show-metadata-other; đã cấu hình title có attribution và ISO ngay từ runtime. Đây là self-review AI, không phải xác nhận human review của sinh viên.
+
+## Final evidence
+
+Batch session003-final: 150 pass/54 fail/0 skipped. FR-09 đạt57/57; timeout batch đầu không lặp lại, nguyên nhân gốc vẫn chưa kết luận.
+
+| Bug | Case | Screenshot | Report |
+| --- | --- | --- | --- |
+| BUG-01 | FR-02-TC02 / Chromium | [Actual screenshot](artifacts/evidence/BUG-01.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
+| BUG-02 | FR-02-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-02.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
+| BUG-03 | FR-02-TC06 / Chromium | [Actual screenshot](artifacts/evidence/BUG-03.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
+| BUG-04 | FR-02-TC13 / Chromium | [Actual screenshot](artifacts/evidence/BUG-04.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
+| BUG-05 | FR-02-TC14 / Chromium | [Actual screenshot](artifacts/evidence/BUG-05.png) | [Actual report](artifacts/session003-final-fr02-chromium/html/index.html) |
+| BUG-06 | FR-17-TC05 / Chromium | [Actual screenshot](artifacts/evidence/BUG-06.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
+| BUG-07 | FR-17-TC32 / Chromium | [Actual screenshot](artifacts/evidence/BUG-07.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
+| BUG-08 | FR-17-TC24 / Chromium | [Actual screenshot](artifacts/evidence/BUG-08.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
+| BUG-09 | FR-17-TC10 / Chromium | [Actual screenshot](artifacts/evidence/BUG-09.png) | [Actual report](artifacts/session003-final-fr17-chromium/html/index.html) |
+
+Screenshot duplicate được chụp sau alert đã được đóng; xem dialog text/response trong lỗi runner và trace, không suy ra nội dung alert từ ảnh bảng. Các ảnh được copy từ output runner, không tạo/sửa hình.

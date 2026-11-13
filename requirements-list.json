@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T14:36:45+07:00",
+  "updated_at": "2026-11-13T15:06:04+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -21,7 +21,8 @@
     "Session 002 REQ-04: giữ nguyên 12 cases, thêm 19 UI cases; FR-17 có 31, toàn suite 64. Không thêm Update; API-only và policy chưa chốt ghi riêng.",
     "Session 002 chốt REQ-04: bỏ TC30/31, giữ IDs retired; thêm TC32–37, cụ thể hóa TC05/08/09. 68 DESIGNED (14/19/35), REQ-04 DONE phần thiết kế; không còn policy pending.",
     "Session 003: REQ-05 ghi DONE theo xác nhận sinh viên đã hoàn tất chuẩn bị; bổ sung preparation-notes.md từ skill mới, không tuyên bố AI đã đọc bài giảng. Kế hoạch REQ-06–09 chuyển sang playwright-cli/core/pom; giữ FR-09 mock theo user dù trái quy tắc skill; trạng thái triển khai chưa đổi.",
-    "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi."
+    "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi.",
+    "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed."
   ],
   "requirements": [
     {
@@ -87,8 +88,9 @@
       "source": "2026.HW04.Automation Testing_En.pdf §§2,6,8 pp.1–5",
       "mandatory": true,
       "acceptance_criteria": "Dẫn AI từng bước tạo automation web bằng Playwright hoặc Selenium 4+ cho ít nhất 12 test cases mỗi feature (>=36 tổng); positive/negative/edge đều được tính.",
-      "status": "NOT START",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)"
+      "status": "DONE",
+      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "68 automated cases (14/19/35), 204 registrations; tests/*.spec.js, stable IDs, stepwise script commits and AI audit. Student human review tracked separately."
     },
     {
       "id": 7,
@@ -98,8 +100,9 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
       "mandatory": true,
       "acceptance_criteria": "Data-driven: toàn bộ test data trong CSV/JSON riêng; tuyệt đối không hardcode trong spec, fixture, helper, POM hoặc PoC. Bao gồm input/setup/seed/mock response/expected/test credentials/biên và tham số thời gian nghiệp vụ. Dữ liệu động resolve từ template/quy tắc trong file ngoài; không inline defaults hoặc fallback hardcode. Validator kiểm tra dữ liệu/mapping; review code đối chiếu nguồn dữ liệu, thiếu trường phải báo lỗi.",
-      "status": "NOT START",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)"
+      "status": "DONE",
+      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "data/shared.json + fr02/fr09/fr17.json; scripts/validate-test-data.js passed; inputs/seed/mock/expected external, no literal fill/test credentials/numeric business oracles found in reviewed test code."
     },
     {
       "id": 8,
@@ -109,8 +112,9 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
       "mandatory": true,
       "acceptance_criteria": "Dùng ít nhất 3 assertion patterns khác nhau, thể hiện trong scripts và report.",
-      "status": "NOT START",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)"
+      "status": "DONE",
+      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "assertion-inventory.md maps text, attributes/values, URL, state/count, polling DB and payload/status assertions to real scripts; executed across 3 engines."
     },
     {
       "id": 9,
@@ -120,8 +124,9 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
       "mandatory": true,
       "acceptance_criteria": "Mỗi feature chạy trên 3 browsers Chromium/Firefox/WebKit hoặc Chrome/Edge/Firefox; >=9 feature-browser runs.",
-      "status": "NOT START",
-      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)"
+      "status": "DONE",
+      "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)",
+      "evidence": "artifacts/session003-final/execution-matrix.json: 9 real feature-browser runs, 204 executed, 150 passed/54 failed/0 skipped. Failures retained; no blocked cases."
     },
     {
       "id": 10,
@@ -131,7 +136,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 p.4; §11 p.6",
       "mandatory": true,
       "acceptance_criteria": "Mỗi run tạo Allure/Playwright HTML report có Run by: {StudentID} và ISO timestamp; phải từ chạy thực tế, không AI-generated/fabricated.",
-      "status": "NOT START"
+      "status": "DONE",
+      "evidence": "9 genuine Playwright HTML reports, visible Run by: 23120352 + actual ISO in title, verified by opening local reports; artifacts/session003-final/report-verification.json and report-verified.png per run."
     },
     {
       "id": 11,

@@ -70,3 +70,41 @@
 - Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, fr09-case-review.md, fr17-case-review.md, references/, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: Mock FR-09 không xác minh backend cap/floor; UI permission không chứng minh endpoint role enforcement. Chưa automation/runtime/report/PDF/video/public remote; không tuyên bố bài nộp hoàn tất. Git log là snapshot trước commit export, cần xuất lại trước nộp.
 - Next best step: Chuyển sang REQ-06–10: proof-of-concept FR-09 page.route fixture, rồi data-driven scripts với dữ liệu JSON riêng, ba browser targets và HTML attribution thật. Xác minh runtime và phân biệt lỗi SUT/script/setup khi có kết quả.
+
+
+## Session 003
+- Date: 2026-11-13 (Asia/Ho_Chi_Minh).
+- Goal: Đối chiếu playwright-skill và lập kế hoạch chi tiết REQ-06–09.
+- Completed: Tạo session-003-plan.md với gap analysis skill, kiến trúc data-driven, tệp dự kiến, 10 bước thực hiện, assertion inventory, ma trận 9 runs/204 lượt và mốc Git. Giữ baseline 68 cases (14/19/35).
+- Verification run: Đọc skill/API reference và source; đối chiếu đề §6/11/12; JSON/counts/IDs; helper detectDevServers lỗi MODULE_NOT_FOUND: playwright, chưa discovery được server. Chưa browser run.
+- Commits: Chưa tạo commit trong lượt lập kế hoạch; không gộp thay đổi người dùng có sẵn vào commit.
+- Files or artifacts updated: session-003-plan.md, requirements-list.json (planning_reference), PROGRESS.md, AI-Report-Audit.md.
+- Known risk or unresolved issue: Skill chưa có dependencies; Vite module mock cần PoC; database.js reset bảng khi backend startup; source login +2/180 giây cần runtime xác minh, chưa gọi bug. Có thay đổi/xóa file sẵn có trong workspace được giữ nguyên. REQ-06–09 vẫn NOT START ở mức triển khai.
+- Next best step: Thực hiện preflight/dependency và kiểm soát DB lifecycle, rồi PoC FR-09 bằng skill executor trước khi mở rộng suite.
+
+### Cập nhật bộ skill mới — tiếp tục Session 003
+- Date: 2026-11-13 (Asia/Ho_Chi_Minh).
+- Goal: REQ-05 với skill mới; phân tích playwright-cli/core/pom và điều chỉnh kế hoạch REQ-06–09.
+- Completed: Ghi preparation-notes.md; REQ-05 DONE dựa trên xác nhận hoàn tất chuẩn bị của sinh viên, phân biệt ghi chú skill với việc ôn bài giảng (AI chưa có bài giảng). Viết lại gap analysis/roles và các bước kế hoạch sang CLI discovery + Playwright Test/Core + POM có chọn lọc. Giữ 68 cases và 204 lượt dự kiến.
+- Verification run: Đọc 3 SKILL.md, guides generation/data/assertions/config/fixtures/clock/mock/POM; xác minh JSON/counts và diff --check. Chưa chạy CLI/browser.
+- Commits: 6b8fba3 — commit tài liệu REQ-05–09; không tính vào >=8 test-script commits. Chỉ stage tài liệu do AI tạo/chỉnh, giữ PROGRESS.md ngoài commit để không gộp sửa header có sẵn của sinh viên.
+- Files or artifacts updated: preparation-notes.md, session-003-plan.md, requirements-list.json, AI-Report-Audit.md, PROGRESS.md, git-log.txt.
+- Known risk or unresolved issue: CLI/Core cấm mock own API trái scope user, đã ghi ngoại lệ FR-09; inline data/networkidle/default traces không sao chép; link ../core sai thư mục phải resolve thủ công; CLI API/version chưa xác minh bằng executable. Không thay đổi scope, không gọi source issue là runtime bug.
+- Next best step: Preflight local CLI/runner, DB isolation, snapshot UI và PoC FR-09 trước mở rộng suite.
+
+### Chốt kế hoạch — tiếp tục Session 003
+- Date: 2026-11-13 (Asia/Ho_Chi_Minh).
+- Completed: Sinh viên chấp nhận kế hoạch CLI/Core/POM, giữ ngoại lệ FR-09; siết REQ-07 toàn bộ test data JSON/CSV riêng, không hardcode ở bất kỳ tầng test code nào. Đã cập nhật acceptance/checklist và kế hoạch.
+- Verification run: Parse checklist, diff --check; chưa thực thi browser/tests.
+- Commits: Commit tài liệu chốt kế hoạch; không tính vào >=8 test-script commits.
+- Next best step: Preflight và triển khai kế hoạch đã được chấp nhận, không hỏi duyệt lại các quyết định đã chốt.
+
+### Thực thi kế hoạch — tiếp tục Session 003
+- Date: 2026-11-13T15:06:04+07:00 (Asia/Ho_Chi_Minh).
+- Goal: Thực hiện REQ-06–09 theo kế hoạch đã chấp nhận; tạo evidence thực.
+- Completed: Runner Playwright Test 1.65.0/CLI 0.1.24; đủ 68 cases (14/19/35) với JSON riêng; fixtures/POM nhỏ, validator và assertion inventory. Backend copy nguyên trạng/DB riêng /tmp, không sửa SUT. CLI snapshots thật. PoC FR-09 pass cả 3 engines. Ma trận final đủ 9 tổ hợp/204 executions: 150 pass/54 fail/0 skipped. REQ-06–09 DONE; REQ-10 cũng DONE theo 9 HTML reports có title attribution/ISO được browser xác minh.
+- Verification run: npm validate; syntax checks scripts/tests; list=204 tests; preflight ghi engines Chromium158/Firefox159/WebKit27.2 và source hashes; final matrix trên revision 676a70eac061864b2779e26fe9efe55bc3ffbc9c. scripts/verify-reports.js mở 9 file HTML trực tiếp và chụp title thật; DB cleanup kiểm tra riêng. First batch 149pass/55fail giữ nguyên, một timeout WebKit không tính là defect SUT. Self-review sửa currency substring thành exact text và custom metadata hidden thành title runtime, không retry tự động.
+- Commits: d995b45,622c221,3caf495,ae36e9e,661c1ae,ffe21bb,cf436b6,945cf44,ecad404 là 9 commits đổi .spec.js có ý nghĩa; các commits config/docs khác không tính vào tối thiểu 8. Commit evidence/docs bổ sung sau cùng; git-log.txt là snapshot.
+- Files or artifacts updated: package/lock/config, data/, tests/, scripts/, RUNNING.md, assertion-inventory.md, implementation-notes.md, automation-report.md, bug-reports.md, artifacts/, checklist/cases/README/scope/progress/audit.
+- Known risk or unresolved issue: 9 nhóm lỗi SUT runtime, chưa GitHub Issues; student human review/PDF/video/public remote chưa hoàn tất. FR-09 mocked không chứng minh backend; permission chỉ UI. WebKit system deps thiếu và sudo cần mật khẩu: dùng apt download/extract trong /tmp với launcher binary gốc, hướng dẫn tái tạo đã lưu. Automatic approval review từ chối phục vụ toàn bộ artifacts qua localhost vì có thể lộ token/credentials trace; đã dùng mở file report trực tiếp, không còn blocker kiểm tra report. Giữ nguyên file xóa và chỉnh header có sẵn của sinh viên.
+- Next best step: Sinh viên human review suite và 9 nhóm lỗi; sau đó xử lý requirements báo cáo/Issues/public remote/PDF/video riêng. Không sửa SUT hoặc sửa expected để xanh tests.

@@ -59,3 +59,7 @@ Giữ nguyên FR-17-TC01–TC12, bổ sung TC13–TC31 (19 cases) từ nguồn s
 ### Chốt requirement 4 — 2026-11-13
 
 User loại dialog xóa, code format/length, used-coupon deletion. Retire TC30/31, không tái sử dụng IDs. Chốt percent nguyên 1–100; TC08/09 pin percent; thêm TC32–35: 101/120/0.5/1.5. TC05 yêu cầu HTTP 400/409 và thông báo trùng mã thân thiện. Thêm TC36/37 kiểm tra user thường và không token qua UI; không kiểm chứng API role enforcement bằng request trực tiếp. FR-17 có 35 cases, toàn suite 68 DESIGNED, dự kiến 204 executions. REQ-04 DONE phần thiết kế; đoạn này thay thế các ghi chú pending trước đó.
+
+## Execution update — Session 003, 2026-11-13
+
+Các đoạn design-only/chưa chạy phía trên là lịch sử. Hiện 68 cases đã automate và thực thi trên ba browsers: 204 lượt, 150 pass/54 fail/0 skipped trong batch final. Xem automation-report.md, bug-reports.md và artifacts/session003-final/execution-matrix.json. FR-09 vẫn chỉ UI mocked, không kiểm chứng backend coupon rules. SUT source không bị sửa để làm tests pass. Student human review/publication/main report/PDF/video còn ở các bước riêng.

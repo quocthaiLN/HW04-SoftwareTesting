@@ -1,0 +1,956 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr09-apply-coupon.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T08:00:42.291Z",
+      "runId": "session003-final-fr09-firefox",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:00:42.291Z",
+          "runId": "session003-final-fr09-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:00:42.291Z",
+          "runId": "session003-final-fr09-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:00:42.291Z",
+          "runId": "session003-final-fr09-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:00:42.291Z",
+          "runId": "session003-final-fr09-firefox",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/html",
+          "open": "never",
+          "title": "Run by: 23120352 | 2026-11-13T08:00:42.291Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr09-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-apply-coupon.spec.js",
+      "file": "fr09-apply-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "FR-09-TC01 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:42.588Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-15762b70e788f17cebf9",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC02 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 684,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:44.638Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-11cba86c4e495e6f7fa6",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC03 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:45.342Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyB04buTbiB04bqhaSJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-85a3003ee381cfb28099",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC04 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 608,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:45.916Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyBob+G6oXQgxJHhu5luZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-a84b2a60964597163d57",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC05 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:46.532Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGjhur90IGjhuqFuIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-44252ac165b374860db0",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC06 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:47.164Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjoyOTk5OTksInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDGoW4gaMOgbmcgY2jGsGEgxJHhu6cgZ2nDoSB0cuG7iyB04buRaSB0aGnhu4N1In19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-6423a2184f126198a35c",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC07 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 623,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:47.806Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDciLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6MjUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-4c9f6bea94c778944c1f",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC08 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:48.435Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMDAwMDEsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6MjUwMDAxLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-fe16b0a1a6f179964ed6",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC09 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:49.067Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJD4bqnbiDEkcSDbmcgbmjhuq1wIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-e0f5093aa6986c5dd01d",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC10 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1073,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:49.815Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTAiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJUb2tlbiBraMO0bmcgaOG7o3AgbOG7hyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-1c56cb4375bd7897989d",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC11 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 595,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:50.896Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-e50848bb2947233dd238",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC12 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 572,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:51.499Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDDoyDEkeG6oXQgZ2nhu5tpIGjhuqFuIHPhu60gZOG7pW5nIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-f7ad4e993c5865d9ac91",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC13 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:52.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-5899537bca9f5630cf46",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC14 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:52.600Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-4f524de4fc1e6f110046",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC15 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 576,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:53.174Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-8f307cb4824024f83214",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC16 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 607,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:53.759Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-ca119741d6fdae801473",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC17 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:54.375Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTciLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiRlJFRTEwMCIsInRvdGFsX2Ftb3VudCI6MTAwMDAwLCJ1c2VyX2lkIjo3N31dLCJyZXNwb25zZSI6eyJzdGF0dXMiOjIwMCwiYm9keSI6eyJjb3Vwb25faWQiOjk5LCJkaXNjb3VudF9hbW91bnQiOjEwMDAwMCwiZmluYWxfYW1vdW50IjowLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-278c2318912f47120ebf",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC18 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:55.027Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiT1ZFUjEwMCIsInRvdGFsX2Ftb3VudCI6ODAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6ODAwMDAsImZpbmFsX2Ftb3VudCI6MCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-badb328661896bcf2158",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC19 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:00:55.667Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMzMzMzMsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6MzMzMzMsImZpbmFsX2Ftb3VudCI6MzAwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-ec4852b85ac625c6c6bc",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T08:00:42.293Z",
+    "duration": 14225.577,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

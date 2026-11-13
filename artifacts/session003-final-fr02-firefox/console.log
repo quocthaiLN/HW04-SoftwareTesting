@@ -1,0 +1,326 @@
+
+Running 14 tests using 1 worker
+
+(node:72614) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC01 success (1.4s)
+  ✘   2 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC02 wrong (3.5s)
+(node:73268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC03 missing (1.4s)
+  ✓   4 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC04 empty-email (581ms)
+  ✓   5 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC05 empty-password (530ms)
+  ✘   6 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC06 format (3.6s)
+(node:74120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC07 two-then-success (1.6s)
+(node:74678) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC08 lock (1.6s)
+(node:75224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC09 lock-deadline (1.6s)
+(node:75775) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC10 unlock (32.7s)
+(node:76509) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC11 reset (1.5s)
+  ✓  12 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC12 jwt (767ms)
+  ✘  13 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC13 mask (3.5s)
+(node:77162) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC14 heading (4.2s)
+
+
+  1) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC02 wrong ───────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+    Call Log:
+    - Timeout 3000ms exceeded while waiting on the predicate
+
+      21 |       await expect(page.getByText(shared.expected.error, { exact: true })).toBeVisible();
+      22 |       expect(await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey)).toBe(shared.null);
+    > 23 |       if (scenario === 'wrong') await expect.poll(async () => (await db.get('SELECT login_attempts FROM users WHERE id=?', [testUser.id])).login_attempts).toBe(shared.expected.one);
+         |                                                                                                                                                            ^
+      24 |     } else if (['empty-email','empty-password','format'].includes(scenario)) {
+      25 |       await login.fill(scenario === 'empty-email' ? shared.empty : (scenario === 'format' ? shared.invalidEmail : testUser.email), scenario === 'empty-password' ? shared.empty : testUser.password);
+      26 |       await login.submit.click();
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:23:156
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC02-wrong-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC02-wrong-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC02-wrong-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC02-wrong-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC06 format ──────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('main form').locator('input').first()
+    Expected: "email"
+    Received: "text"
+    Timeout:  3000ms
+
+    Call log:
+      - Expect "soft toHaveAttribute" locator('main form').locator('input').first() with timeout 3000ms
+      - waiting for locator('main form').locator('input').first()
+        10 × locator resolved to <input required="" type="text" value="abc" class="w-full border p-2 rounded"/>
+           - unexpected value "text"
+
+
+      26 |       await login.submit.click();
+      27 |       const control = scenario === 'empty-password' ? login.password : login.email;
+    > 28 |       if (scenario === 'format') await expect.soft(control).toHaveAttribute('type', shared.expected.emailType);
+         |                                                             ^
+      29 |       expect(await control.evaluate(el => el.validity.valid)).toBeFalsy();
+      30 |       expect(requests).toHaveLength(shared.expected.zero);
+      31 |     } else if (scenario === 'mask') {
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:28:61
+
+    Error: expect(received).toBeFalsy()
+
+    Received: true
+
+      27 |       const control = scenario === 'empty-password' ? login.password : login.email;
+      28 |       if (scenario === 'format') await expect.soft(control).toHaveAttribute('type', shared.expected.emailType);
+    > 29 |       expect(await control.evaluate(el => el.validity.valid)).toBeFalsy();
+         |                                                               ^
+      30 |       expect(requests).toHaveLength(shared.expected.zero);
+      31 |     } else if (scenario === 'mask') {
+      32 |       await login.password.fill(shared.maskPassword);
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:29:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC06-format-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC06-format-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC06-format-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC06-format-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC07 two-then-success ────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+      62 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+      63 |       } else {
+    > 64 |         expect(response.status()).toBe(shared.expected.successStatus);
+         |                                   ^
+      65 |         await expect(page).toHaveURL('/');
+      66 |         await expect(page.getByRole('link', { name: new RegExp(testUser.name) })).toBeVisible();
+      67 |         if (scenario === 'reset') {
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:64:35
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC07-two-then-success-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC07-two-then-success-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC07-two-then-success-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC07-two-then-success-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC08 lock ────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 180
+
+      60 |         expect.soft(after.locked_until).toBe(before.locked_until);
+      61 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.
+    > 62 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+         |                                                                                                    ^
+      63 |       } else {
+      64 |         expect(response.status()).toBe(shared.expected.successStatus);
+      65 |         await expect(page).toHaveURL('/');
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:62:100
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC08-lock-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC08-lock-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC08-lock-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC08-lock-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC09 lock-deadline ───────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 180
+
+      60 |         expect.soft(after.locked_until).toBe(before.locked_until);
+      61 |         // Allow request/SQLite scheduling jitter, without accepting a different duration policy.
+    > 62 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+         |                                                                                                    ^
+      63 |       } else {
+      64 |         expect(response.status()).toBe(shared.expected.successStatus);
+      65 |         await expect(page).toHaveURL('/');
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:62:100
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC09-lock-deadline-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC09-lock-deadline-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC09-lock-deadline-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC09-lock-deadline-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC10 unlock ──────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 403
+
+      62 |         expect.soft(Math.round((new Date(before.locked_until).getTime() - thirdAttemptAt) / 1000)).toBe(shared.expected.lockSeconds);
+      63 |       } else {
+    > 64 |         expect(response.status()).toBe(shared.expected.successStatus);
+         |                                   ^
+      65 |         await expect(page).toHaveURL('/');
+      66 |         await expect(page.getByRole('link', { name: new RegExp(testUser.name) })).toBeVisible();
+      67 |         if (scenario === 'reset') {
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:64:35
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC10-unlock-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC10-unlock-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC10-unlock-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC10-unlock-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC13 mask ────────────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('main form').locator('input').nth(1)
+    Expected: "password"
+    Received: "text"
+    Timeout:  3000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('main form').locator('input').nth(1) with timeout 3000ms
+      - waiting for locator('main form').locator('input').nth(1)
+        10 × locator resolved to <input required="" type="text" value="TestMask123!" class="w-full border p-2 rounded"/>
+           - unexpected value "text"
+
+
+      32 |       await login.password.fill(shared.maskPassword);
+      33 |       await expect.soft(login.password).toHaveValue(shared.maskPassword);
+    > 34 |       await expect(login.password).toHaveAttribute('type', shared.expected.passwordType);
+         |                                    ^
+      35 |     } else if (scenario === 'heading') {
+      36 |       await expect(page).toHaveURL('/login');
+      37 |       await expect.soft(login.email).toBeVisible();
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:34:36
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC13-mask-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC13-mask-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC13-mask-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC13-mask-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC14 heading ─────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Đăng nhập/i })
+    Expected: visible
+    Timeout: 3000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Đăng nhập/i }) with timeout 3000ms
+      - waiting for getByRole('heading', { name: /Đăng nhập/i })
+
+
+      37 |       await expect.soft(login.email).toBeVisible();
+      38 |       await expect.soft(login.password).toBeVisible();
+    > 39 |       await expect(page.getByRole('heading', { name: new RegExp(shared.expected.loginHeading, 'i'), exact: true })).toBeVisible();
+         |                                                                                                                     ^
+      40 |     } else if (['two-then-success','lock','lock-deadline','unlock','reset','jwt'].includes(scenario)) {
+      41 |       const attempts = scenario === 'two-then-success' ? shared.expected.two : (['reset','jwt'].includes(scenario) ? (scenario === 'reset' ? shared.expected.one : shared.expected.zero) : shared.expected.threshold);
+      42 |       for (let i = 0; i < attempts; i++) {
+        at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr02-login.spec.js:39:117
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC14-heading-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC14-heading-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC14-heading-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace artifacts/session003-final-fr02-firefox/test-results/fr02-login-FR-02-TC14-heading-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC02 wrong ────────────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC06 format ───────────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC07 two-then-success ─────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC08 lock ─────────────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC09 lock-deadline ────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC10 unlock ───────────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC13 mask ─────────────────────────────────────
+    [firefox] › tests/fr02-login.spec.js:5:3 › FR-02-TC14 heading ──────────────────────────────────
+  6 passed (1.1m)

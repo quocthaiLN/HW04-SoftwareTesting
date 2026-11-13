@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-13T08:02:47.518486+00:00",
+  "files": {
+    "data/fr02.json": "f2d895813628ccbe282a941ae5a07c34febdc400a7cdb5c7cf5bfe169f07da2a",
+    "data/fr09.json": "7673a7fbbaa3d936ca0cc14f0ee91895604dc89f513e04376404d6cdd4ebbfc2",
+    "data/fr17.json": "03bcd7702eabc2dd884ba27d3322d3f898b7b022df2358af9aca9094b0cc0349",
+    "data/shared.json": "c5aab1c342d06e273f162a26519fdf6c6b24b3e6944f37a489e519562735b154",
+    "package-lock.json": "974b2d8ce7c3205c52cb29f2b113a3d29dbfdf33d9ecc487d6dae4b0ff0eab5f",
+    "playwright.config.js": "868c321e2bac59b8b78c3224b20823a70dbba3cc3c9c526fbc7c54c4d96a8702",
+    "tests/fixtures/coupon-routes.js": "cb0ed88363f3216009e12620e788bae9669a107b33f378c02034df3288989702",
+    "tests/fixtures/real-sut.js": "f992e054b0b5920fde035711b58024d305deface283c67348819566e29ed281e",
+    "tests/fr02-login.spec.js": "3be5465ac90f4b0fcff1c21878e063ff0b9a5748d3a6cd9a3a1e736035092503",
+    "tests/fr09-apply-coupon.spec.js": "959126f3eceda4777e581b740d7f8f3a4ff6e4a2c3e4b612affc34a8b12c347e",
+    "tests/fr17-coupons.spec.js": "dc9e4ab858e5e4210ac1625ef935d9332bfd14d78182f4e466c88b75032614b3",
+    "tests/helpers/data.js": "cfed58f55fc87d1ad12454525e5b79139de17d8c7abc0d55689bb1c6c1bf3902",
+    "tests/pages/coupons.js": "c8bec9414ced7ab7e5e784cadb7d4a72e7808890cef663c2f335aef1f7542e42",
+    "tests/pages/login.js": "af7651a8cde7a8ead71177ebb6826fb699bd8207dadee84649a9002f073b6cef"
+  }
+}

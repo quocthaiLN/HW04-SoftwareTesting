@@ -1,0 +1,992 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr09-apply-coupon.spec.js",
+      "--project=webkit"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T07:52:35.422Z",
+      "runId": "session003-full-fr09-webkit",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:35.422Z",
+          "runId": "session003-full-fr09-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:35.422Z",
+          "runId": "session003-full-fr09-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:35.422Z",
+          "runId": "session003-full-fr09-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:35.422Z",
+          "runId": "session003-full-fr09-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit",
+          "launchOptions": {
+            "executablePath": "/tmp/hw04-webkit-launch.sh"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-apply-coupon.spec.js",
+      "file": "fr09-apply-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "FR-09-TC01 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 959,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:35.727Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-86e06eae83cefed0b178",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC02 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 808,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:36.908Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-fadf1ce3348d6cfdbfb2",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC03 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:37.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyB04buTbiB04bqhaSJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-6d866b8ef11cc6fe66e8",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC04 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 750,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:38.476Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyBob+G6oXQgxJHhu5luZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-f896cdd4dcff5ee35df8",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC05 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 746,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:39.236Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGjhur90IGjhuqFuIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-4c419b686ea5befba812",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC06 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:39.991Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjoyOTk5OTksInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDGoW4gaMOgbmcgY2jGsGEgxJHhu6cgZ2nDoSB0cuG7iyB04buRaSB0aGnhu4N1In19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-2ef5e5a9d94deaa4d064",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC07 success [UI mocked]",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8770,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Áp dụng', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 disabled:opacity-50\">Áp dụng</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Áp dụng', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 disabled:opacity-50\">Áp dụng</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:23:19",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                      "column": 19,
+                      "line": 23
+                    },
+                    "snippet": " \u001b[90m 21 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Tổng thanh toán:'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(money(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     } \u001b[36melse\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m       \u001b[36mawait\u001b[39m apply\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m       \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'success'\u001b[39m) {\n \u001b[90m 25 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Tiết kiệm:'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(money(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount))\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Thành tiền:'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(money(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                        "column": 19,
+                        "line": 23
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Áp dụng', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 disabled:opacity-50\">Áp dụng</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n  21 |       await expect(page.getByText('Tổng thanh toán:')).toContainText(money(record.expected.final));\n  22 |     } else {\n> 23 |       await apply.click();\n     |                   ^\n  24 |       if (record.scenario === 'success') {\n  25 |         await expect(page.getByText('Tiết kiệm:')).toContainText(money(record.expected.discount));\n  26 |         await expect(page.getByText('Thành tiền:')).toContainText(money(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:23:19"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:40.814Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results/fr09-apply-coupon-FR-09-TC07-success-UI-mocked--webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results/fr09-apply-coupon-FR-09-TC07-success-UI-mocked--webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-webkit/test-results/fr09-apply-coupon-FR-09-TC07-success-UI-mocked--webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                    "column": 19,
+                    "line": 23
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-47c0506ed32a1d19ae25",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC08 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 877,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:49.932Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMDAwMDEsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6MjUwMDAxLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-a85fae28e394ad3f16ae",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC09 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 694,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:50.953Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJD4bqnbiDEkcSDbmcgbmjhuq1wIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-29b1ebe2ba46b42f1bf2",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC10 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 687,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:51.658Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTAiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJUb2tlbiBraMO0bmcgaOG7o3AgbOG7hyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-85b4ce30ef1fd4556b1e",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC11 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 724,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:52.354Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-d1d98066b91df3399010",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC12 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 684,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:53.085Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDDoyDEkeG6oXQgZ2nhu5tpIGjhuqFuIHPhu60gZOG7pW5nIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-7f003dcda2e1fd5e41ec",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC13 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 618,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:53.778Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-80819f0e28f71ccf8869",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC14 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:54.404Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-3324548801e7ebdb125e",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC15 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:55.010Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-d3f06d36701409e45162",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC16 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 732,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:55.746Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-771c7629a80265c3e99e",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC17 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 736,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:56.485Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTciLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiRlJFRTEwMCIsInRvdGFsX2Ftb3VudCI6MTAwMDAwLCJ1c2VyX2lkIjo3N31dLCJyZXNwb25zZSI6eyJzdGF0dXMiOjIwMCwiYm9keSI6eyJjb3Vwb25faWQiOjk5LCJkaXNjb3VudF9hbW91bnQiOjEwMDAwMCwiZmluYWxfYW1vdW50IjowLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-fc2017e35c83df43db83",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC18 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:57.227Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiT1ZFUjEwMCIsInRvdGFsX2Ftb3VudCI6ODAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6ODAwMDAsImZpbmFsX2Ftb3VudCI6MCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-c59802a7a5a788e70fd8",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC19 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:57.953Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMzMzMzMsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6MzMzMzMsImZpbmFsX2Ftb3VudCI6MzAwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-7dba590b94c6a6f4945b",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T07:52:35.424Z",
+    "duration": 23309.815000000002,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

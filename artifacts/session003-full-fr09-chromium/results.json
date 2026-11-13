@@ -1,0 +1,955 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr09-apply-coupon.spec.js",
+      "--project=chromium"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T07:52:09.920Z",
+      "runId": "session003-full-fr09-chromium",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:09.920Z",
+          "runId": "session003-full-fr09-chromium",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:09.920Z",
+          "runId": "session003-full-fr09-chromium",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:09.920Z",
+          "runId": "session003-full-fr09-chromium",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T07:52:09.920Z",
+          "runId": "session003-full-fr09-chromium",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-full-fr09-chromium/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-apply-coupon.spec.js",
+      "file": "fr09-apply-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "FR-09-TC01 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:10.203Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-bd7278299aa6e9cd2a67",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC02 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:11.651Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-a75f666284a6bc4dea1d",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC03 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 430,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:12.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyB04buTbiB04bqhaSJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-71dfdb6240cd1da44b93",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC04 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 424,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:12.518Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGtow7RuZyBob+G6oXQgxJHhu5luZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-fd4ef1301c9fed602ee6",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC05 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 482,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:12.951Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoiTcOjIGjhur90IGjhuqFuIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-794fb9e455feed929699",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC06 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 723,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:13.443Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjoyOTk5OTksInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDGoW4gaMOgbmcgY2jGsGEgxJHhu6cgZ2nDoSB0cuG7iyB04buRaSB0aGnhu4N1In19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-6be12906a74354f5c7b1",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC07 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 510,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:14.177Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDciLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6MjUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-42ebf5026bfdccfa3938",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC08 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:14.699Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMDAwMDEsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6MjUwMDAxLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-66852a51438f9f8c8fd8",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC09 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:15.130Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMDkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJD4bqnbiDEkcSDbmcgbmjhuq1wIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-ff331d8f447526220f3e",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC10 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 413,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:15.559Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTAiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOm51bGx9XSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDEsImJvZHkiOnsiZXJyb3IiOiJUb2tlbiBraMO0bmcgaOG7o3AgbOG7hyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-216af3ff80c7e7b7c439",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC11 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:15.987Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTEiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-4c43c21275c58c846cb0",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC12 error [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 419,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:16.401Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTIiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6NDAwLCJib2R5Ijp7ImVycm9yIjoixJDDoyDEkeG6oXQgZ2nhu5tpIGjhuqFuIHPhu60gZOG7pW5nIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-e045a40c5b5eaacd349b",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC13 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 361,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:16.831Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTMiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-660d740c2a232edfc4d6",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC14 empty [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:17.200Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTQiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbXSwicmVzcG9uc2UiOnsic3RhdHVzIjo0MDAsImJvZHkiOnsiZXJyb3IiOiJLaMO0bmcgw6FwIGThu6VuZyJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-16c89d3a65a2adf85502",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC15 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:17.592Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTUiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-5f675871ac9c9a3853a9",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC16 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:18.042Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTYiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50Ijo1MDAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6NTAwMDAsImZpbmFsX2Ftb3VudCI6NDUwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-f1ca1a5a950daa35375f",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC17 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 428,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:18.527Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTciLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiRlJFRTEwMCIsInRvdGFsX2Ftb3VudCI6MTAwMDAwLCJ1c2VyX2lkIjo3N31dLCJyZXNwb25zZSI6eyJzdGF0dXMiOjIwMCwiYm9keSI6eyJjb3Vwb25faWQiOjk5LCJkaXNjb3VudF9hbW91bnQiOjEwMDAwMCwiZmluYWxfYW1vdW50IjowLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-6669562b000ef2d24f54",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC18 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:18.963Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTgiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiT1ZFUjEwMCIsInRvdGFsX2Ftb3VudCI6ODAwMDAsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6ODAwMDAsImZpbmFsX2Ftb3VudCI6MCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISJ9fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-033ecf1767bbb7e83f45",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "FR-09-TC19 success [UI mocked]",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 464,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T07:52:19.376Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "coverage",
+                      "contentType": "application/json",
+                      "body": "eyJpZCI6IkZSLTA5LVRDMTkiLCJjb3ZlcmFnZSI6IlVJIG1vY2tlZCByZXNwb25zZSwgbm90IGJhY2tlbmQgcnVsZXMiLCJyZXF1ZXN0IjpbeyJjb2RlIjoiQklHQlVZIiwidG90YWxfYW1vdW50IjozMzMzMzMsInVzZXJfaWQiOjc3fV0sInJlc3BvbnNlIjp7InN0YXR1cyI6MjAwLCJib2R5Ijp7ImNvdXBvbl9pZCI6OTksImRpc2NvdW50X2Ftb3VudCI6MzMzMzMsImZpbmFsX2Ftb3VudCI6MzAwMDAwLCJtZXNzYWdlIjoiw4FwIGThu6VuZyB0aMOgbmggY8O0bmchIn19fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8fb714b3b0d16e842cd-01129da1d7348224ee62",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T07:52:09.922Z",
+    "duration": 10068.727,
+    "expected": 19,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

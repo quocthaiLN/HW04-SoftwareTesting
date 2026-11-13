@@ -1,0 +1,1999 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/@playwright/test/cli.js",
+      "test",
+      "tests/fr17-coupons.spec.js",
+      "--project=webkit"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-13T08:03:37.735Z",
+      "runId": "session003-final-fr17-webkit",
+      "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:03:37.735Z",
+          "runId": "session003-final-fr17-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:03:37.735Z",
+          "runId": "session003-final-fr17-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:03:37.735Z",
+          "runId": "session003-final-fr17-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-13T08:03:37.735Z",
+          "runId": "session003-final-fr17-webkit",
+          "coverage": "FR-09 UI mocked; FR-02/17 real isolated backend",
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": false,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit",
+          "launchOptions": {
+            "executablePath": "/tmp/hw04-webkit-launch.sh"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/html",
+          "open": "never",
+          "title": "Run by: 23120352 | 2026-11-13T08:03:37.735Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr17-coupons.spec.js",
+      "file": "fr17-coupons.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "FR-17-TC01 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:38.045Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-f3579b2d395961f83667",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC02 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:40.000Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-1bb47eed985a1d0c51f6",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC03 read",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:41.527Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-247eff0242e2f4eec07e",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC04 delete",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1207,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:42.498Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-4aa35eaa7708541c608c",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC05 duplicate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1401,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m500\u001b[39m\nReceived array: \u001b[31m[400, 409]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 44,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/đã tồn tại|trùng|already exists|duplicate/i\u001b[39m\nReceived string:  \u001b[31m\"Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code\"\u001b[39m\n\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n> 70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n     |                                            ^\n  71 |             expect.soft(dialogs.join(' ')).not.toMatch(new RegExp(shared.ui.forbiddenLeakPattern, 'i'));\n  72 |           }\n  73 |         }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:70:44"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 48,
+                        "line": 71
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: not \u001b[32m/SQLITE|INSERT INTO|stack|Error:/i\u001b[39m\nReceived string:      \u001b[31m\"Lỗi: \u001b[7mSQLITE\u001b[27m_CONSTRAINT: UNIQUE constraint failed: coupons.code\"\u001b[39m\n\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n> 71 |             expect.soft(dialogs.join(' ')).not.toMatch(new RegExp(shared.ui.forbiddenLeakPattern, 'i'));\n     |                                                ^\n  72 |           }\n  73 |         }\n  74 |         if (record.expected.htmlOnly) expect(htmlValid).toBeFalsy();\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:71:48"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:43.716Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjUwMCwiYm9keSI6IntcImVycm9yXCI6XCJTUUxJVEVfQ09OU1RSQUlOVDogVU5JUVVFIGNvbnN0cmFpbnQgZmFpbGVkOiBjb3Vwb25zLmNvZGVcIn0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC05-duplicate-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC05-duplicate-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC05-duplicate-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-ad321bda9b856a54dd06",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC06 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:45.520Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-4484a25f99c8e5b2abc6",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC07 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:47.020Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-8bf4b01b8e5130faf831",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC08 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4471,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 149}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW5D9ABAD6E0FC47819F79FD2E953C22B4', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW5D9ABAD6E0FC47819F79FD2E953C22B4', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW5D9ABAD6E0FC47819F79FD2E953C22B4', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:48.345Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE0OX0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC08-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC08-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC08-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-2afa9ee68bef0537f86f",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC09 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4540,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 150}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW10675B670C3F466B9ABA12DE9C1F61C3', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW10675B670C3F466B9ABA12DE9C1F61C3', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW10675B670C3F466B9ABA12DE9C1F61C3', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:53.210Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE1MH0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC09-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC09-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC09-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-8231ffbb43b51c319770",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC10 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4560,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 151}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HWE1B3A22BBC62488883F6314336114B9C', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HWE1B3A22BBC62488883F6314336114B9C', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HWE1B3A22BBC62488883F6314336114B9C', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:03:58.261Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE1MX0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC10-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC10-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC10-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-3f7dd4a514de5b074085",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC11 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1446,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:03.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-7e21e66f72cad2b04401",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC12 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1318,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:04.943Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-872aca8117bdce3fba5a",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC13 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1418,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:06.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-c9168805dcca8cec8fab",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC14 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1455,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:07.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-eec3cf5cff65a57d543f",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC15 uppercase",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1443,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:09.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-21eb11303b4718951c44",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC16 reset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1512,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:10.627Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-5ea50ffda8be59ecba5c",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC17 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1405,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:12.147Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-797dfac8348f3c925192",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC18 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:13.561Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-bc8ba48feb87d5c563f5",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC19 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:14.972Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-edfc252ca9ff0dbc1c5c",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC20 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1383,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:16.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-032aa3cfa022b1f8ef84",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC21 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1421,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:17.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-60cc32417d61243b9117",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC22 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:19.202Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-6d40aaf9b885ba80be8c",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC23 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1402,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:20.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-a264a72ebc64abda954b",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC24 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4398,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 163}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW5548233699454C0885A5D4540014F1AB', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW5548233699454C0885A5D4540014F1AB', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW5548233699454C0885A5D4540014F1AB', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:22.060Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE2M30ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC24-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC24-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC24-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-fb5fbd80843d565d3c0e",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC25 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4538,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 164}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW98A8138D4F7E4C8282321D403C069847', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW98A8138D4F7E4C8282321D403C069847', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW98A8138D4F7E4C8282321D403C069847', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:26.859Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE2NH0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC25-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC25-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC25-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-a700757b3d2fca34b3fd",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC26 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:31.922Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-16238f5e047feabcf134",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC27 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:33.645Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-b07f59299013fde687b7",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC28 reject",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1341,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:34.995Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-99c9bb4391fa06eacdb3",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC29 create",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:36.349Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-b4d74b3eb3ca9da4e472",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC32 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4516,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 167}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW339323BA4FF94B14ACB457AF60A58438', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW339323BA4FF94B14ACB457AF60A58438', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW339323BA4FF94B14ACB457AF60A58438', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:37.793Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE2N30ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC32-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC32-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC32-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-1b77a818603c83cfa9c6",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC33 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4668,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 168}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW8DC4BD2B3863490DB473F513B47801B3', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW8DC4BD2B3863490DB473F513B47801B3', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW8DC4BD2B3863490DB473F513B47801B3', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:42.752Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE2OH0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC33-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC33-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC33-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-e292fdcfd5409caa3316",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC34 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4593,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 169}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HW0077C69FF4D54D78AD926A38EFFCCD25', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HW0077C69FF4D54D78AD926A38EFFCCD25', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HW0077C69FF4D54D78AD926A38EFFCCD25', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:47.950Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE2OX0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC34-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC34-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC34-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-11da270cf8b80caf46c8",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC35 reject",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4556,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108",
+                    "location": {
+                      "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                      "column": 108,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m           \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m responsePromise\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m           \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'creation-response'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body\u001b[33m:\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext() })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m           expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m \u001b[33m?\u001b[39m shared\u001b[33m.\u001b[39mduplicateStatuses \u001b[33m:\u001b[39m shared\u001b[33m.\u001b[39minvalidStatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m           \u001b[36mif\u001b[39m (record\u001b[33m.\u001b[39mscenario \u001b[33m===\u001b[39m \u001b[32m'duplicate'\u001b[39m) {\n \u001b[90m 69 |\u001b[39m             \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dialogs\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mone)\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m             expect\u001b[33m.\u001b[39msoft(dialogs\u001b[33m.\u001b[39mjoin(\u001b[32m' '\u001b[39m))\u001b[33m.\u001b[39mtoMatch(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mduplicateMessagePattern\u001b[33m,\u001b[39m \u001b[32m'i'\u001b[39m))\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 108,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m200\u001b[39m\nReceived array: \u001b[31m[400, 409, 422]\u001b[39m\n\n  65 |           const response = await responsePromise;\n  66 |           await test.info().attach('creation-response', { body: JSON.stringify({ status: response.status(), body: await response.text() }), contentType: 'application/json' });\n> 67 |           expect.soft(record.scenario === 'duplicate' ? shared.duplicateStatuses : shared.invalidStatuses).toContain(response.status());\n     |                                                                                                            ^\n  68 |           if (record.scenario === 'duplicate') {\n  69 |             await expect.poll(() => dialogs.length).toBe(shared.expected.one);\n  70 |             expect.soft(dialogs.join(' ')).toMatch(new RegExp(shared.ui.duplicateMessagePattern, 'i'));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:67:108"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 32,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m0\u001b[39m\nReceived length: \u001b[31m1\u001b[39m\nReceived array:  \u001b[31m[{\"id\": 170}]\u001b[39m\n\n  75 |         await coupons.reload();\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n> 77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n     |                                ^\n  78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n  79 |         return;\n  80 |       }\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:77:32"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                        "column": 78,
+                        "line": 78
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('row').filter({ has: getByRole('cell', { name: 'HWE8635E9713C447CFA37F364876090624', exact: true }) })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('row').filter({ has: getByRole('cell', { name: 'HWE8635E9713C447CFA37F364876090624', exact: true }) }) with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('row').filter({ has: getByRole('cell', { name: 'HWE8635E9713C447CFA37F364876090624', exact: true }) })\u001b[22m\n\u001b[2m    10 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  76 |         const persisted = await db.all('SELECT id FROM coupons WHERE code=?', [savedCode]);\n  77 |         expect.soft(persisted).toHaveLength(record.expected.rowCount);\n> 78 |         if (data.code !== shared.empty) await expect(coupons.row(savedCode)).toHaveCount(record.expected.rowCount);\n     |                                                                              ^\n  79 |         return;\n  80 |       }\n  81 |       if (record.scenario !== 'read') {\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js:78:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:53.073Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "creation-response",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0dXMiOjIwMCwiYm9keSI6IntcIm1lc3NhZ2VcIjpcIkNvdXBvbiBjcmVhdGVkXCIsXCJpZFwiOjE3MH0ifQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC35-reject-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC35-reject-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session003-final-fr17-webkit/test-results/fr17-coupons-FR-17-TC35-reject-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr17-coupons.spec.js",
+                    "column": 108,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-ff45a46aa6ff1d902f08",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC36 user-permission",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:58.146Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-577811f097ebebed852f",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        },
+        {
+          "title": "FR-17-TC37 anonymous",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 556,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T08:04:59.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fc5103c6032a05bd1109-977e3fbf8b8ff4b918a4",
+          "file": "fr17-coupons.spec.js",
+          "line": 5,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T08:03:37.738Z",
+    "duration": 81961.622,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}
