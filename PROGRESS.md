@@ -175,3 +175,11 @@
 - Commits: Commit cleanup/report riêng và snapshot Git log sau đó; docs/evidence-only.
 - Known risk or unresolved issue: Audit/progress và comparison.json giữ lịch sử file/baseline đã xóa; muốn tái so baseline phải khôi phục Git. GitHub Issues giữ ảnh upload ban đầu, không tự thay bằng ảnh local mới. PDF/video/publication/self-assessment chưa tự hoàn tất.
 - Next best step: Sinh viên review main-report.md; hoàn thiện các deliverables còn lại theo checklist.
+
+### Cấu trúc main report theo mẫu sinh viên — tiếp tục Session005
+- Date: 2026-11-13T17:35:40+07:00.
+- Goal: Cập nhật main-report.md theo trang bìa +12mục và Appendix.
+- Completed: 68case rows có loại/data/assertion/status;3feature×7tiểu mục; ảnh report/bugs và9Issues; mô tả4skill/flow;10spec commits từ Git; đo tỷ lệ token giữ/sửa baseline676a70e→current theo3specs; before/after Conditional Test Logic. Self-assessment100/100 theo yêu cầu, nêu rõ video/demo còn thiếu. git_log.txt định dạng pretty riêng, README đồng bộ điểm.
+- Verification run: Đủ12sections/68case rows; local links tồn tại; code/data excerpts lấy file thật. Không chạy lại suite, không tự điền ngày nộp/YouTube/độ dài video.
+- Known risk or unresolved issue: Public repo chưa xác minh; video/AI Critique/kết luận để thực hiện sau theo user. Tỷ lệ token là text change metric, không là tỷ lệ công sức; review cuối khác giai đoạn AI self-review đã ghi rõ.
+- Next best step: Sinh viên review báo cáo và bổ sung các mục để sau.

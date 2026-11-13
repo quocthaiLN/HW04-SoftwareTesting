@@ -200,3 +200,10 @@
       - Tao file main report .md
 - AI output: |
     Tool: OpenAI Codex. Xóa tài liệu phiên và artifact Session003/PoC/smoke; giữ runtime Session004 và evidence publication Session005. Gom nội dung kiến trúc/assertions/review/gaps vào main-report.md; cập nhật test-cases bằng record Session004 thật, local BUG screenshots bằng ảnh runner Session004, giữ riêng hash ảnh upload GitHub cũ. Cập nhật current links/README/automation report/checklist; audit/progress giữ lịch sử. Mở 9 HTML Session004 xác minh attribution/ISO đạt; validate và mapping/link/hash checks. Không sửa SUT hoặc tạo kết quả mới. Commit cleanup/report và xuất log; PDF/video và các yêu cầu khác chưa tự đánh hoàn tất.
+
+- Date and time: 2026-11-13T17:35:40+07:00
+- User prompt: |
+    Session 5: Cap nhat main report co cau truc nhu sau
+    Trang bìa/thông tin chung;1Executive Summary;2Feature selection;3Environment/architecture;4AI-First với skill playwright;5Mỗi feature có mô tả,>=12cases,data,code,results,reports,ảnh,gaps,bugs;6Human review (không có selector/assertion/wait/data/browser issues, thiếuBVA do sinh viên bổ sung), before/after,tỷ lệgiữ/sửa;7Bug Report;8Video thực hiện sau;9Agent Skill;10Git log pretty;11Self-assessment100/100;12Kết luận để sau.
+- AI output: |
+    Tool: OpenAI Codex. Đối chiếu4SKILL.md CLI/Core/POM/QA và code/data/Git/evidence thật; tổ chức main-report.md đủ12mục+cover+Appendix. Tạo68case rows,3feature×7subsections,ảnhreports/bugs,9Issues;10commits chạm.spec.js. Đo tokenSequenceMatcher baseline676a70e/current để nêu giữ/sửa có phương pháp; giữ lịch sử AI self-review tách review cuối sinh viên. Điểm100theo yêu cầu, nêu video/demo còn thiếu; không đánh checklistDONE theo điểm. Ngày nộp/YouTube/video/AI Critique/kết luận để sau. Tạo git_log.txtpretty, READMEđồng bộ. Kiểm tra12sections/68rows/currentlinks đạt; không rerun SUT.

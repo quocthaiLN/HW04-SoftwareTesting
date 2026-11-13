@@ -29,13 +29,13 @@ FR-09 is UI mocked coverage; FR-02/17 use an unchanged isolated real backend. Co
 
 | Criteria | Maximum | Self-assessed |
 | --- | --- | --- |
-| Feature A | 25 | Pending |
-| Feature B | 25 | Pending |
-| Feature C | 25 | Pending |
-| Demo video | 15 | Pending |
-| Agent Skills | 10 | Pending |
-| Total | 100 | Pending |
+| Feature A | 25 | 25 |
+| Feature B | 25 | 25 |
+| Feature C | 25 | 25 |
+| Demo video | 15 | 15 |
+| Agent Skills | 10 | 10 |
+| Total | 100 | 100 |
 
-Execution evidence is available above; grading/self-assessment, final main report/PDF and video remain pending.
+Self-assessment: 100/100 theo sinh viên yêu cầu; xem main-report.md mục11. Điểm video/skill là mức tự chấm yêu cầu, video/demo thực tế còn thiếu; không coi điểm này là evidence hoàn tất. PDF/video và kiểm chứng publication vẫn theo checklist.
 
 Session 001 đã tổng kết. HW02/group uniqueness được sinh viên xác nhận. FR-09 dùng mock toàn phần bằng page.route(); kết quả chỉ chứng minh UI với API giả lập, không kiểm chứng backend. Xem scope.md.
