@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T14:16:01+07:00",
+  "updated_at": "2026-11-13T14:36:45+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -20,7 +20,8 @@
     "Session 002: chốt Q1–Q6 theo user; TC18 DESIGNED, thêm TC19 floor. 45 cases DESIGNED (14/19/12), REQ-03 DONE ở mức thiết kế.",
     "Session 002 REQ-04: giữ nguyên 12 cases, thêm 19 UI cases; FR-17 có 31, toàn suite 64. Không thêm Update; API-only và policy chưa chốt ghi riêng.",
     "Session 002 chốt REQ-04: bỏ TC30/31, giữ IDs retired; thêm TC32–37, cụ thể hóa TC05/08/09. 68 DESIGNED (14/19/35), REQ-04 DONE phần thiết kế; không còn policy pending.",
-    "Session 003: REQ-05 ghi DONE theo xác nhận sinh viên đã hoàn tất chuẩn bị; bổ sung preparation-notes.md từ skill mới, không tuyên bố AI đã đọc bài giảng. Kế hoạch REQ-06–09 chuyển sang playwright-cli/core/pom; giữ FR-09 mock theo user dù trái quy tắc skill; trạng thái triển khai chưa đổi."
+    "Session 003: REQ-05 ghi DONE theo xác nhận sinh viên đã hoàn tất chuẩn bị; bổ sung preparation-notes.md từ skill mới, không tuyên bố AI đã đọc bài giảng. Kế hoạch REQ-06–09 chuyển sang playwright-cli/core/pom; giữ FR-09 mock theo user dù trái quy tắc skill; trạng thái triển khai chưa đổi.",
+    "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi."
   ],
   "requirements": [
     {
@@ -92,11 +93,11 @@
     {
       "id": 7,
       "name": "External test data",
-      "description": "Data-driven: dữ liệu trong CSV/JSON riêng; không dùng inline arrays/objects hardcode làm test data.",
+      "description": "Data-driven: toàn bộ test data trong CSV/JSON riêng; tuyệt đối không hardcode trong spec, fixture, helper, POM hoặc PoC. Bao gồm input/setup/seed/mock response/expected/test credentials/biên và tham số thời gian nghiệp vụ. Dữ liệu động resolve từ template/quy tắc trong file ngoài; không inline defaults hoặc fallback hardcode.",
       "expected_output": "Data files + scripts đọc dữ liệu",
       "source": "2026.HW04.Automation Testing_En.pdf §6 Task 1 p.4",
       "mandatory": true,
-      "acceptance_criteria": "Data-driven: dữ liệu trong CSV/JSON riêng; không dùng inline arrays/objects hardcode làm test data.",
+      "acceptance_criteria": "Data-driven: toàn bộ test data trong CSV/JSON riêng; tuyệt đối không hardcode trong spec, fixture, helper, POM hoặc PoC. Bao gồm input/setup/seed/mock response/expected/test credentials/biên và tham số thời gian nghiệp vụ. Dữ liệu động resolve từ template/quy tắc trong file ngoài; không inline defaults hoặc fallback hardcode. Validator kiểm tra dữ liệu/mapping; review code đối chiếu nguồn dữ liệu, thiếu trường phải báo lỗi.",
       "status": "NOT START",
       "planning_reference": "session-003-plan.md (cập nhật playwright-cli/core/pom; chưa triển khai/chạy)"
     },

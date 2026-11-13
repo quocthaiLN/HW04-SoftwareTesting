@@ -125,3 +125,11 @@
     Đọc ba SKILL.md và guides liên quan. Bổ sung preparation-notes.md; cập nhật REQ-05 DONE dựa trên xác nhận sinh viên trước đó, không tuyên bố AI đã đọc bài giảng vì workspace chưa có. Không tự thêm mục REQ-05 vào main report.
     Kế hoạch mới: CLI snapshot/discovery/debug → Core Playwright Test với external JSON/fixtures/assertions/3 browser projects → POM có chọn lọc cho UI, không đặt DB lifecycle trong POM. Nêu xung đột cấm mock own API với FR-09 và giữ scope user; inline data trái đề, retry/trace defaults, state leakage, clock backend, networkidle, cleanup khi process chết, global latest và link ../core sai đường dẫn.
     Giữ 68 cases/204 lượt dự kiến, 9 tổ hợp; baseline retries=0, trace retain-on-failure; 10 bước triển khai, files/inventory/acceptance/Git milestones trong session-003-plan.md. Chưa cài dependencies, chạy CLI/browser hoặc tạo runtime evidence; REQ-06–09 chưa triển khai. Cập nhật checklist/progress/audit và commit tài liệu riêng, không stage thay đổi/xóa file có sẵn của sinh viên.
+
+- Date and time: 2026-11-13T14:36:45+07:00
+- User prompt: |
+    1. Giu ngoai le
+    2. Yeu cau de bai la test data phai co trong file json/csv rieng, tuyet doi khong hardcode
+    3. Dong y cac phan con lai
+- AI output: |
+    Tool: OpenAI Codex. Ghi nhận giữ ngoại lệ FR-09 và chấp nhận các phần còn lại của kế hoạch. Cập nhật REQ-07: toàn bộ test data JSON/CSV riêng, không hardcode trong spec/fixtures/helpers/POM/PoC; dữ liệu động resolve từ quy tắc/template bên ngoài, không fallback hardcode. Bổ sung nghiệm thu validator và review nguồn dữ liệu. Cập nhật kế hoạch/checklist/progress/audit; chưa chạy browser/tests trong lượt chốt quyết định.

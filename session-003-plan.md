@@ -113,3 +113,11 @@ Commit từng bước thực chất: (1) FR-09 PoC spec, (2) FR-02 login/HTML va
 ## Thay đổi so với bản kế hoạch trước
 
 CLI discovery → Playwright Test suite thay cho run.js của skill cũ. Core quản lý fixtures/assertions/config; POM chỉ khi đủ lợi ích. Các baseline, IDs, scope mock, 10 bước và tiêu chí nghiệm thu giữ nguyên. Lỗi thiếu playwright của helper cũ là evidence lịch sử, không phải kết quả preflight bộ mới. Chưa chạy CLI hoặc browser trong lượt phân tích này.
+
+## Quyết định sinh viên đã chốt — 2026-11-13
+
+1. Giữ ngoại lệ FR-09 mock toàn phần dù CLI/Core khuyến nghị không mock API nội bộ. Evidence chỉ chứng minh UI với response giả lập.
+2. Toàn bộ test data bắt buộc nằm trong JSON/CSV riêng; tuyệt đối không hardcode trong spec, fixture, helper, POM hoặc script PoC. Bao gồm input, dữ liệu seed, mock response, expected, credentials test, các giá trị biên và tham số thời gian nghiệp vụ. Không dùng inline defaults hoặc factory để lách yêu cầu. Dữ liệu động chỉ resolve từ template/quy tắc khai báo trong file ngoài; lưu giá trị đã resolve để tái hiện. Locator và cấu hình kỹ thuật không phải test data nghiệp vụ; không dùng sự phân biệt này để giấu input/expected trong code.
+3. Các phần còn lại của kế hoạch được sinh viên chấp nhận. Không còn quyết định scope/phương án cần xác nhận trước preflight và triển khai.
+
+Nghiệm thu REQ-07 bổ sung: đối chiếu mọi giá trị input/setup/mock/expected trong code với file dữ liệu; validator kiểm tra trường bắt buộc và mapping; review thủ công để phát hiện hardcode kể cả trong helpers/POM. Thiếu dữ liệu phải báo lỗi, không fallback về giá trị hardcode.
