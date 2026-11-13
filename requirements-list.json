@@ -23,7 +23,8 @@
     "Session 003: REQ-05 ghi DONE theo xác nhận sinh viên đã hoàn tất chuẩn bị; bổ sung preparation-notes.md từ skill mới, không tuyên bố AI đã đọc bài giảng. Kế hoạch REQ-06–09 chuyển sang playwright-cli/core/pom; giữ FR-09 mock theo user dù trái quy tắc skill; trạng thái triển khai chưa đổi.",
     "Session 003: sinh viên chấp nhận kế hoạch mới, giữ ngoại lệ FR-09; REQ-07 tuyệt đối không hardcode toàn bộ test data, kể cả fixture/helper/POM/PoC. Các phần còn lại đồng ý; không cần hỏi duyệt lại trước thực thi.",
     "Session 003 execution: requirements 6–9 completed with real final matrix; requirement 10 also verified as generated evidence. 68 cases/204 executions; FR-09 remains UI mocked. Failures retained, human review/publication/PDF/video not claimed.",
-    "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history."
+    "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history.",
+    "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem session-004-review.md."
   ],
   "requirements": [
     {
@@ -148,7 +149,7 @@
       "source": "2026.HW04.Automation Testing_En.pdf §2 pp.1–2; §6 p.4",
       "mandatory": true,
       "acceptance_criteria": "Sinh viên review/sửa mọi AI output; mô tả lỗi/missing cases/selectors/assertions/waits và nguyên nhân (prompt/model/feature); ghi case chưa automate và lý do.",
-      "status": "NOT START"
+      "status": "IN PROGRESS"
     },
     {
       "id": 12,
