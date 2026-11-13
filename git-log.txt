@@ -1,3 +1,25 @@
+* commit bc498a5134d80a6b45e9f1c18bbd5c7bf0852f70
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 17:35:40 2026 +0700
+| 
+|     [HW04][Session005] Structure main report into twelve requested sections
+| 
+|  AI-Report-Audit.md |    7 +
+|  PROGRESS.md        |    8 +
+|  README.md          |   16 +-
+|  git_log.txt        | 1940 ++++++++++++++++++++++++++++++++++++++++++++++++++
+|  main-report.md     |  765 ++++++++++++++++++--
+|  5 files changed, 2674 insertions(+), 62 deletions(-)
+| 
+* commit a073924f98bf2853fc341b1956ffbfd0fefc8f5e
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 17:24:57 2026 +0700
+| 
+|     [HW04][REQ-17] Refresh Git log after submission cleanup
+| 
+|  git-log.txt | 699 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  1 file changed, 699 insertions(+)
+| 
 * commit 084f93521fc665ddeeef2bbfb1a7f708fa1da170
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:24:51 2026 +0700
