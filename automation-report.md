@@ -24,7 +24,7 @@ All reports are real Playwright output. Attribution and ISO timestamp come from 
 
 FR-02/17 use the real unchanged SUT backend copied into an isolated runtime/SQLite. FR-09 mocks auth/cart/apply-coupon using page.route and a Vite CartContext module response; it proves UI/payload contracts with fixture responses, not backend coupon rules. No checkout. Permission cases exercise UI only, not direct endpoint role enforcement.
 
-Failures remain visible and are grouped in [bug-reports.md](bug-reports.md). Do not equate number of failed executions with number of unique defects. No GitHub Issues/publication or human review is claimed here. An earlier batch had one WebKit actionability timeout, documented separately; see original artifacts/session003-full/execution-matrix.json.
+Failures remain visible and are grouped in [bug-reports.md](bug-reports.md). Do not equate number of failed executions with number of unique defects. This Session003 execution report is historical. Human review completed in Session004; Session005 created GitHub Issues #1–#9 with screenshots (see bug-reports.md). Public repository publication remains tracked separately under REQ-16. An earlier batch had one WebKit actionability timeout, documented separately; see original artifacts/session003-full/execution-matrix.json.
 
 ## REQ-06–09 evidence
 

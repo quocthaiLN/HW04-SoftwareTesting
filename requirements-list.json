@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T16:50:15+07:00",
+  "updated_at": "2026-11-13T17:11:43+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -26,7 +26,8 @@
     "Tổng kết Session 003: đối chiếu evidence thực, REQ-12/14/18/19 IN PROGRESS, REQ-17 DONE theo Git log đã xuất; REQ-16 vẫn IN PROGRESS do chưa public remote. REQ-06–10 giữ DONE. Phân biệt AI self-review với human review; corrected mapping subject commit 282c750 REQ-19 → nội dung REQ-17, không rewrite Git history.",
     "Session 004 REQ-11: sinh viên phát hiện Conditional Test Logic; refactor theo hành vi, giữ data-driven cùng hình dạng. Review đang thực hiện, chưa xác nhận toàn bộ outputs. Xem session-004-review.md.",
     "Tổng kết Session004: sinh viên chấp nhận refactor Conditional Test Logic; hạng mục sửa hoàn tất, REQ-11 tổng thể IN PROGRESS vì chưa xác nhận review toàn bộ outputs. Regression204keys0status differences; xem session-004-summary.md.",
-    "Session004: sinh viên xác nhận đồng ý selectors/assertions/waits/missing cases/gap analysis vì đã bổ sung ở testcase design. Cùng xác nhận refactor Conditional Test Logic trước đó, REQ-11 DONE theo human review; xem test-cases.json và session-004-review.md. Không suy thành coverage backend ngoài scope."
+    "Session004: sinh viên xác nhận đồng ý selectors/assertions/waits/missing cases/gap analysis vì đã bổ sung ở testcase design. Cùng xác nhận refactor Conditional Test Logic trước đó, REQ-11 DONE theo human review; xem test-cases.json và session-004-review.md. Không suy thành coverage backend ngoài scope.",
+    "Session005 REQ-12 DONE: 9 GitHub Issues có screenshot đã UI-verified; full Markdown reports, mapping54failures và giới hạn screenshot ghi rõ. Evidence runtime dùng lại Session003/004; không tự chuyển REQ-16/publication thành DONE."
   ],
   "requirements": [
     {
@@ -161,8 +162,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §6 p.4; §14 p.7",
       "mandatory": true,
       "acceptance_criteria": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
-      "status": "IN PROGRESS",
-      "evidence": "bug-reports.md: 9 nhóm lỗi runtime và screenshots/HTML evidence; chưa tạo GitHub Issues."
+      "status": "DONE",
+      "evidence": "Session005: bug-reports.md có 9 báo cáo chi tiết; GitHub Issues #1–#9 trên quocthaiLN/HW04-SoftwareTesting đã tạo và UI-verified từng Issue có screenshot. artifacts/evidence/session005-bug-evidence.json đối chiếu 18 failing IDs ×3 browsers=54 executions; ảnh danh sách session005-github-issues.png. Timeout/script/setup phân loại riêng; không chạy lại tests hoặc sửa SUT."
     },
     {
       "id": 13,

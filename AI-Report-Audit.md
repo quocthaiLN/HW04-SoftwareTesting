@@ -181,3 +181,12 @@
     Dong y voi cac thanh phan selectors, assertions, waits, missing cases và gap analysis do da duoc toi bo sung o phan testcase design roi
 - AI output: |
     Tool: OpenAI Codex. Ghi nhận xác nhận human review của sinh viên đối với các thành phần còn lại và testcase design. Cập nhật REQ-11 DONE, reconcile summary/review/progress/checklist; giữ lịch sử IN PROGRESS có chú thích. Không sửa hoặc chạy lại suite, không mở rộng coverage. Commit tài liệu và xuất Git log; giữ user changes có sẵn.
+
+
+- Date and time: 2026-11-13T17:11:43+07:00
+- User prompt: |
+    Session 5:
+
+    - Thuc hien requirement 12
+- AI output: |
+    Tool: OpenAI Codex; áp dụng task-planning. Đọc repo instructions/policies/đề gốc và evidence Session003/004. Hoàn thiện 9 bug reports tự chứa (steps, input, expected, actual, proposed severity, evidence limits); tạo GitHub Issues #1–#9 trên quocthaiLN/HW04-SoftwareTesting qua browser đã đăng nhập, upload mỗi Issue một screenshot runner gốc và UI-verify ảnh. Lưu ảnh danh sách và manifest case/browser/issue/attachment/SHA256; 18caseIDs×3=54failures mapping đủ 9groups. Tách timeout WebKit và lỗi AI test/report khỏi SUT defects. Không chạy lại tests/sửa SUT/đổi expected; baseline150pass54fail0skip giữ nguyên. REQ-12 DONE; README/automation-report/checklist/progress cập nhật, commit docs/evidence riêng và xuất log thật. Giới hạn BUG06 ảnh sau alert, BUG07–09 row ngoài viewport đã ghi ngay trên Issues; runner/trace xác minh chi tiết. Public remote/PDF/video và yêu cầu khác vẫn tách riêng, không tự đánh DONE. Giữ thay đổi sinh viên có sẵn.

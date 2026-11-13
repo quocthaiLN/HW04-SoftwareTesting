@@ -1,0 +1,460 @@
+{
+  "requirement": 12,
+  "verified_at": "2026-11-13T17:11:43+07:00",
+  "method": "GitHub browser UI: created issue page URL and one attached image observed per issue; final issues list observed with all 9 titles.",
+  "test_execution": "Existing session003-final and session004-refactor results; no new SUT test run in Session005.",
+  "matrix": "artifacts/session004-refactor/execution-matrix.json",
+  "test_revision": "3cd7cc68e83c3f3417b31a02a47231df5f3e54e0",
+  "issues": [
+    {
+      "bug_id": "BUG-01",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/1",
+      "attachment_url": "https://github.com/user-attachments/assets/6b6f06b8-2e8c-494b-8533-2bb58525a5cc",
+      "screenshot": "artifacts/evidence/BUG-01.png",
+      "screenshot_sha256": "286ffea78728524aa667c503d88366a5770acff985f41a312442e65f3d29ada5",
+      "case_ids": [
+        "FR-02-TC02",
+        "FR-02-TC07"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC02",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC07",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC02",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC07",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC02",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC07",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-02",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/2",
+      "attachment_url": "https://github.com/user-attachments/assets/f5d4fb00-beaf-478e-99c0-0ad15bfa5fb6",
+      "screenshot": "artifacts/evidence/BUG-02.png",
+      "screenshot_sha256": "9353a0fab9300c08362f7e401c9dbdf58d23c1c60edc0e8f3da31454dcd94eec",
+      "case_ids": [
+        "FR-02-TC08",
+        "FR-02-TC09",
+        "FR-02-TC10"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-03",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/3",
+      "attachment_url": "https://github.com/user-attachments/assets/2e4f4a73-5000-46f6-91a7-cead55c71502",
+      "screenshot": "artifacts/evidence/BUG-03.png",
+      "screenshot_sha256": "38dd7d47e0f959e4dd9774665d168cda0fbc7ebb71d3f033bdb03d2dc84855e0",
+      "case_ids": [
+        "FR-02-TC06"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC06",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC06",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC06",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-04",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/4",
+      "attachment_url": "https://github.com/user-attachments/assets/87b8980e-dc47-4fae-afbf-86e3bc3aafb8",
+      "screenshot": "artifacts/evidence/BUG-04.png",
+      "screenshot_sha256": "b6425c7e78e1b44f7eeeaec3940cde8b72096f6ef9d63fe25a5b3c5438924684",
+      "case_ids": [
+        "FR-02-TC13"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC13",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC13",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC13",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-05",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/5",
+      "attachment_url": "https://github.com/user-attachments/assets/6f2e0c99-2d9c-4a60-afc8-3d8d0ecd4ae2",
+      "screenshot": "artifacts/evidence/BUG-05.png",
+      "screenshot_sha256": "f7acd69258b5b11aca4cf5fcb2a8418100cf9df35311838525f21206ea7ca9fb",
+      "case_ids": [
+        "FR-02-TC14"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-02-TC14",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-02-TC14",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-02-TC14",
+          "status": "failed",
+          "run_id": "session004-refactor-fr02-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-06",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/6",
+      "attachment_url": "https://github.com/user-attachments/assets/89ef59f1-dd9d-4841-9895-4366ff5757f1",
+      "screenshot": "artifacts/evidence/BUG-06.png",
+      "screenshot_sha256": "0d3275cb575a2070b33297390c876cd6497e85fa9b7da0f2a9c080ecd54a3748",
+      "case_ids": [
+        "FR-17-TC05"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC05",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC05",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC05",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-07",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/7",
+      "attachment_url": "https://github.com/user-attachments/assets/31d9146d-dda2-4422-a5af-2fbc22581eef",
+      "screenshot": "artifacts/evidence/BUG-07.png",
+      "screenshot_sha256": "c28d555bf721698e046d62ab8aebee1611ede717c07e257a2cc25acc5eaeb7b2",
+      "case_ids": [
+        "FR-17-TC08",
+        "FR-17-TC09",
+        "FR-17-TC32",
+        "FR-17-TC33",
+        "FR-17-TC34",
+        "FR-17-TC35"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC32",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC33",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC34",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC35",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC32",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC33",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC34",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC35",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC08",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC09",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC32",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC33",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC34",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC35",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-08",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/8",
+      "attachment_url": "https://github.com/user-attachments/assets/a2d7f259-79de-4dbb-be49-7c2d8690b0ac",
+      "screenshot": "artifacts/evidence/BUG-08.png",
+      "screenshot_sha256": "d1e2f9932cadd355fb92f0afeebb17c706a5af50a57669d81ae49dcc623a527e",
+      "case_ids": [
+        "FR-17-TC24",
+        "FR-17-TC25"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC24",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC25",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC24",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC25",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC24",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC25",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    },
+    {
+      "bug_id": "BUG-09",
+      "issue_url": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/9",
+      "attachment_url": "https://github.com/user-attachments/assets/28c1f1cd-10ae-4078-acc4-125f1b6ff493",
+      "screenshot": "artifacts/evidence/BUG-09.png",
+      "screenshot_sha256": "14bced8a2bf93e3c3551ef19b37f0bb27f9d41e37c80779963b05880af533668",
+      "case_ids": [
+        "FR-17-TC10"
+      ],
+      "observations": [
+        {
+          "browser": "chromium",
+          "case_id": "FR-17-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-chromium"
+        },
+        {
+          "browser": "firefox",
+          "case_id": "FR-17-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-firefox"
+        },
+        {
+          "browser": "webkit",
+          "case_id": "FR-17-TC10",
+          "status": "failed",
+          "run_id": "session004-refactor-fr17-webkit"
+        }
+      ],
+      "image_observed_on_issue": true
+    }
+  ]
+}

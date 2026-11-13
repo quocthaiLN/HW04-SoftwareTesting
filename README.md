@@ -15,13 +15,13 @@
 | Passed / failed / skipped | 150 / 54 / 0 |
 | Cases passing all 3 engines | 50 / 68 |
 | Feature-browser runs | 9 (Chromium/Firefox/WebKit × 3 features) |
-| Runtime defect groups | 9; local reports, GitHub Issues pending |
+| Runtime defect groups | 9; [GitHub Issues #1–#9](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues), each with screenshot |
 | Demo video | Pending |
 | Public GitHub repository | Pending |
 
 Final batch: session003-final. [Execution report](automation-report.md), [matrix](artifacts/session003-final/execution-matrix.json), [running instructions](RUNNING.md), [assertion inventory](assertion-inventory.md), [implementation explanation](implementation-notes.md), [defects](bug-reports.md).
 
-FR-09 is UI mocked coverage; FR-02/17 use an unchanged isolated real backend. Counts above refer to the final matrix, excluding prior PoC/smoke and first-batch executions. Student human review is pending.
+FR-09 is UI mocked coverage; FR-02/17 use an unchanged isolated real backend. Counts above refer to the final matrix, excluding prior PoC/smoke and first-batch executions. Student human review completed in Session004 (REQ-11); bug reporting completed in Session005 (REQ-12).
 
 ## Self-assessment
 
