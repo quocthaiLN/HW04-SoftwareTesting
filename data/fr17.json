@@ -1,0 +1,503 @@
+[
+  {
+    "id": "FR-17-TC01",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC02",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 50000,
+      "min_order_amount": 300000,
+      "max_uses_per_user": 2
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC03",
+    "feature": "FR-17",
+    "scenario": "read",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC04",
+    "feature": "FR-17",
+    "scenario": "delete",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC05",
+    "feature": "FR-17",
+    "scenario": "duplicate",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC06",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "code": ""
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC07",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": ""
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC08",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": 0
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC09",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": -1
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC10",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "min_order_amount": -1
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC11",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "expired_at": ""
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC12",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "max_uses_per_user": 0
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC13",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 50000,
+      "max_uses_per_user": 3
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC14",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 15,
+      "min_order_amount": 100000,
+      "expired_at": "2020-01-01"
+    },
+    "expected": {
+      "persist": true,
+      "expired": true,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC15",
+    "feature": "FR-17",
+    "scenario": "uppercase",
+    "overrides": {
+      "codeTemplate": "summer2026{unique}"
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC16",
+    "feature": "FR-17",
+    "scenario": "reset",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 50000,
+      "min_order_amount": 200000,
+      "max_uses_per_user": 3
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC17",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 1,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC18",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 2,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC19",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 50,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC20",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 99,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC21",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "discount_value": 100,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC22",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 1,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC23",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 2,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC24",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": 0,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC25",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "type": "fixed",
+      "discount_value": -50000,
+      "min_order_amount": 200000
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC26",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "min_order_amount": 1
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC27",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "max_uses_per_user": -1
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC28",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "max_uses_per_user": 1.5
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": true,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC29",
+    "feature": "FR-17",
+    "scenario": "create",
+    "overrides": {
+      "max_uses_per_user": 10
+    },
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC32",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": 101
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC33",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": 120
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC34",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": 0.5
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC35",
+    "feature": "FR-17",
+    "scenario": "reject",
+    "overrides": {
+      "discount_value": 1.5
+    },
+    "expected": {
+      "persist": false,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 0
+    }
+  },
+  {
+    "id": "FR-17-TC36",
+    "feature": "FR-17",
+    "scenario": "user-permission",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "FR-17-TC37",
+    "feature": "FR-17",
+    "scenario": "anonymous",
+    "overrides": {},
+    "expected": {
+      "persist": true,
+      "expired": false,
+      "htmlOnly": false,
+      "rowCount": 1
+    }
+  }
+]

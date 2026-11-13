@@ -1,0 +1,72 @@
+{
+  "user": {
+    "name": "HW04 Test User",
+    "emailTemplate": "hw04-{unique}@example.test",
+    "password": "Test1234!",
+    "role": "user",
+    "login_attempts": 0,
+    "locked_until": null
+  },
+  "wrongPassword": "Wrong123!",
+  "missingEmailTemplate": "missing-{unique}@example.test",
+  "empty": "",
+  "invalidEmail": "abc",
+  "maskPassword": "TestMask123!",
+  "expected": {
+    "zero": 0,
+    "one": 1,
+    "two": 2,
+    "threshold": 3,
+    "lockSeconds": 30,
+    "unlockWaitMs": 31000,
+    "tokenKey": "token",
+    "adminTokenKey": "adminToken",
+    "passwordType": "password",
+    "emailType": "email",
+    "loginHeading": "Đăng nhập",
+    "error": "Đăng nhập thất bại. Vui lòng kiểm tra lại.",
+    "failureStatus": [
+      401,
+      403
+    ],
+    "unauthorizedStatus": [
+      401,
+      403
+    ],
+    "successStatus": 200
+  },
+  "couponDefaults": {
+    "codeTemplate": "HW{unique}",
+    "type": "percent",
+    "discount_value": 10,
+    "min_order_amount": 0,
+    "max_uses_per_user": 1,
+    "expiryOffsetDays": 30
+  },
+  "resetExpected": {
+    "code": "",
+    "discount_value": "",
+    "expired_at": "",
+    "type": "percent",
+    "min_order_amount": "0",
+    "max_uses_per_user": "1"
+  },
+  "ui": {
+    "expiredLabel": "Hết hạn",
+    "expiredColor": "rgb(239, 68, 68)",
+    "duplicateMessagePattern": "đã tồn tại|trùng|already exists|duplicate",
+    "forbiddenLeakPattern": "SQLITE|INSERT INTO|stack|Error:",
+    "notAdminMessage": "Bạn không phải là admin!"
+  },
+  "duplicateStatuses": [
+    400,
+    409
+  ],
+  "invalidStatuses": [
+    400,
+    409,
+    422
+  ],
+  "null": null,
+  "emptyArray": []
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "FR-02-TC01",
+    "scenario": "success",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC02",
+    "scenario": "wrong",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC03",
+    "scenario": "missing",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC04",
+    "scenario": "empty-email",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC05",
+    "scenario": "empty-password",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC06",
+    "scenario": "format",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC07",
+    "scenario": "two-then-success",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC08",
+    "scenario": "lock",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC09",
+    "scenario": "lock-deadline",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC10",
+    "scenario": "unlock",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC11",
+    "scenario": "reset",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC12",
+    "scenario": "jwt",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC13",
+    "scenario": "mask",
+    "feature": "FR-02"
+  },
+  {
+    "id": "FR-02-TC14",
+    "scenario": "heading",
+    "feature": "FR-02"
+  }
+]

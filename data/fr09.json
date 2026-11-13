@@ -1,0 +1,1001 @@
+[
+  {
+    "id": "FR-09-TC01",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 450000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 450000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "percent",
+      "value": 10,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC02",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 450000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 450000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC03",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Mã không tồn tại"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": "Mã không tồn tại",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC04",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Mã không hoạt động"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": "Mã không hoạt động",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": false,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC05",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Mã hết hạn"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": "Mã hết hạn",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2020-01-01"
+    }
+  },
+  {
+    "id": "FR-09-TC06",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 299999
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 299999,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Đơn hàng chưa đủ giá trị tối thiểu"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 299999,
+      "user_id": 77,
+      "discount": null,
+      "final": 299999,
+      "error": "Đơn hàng chưa đủ giá trị tối thiểu",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC07",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 300000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 300000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 250000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 300000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 250000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC08",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 300001
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 300001,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 250001,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 300001,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 250001,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC09",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "absent",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 401,
+      "body": {
+        "error": "Cần đăng nhập"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": null,
+      "discount": null,
+      "final": 500000,
+      "error": "Cần đăng nhập",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC10",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "invalid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 401,
+      "body": {
+        "error": "Token không hợp lệ"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": null,
+      "discount": null,
+      "final": 500000,
+      "error": "Token không hợp lệ",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 401
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC11",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 450000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 450000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 1,
+      "maxUses": 2,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC12",
+    "feature": "FR-09",
+    "scenario": "error",
+    "input": {
+      "code": "BIGBUY",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Đã đạt giới hạn sử dụng"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": "Đã đạt giới hạn sử dụng",
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 2,
+      "maxUses": 2,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC13",
+    "feature": "FR-09",
+    "scenario": "empty",
+    "input": {
+      "code": "",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Không áp dụng"
+      }
+    },
+    "expected": {
+      "code": "",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": null,
+      "applyCount": 0,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC14",
+    "feature": "FR-09",
+    "scenario": "empty",
+    "input": {
+      "code": "   ",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 400,
+      "body": {
+        "error": "Không áp dụng"
+      }
+    },
+    "expected": {
+      "code": "",
+      "total": 500000,
+      "user_id": 77,
+      "discount": null,
+      "final": 500000,
+      "error": null,
+      "applyCount": 0,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC15",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "bigbuy",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 450000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 450000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC16",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "  BIGBUY  ",
+      "total": 500000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 500000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 50000,
+        "final_amount": 450000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 500000,
+      "user_id": 77,
+      "discount": 50000,
+      "final": 450000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 50000,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC17",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "FREE100",
+      "total": 100000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 100000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 100000,
+        "final_amount": 0,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "FREE100",
+      "total": 100000,
+      "user_id": 77,
+      "discount": 100000,
+      "final": 0,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 100000,
+      "min": 0,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC18",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "OVER100",
+      "total": 80000
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 80000,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 80000,
+        "final_amount": 0,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "OVER100",
+      "total": 80000,
+      "user_id": 77,
+      "discount": 80000,
+      "final": 0,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "fixed",
+      "value": 100000,
+      "min": 0,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  },
+  {
+    "id": "FR-09-TC19",
+    "feature": "FR-09",
+    "scenario": "success",
+    "input": {
+      "code": "BIGBUY",
+      "total": 333333
+    },
+    "authMode": "valid",
+    "token": "mock-valid-token",
+    "invalidToken": "mock-invalid-token",
+    "user": {
+      "id": 77,
+      "name": "Mock Coupon User",
+      "role": "user"
+    },
+    "cart": [
+      {
+        "id": 88,
+        "name": "Mock cart item",
+        "price": 333333,
+        "quantity": 1
+      }
+    ],
+    "response": {
+      "status": 200,
+      "body": {
+        "coupon_id": 99,
+        "discount_amount": 33333,
+        "final_amount": 300000,
+        "message": "Áp dụng thành công!"
+      }
+    },
+    "expected": {
+      "code": "BIGBUY",
+      "total": 333333,
+      "user_id": 77,
+      "discount": 33333,
+      "final": 300000,
+      "error": null,
+      "applyCount": 1,
+      "checkoutCount": 0,
+      "authStatus": 200
+    },
+    "policy": {
+      "kind": "percent",
+      "value": 10,
+      "min": 300000,
+      "uses": 0,
+      "maxUses": 1,
+      "active": true,
+      "expiry": "2099-12-31"
+    }
+  }
+]
