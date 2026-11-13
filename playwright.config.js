@@ -13,6 +13,6 @@ module.exports = defineConfig({
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-    { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+    { name: 'webkit', use: { ...devices['Desktop Safari'], ...(process.env.WEBKIT_EXECUTABLE_PATH ? { launchOptions: { executablePath: process.env.WEBKIT_EXECUTABLE_PATH } } : {}) } },
   ],
 });
