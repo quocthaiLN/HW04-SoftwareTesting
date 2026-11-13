@@ -77,5 +77,9 @@
     "role": "admin",
     "login_attempts": 0,
     "locked_until": null
+  },
+  "typeLabels": {
+    "percent": "Phần trăm",
+    "fixed": "Cố định"
   }
 }

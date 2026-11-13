@@ -29,6 +29,7 @@ class CouponsPage {
     await expect(row).toHaveCount(expected.rowCount);
     const cells = row.getByRole('cell');
     await expect(cells.nth(0)).toHaveText(data.code.toUpperCase());
+    await expect(cells.nth(1)).toHaveText(shared.typeLabels[data.type]);
     await expect(cells.nth(2)).toHaveText(data.type === shared.couponDefaults.type ? `${data.discount_value}%` : `${money(Number(data.discount_value))} ₫`);
     await expect(cells.nth(3)).toHaveText(`${money(Number(data.min_order_amount))} ₫`);
     await expect(cells.nth(4)).toHaveText(expected.expired ? shared.ui.expiredLabel : data.expired_at);
