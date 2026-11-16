@@ -1,3 +1,229 @@
+* commit 3a18c521237218e0ebbf2c31bd72f61754d7e43c
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Mon Nov 16 12:03:24 2026 +0700
+|
+|     [REQ-10,13,14,15,18,19,22] Finalize reviewed submission reports PDFs and authentic evidence
+|
+|  AI-Critique.md                                    |    3 +
+|  AI-Critique.pdf                                   |  Bin 0 -> 47137 bytes
+|  AI-Report-Audit.md                                |  124 +-
+|  AI-Report-Audit.pdf                               |  Bin 0 -> 96343 bytes
+|  Main-Report.md                                    | 1064 ++++
+|  Main-Report.pdf                                   | 1490 ++++++
+|  PROGRESS.md                                       |  105 +-
+|  README.md                                         |   62 +-
+|  README.pdf                                        |  Bin 0 -> 67993 bytes
+|  RUNNING.md                                        |   36 -
+|  artifacts/evidence/final-report-verification.json |   83 +
+|  .../session004-refactor-fr02-chromium.png         |  Bin 0 -> 183230 bytes
+|  .../session004-refactor-fr02-firefox.png          |  Bin 0 -> 180864 bytes
+|  .../session004-refactor-fr02-webkit.png           |  Bin 0 -> 182481 bytes
+|  .../session004-refactor-fr17-chromium.png         |  Bin 0 -> 422629 bytes
+|  .../session004-refactor-fr17-firefox.png          |  Bin 0 -> 409346 bytes
+|  .../session004-refactor-fr17-webkit.png           |  Bin 0 -> 452764 bytes
+|  .../session006-fr09-real-chromium.png             |  Bin 0 -> 278593 bytes
+|  .../session006-fr09-real-firefox.png              |  Bin 0 -> 273803 bytes
+|  .../final-reports/session006-fr09-real-webkit.png |  Bin 0 -> 275807 bytes
+|  .../evidence/final-submission-validation.json     |   32 +
+|  artifacts/execution-matrix.json                   | 5257 +++++++++++++++++++
+|  .../session004-refactor-fr09-chromium/console.log |   26 -
+|  .../report-verified.png                           |  Bin 271712 -> 0 bytes
+|  .../results.json                                  |  997 ----
+|  .../session004-refactor-fr09-firefox/console.log  |   26 -
+|  .../report-verified.png                           |  Bin 269625 -> 0 bytes
+|  .../session004-refactor-fr09-firefox/results.json |  997 ----
+|  .../session004-refactor-fr09-webkit/console.log   |   26 -
+|  .../report-verified.png                           |  Bin 272641 -> 0 bytes
+|  .../session004-refactor-fr09-webkit/results.json  | 1000 ----
+|  .../session004-refactor/execution-matrix.json     |  908 +---
+|  .../session004-refactor/report-verification.json  |   21 -
+|  artifacts/session004-refactor/summary.json        |   12 +-
+|  .../2c6673782e5525bdc9a74091a7dbf2bb52cf6368.zip  |  Bin 0 -> 498369 bytes
+|  .../2f431a7cc9c123ed6d366e72ce0c4244d54a1167.zip  |  Bin 0 -> 475961 bytes
+|  .../3871b36fa1097570d6699e181877b20497b837ff.png  |  Bin 0 -> 54447 bytes
+|  .../3e8d02ebd5ed7296b92e1aecd1098b2d1c539685.png  |  Bin 0 -> 55006 bytes
+|  .../4422db0c0bac5ec19cae74867adc3aab489189f5.md   |  271 +
+|  .../5374d0db58a29ed75b06c3062f0b03f9d6b32863.md   |  229 +
+|  .../57e8a67bc77eff0d9b436e02963dd342b8daad72.md   |  229 +
+|  .../5de35badad8fbb37b533dbd76a4b390f2361f25e.zip  |  Bin 0 -> 545265 bytes
+|  .../ab2c423953761156bf2e7c05df2e8ad9ba5fe911.png  |  Bin 0 -> 54682 bytes
+|  .../c1e5bd1a6f4ae8d6410d9b7dcb76ab345bc33ea9.md   |  229 +
+|  .../c37dd5ac057fb359c93a3f4d5dfb6cd1d240faef.zip  |  Bin 0 -> 460315 bytes
+|  .../f1ef40b65bcf21c1a331ca3d2ceab4a9f1e25a4f.png  |  Bin 0 -> 54339 bytes
+|  .../html/index.html                               |    2 +-
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../3344205b01583a812c3a37e634bc3eda5aa304b3.png  |  Bin 0 -> 63378 bytes
+|  .../48421ec4bfbf6785907e8e2c41113cc92788f6c2.zip  |  Bin 0 -> 2508797 bytes
+|  .../49ec9b2b050a5b7d989e0986267be206f2931bed.zip  |  Bin 0 -> 2837331 bytes
+|  .../4e5d89b1bacbc91496a5f5675eeff7257262f4da.md   |  229 +
+|  .../4f57872340e077c9cdc298295ee264ffe62446b3.zip  |  Bin 0 -> 2778552 bytes
+|  .../68e663b3f3cb2b13ca88cdf5aff0c3bc12c60804.zip  |  Bin 0 -> 2496238 bytes
+|  .../76c1bf4cc58100c035385d3072d67da94407f249.png  |  Bin 0 -> 64775 bytes
+|  .../a98a6d91fa659732890a84ab0a5a5cdda0d7543a.md   |  229 +
+|  .../bf1272fa80a46699b40132911f6cb4de9a3182c0.png  |  Bin 0 -> 64095 bytes
+|  .../de7d273e21cdecfd7232ba8b54da387d1ad794d7.md   |  271 +
+|  .../ef38a15bd6a47a19eef64339ded46bf8112dc54d.md   |  229 +
+|  .../fc28a0bd7674a2f843e368910dc425275e946ef8.png  |  Bin 0 -> 63387 bytes
+|  .../html/index.html                               |    2 +-
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  .../0b803dad1631a86ea11ddf54dba435e9a111a5f9.zip  |  Bin 0 -> 562883 bytes
+|  .../113dc9b89d40c9cb6344345f5058b9a85c18227a.md   |  229 +
+|  .../43d48cf7a5b56685d7ef398c27d4b51af353da90.md   |  229 +
+|  .../6005e5890c224973d2debac1faf775312e05150a.png  |  Bin 0 -> 150675 bytes
+|  .../699142dab2e1580732e360e3efb87411739b9c0a.png  |  Bin 0 -> 151458 bytes
+|  .../800c1ea5aea31488e5c0d064e236237ab31e5906.png  |  Bin 0 -> 151387 bytes
+|  .../b4b291334a85b1b321d38d7658a4515eec29857e.zip  |  Bin 0 -> 484065 bytes
+|  .../bd87aef5b08f5a91f86f7f2b1f61840cdbbe4452.md   |  271 +
+|  .../bf76a2f1dc3c3880708ef6a82d7caf51f7cd0978.png  |  Bin 0 -> 154280 bytes
+|  .../c8af4dc0d8653c0ffe824e88d188c1e46dbd5426.zip  |  Bin 0 -> 547118 bytes
+|  .../e6a479f1fc7ad749d155a813f27594b9e11e8e63.zip  |  Bin 0 -> 538323 bytes
+|  .../f0fbd81f9dd84f4346ef4966ef768a8b752d92e9.md   |  229 +
+|  .../html/index.html                               |    2 +-
+|  .../trace/assets/codeMirrorModule-DNqxPF-E.js     |   32 +
+|  .../trace/assets/defaultSettingsView-BQT9Z6FV.js  |  184 +
+|  .../trace/assets/rolldown-runtime-QTnfLwEv.js     |    1 +
+|  .../html/trace/assets/urlMatch-Cgl6axSs.js        |    1 +
+|  .../html/trace/codeMirrorModule.-QdMvsKi.css      |    1 +
+|  .../html/trace/codicon.DCmgc-ay.ttf               |  Bin 0 -> 80340 bytes
+|  .../html/trace/defaultSettingsView.C8BeHuxd.css   |    1 +
+|  .../html/trace/index.B5WWZ7O0.js                  |    1 +
+|  .../html/trace/index.B_TqY17P.css                 |    1 +
+|  .../html/trace/index.html                         |   45 +
+|  .../html/trace/manifest.webmanifest               |   16 +
+|  .../html/trace/playwright-logo.svg                |    9 +
+|  .../html/trace/snapshot.-ChLTbql.js               |    1 +
+|  .../html/trace/snapshot.html                      |   10 +
+|  .../html/trace/sw.bundle.js                       |    4 +
+|  .../html/trace/uiMode.CyMfwkXJ.css                |    1 +
+|  .../html/trace/uiMode.DuLwZHRf.js                 |    5 +
+|  .../html/trace/uiMode.html                        |   19 +
+|  .../html/trace/xtermModule.kHJ-D0s7.css           |    1 +
+|  automation-report.md                              |   27 -
+|  bug-reports.md                                    |  371 --
+|  fr09-case-review.md                               |   45 -
+|  fr09-integration.md                               |   83 -
+|  fr17-case-review.md                               |   74 -
+|  git-log.txt                                       |  361 +-
+|  git_log.txt                                       | 1940 -------
+|  main-report.md                                    |  763 ---
+|  preparation-notes.md                              |   41 -
+|  references/fr09-user-testcases.txt                | 1594 ------
+|  references/fr17-user-testcases.txt                | 2628 ---------
+|  requirements-list.json                            |   87 +-
+|  scope.md                                          |   65 -
+|  skills-lock.json                                  |    0
+|  skills/.agents/skills/playwright-cli/SKILL.md     |  233 +
+|  .../skills/playwright-cli/advanced-workflows.md   |  679 +++
+|  .../skills/playwright-cli/core-commands.md        |  399 ++
+|  .../skills/playwright-cli/device-emulation.md     |  475 ++
+|  .../skills/playwright-cli/request-mocking.md      |  373 ++
+|  .../skills/playwright-cli/running-custom-code.md  |  553 ++
+|  .../playwright-cli/screenshots-and-media.md       |  499 ++
+|  .../skills/playwright-cli/session-management.md   |  425 ++
+|  .../skills/playwright-cli/storage-and-auth.md     |  487 ++
+|  .../skills/playwright-cli/test-generation.md      |  336 ++
+|  .../playwright-cli/tracing-and-debugging.md       |  500 ++
+|  skills/.agents/skills/playwright-core/SKILL.md    |  104 +
+|  .../skills/playwright-core/accessibility.md       | 1526 ++++++
+|  skills/.agents/skills/playwright-core/angular.md  | 1086 ++++
+|  .../.agents/skills/playwright-core/api-testing.md | 1655 ++++++
+|  .../playwright-core/assertions-and-waiting.md     |  728 +++
+|  .../.agents/skills/playwright-core/auth-flows.md  | 1088 ++++
+|  .../skills/playwright-core/authentication.md      | 1430 +++++
+|  .../skills/playwright-core/browser-apis.md        |  675 +++
+|  .../skills/playwright-core/browser-extensions.md  |  319 ++
+|  .../skills/playwright-core/canvas-and-webgl.md    |  494 ++
+|  .../playwright-core/clock-and-time-mocking.md     |  427 ++
+|  .../skills/playwright-core/common-pitfalls.md     | 1318 +++++
+|  .../skills/playwright-core/component-testing.md   |  472 ++
+|  .../skills/playwright-core/configuration.md       |  732 +++
+|  .../skills/playwright-core/crud-testing.md        |  945 ++++
+|  .../.agents/skills/playwright-core/debugging.md   |  832 +++
+|  .../skills/playwright-core/drag-and-drop.md       |  992 ++++
+|  .../playwright-core/dynamic-test-selection.md     |  217 +
+|  .../skills/playwright-core/electron-testing.md    |  622 +++
+|  .../playwright-core/error-and-edge-cases.md       | 1181 +++++
+|  .../.agents/skills/playwright-core/error-index.md | 1855 +++++++
+|  .../skills/playwright-core/file-operations.md     |  749 +++
+|  .../playwright-core/file-upload-download.md       | 1012 ++++
+|  .../skills/playwright-core/fixtures-and-hooks.md  | 1072 ++++
+|  .../.agents/skills/playwright-core/flaky-tests.md |  943 ++++
+|  .../playwright-core/forms-and-validation.md       | 1056 ++++
+|  .../playwright-core/i18n-and-localization.md      |  622 +++
+|  .../playwright-core/iframes-and-shadow-dom.md     |  515 ++
+|  .../skills/playwright-core/locator-strategy.md    |  588 +++
+|  skills/.agents/skills/playwright-core/locators.md |  798 +++
+|  .../playwright-core/mobile-and-responsive.md      | 1675 ++++++
+|  .../playwright-core/multi-context-and-popups.md   |  581 ++
+|  .../multi-user-and-collaboration.md               |  477 ++
+|  .../skills/playwright-core/network-mocking.md     | 1391 +++++
+|  skills/.agents/skills/playwright-core/nextjs.md   | 1015 ++++
+|  .../skills/playwright-core/performance-testing.md |  608 +++
+|  skills/.agents/skills/playwright-core/react.md    | 1086 ++++
+|  .../skills/playwright-core/search-and-filter.md   | 1366 +++++
+|  .../skills/playwright-core/security-testing.md    |  624 +++
+|  .../playwright-core/service-workers-and-pwa.md    |  524 ++
+|  .../.agents/skills/playwright-core/test-agents.md |  106 +
+|  .../skills/playwright-core/test-architecture.md   |  571 ++
+|  .../playwright-core/test-data-management.md       | 1209 +++++
+|  .../skills/playwright-core/test-organization.md   |  955 ++++
+|  .../playwright-core/third-party-integrations.md   |  754 +++
+|  .../skills/playwright-core/trace-analysis.md      |  161 +
+|  .../skills/playwright-core/visual-regression.md   | 1075 ++++
+|  skills/.agents/skills/playwright-core/vue.md      | 1166 ++++
+|  .../skills/playwright-core/webmcp-testing.md      |  236 +
+|  .../playwright-core/websockets-and-realtime.md    |  623 +++
+|  .../skills/playwright-core/when-to-mock.md        |  827 +++
+|  skills/.agents/skills/playwright-pom/SKILL.md     |   17 +
+|  .../skills/playwright-pom/page-object-model.md    |  921 ++++
+|  .../playwright-pom/pom-vs-fixtures-vs-helpers.md  |  937 ++++
+|  skills/.agents/skills/playwright-qa/SKILL.md      |   29 +
+|  .../.agents/skills/playwright-qa/bug-reports.md   |  119 +
+|  .../skills/playwright-qa/manual-to-automated.md   |  153 +
+|  .../.agents/skills/playwright-qa/test-design.md   |  140 +
+|  .../.agents/skills/playwright-qa/test-review.md   |  144 +
+|  skills/skills-lock.json                           |   29 +
+|  submission-manifest.json                          | 3667 +++++++++++++
+|  test-cases.json                                   |  228 +-
+|  tests/pages/login.js                              |    2 +-
+|  218 files changed, 66642 insertions(+), 12013 deletions(-)
+|
 * commit 2fe345782d4aebc270c47e16def2b5e210d0f951
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Mon Nov 16 10:23:44 2026 +0700

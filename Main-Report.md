@@ -9,7 +9,7 @@
 | Môn học | Software Testing — Kiểm thử phần mềm |
 | Mã bài tập | HW04-AI |
 | Ngày nộp | Chưa nộp; ngày cập nhật báo cáo: 16/11/2026 |
-| GitHub repository | [quocthaiLN/HW04-SoftwareTesting](https://github.com/quocthaiLN/HW04-SoftwareTesting); đã xác minh Public qua UI ngày 16/11/2026; bản remote cần đồng bộ với bản nộp cuối (REQ-16) |
+| GitHub repository | [quocthaiLN/HW04-SoftwareTesting](https://github.com/quocthaiLN/HW04-SoftwareTesting); đã xác minh Public qua UI ngày 16/11/2026; đã đồng bộ bản chốt; Git log kèm lịch sử thật (REQ-16) |
 | YouTube unlisted | [Video demo](https://youtu.be/-32746b5iEI?si=RqwYGPSNndiy2B_h) (sinh viên xác nhận hoàn tất đủ tiêu chí video ngày 16/11/2026) |
 | Playwright reports | 9 HTML reports tại mục 5; [execution matrix](artifacts/execution-matrix.json) |
 
@@ -1011,7 +1011,7 @@ Có **11 commits chạm `.spec.js`** trong Git hiện tại: 9 commits triển k
 - `d995b45 [REQ-06,07,08] Prove FR-09 mocked cart and coupon UI using external JSON`
 
 
-[git-log.txt](git-log.txt) xuất bằng `git log --graph --all --stat` từ Git thực tế, bỏ khoảng trắng cuối dòng để giữ định dạng sạch. Snapshot phản ánh các commit hiện có tại thời điểm xuất; xem PROGRESS.md về commit bản cuối. Lịch sử thể hiện generation → assertion/data improvements → human refactor → evidence → report cleanup → FR09 backend thật.
+[git-log.txt](git-log.txt) xuất bằng `git log --graph --all --stat` từ Git thực tế, bỏ khoảng trắng cuối dòng để giữ định dạng sạch. Snapshot được xuất sau commit 3a18c52; commit chốt log/manifest/PDF theo sau không nằm trong chính snapshot của nó. Xem PROGRESS.md. Lịch sử thể hiện generation → assertion/data improvements → human refactor → evidence → report cleanup → FR09 backend thật.
 
 ## 11. Tự đánh giá (Self-Assessment)
 
@@ -1032,7 +1032,7 @@ Nếu giữ mức này khi đóng gói, mã3chữ số là `100`, tên dự ki�
 
 Bộ test gồm 68 cases trên ba engines, dữ liệu JSON riêng và 12 nhóm lỗi được ghi nhận bằng runner/evidence thật. Evidence giữ lại tổng hợp hai phiên: 138 pass, 66 fail, không skip. FR-09 đã chuyển từ mock sang UI/backend thật; test dừng trước xác nhận thanh toán. UI permission/auth guards không thay cho kiểm thử trực tiếp endpoint security.
 
-Human review Session004 đã chấp nhận refactor Conditional Test Logic và thiết kế bổ sung BVA. Trong lượt rà soát cuối ngày 16/11/2026, sinh viên xác nhận đã review cả FR09 backend thật và toàn bộ báo cáo, đồng thời hoàn thành video/demo. Repository Public đã được xác minh; cần đồng bộ bản cuối và nộp Moodle đúng hạn theo link lớp. Không ghi nhận đã nộp Moodle khi chưa có thao tác nộp.
+Human review Session004 đã chấp nhận refactor Conditional Test Logic và thiết kế bổ sung BVA. Trong lượt rà soát cuối ngày 16/11/2026, sinh viên xác nhận đã review cả FR09 backend thật và toàn bộ báo cáo, đồng thời hoàn thành video/demo. Repository Public đã được xác minh và bản cuối đã được push; sinh viên nộp Moodle đúng hạn theo link lớp. Không ghi nhận đã nộp Moodle khi chưa có thao tác nộp.
 
 ### Đối chiếu đề trước nộp
 
@@ -1047,7 +1047,7 @@ Human review Session004 đã chấp nhận refactor Conditional Test Logic và t
 | Skill và demo | mục 9; skills/ có nguồn; sinh viên xác nhận demo |
 | AI Audit/Critique Markdown + PDF | file kèm theo; Critique 274 từ theo cách đếm whitespace |
 | ≥8 qualifying test-script commits; Git log text | 11 commits; git-log.txt |
-| README summary/rubric, report PDF và ZIP đúng tên | README.md; các PDF và gói 23120352_HW04_AI_Automation_100.zip |
+| README summary/rubric, report PDF và ZIP đúng tên | README.md; các PDF và gói 23120352_HW04_AI_Automation_100.zip (4 phần split ZIP, mỗi phần <20MB) |
 
 Sinh viên chịu trách nhiệm tính cá nhân, không sao chép prompts và nội dung, xác nhận sẵn sàng giải thích bài. Gợi ý tự kiểm tra khi oral defense 5–7 phút: giải thích JSON → fixture → POM → spec → assertions; vì sao mock cũ không chứng minh backend; cách tách Conditional Test Logic; một bug percent/min/cap với expected/actual; phân biệt 204 executions tổng hợp với một full-suite run.
 

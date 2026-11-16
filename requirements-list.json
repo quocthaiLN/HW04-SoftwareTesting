@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "2.0-final-review",
-  "updated_at": "2026-11-16T11:58:42+07:00",
+  "updated_at": "2026-11-16T12:04:57+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -33,7 +33,8 @@
     "2026-11-16: user explicitly replaces all FR09 mocked scripts with full UI cart-to-checkout/apply flow and real backend. 19 IDs retained, pilot merged. TC09/TC10 verify UI checkout guard; do not establish direct apply endpoint authentication. Historical mock execution preserved separately. No final order confirmation.",
     "2026-11-16 REQ-12 updated: 3 real-backend FR09 groups BUG-10–12 published as GitHub Issues #10–12 with original screenshots; verified issue bodies and list12Open. Existing9groups retained; no new runtime execution.",
     "Dọn chuẩn bị nộp: báo cáo execution/FR09/bugs đã gộp vào Main-Report.md; nguồn testcase do sinh viên mô tả, bỏ thư mục tài liệu tham khảo. Có URL video sinh viên cung cấp, chưa xác minh nội dung; không tự đổi trạng thái nghiệm thu.",
-    "Final review: đối chiếu đủ8trang đề. Sinh viên xác nhận review FR09/báo cáo và hoàn thành toàn bộ video/demo; README bổ sung rubric/summary. Public repo đã xác minh nhưng remote còn cũ; chờ sync bản cuối. PDF/ZIP được tạo/kiểm tra trong lượt này, không bịa nộp Moodle."
+    "Final review: đối chiếu đủ8trang đề. Sinh viên xác nhận review FR09/báo cáo và hoàn thành toàn bộ video/demo; README bổ sung rubric/summary. Public repo đã xác minh nhưng remote còn cũ; chờ sync bản cuối. PDF/ZIP được tạo/kiểm tra trong lượt này, không bịa nộp Moodle.",
+    "Final close: repository Public đã push bản3a18c52; PDF render/layout và9HTML verified, README đủrubric/summary. ZIP split4parts<20MB đã kiểm tra và rebuild bản cuối sau snapshot. REQ20 giữINPROGRESS chỉ vì chưa submit Moodle; không coi đó là đã nộp."
   ],
   "requirements": [
     {
@@ -213,8 +214,8 @@
       "source": "2026.HW04.Automation Testing_En.pdf §12 p.6; AGENTS.md Git; policies.md",
       "mandatory": true,
       "acceptance_criteria": "Public GitHub repository, lịch sử có ý nghĩa >=8 commits có thay đổi .spec.js/.spec.ts hoặc test-script tương đương; docs-only không tính. Commit rõ từng bước và requirement IDs.",
-      "status": "IN PROGRESS",
-      "evidence": "GitHub UI xác minh Public ngày16/11; remote mới nhất e1064e2 (13/11) chưa có FR09 thật/bản cuối. Local có11qualifying .spec.js commits. Cần commit/sync bản cuối; không nhận remote đã cập nhật."
+      "status": "DONE",
+      "evidence": "GitHub UI xác minh Public; push origin/main thành công tới3a18c52 sau e1064e2. 11qualifying .spec.js commits. Bản chốt log/manifest/PDF được commit và push ngay sau snapshot; không sửa lịch sử cũ."
     },
     {
       "id": 17,
@@ -258,7 +259,9 @@
       "mandatory": true,
       "acceptance_criteria": "Tên <StudentID>_HW04_AI_Automation_<SelfAssessedGrade>.zip; grade 000–100 đúng 3 chữ số. Moodle đúng hạn theo link; tối đa 20 files, mỗi file <=20MB theo policies. Thiếu tài liệu bắt buộc hoặc vi phạm quy định có thể bị 0.",
       "status": "IN PROGRESS",
-      "evidence": "Đang tạo và kiểm tra ZIP đúng tên, giới hạn20MB/file và tối đa20parts. Moodle chưa nộp; sinh viên phải submit theo deadline link lớp."
+      "evidence": "Gói địa phương đã chuẩn bị đúng tên23120352_HW04_AI_Automation_100.zip, split4parts .z01/.z02/.z03/.zip, mỗipart<20MB; tổng4uploadfiles<=20. ZIP test/hash/requiredcontents đạt; bản cuối được rebuild/round-trip trước giao. Moodle chưa nộp; sinh viên upload đủ4parts trước deadline link lớp.",
+      "local_package_ready": true,
+      "moodle_submitted": false
     },
     {
       "id": 21,
@@ -279,8 +282,8 @@
       "source": "AGENTS.md workflow/checklist",
       "mandatory": true,
       "acceptance_criteria": "Giữ requirement IDs ổn định, ghi tiến độ/evidence/risks/commits theo cùng IDs trong PROGRESS; mỗi chat là một session; rà mọi mandatory item trước packaging, chưa verified thì không tuyên bố hoàn tất.",
-      "status": "IN PROGRESS",
-      "evidence": "Đã đối chiếu đủ8trang PDF với23IDs, sửa trạng thái cũ theo evidence hiện tại; chờ kiểm tra PDF/package và public sync."
+      "status": "DONE",
+      "evidence": "Đã rà đủ8trang PDF với23IDs, đối chiếu evidence hiện hành, sửa checklist trạng thái cũ; không có mandatory item chưa verified bị nhận DONE. REQ20 giữINPROGRESS vì Moodle chưa nộp; các phần local packaging đã hoàn tất kiểm tra."
     },
     {
       "id": 23,
@@ -297,5 +300,20 @@
   "student": {
     "id": "23120352",
     "name": "Le Nguyen Quoc Thai"
+  },
+  "final_review": {
+    "reviewed_at": "2026-11-16T12:04:57+07:00",
+    "assignment_pages": 8,
+    "prepared_grade": "100",
+    "archive_name": "23120352_HW04_AI_Automation_100.zip",
+    "upload_parts": [
+      "23120352_HW04_AI_Automation_100.z01",
+      "23120352_HW04_AI_Automation_100.z02",
+      "23120352_HW04_AI_Automation_100.z03",
+      "23120352_HW04_AI_Automation_100.zip"
+    ],
+    "remote_base_verified": "3a18c521237218e0ebbf2c31bd72f61754d7e43c",
+    "moodle_submitted": false,
+    "remaining_action": "Sinh viên upload đủ4parts Moodle theo deadline link lớp; khi mở, để4parts chung thư mục và mở .zip bằng7-Zip/WinRAR."
   }
 }

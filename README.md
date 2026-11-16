@@ -31,7 +31,7 @@
 | Agent Skills | 10 | 10 |
 | **Tổng** | **100** | **100** |
 
-Điểm theo tự đánh giá của sinh viên; review FR09 mới/báo cáo/video/demo được sinh viên xác nhận ngày 16/11/2026. Repository đã public; cần đồng bộ bản cuối trước nộp. Gói nộp: `23120352_HW04_AI_Automation_100.zip` (nếu chia nhiều phần, tải đủ các phần).
+Điểm theo tự đánh giá của sinh viên; review FR09 mới/báo cáo/video/demo được sinh viên xác nhận ngày 16/11/2026. Repository đã public và đã push bản chốt. Gói nộp: `23120352_HW04_AI_Automation_100.zip` (nếu chia nhiều phần, tải đủ các phần).
 
 ## Chạy lại
 

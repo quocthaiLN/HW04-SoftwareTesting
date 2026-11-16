@@ -278,3 +278,12 @@
 - Files or artifacts updated: PDF/Markdown/checklist/progress/audit, final report verification, submission-manifest.json; gói cuối ngoài submission/ tại final-submission/.
 - Known risk or unresolved issue: Chưa nộp Moodle; deadline theo link lớp. Video/skill/review theo xác nhận sinh viên. ZIP/manifest sẽ tạo lại sau cập nhật cuối để không đóng gói snapshot cũ.
 - Next best step: Push được user cho phép, xác minh remote; xuất lại log/manifest/package và kiểm tra4parts.
+
+### Kết quả chốt bản nộp — Session008
+- Date: 2026-11-16T12:04:57+07:00.
+- Completed: Public origin/main đã push từe1064e2 tới3a18c52 (bản báo cáo/evidence cuối). README/checklist/publication notes cập nhật; REQ14/15/16/18/19/21/22/23 DONE theo evidence/xác nhận sinh viên. REQ20 giữINPROGRESS chỉ vì Moodle chưa submit; local ZIP đã chuẩn bị.
+- Verification run: 4PDF đã render và kiểm tra không tràn safe bounds (Main33/Audit9/Critique1/README1trang); ZIP thử731files/68637502bytes có testzip/hashPASS,9HTML. Final log/manifest/package xuất lại từ working tree cuối và kiểm tra split/rejoin; kết quả checksum bàn giao tại final-submission/.
+- Commits: 3a18c52 — bản nộp cuối; commit snapshot/log/manifest/PDF tiếp theo. git-log.txt xuất sau3a18c52 nên không chứa chính commit export theo sau. Git history vẫn11qualifying .spec.js commits, docs-only commits không cộng.
+- Files or artifacts updated: Main-Report.md/.pdf, AI-Report-Audit.md/.pdf, AI-Critique.pdf, README.md/.pdf, requirements-list.json, git-log.txt, submission-manifest.json, final-submission-validation.json, gói splitZIP.
+- Known risk or unresolved issue: Chưa thực hiện upload Moodle hoặc xác minh deadline lớp; sinh viên upload đủ4parts. Video/skill/human review theo xác nhận sinh viên, AI không nhận đã xem/nghe video. Khi mở gói đặt4parts cùng thư mục, mở .zip bằng7-Zip/WinRAR.
+- Next best step: Sinh viên nộp Moodle đúng hạn; không cần chạy lại SUT để tạo thêm evidence.

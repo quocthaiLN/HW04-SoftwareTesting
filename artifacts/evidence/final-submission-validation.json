@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2026-11-16T12:03:23+07:00",
+  "reviewed_at": "2026-11-16T12:04:57+07:00",
   "assignment_pages_reviewed": 8,
   "student_id": "23120352",
   "feature_cases": {
@@ -27,6 +27,18 @@
   },
   "student_confirmed_all_review_video_skill": true,
   "public_repo": "https://github.com/quocthaiLN/HW04-SoftwareTesting",
-  "remote_sync": "authorized, in progress",
-  "moodle_submitted": false
+  "remote_sync": "push succeeded",
+  "moodle_submitted": false,
+  "remote_base_verified": "3a18c521237218e0ebbf2c31bd72f61754d7e43c",
+  "readme_pdf_pages": 1,
+  "package_checks": {
+    "prototype_files": 731,
+    "prototype_archive_bytes": 68637502,
+    "testzip": "PASS",
+    "file_hashes": "PASS",
+    "html_reports": 9,
+    "parts": 4,
+    "split_part_size_bytes": 19922944,
+    "final_rebuilt_after_snapshot": true
+  }
 }
