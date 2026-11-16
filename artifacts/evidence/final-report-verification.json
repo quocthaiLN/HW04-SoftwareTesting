@@ -1,0 +1,83 @@
+[
+  {
+    "runId": "session004-refactor-fr02-chromium",
+    "html": "artifacts/session004-refactor-fr02-chromium/html/index.html",
+    "timestamp": "2026-11-13T09:24:37.518Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:24:37.518Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr02-chromium.png",
+    "checkedAt": "2026-11-16T04:56:25.708Z"
+  },
+  {
+    "runId": "session004-refactor-fr02-firefox",
+    "html": "artifacts/session004-refactor-fr02-firefox/html/index.html",
+    "timestamp": "2026-11-13T09:25:34.081Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:25:34.081Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr02-firefox.png",
+    "checkedAt": "2026-11-16T04:56:26.037Z"
+  },
+  {
+    "runId": "session004-refactor-fr02-webkit",
+    "html": "artifacts/session004-refactor-fr02-webkit/html/index.html",
+    "timestamp": "2026-11-13T09:26:45.395Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:26:45.395Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr02-webkit.png",
+    "checkedAt": "2026-11-16T04:56:26.527Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-chromium",
+    "html": "artifacts/session004-refactor-fr17-chromium/html/index.html",
+    "timestamp": "2026-11-13T09:28:24.015Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:28:24.015Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr17-chromium.png",
+    "checkedAt": "2026-11-16T04:56:27.609Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-firefox",
+    "html": "artifacts/session004-refactor-fr17-firefox/html/index.html",
+    "timestamp": "2026-11-13T09:29:23.557Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:29:23.557Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr17-firefox.png",
+    "checkedAt": "2026-11-16T04:56:28.321Z"
+  },
+  {
+    "runId": "session004-refactor-fr17-webkit",
+    "html": "artifacts/session004-refactor-fr17-webkit/html/index.html",
+    "timestamp": "2026-11-13T09:30:47.397Z",
+    "title": "Run by: 23120352 | 2026-11-13T09:30:47.397Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session004-refactor-fr17-webkit.png",
+    "checkedAt": "2026-11-16T04:56:29.013Z"
+  },
+  {
+    "runId": "session006-fr09-real-chromium",
+    "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+    "timestamp": "2026-11-16T03:09:13.506Z",
+    "title": "Run by: 23120352 | 2026-11-16T03:09:13.506Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session006-fr09-real-chromium.png",
+    "checkedAt": "2026-11-16T04:56:29.402Z"
+  },
+  {
+    "runId": "session006-fr09-real-firefox",
+    "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+    "timestamp": "2026-11-16T03:10:19.915Z",
+    "title": "Run by: 23120352 | 2026-11-16T03:10:19.915Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session006-fr09-real-firefox.png",
+    "checkedAt": "2026-11-16T04:56:30.482Z"
+  },
+  {
+    "runId": "session006-fr09-real-webkit",
+    "html": "artifacts/session006-fr09-real-webkit/html/index.html",
+    "timestamp": "2026-11-16T03:09:48.561Z",
+    "title": "Run by: 23120352 | 2026-11-16T03:09:48.561Z",
+    "attributionAndISOVisible": true,
+    "screenshot": "artifacts/evidence/final-reports/session006-fr09-real-webkit.png",
+    "checkedAt": "2026-11-16T04:56:31.098Z"
+  }
+]

@@ -31,7 +31,7 @@
 ### Requirement 3 — tiếp tục Session 002, 2026-11-13
 - Completed: Chấp nhận và giữ nguyên FR-09-TC01–TC12. Đối chiếu 21 cases nguồn trong fr09-case-review.md, thêm TC13–TC18: trống, whitespace-only, lowercase payload, trim payload, giảm bằng tổng, giảm vượt tổng. TC18 chờ cap/reject; 43 DESIGNED + 1 pending toàn suite. REQ-03 vẫn IN PROGRESS; REQ-04 chưa review.
 - Verification run: Parse JSON, uniqueness, mapping/browser targets, so sánh toàn bộ 38 cases trước với Git HEAD không đổi; diff whitespace check. Chưa chạy runtime/automation.
-- Files or artifacts updated: test-cases.json, requirements-list.json, fr09-case-review.md, references/fr09-user-testcases.txt, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr09-case-review.md, testcase FR09 do sinh viên mô tả, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: Cần xác nhận Q1–Q6 trong review; mock chỉ chứng minh UI. Không dùng kết quả Pass/Fail của nguồn làm evidence suite.
 - Next best step: Chốt cap/reject, normalization, rounding và phạm vi case bổ sung; sau đó review REQ-04.
 - Commits: Bước thiết kế REQ-03 và export log trong Git history; không tính vào >=8 test-script commits.
@@ -47,7 +47,7 @@
 ### Requirement 4 — tiếp tục Session 002, 2026-11-13
 - Completed: Đối chiếu nguồn EP01–27 và BVA01–25; giữ nguyên TC01–12, thêm TC13–31 (19 UI cases): fixed min=0, expiry quá khứ, uppercase, reset, percent 1/2/50/99/100, fixed 1/2/0/âm, min=1, uses âm/thập phân/10, code dài 1/2. Tổng 64 DESIGNED (14/19/31), dự kiến 192 browser executions.
 - Verification run: Parse JSON, unique IDs, traceability/browser targets, 45 cases trước giữ nguyên; mapping nguồn đủ 27 EP +25 BVA; kiểm tra lại chuỗi BVA24 có đúng 30 ký tự (sửa nhận định đếm ban đầu). diff --check. Chưa runtime.
-- Files or artifacts updated: test-cases.json, requirements-list.json, fr17-case-review.md, references/fr17-user-testcases.txt, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Files or artifacts updated: test-cases.json, requirements-list.json, fr17-case-review.md, testcase FR17 do sinh viên mô tả, scope.md, README.md, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: REQ-04 IN PROGRESS; Q1–Q6 trong review cần chốt (dialog, code domain/length, percent range, used coupon deletion, duplicate error, security scope). API-only không đưa vào UI suite; không dùng Pass/Fail nguồn làm evidence.
 - Commits: Bước bổ sung testcase REQ-04 và export Git log; không tính vào >=8 test-script commits.
 - Next best step: Sinh viên review Q1–Q6; sau đó chốt scope/thiết kế FR-17 trước automation.
@@ -60,14 +60,14 @@
 - Known risk or unresolved issue: Không còn policy pending của REQ-04; UI permission coverage không chứng minh endpoint role enforcement. Các yêu cầu automation/report/PDF/video/public remote còn chưa hoàn tất.
 - Next best step: Triển khai automation data-driven theo REQ-06–10 khi chuyển sang bước thực thi.
 
-### Tổng kết phiên — user gọi “Session 3”, lịch sử chat ghi Session 002
+### Tổng kết phiên — Session 002
 
 - Date: 2026-11-13 (Asia/Ho_Chi_Minh). Giữ số Session 002 của cùng chat theo workflow; không tạo một session thực thi mới chỉ vì prompt tổng kết.
 - Goal: Review và chốt thiết kế requirements 2, 3, 4.
 - Completed: REQ-02 DONE thiết kế, FR-02 có 14 cases (thêm che mật khẩu/nhận diện trang login). REQ-03 DONE thiết kế, FR-09 có 19 cases, cap discount bằng tổng, final>=0, floor percent, normalization chỉ payload, mocked UI-only. REQ-04 DONE thiết kế, FR-17 có 35 cases Create/Read/Delete, percent nguyên 1–100, duplicate HTTP 400/409 + thông báo nghiệp vụ, quyền user/không token qua UI; loại dialog/code-format/length/used-coupon-delete. TC30/31 retired, không tái sử dụng IDs.
 - Verification run: JSON/counts/IDs/traceability/browser targets, kiểm tra thay đổi approved và diff whitespace; 68 DESIGNED (14/19/35), dự kiến 204 executions, thực tế 0 automated/executed, chưa có runtime bug/HTML evidence.
 - Commits: Các commit chính ad84d02 (REQ-02), b990bf9 và 99768c6 (REQ-03), 562f612 và d7cdc50 (REQ-04), cùng commits correction/audit/Git log. Tất cả là docs/data-only, chưa tính vào >=8 test-script commits.
-- Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, fr09-case-review.md, fr17-case-review.md, references/, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
+- Files or artifacts updated: test-cases.json, requirements-list.json, scope.md, README.md, fr09-case-review.md, fr17-case-review.md, testcases do sinh viên mô tả, PROGRESS.md, AI-Report-Audit.md, git-log.txt.
 - Known risk or unresolved issue: Mock FR-09 không xác minh backend cap/floor; UI permission không chứng minh endpoint role enforcement. Chưa automation/runtime/report/PDF/video/public remote; không tuyên bố bài nộp hoàn tất. Git log là snapshot trước commit export, cần xuất lại trước nộp.
 - Next best step: Chuyển sang REQ-06–10: proof-of-concept FR-09 page.route fixture, rồi data-driven scripts với dữ liệu JSON riêng, ba browser targets và HTML attribution thật. Xác minh runtime và phân biệt lỗi SUT/script/setup khi có kết quả.
 
@@ -179,7 +179,102 @@
 ### Cấu trúc main report theo mẫu sinh viên — tiếp tục Session005
 - Date: 2026-11-13T17:35:40+07:00.
 - Goal: Cập nhật main-report.md theo trang bìa +12mục và Appendix.
-- Completed: 68case rows có loại/data/assertion/status;3feature×7tiểu mục; ảnh report/bugs và9Issues; mô tả4skill/flow;10spec commits từ Git; đo tỷ lệ token giữ/sửa baseline676a70e→current theo3specs; before/after Conditional Test Logic. Self-assessment100/100 theo yêu cầu, nêu rõ video/demo còn thiếu. git_log.txt định dạng pretty riêng, README đồng bộ điểm.
+- Completed: 68case rows có loại/data/assertion/status;3feature×7tiểu mục; ảnh report/bugs và9Issues; mô tả4skill/flow;10spec commits từ Git; đo tỷ lệ token giữ/sửa baseline676a70e→current theo3specs; before/after Conditional Test Logic. Self-assessment100/100 theo yêu cầu, nêu rõ video/demo còn thiếu. git-log.txt định dạng pretty riêng, README đồng bộ điểm.
 - Verification run: Đủ12sections/68case rows; local links tồn tại; code/data excerpts lấy file thật. Không chạy lại suite, không tự điền ngày nộp/YouTube/độ dài video.
 - Known risk or unresolved issue: Public repo chưa xác minh; video/AI Critique/kết luận để thực hiện sau theo user. Tỷ lệ token là text change metric, không là tỷ lệ công sức; review cuối khác giai đoạn AI self-review đã ghi rõ.
 - Next best step: Sinh viên review báo cáo và bổ sung các mục để sau.
+
+## Session 006
+- Date: 2026-11-16T09:57:02+07:00.
+- Goal: REQ-03/06–09 mở rộng FR09 với giỏ hàng UI và backend thật theo user đồng ý.
+- Completed: Thêm pilot INT01/INT02, 3 POM Home/Cart/Checkout, fixture DB ownership cleanup, data JSON và lệnh test riêng; giữ nguyên 19 mock cases và lịch sử matrix. Xem fr09-integration.md.
+- Verification run: Chromium và Firefox mỗi engine 1 pass fixed/1 fail percent; backend trả discount=-4500000/final=5000000 thay expected 50000/450000. WebKit 2 launch failures do thiếu libevent-2.1.so.7, chưa tới SUT. Validator đạt68 historical+2 supplemental; list210 registrations. DB cleanup: 0 owned products/coupons/users. Diff check trên toàn workspace báo whitespace ở git-log.txt có sẵn; không sửa user changes.
+- Commits: Chưa commit; workspace có nhiều thay đổi sẵn có của sinh viên.
+- Files or artifacts updated: tests/fr09-integration.spec.js, tests/pages/home.js/cart.js/checkout.js, data/fr09-integration.json, package.json, playwright.config.js, scripts/validate-test-data.js, fr09-integration.md, README.md, checklist, audit/progress; artifacts/session006-fr09-integration-*.
+- Known risk or unresolved issue: Backend formula bug giữ nguyên. WebKit thiếu dependency hệ thống; chưa migrate đủ19case sang backend thật. Các báo cáo/matrix cũ giữ nguyên mốc lịch sử.
+- Next best step: Cài dependency WebKit và mở rộng các backend rules theo từng case.
+
+### Kế hoạch thay toàn bộ FR09 — tiếp tục Session 006
+- Date: 2026-11-16 (Asia/Ho_Chi_Minh).
+- Goal: Theo yêu cầu user, thay19case mock bằng UI + backend thật; giữ TC01–TC19 và expected nghiệp vụ; kết thúc ở áp coupon, không xác nhận tạo đơn.
+- Plan: (1) Chuyển data/fr09.json sang product/coupon/usage thực, thêm mã unique và giữ normalization. (2) Fixture chuẩn bị DB riêng, ghi nhận request/response thụ động và cleanup. (3) Viết lại fr09-apply-coupon.spec.js dùng Login/Home/Cart/Checkout POM, kiểm tra cart/tổng/API/UI. TC09/10 kiểm tra chặn checkout khi không xác thực; không tuyên bố kiểm chứng bảo vệ API từ các case này. (4) Bỏ mock fixture và gộp pilot vào19case chính. (5) Cập nhật validator/config/package/design/checklist/tài liệu; giữ evidence cũ là lịch sử. (6) Chạy19case trên3engine, phân loại lỗi SUT/setup/environment, kiểm tra cleanup và lưu kết quả thật.
+- Acceptance: Không mock module/API, không sửa tổng tại checkout, không reload sau thêm hàng, không sửa SUT/expected để xanh; mỗi case có product/user/coupon riêng, cleanup sau cả failure. 19 IDs ×3=57registrations FR09, suite tổng68×3=204.
+- Files: tests/fr09-apply-coupon.spec.js; tests/fixtures/coupon-real.js (mới); tests/pages/checkout.js; data/fr09.json; scripts/validate-test-data.js; package.json; playwright.config.js; test-cases.json; requirements-list.json; README.md; fr09-integration.md; PROGRESS.md; AI-Report-Audit.md. Bỏ tests/fixtures/coupon-routes.js, tests/fr09-integration.spec.js, data/fr09-integration.json sau khi gộp.
+- Verification: npm run validate; playwright --list; FR09 chromium/firefox/webkit; kiểm tra DB owned rows và review report JSON. Chưa chạy lại ở thời điểm ghi kế hoạch.
+
+### Hoàn tất thay toàn bộ FR09 — Session 006
+- Date: 2026-11-16T10:13:51+07:00.
+- Goal: Thực thi kế hoạch đã ghi theo user, thay19mockcases bằng real UI cart → checkout → apply coupon.
+- Completed: REQ-03 scope cập nhật DONE. Giữ TC01–TC19; fixture coupon-real seed user/product/coupon/usage thật, cleanup; Login/Home/Cart/Checkout POM. Bỏ coupon-routes và pilot2cases khỏi discovery. TC09/10 kiểm tra chặn cart→login, không bypass hoặc tuyên bố API auth được bảo vệ. Dừng trước xác nhận thanh toán.
+- Verification run: Validator68cases/204registrations; FR09list57. Chromium/Firefox/WebKit mỗi15pass4fail0skip, tổng45pass12fail0skip. Fail đúng TC01/TC07/TC18/TC19, 3nhóm lỗi backend formula/min equality/discount cap. WebKit đã chạy được, không còn launch failure trong batch này. Actual JSON/HTML/screenshot/trace trong artifacts/session006-fr09-real-*. Matrix tổng hợp artifacts/session006-fr09-real/execution-matrix.json. DB cleanup0ownedproducts,0testusers,0usage; chỉ4seedcoupons. Không chạy lại FR02/17.
+- Commits: 83bc1ae — thay code/data FR09; docs/evidence commit riêng. Không stage sửa login POM, các file xóa hoặc thay đổi tài liệu có sẵn của sinh viên.
+- Files or artifacts updated: Các file trong kế hoạch; test-cases.json lưu kết quả thật và tách historical_mock_execution_results; fr09-integration.md/bug-reports.md ghi3nhóm lỗi mới; README/main-report/automation-report nêu rõ Session004 là lịch sử; checklist/audit/progress.
+- Known risk or unresolved issue: 12fail là lỗi SUT giữ nguyên expected nghiệp vụ; chưa tạo Issues mới. C4 chỉ kiểm tra UI guard và /users/me invalid403, không chứng minh direct apply API auth. Human review bộFR09mới cần làm lại; kết quả review cũ thuộc mocked suite. Các thay đổi có sẵn của sinh viên được giữ nguyên.
+- Next best step: Sinh viên review FR09mới và3nhóm lỗi backend, rồi cập nhật deliverables/Issues khi được yêu cầu.
+
+### Cập nhật Bug Report và GitHub Issues — Session 006
+- Date: 2026-11-16T10:23:36+07:00.
+- Goal: User yêu cầu cập nhật Bug Report/GitHub theo FR09 real run.
+- Completed: REQ-12: BUG-10(formula TC01/19), BUG-11(min equality TC07), BUG-12(cap TC18); chi tiết preconditions/steps/expected/actual/severity đề xuất và giới hạn. Đã tạo Issues#10–12, mỗiIssue có runner screenshot nguyên bản, UI xác minh body/ảnh và danh sách12Open. Các Issue#1–9 giữ nguyên.
+- Verification run: Source/target SHA256 của3ảnh khớp; xem cả3ảnh gốc; mapping đúng4IDs fail×3engines=12executions/3groups. Không chạy lại tests; giữ45pass12fail0skip FR09. No SUT fixes.
+- Files or artifacts updated: bug-reports.md, fr09-integration.md, checklist, README/automation-report, artifacts/evidence/BUG-10.png/BUG-11.png/BUG-12.png/session006-bug-evidence.json/session006-github-issues.png; audit/progress.
+- Known risk or unresolved issue: Severity là đề xuất; chưa triage/fix. Cap theo testcase student-approved; chưa thử downstream payment.
+- Next best step: Review/triage3Issue mới; các deliverables khác theo checklist.
+
+
+## Session 007
+- Date: 2026-11-16T11:37:13+07:00 (Asia/Ho_Chi_Minh).
+- Goal: Đọc lại tiến độ và dọn artifacts không cần thiết (REQ-18/22).
+- Completed: Xóa 13 thư mục thử/pilot (345 files, 35,846,252 bytes). Giữ nguyên Session004 lịch sử đủ9runs, Session006 fr09-real hiện tại và evidence/; giữ mọi HTML dependency/trace/attachment của các batch này.
+- Removed directories: 2026-11-16T02-55-59-162Z, 2026-11-16T02-59-02-847Z, 2026-11-16T02-59-03-136Z, 2026-11-16T02-59-09-551Z, 2026-11-16T03-08-47-778Z, my-new-batch, my-new-batch-fr02-chromium, my-new-batch-fr02-firefox, my-new-batch-fr02-webkit, my-new-batch-fr09-chromium, session006-fr09-integration-chromium, session006-fr09-integration-firefox, session006-fr09-integration-webkit.
+- Verification run: Đối chiếu PROGRESS/checklist/reports/matrices/manifests;12 HTML reports còn đủ, JSON results parse được, các ảnh/trace được manifest tham chiếu tồn tại; SHA256 BUG-10–12 khớp cả source và copy. Không chạy lại SUT tests. my-new-batch chỉ có matrix3runs FR02 và FR09 Chromium rời; pilot2cases đã được thay bằng19cases thật.
+- Commits: Chưa tạo commit; giữ nguyên thay đổi có sẵn của sinh viên.
+- Files or artifacts updated: artifacts/, fr09-integration.md, PROGRESS.md, AI-Report-Audit.md, requirements-list.json.
+- Known risk or unresolved issue: Audit/progress/Git giữ ghi nhận lịch sử pilot đã xóa. Session004 vẫn là lịch sử, không gộp thành lượt chạy chung với FR09 mới.
+- Next best step: Hoàn thiện deliverables còn thiếu theo checklist.
+
+### Thay evidence FR09 refactor — tiếp tục Session007
+- Date: 2026-11-16T11:39:34+07:00.
+- Completed: Theo yêu cầu user xóa3thư mục session004-refactor-fr09-*. Matrix/summary Session004 chỉ giữ FR02/17:147executions93pass54fail; report-verification giữ6records. Tạo artifacts/execution-matrix.json làm index9runs từ2phiên:204executions138pass66fail0skip. Cập nhật HTML links/bảng kết quả/checklist; bỏ ảnh attribution FR09 mock.
+- Verification run: Kiểm tra9HTML và references tới3thư mục bị xóa; không chạy lại tests, không sửa HTML runner. Giữ comparison/registration lịch sử gốc với giới hạn đã ghi.
+- Commits: Chưa commit.
+
+
+## Session 008 — Đối chiếu AI audit với 7 chat tham chiếu
+- Date: 2026-11-16T11:48:37+07:00 (Asia/Ho_Chi_Minh).
+- Goal: Bổ sung AI-Report-Audit.md nếu còn thiếu tương tác.
+- Completed: Đọc đủ 7 chat và phân trang; bổ sung 6 lượt lịch sử cùng lượt yêu cầu audit hiện tại. Giữ nguyên lịch sử đã có, phân biệt lời khuyên/API proposal với triển khai UI thật và kịch bản với video đã quay.
+- Verification run: Đối chiếu prompt/output từ read_thread; kiểm tra mỗi entry bổ sung đúng 3 thành phần Date and time, User prompt, AI output. Không chạy SUT hoặc browser tests.
+- Commits: Chưa tạo commit; workspace có thay đổi sẵn có của sinh viên.
+- Files or artifacts updated: AI-Report-Audit.md, PROGRESS.md.
+- Known risk or unresolved issue: Audit là bản tóm tắt; timestamp hồi cứu là thời điểm bắt đầu lượt chat. Không có evidence video mới; trạng thái checklist giữ nguyên.
+- Next best step: Tiếp tục hoàn thiện deliverables còn thiếu theo requirements-list.json.
+
+### Dọn tài liệu chuẩn bị nộp — tiếp tục Session008
+- Date: 2026-11-16T11:52:24+07:00.
+- Goal: Gộp tài liệu vào main report và xóa file thừa/theo yêu cầu sinh viên.
+- Completed: Gộp Automation-Report.md, fr09-integration.md, bug-reports.md và youtube.txt vào main-report.md; xóa 4 file nguồn sau gộp, references và .playwright-cli khám phá cũ. README thành chỉ mục ngắn; testcase nguồn ghi do sinh viên mô tả. Giữ AI Critique riêng và các artifacts thực.
+- Verification run: Kiểm tra links tài liệu chính: 0 liên kết file hỏng; JSON parse đạt; validator đạt 68 cases/204 registrations; 19 dòng FR09 và đủ 12 báo cáo bug chi tiết. Cập nhật Git log từ lịch sử thật (11 spec commits); không chạy lại SUT/tests, không thay runner reports.
+- Commits: Chưa tạo commit; giữ nguyên thay đổi có sẵn của sinh viên.
+- Files or artifacts updated: main-report.md, README.md, AI-Report-Audit.md, PROGRESS.md, requirements-list.json, test-cases.json; các file/thư mục đã gộp hoặc xóa nêu trên.
+- Known risk or unresolved issue: PDF/ZIP chưa tạo; video đã có URL nhưng chưa xác minh nội dung/quyền xem/thời lượng. Lịch sử audit/progress/Git có tên tài liệu đã gộp, không phải liên kết hiện hành.
+- Next best step: Hoàn tất các mục chưa nghiệm thu trong checklist trước đóng gói.
+
+### Rà soát đề và chốt gói nộp — tiếp tục Session008
+- Date: 2026-11-16T11:58:42+07:00.
+- Goal: REQ-13–23 đối chiếu đề gốc và chuẩn bị bài nộp cuối.
+- Completed: Đọc đủ8trang đề; sửa checklist cũ, README có rubric/summary/video. Sinh viên xác nhận toàn bộ review/video/demo đã hoàn thành. Giữ tên Main-Report.md do sinh viên đổi và sửa live links. Critique274whitespace words;11qualifying spec commits.
+- Verification run: 9HTML mở trực tiếp, attribution+ISO+Project đều visible; artifacts/evidence/final-report-verification.json và9ảnh. 12bug screenshots hash khớp manifests; không chạy lại SUT. Skill executor thiếu dependency nên dùng Playwright đã cài trong submission; sandbox chặn Chromium launch, escalation read-only file inspection được cho phép.
+- Commits: Chờ final local commit và export log; public remote hiện e1064e2 còn cũ, local HEAD2fe3457.
+- Files or artifacts updated: Main-Report.md, README.md, requirements-list.json, AI-Report-Audit.md, PROGRESS.md; final report-verification evidence; PDF/ZIP đang chuẩn bị.
+- Known risk or unresolved issue: Public repo đã xác minh nhưng bản cuối cần sync; Moodle chưa nộp. Video/demo theo xác nhận sinh viên, không nhận AI đã xem/nghe.
+- Next best step: Xuất/kiểm tra PDF, đóng gói giới hạn20MB/part; chốt sync public repo trước nộp.
+
+### Chốt PDF/package và đồng bộ Git — tiếp tục Session008
+- Date: 2026-11-16T12:03:23+07:00.
+- Completed: Main-Report.pdf33trang, AI-Report-Audit.pdf9trang, AI-Critique.pdf1trang, README.pdf1trang; render toàn bộ và xem contact sheets/sample, không ký tự ngoài safe bounds. ZIP thử731files,68637502bytes; testzip/hash PASS; chia4parts19MiB/19MiB/19MiB/phầnzip còn lại, mỗifile<20MB. Sinh viên cho phép commit/push bản cuối lên public repo.
+- Verification run: 9HTML có visible attribution/ISO/project;12bug images hash; validator68cases và playwright list204tests. Không chạy SUT lại. Local links/JSON và format audit43interactions đạt trước entry push mới.
+- Commits: Commit bản cuối và commit snapshot Git log/manifest theo sau; test-script history vẫn11commits, không tính commit tài liệu.
+- Files or artifacts updated: PDF/Markdown/checklist/progress/audit, final report verification, submission-manifest.json; gói cuối ngoài submission/ tại final-submission/.
+- Known risk or unresolved issue: Chưa nộp Moodle; deadline theo link lớp. Video/skill/review theo xác nhận sinh viên. ZIP/manifest sẽ tạo lại sau cập nhật cuối để không đóng gói snapshot cũ.
+- Next best step: Push được user cho phép, xác minh remote; xuất lại log/manifest/package và kiểm tra4parts.

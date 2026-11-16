@@ -3,15 +3,17 @@
   "revision": "3cd7cc68e83c3f3417b31a02a47231df5f3e54e0",
   "startedAt": "2026-11-13T09:24:37.173Z",
   "endedAt": "2026-11-13T09:32:10.786Z",
-  "runs": 9,
-  "executions": 204,
-  "passed": 150,
+  "runs": 6,
+  "executions": 147,
+  "passed": 93,
   "failed": 54,
   "skipped": 0,
   "comparison": {
     "baseline": "artifacts/session003-final/execution-matrix.json",
     "candidate": "artifacts/session004-refactor/execution-matrix.json",
     "compared": 204,
-    "differences": []
-  }
+    "differences": [],
+    "note": "Historical comparison covered original 204 executions before FR09 cleanup; baseline no longer retained."
+  },
+  "coverage": "Retained historical FR02/17 only; superseded mocked FR09 artifacts removed in Session007."
 }

@@ -1,31 +1,94 @@
+* commit 2fe345782d4aebc270c47e16def2b5e210d0f951
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Mon Nov 16 10:23:44 2026 +0700
+|
+|     [REQ-12] Publish three FR09 backend issues with original screenshot evidence
+|
+|  README.md                                       |   2 +
+|  artifacts/evidence/BUG-10.png                   | Bin 0 -> 54447 bytes
+|  artifacts/evidence/BUG-11.png                   | Bin 0 -> 54682 bytes
+|  artifacts/evidence/BUG-12.png                   | Bin 0 -> 54339 bytes
+|  artifacts/evidence/session006-bug-evidence.json |  41 +++++++++++++++
+|  artifacts/evidence/session006-github-issues.png | Bin 0 -> 58011 bytes
+|  automation-report.md                            |   2 +
+|  bug-reports.md                                  |  61 ++++++++++++++++++----
+|  fr09-integration.md                             |   6 ++-
+|  requirements-list.json                          |   7 +--
+|  10 files changed, 106 insertions(+), 13 deletions(-)
+|
+* commit 9cab75fff9e9c73913ba6b4c1f25e59fcde5c4c8
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Mon Nov 16 10:14:08 2026 +0700
+|
+|     [REQ-03,09,12] Record real FR09 matrix and three backend defect groups
+|
+|  README.md                                         |   10 +-
+|  .../session006-fr09-real-chromium/results.json    | 1369 ++++++++++++++
+|  .../session006-fr09-real-firefox/results.json     | 1369 ++++++++++++++
+|  .../session006-fr09-real-webkit/results.json      | 1369 ++++++++++++++
+|  .../session006-fr09-real/execution-matrix.json    | 1782 +++++++++++++++++++
+|  automation-report.md                              |    2 +
+|  bug-reports.md                                    |   10 +
+|  fr09-integration.md                               |   79 +
+|  requirements-list.json                            |   12 +-
+|  test-cases.json                                   |  637 ++++++-
+|  10 files changed, 6535 insertions(+), 104 deletions(-)
+|
+* commit 83bc1ae147013de86c6864a819d97d494046c6ac
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Mon Nov 16 10:13:06 2026 +0700
+|
+|     [REQ-03,06,07,08,09] Replace FR09 mocks with real cart UI and coupon backend tests
+|
+|  data/fr09.json                  | 718 +++++++++++---------------------------
+|  package.json                    |  17 +-
+|  playwright.config.js            |   2 +-
+|  scripts/validate-test-data.js   |  19 +-
+|  tests/fixtures/coupon-real.js   |  42 +++
+|  tests/fixtures/coupon-routes.js |  36 --
+|  tests/fr09-apply-coupon.spec.js | 343 +++++++-----------
+|  tests/pages/cart.js             |  12 +
+|  tests/pages/checkout.js         |  19 +
+|  tests/pages/home.js             |  13 +
+|  10 files changed, 447 insertions(+), 774 deletions(-)
+|
+* commit 5755e1990e15a6fd42436dcbac1258717004c2be
+| Author: quocthaLN <quocthailenguyen41@gmail.com>
+| Date:   Fri Nov 13 17:35:41 2026 +0700
+|
+|     [HW04][REQ-17] Refresh history after structured main report
+|
+|  git-log.txt | 22 ++++++++++++++++++++++
+|  1 file changed, 22 insertions(+)
+|
 * commit bc498a5134d80a6b45e9f1c18bbd5c7bf0852f70
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:35:40 2026 +0700
-| 
+|
 |     [HW04][Session005] Structure main report into twelve requested sections
-| 
+|
 |  AI-Report-Audit.md |    7 +
 |  PROGRESS.md        |    8 +
 |  README.md          |   16 +-
 |  git_log.txt        | 1940 ++++++++++++++++++++++++++++++++++++++++++++++++++
 |  main-report.md     |  765 ++++++++++++++++++--
 |  5 files changed, 2674 insertions(+), 62 deletions(-)
-| 
+|
 * commit a073924f98bf2853fc341b1956ffbfd0fefc8f5e
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:24:57 2026 +0700
-| 
+|
 |     [HW04][REQ-17] Refresh Git log after submission cleanup
-| 
+|
 |  git-log.txt | 699 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |  1 file changed, 699 insertions(+)
-| 
+|
 * commit 084f93521fc665ddeeef2bbfb1a7f708fa1da170
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:24:51 2026 +0700
-| 
+|
 |     [HW04][Session005] Consolidate main report and retain Session004 runtime evidence
-| 
+|
 |  AI-Report-Audit.md                                |   10 +
 |  PROGRESS.md                                       |    9 +
 |  README.md                                         |    6 +-
@@ -708,23 +771,23 @@
 |  session-004-summary.md                            |   40 -
 |  test-cases.json                                   | 1870 +++++---
 |  681 files changed, 1644 insertions(+), 69440 deletions(-)
-| 
+|
 * commit 8dcab3f376cbebe96a5661ce5e007e74fe3807dd
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:12:26 2026 +0700
-| 
+|
 |     [HW04][REQ-12][REQ-17] Record completion commit and refresh actual Git log
-| 
+|
 |  PROGRESS.md |  2 +-
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  2 files changed, 26 insertions(+), 1 deletion(-)
-| 
+|
 * commit 4696f6434a3ae605b1565e37c98cc11c2ac80354
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 17:12:12 2026 +0700
-| 
+|
 |     [HW04][REQ-12] Document nine defects and verify screenshot-backed GitHub Issues
-| 
+|
 |  AI-Report-Audit.md                              |   9 +
 |  PROGRESS.md                                     |  11 +
 |  README.md                                       |   4 +-
@@ -734,66 +797,66 @@
 |  bug-reports.md                                  | 271 ++++++++++++-
 |  requirements-list.json                          |   9 +-
 |  8 files changed, 757 insertions(+), 9 deletions(-)
-| 
+|
 * commit e1064e2b849246f1484a4341c82badfc59691d42
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:50:43 2026 +0700
-| 
+|
 |     [REQ-17] Refresh log after human review completion
-| 
+|
 |  git-log.txt | 22 ++++++++++++++++++++++
 |  1 file changed, 22 insertions(+)
-| 
+|
 * commit b2e765224a4f43f9ad44cb91925bd9ce1be0993a
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:50:42 2026 +0700
-| 
+|
 |     [REQ-11] Complete human review following student confirmation
-| 
+|
 |  AI-Report-Audit.md     | 12 ++++++++++++
 |  PROGRESS.md            |  9 +++++++++
 |  requirements-list.json |  7 ++++---
 |  session-004-review.md  |  4 ++++
 |  session-004-summary.md |  4 ++--
 |  5 files changed, 31 insertions(+), 5 deletions(-)
-| 
+|
 * commit cfdbed939f2ebd296fea5d296f795ac868997e47
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:41:24 2026 +0700
-| 
+|
 |     [REQ-17] Refresh history after Session 004 summary
-| 
+|
 |  git-log.txt | 22 ++++++++++++++++++++++
 |  1 file changed, 22 insertions(+)
-| 
+|
 * commit b5a3c9752d671169a194aa51953d476464f5127b
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:41:24 2026 +0700
-| 
+|
 |     [REQ-11] Summarize Session 004 and record student acceptance
-| 
+|
 |  AI-Report-Audit.md     |  6 ++++++
 |  PROGRESS.md            | 10 ++++++++++
 |  requirements-list.json |  5 +++--
 |  session-004-review.md  |  4 ++++
 |  session-004-summary.md | 40 ++++++++++++++++++++++++++++++++++++++++
 |  5 files changed, 63 insertions(+), 2 deletions(-)
-| 
+|
 * commit 793090188abf269e8ee3a8d5ae2191dff611ee64
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:33:23 2026 +0700
-| 
+|
 |     [REQ-17] Export history after Session 004 refactor verification
-| 
+|
 |  git-log.txt | 545 ++++++++++++++++++++++++++++++++++++++++++++++------------
 |  1 file changed, 438 insertions(+), 107 deletions(-)
-| 
+|
 * commit e1a41163c15dc120c4e20518b66216cc5d26312d
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:33:23 2026 +0700
-| 
+|
 |     [REQ-11] Preserve refactor regression evidence and human-review findings
-| 
+|
 |  AI-Report-Audit.md                                |   13 +
 |  PROGRESS.md                                       |   18 +
 |  RUNNING.md                                        |    8 +
@@ -1087,65 +1150,65 @@
 |  requirements-list.json                            |    2 +-
 |  session-004-review.md                             |    8 +-
 |  292 files changed, 38443 insertions(+), 2 deletions(-)
-| 
+|
 * commit af7b682604314052eb1631de6b024db2324e6d7f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:25:37 2026 +0700
-| 
+|
 |     [REQ-11] Record human review and add case-level regression comparison
-| 
+|
 |  requirements-list.json      |  5 +++--
 |  scripts/compare-matrices.js | 26 ++++++++++++++++++++++++++
 |  session-004-review.md       | 34 ++++++++++++++++++++++++++++++++++
 |  3 files changed, 63 insertions(+), 2 deletions(-)
-| 
+|
 * commit 3cd7cc68e83c3f3417b31a02a47231df5f3e54e0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 16:24:26 2026 +0700
-| 
+|
 |     [REQ-11] Separate test behaviors and retain homogeneous data-driven groups
-| 
+|
 |  tests/fr02-login.spec.js        | 306 +++++++++++++++++------
 |  tests/fr09-apply-coupon.spec.js | 259 +++++++++++++++++---
 |  tests/fr17-coupons.spec.js      | 500 +++++++++++++++++++++++++++++++-------
 |  3 files changed, 873 insertions(+), 192 deletions(-)
-| 
+|
 * commit f6a6c381960127399f09a0c5ca4423ec040034bd
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:11:44 2026 +0700
-| 
+|
 |     [REQ-17] Refresh log after Session 003 summary
-| 
+|
 |  git-log.txt | 21 +++++++++++++++++++++
 |  1 file changed, 21 insertions(+)
-| 
+|
 * commit 8c7cb704462bbfcf1b5591b5af04f0292bd8516f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:11:43 2026 +0700
-| 
+|
 |     [REQ-17,22] Summarize Session 003 and reconcile actual completion evidence
-| 
+|
 |  AI-Report-Audit.md     |  7 +++++++
 |  PROGRESS.md            | 10 ++++++++++
 |  requirements-list.json | 23 +++++++++++++++--------
 |  session-003-summary.md | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 80 insertions(+), 8 deletions(-)
-| 
+|
 * commit 282c750136c3316cbf5e3598a28da6360cc9d601
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:07:16 2026 +0700
-| 
+|
 |     [REQ-19] Export execution and script commit history
-| 
+|
 |  git-log.txt | 957 +++++++++++++++++++++++++++++++++++++++++++++++++++++++---
 |  1 file changed, 907 insertions(+), 50 deletions(-)
-| 
+|
 * commit 2866501edb98e23d518f98555bbff1d3cb197ca9
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:07:16 2026 +0700
-| 
+|
 |     [REQ-06,07,08,09,10] Preserve 204 real executions, verified reports and defect evidence
-| 
+|
 |  AI-Report-Audit.md                                |   10 +
 |  PROGRESS.md                                       |   38 +
 |  README.md                                         |   20 +-
@@ -1816,140 +1879,140 @@
 |  scripts/verify-reports.js                         |   31 +
 |  test-cases.json                                   | 1961 +++++++-
 |  669 files changed, 70435 insertions(+), 233 deletions(-)
-| 
+|
 * commit 0c25eee985b4e9fd3d46f1f8a4864ea4c5fbbad1
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 15:00:03 2026 +0700
-| 
+|
 |     [REQ-06,09] Document observed defects and summarize only actual matrix results
-| 
+|
 |  bug-reports.md           | 29 +++++++++++++++++++++++++++++
 |  scripts/summarize-run.js | 41 +++++++++++++++++++++++++++++++++++++++++
 |  session-003-plan.md      |  4 ++++
 |  3 files changed, 74 insertions(+)
-| 
+|
 * commit 676a70eac061864b2779e26fe9efe55bc3ffbc9c
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:56:48 2026 +0700
-| 
+|
 |     [REQ-06,09] Document reproducible isolated SUT and browser setup
-| 
+|
 |  .gitignore |  2 ++
 |  RUNNING.md | 34 ++++++++++++++++++++++++++++++++++
 |  2 files changed, 36 insertions(+)
-| 
+|
 * commit ae9e66270a58f09222e5e7118129429dc235c575
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:55:28 2026 +0700
-| 
+|
 |     [REQ-07,09,10] Validate complete external oracles and show runtime attribution in report title
-| 
+|
 |  playwright.config.js          |  5 +++--
 |  scripts/run-matrix.js         |  5 ++++-
 |  scripts/validate-test-data.js | 24 ++++++++++++++++++++++--
 |  3 files changed, 29 insertions(+), 5 deletions(-)
-| 
+|
 * commit ecad404827a1682df20feb815d7cad714a108a78
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:54:45 2026 +0700
-| 
+|
 |     [REQ-07,08] Strengthen exact currency assertions using external display oracles
-| 
+|
 |  data/shared.json                | 10 ++++++++--
 |  tests/fr09-apply-coupon.spec.js | 10 +++++-----
 |  tests/pages/coupons.js          |  6 +++---
 |  3 files changed, 16 insertions(+), 10 deletions(-)
-| 
+|
 * commit 984902f9706dabdb0674306105cc95c0fe188596
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:51:02 2026 +0700
-| 
+|
 |     [REQ-08,09] Record assertion inventory and orchestrate attributable browser matrix
-| 
+|
 |  assertion-inventory.md          | 17 ++++++++++++++++
 |  implementation-notes.md         | 14 +++++++++++++
 |  scripts/preflight.js            | 27 ++++++++++++++++++++++++++
 |  scripts/prepare-webkit-local.js | 18 +++++++++++++++++
 |  scripts/run-matrix.js           | 41 +++++++++++++++++++++++++++++++++++++++
 |  5 files changed, 117 insertions(+)
-| 
+|
 * commit 945cf44e3b5454d3f64c8eba90fcbc30b4b603f2
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:47:59 2026 +0700
-| 
+|
 |     [REQ-06,08] Verify coupon deletion and UI authorization without admin token
-| 
+|
 |  tests/fr17-coupons.spec.js | 42 +++++++++++++++++++++++++++++++++++++++---
 |  1 file changed, 39 insertions(+), 3 deletions(-)
-| 
+|
 * commit cf436b6ed8fd0f21fdc12aaea33f0eee26ed1a2e
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:47:29 2026 +0700
-| 
+|
 |     [REQ-06,08] Exercise FR-17 form rejection, duplicate and numeric boundaries
-| 
+|
 |  data/shared.json           |  4 ++++
 |  tests/fr17-coupons.spec.js | 33 +++++++++++++++++++++++++++++++--
 |  tests/pages/coupons.js     |  1 +
 |  3 files changed, 36 insertions(+), 2 deletions(-)
-| 
+|
 * commit ffe21bb95987721f0645906e09ebbcca187f9bb2
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:46:51 2026 +0700
-| 
+|
 |     [REQ-06,08] Add coupon POM and FR-17 Create Read persistence checks
-| 
+|
 |  data/shared.json           | 15 ++++++++++++---
 |  tests/fixtures/real-sut.js |  6 ++++++
 |  tests/fr17-coupons.spec.js | 40 ++++++++++++++++++++++++++++++++++++++++
 |  tests/pages/coupons.js     | 40 ++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 98 insertions(+), 3 deletions(-)
-| 
+|
 * commit 661c1ae99b78c28af873631fa04ba6f84b6cb381
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:45:51 2026 +0700
-| 
+|
 |     [REQ-06,08] Add FR-09 auth, error, empty and payload assertions
-| 
+|
 |  playwright.config.js            |  2 +-
 |  tests/fr09-apply-coupon.spec.js | 39 ++++++++++++++++++++++++++++++---------
 |  2 files changed, 31 insertions(+), 10 deletions(-)
-| 
+|
 * commit ae36e9e5517b713d035c2dbc013a5eea200d724e
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:45:19 2026 +0700
-| 
+|
 |     [REQ-06,08] Cover FR-09 success, boundary, cap and rounding UI contracts
-| 
+|
 |  tests/fr09-apply-coupon.spec.js | 4 +++-
 |  1 file changed, 3 insertions(+), 1 deletion(-)
-| 
+|
 * commit 3caf495ac3a0b4d33019f08a2bf6755a1ff6b841
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:44:40 2026 +0700
-| 
+|
 |     [REQ-06,08] Add real-time lockout, reset and JWT scenarios for FR-02
-| 
+|
 |  tests/fr02-login.spec.js | 41 ++++++++++++++++++++++++++++++++++++++++-
 |  1 file changed, 40 insertions(+), 1 deletion(-)
-| 
+|
 * commit 622c2214bc20e9a36f2cbe35f649bd1072f620a8
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:44:03 2026 +0700
-| 
+|
 |     [REQ-06,08] Automate FR-02 login and HTML validation with isolated users
-| 
+|
 |  tests/fixtures/real-sut.js | 31 +++++++++++++++++++++++++++++++
 |  tests/fr02-login.spec.js   | 42 ++++++++++++++++++++++++++++++++++++++++++
 |  tests/pages/login.js       | 19 +++++++++++++++++++
 |  3 files changed, 92 insertions(+)
-| 
+|
 * commit d995b457f521b43197e678139e7d475a782a0055
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:43:15 2026 +0700
-| 
+|
 |     [REQ-06,07,08] Prove FR-09 mocked cart and coupon UI using external JSON
-| 
+|
 |  .gitignore                      |    4 +
 |  data/fr02.json                  |   72 +++
 |  data/fr09.json                  | 1001 +++++++++++++++++++++++++++++++++++++
@@ -1964,64 +2027,64 @@
 |  tests/fr09-apply-coupon.spec.js |   17 +
 |  tests/helpers/data.js           |   15 +
 |  13 files changed, 1897 insertions(+)
-| 
+|
 * commit e65d332178109b08534d8f41c7a7f5d788b3cdf6
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:37:13 2026 +0700
-| 
+|
 |     [REQ-07] Confirm strict external test data and approved workflow
-| 
+|
 |  AI-Report-Audit.md     | 8 ++++++++
 |  requirements-list.json | 9 +++++----
 |  session-003-plan.md    | 8 ++++++++
 |  3 files changed, 21 insertions(+), 4 deletions(-)
-| 
+|
 * commit 6b8fba324f0af6fd565ffe47fed2ffcbcf859977
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 14:18:33 2026 +0700
-| 
+|
 |     [REQ-05,06,07,08,09] Prepare new Playwright skills workflow and execution plan
-| 
+|
 |  AI-Report-Audit.md     |  21 +++++++++
 |  preparation-notes.md   |  41 +++++++++++++++++
 |  requirements-list.json |  20 ++++++---
 |  session-003-plan.md    | 115 +++++++++++++++++++++++++++++++++++++++++++++++
 |  4 files changed, 190 insertions(+), 7 deletions(-)
-| 
+|
 * commit ab12eb084f28de0b0b47d2761bb9e9ee40957fd9
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:23:47 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Export Git log for session summary
-| 
+|
 |  git-log.txt | 19 +++++++++++++++++++
 |  1 file changed, 19 insertions(+)
-| 
+|
 * commit f22940bf5495ecfd38a4efa1e4a7287ec70b37a6
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:23:47 2026 +0700
-| 
+|
 |     HW04 [REQ-22] Summarize session design decisions and remaining execution work
-| 
+|
 |  AI-Report-Audit.md |  6 ++++++
 |  PROGRESS.md        | 11 +++++++++++
 |  2 files changed, 17 insertions(+)
-| 
+|
 * commit dadeee8b73236a80b933e6cf71401f0ed62c2d5f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:22:44 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Export log after requirement 4 confirmation
-| 
+|
 |  git-log.txt | 24 ++++++++++++++++++++++++
 |  1 file changed, 24 insertions(+)
-| 
+|
 * commit d7cdc5000c8b054dbc2db329ce124300861dd643
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:22:44 2026 +0700
-| 
+|
 |     HW04 [REQ-04] Finalize percent validation duplicate errors and UI access cases
-| 
+|
 |  AI-Report-Audit.md     |  11 +++++
 |  PROGRESS.md            |   8 ++++
 |  README.md              |   2 +-
@@ -2030,42 +2093,42 @@
 |  scope.md               |   6 ++-
 |  test-cases.json        | 119 +++++++++++++++++++++++++++++++++++++++++------
 |  7 files changed, 162 insertions(+), 47 deletions(-)
-| 
+|
 * commit e0579f11ec3076d2ae2916cfc5ddacaea5b97a4c
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:49 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Refresh log after review correction
-| 
+|
 |  git-log.txt | 20 ++++++++++++++++++++
 |  1 file changed, 20 insertions(+)
-| 
+|
 * commit bcca4cbd5e04a2c46e14c4e17e80870b73f49548
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:49 2026 +0700
-| 
+|
 |     HW04 [REQ-04] Correct source code length observation after verification
-| 
+|
 |  AI-Report-Audit.md  | 2 +-
 |  PROGRESS.md         | 2 +-
 |  fr17-case-review.md | 2 +-
 |  3 files changed, 3 insertions(+), 3 deletions(-)
-| 
+|
 * commit bf0f5cb03cec7e5841e0c6e17cb038d9ac06ec62
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:31 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Export log after admin coupon case expansion
-| 
+|
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-| 
+|
 * commit 562f612ce8da89b4eaa261c6027d50ed795ac7f0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:18:31 2026 +0700
-| 
+|
 |     HW04 [REQ-04] Add 19 admin coupon UI cases and review EP BVA coverage
-| 
+|
 |  AI-Report-Audit.md                 |    9 +
 |  PROGRESS.md                        |    8 +
 |  README.md                          |    2 +-
@@ -2075,22 +2138,22 @@
 |  scope.md                           |    6 +-
 |  test-cases.json                    |  399 ++++++
 |  8 files changed, 3131 insertions(+), 9 deletions(-)
-| 
+|
 * commit 2f18d6a371d0b31bd8d4e36275dc811bf343758f
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:13:20 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Export log after coupon scope confirmation
-| 
+|
 |  git-log.txt | 24 ++++++++++++++++++++++++
 |  1 file changed, 24 insertions(+)
-| 
+|
 * commit 99768c66a6c4516bac86e2fcd75aabd4bb91c4c0
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:13:20 2026 +0700
-| 
+|
 |     HW04 [REQ-03] Finalize coupon cap and rounding policies and 19 cases
-| 
+|
 |  AI-Report-Audit.md     | 10 ++++++++++
 |  PROGRESS.md            |  8 ++++++++
 |  README.md              |  2 +-
@@ -2099,22 +2162,22 @@
 |  scope.md               |  6 +++++-
 |  test-cases.json        | 28 +++++++++++++++++++++++++---
 |  7 files changed, 77 insertions(+), 30 deletions(-)
-| 
+|
 * commit 80868fc0b1c46d8da2d191e1e130fbc444289176
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:07:29 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Export log after coupon case review
-| 
+|
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-| 
+|
 * commit b990bf95d0c0d2780378773c48a88d45874f9293
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Fri Nov 13 00:07:29 2026 +0700
-| 
+|
 |     HW04 [REQ-03] Review coupon edge cases and identify pending policy decisions
-| 
+|
 |  AI-Report-Audit.md                 |   18 +
 |  PROGRESS.md                        |    8 +
 |  README.md                          |    2 +-
@@ -2124,22 +2187,22 @@
 |  scope.md                           |    6 +-
 |  test-cases.json                    |  132 +++
 |  8 files changed, 1810 insertions(+), 9 deletions(-)
-| 
+|
 * commit 5fd67b72256a544df143892604d64c09a85b7cd4
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:53:16 2026 +0700
-| 
+|
 |     HW04 [REQ-17] Refresh Git log after requirement 2 design
-| 
+|
 |  git-log.txt | 37 +++++++++++++++++++++++++++++++++++++
 |  1 file changed, 37 insertions(+)
-| 
+|
 * commit ad84d02ee8a4f91c557bdd3411a9f1b60c9ea4b8
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:53:16 2026 +0700
-| 
+|
 |     HW04 [REQ-02] Accept login cases and add masking and page identity checks
-| 
+|
 |  AI-Report-Audit.md     | 11 +++++++++++
 |  PROGRESS.md            | 10 ++++++++++
 |  README.md              |  2 +-
@@ -2147,13 +2210,13 @@
 |  scope.md               |  8 +++++++-
 |  test-cases.json        | 42 ++++++++++++++++++++++++++++++++++++++++++
 |  6 files changed, 81 insertions(+), 10 deletions(-)
-| 
+|
 * commit 6107dcd449a6a8a6ab8d2049515544a86ad0122a
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:38:21 2026 +0700
-| 
+|
 |     [REQ-01,03,14,22] Close Session 001 and confirm fully mocked coupon UI scope
-| 
+|
 |  AI-Report-Audit.md     | 11 +++++++++++
 |  PROGRESS.md            | 14 +++++++++++---
 |  README.md              |  2 ++
@@ -2161,32 +2224,32 @@
 |  scope.md               | 16 ++++++++--------
 |  test-cases.json        | 43 ++++++++++++++++++++++++++++++-------------
 |  6 files changed, 70 insertions(+), 30 deletions(-)
-| 
+|
 * commit 0bbd805e6376d149464d3b02868f4e5028db612d
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:26:42 2026 +0700
-| 
+|
 |     [REQ-17] Export current Git history snapshot
-| 
+|
 |  git-log.txt | 25 +++++++++++++++++++++++++
 |  1 file changed, 25 insertions(+)
-| 
+|
 * commit c2b9c683871cb26617086deb84480d06382d8d99
 | Author: quocthaLN <quocthailenguyen41@gmail.com>
 | Date:   Thu Nov 12 23:26:42 2026 +0700
-| 
+|
 |     [REQ-14,22] Record Session 001 scope review and AI audit
-| 
+|
 |  AI-Report-Audit.md | 30 ++++++++++++++++++++++++++++++
 |  PROGRESS.md        | 11 +++++++++++
 |  2 files changed, 41 insertions(+)
-| 
+|
 * commit 6ee2ee935123c62d564d856ed60a7af9797b4976
   Author: quocthaLN <quocthailenguyen41@gmail.com>
   Date:   Thu Nov 12 23:26:12 2026 +0700
-  
+
       [REQ-02,03,04,06,16] Define scoped features and 36 UI test cases
-  
+
    .gitignore             |   7 +
    AGENTS.md              |  66 ++++
    README.md              |  31 ++

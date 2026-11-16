@@ -1,0 +1,32 @@
+{
+  "reviewed_at": "2026-11-16T12:03:23+07:00",
+  "assignment_pages_reviewed": 8,
+  "student_id": "23120352",
+  "feature_cases": {
+    "FR02": 14,
+    "FR09": 19,
+    "FR17": 35
+  },
+  "registered_executions": 204,
+  "retained_executions": {
+    "passed": 138,
+    "failed": 66,
+    "skipped": 0,
+    "separate_sessions": true
+  },
+  "html_reports_verified": 9,
+  "bug_screenshot_hashes_verified": 12,
+  "critique_whitespace_words": 274,
+  "qualifying_spec_commits": 11,
+  "pdf_layout_checks": {
+    "Main-Report.pdf": 33,
+    "AI-Report-Audit.pdf": 9,
+    "AI-Critique.pdf": 1,
+    "README.pdf": 1,
+    "charsOutsideSafeBounds": 0
+  },
+  "student_confirmed_all_review_video_skill": true,
+  "public_repo": "https://github.com/quocthaiLN/HW04-SoftwareTesting",
+  "remote_sync": "authorized, in progress",
+  "moodle_submitted": false
+}

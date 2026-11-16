@@ -21,27 +21,6 @@
     "checkedAt": "2026-11-13T10:23:57.128Z"
   },
   {
-    "runId": "session004-refactor-fr09-chromium",
-    "attributionAndISOVisible": true,
-    "timestamp": "2026-11-13T09:27:44.675Z",
-    "title": "Run by: 23120352 | 2026-11-13T09:27:44.675Z",
-    "checkedAt": "2026-11-13T10:23:57.431Z"
-  },
-  {
-    "runId": "session004-refactor-fr09-firefox",
-    "attributionAndISOVisible": true,
-    "timestamp": "2026-11-13T09:27:54.178Z",
-    "title": "Run by: 23120352 | 2026-11-13T09:27:54.178Z",
-    "checkedAt": "2026-11-13T10:23:57.804Z"
-  },
-  {
-    "runId": "session004-refactor-fr09-webkit",
-    "attributionAndISOVisible": true,
-    "timestamp": "2026-11-13T09:28:08.803Z",
-    "title": "Run by: 23120352 | 2026-11-13T09:28:08.803Z",
-    "checkedAt": "2026-11-13T10:23:58.128Z"
-  },
-  {
     "runId": "session004-refactor-fr17-chromium",
     "attributionAndISOVisible": true,
     "timestamp": "2026-11-13T09:28:24.015Z",

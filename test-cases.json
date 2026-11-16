@@ -841,20 +841,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -918,20 +918,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -980,20 +980,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1042,20 +1042,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1104,20 +1104,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1166,20 +1166,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1228,20 +1228,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1308,20 +1308,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1370,20 +1370,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1432,20 +1432,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1494,20 +1494,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1556,20 +1556,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1618,20 +1618,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1680,20 +1680,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1742,20 +1742,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1804,20 +1804,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1866,20 +1866,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -1928,20 +1928,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {
@@ -2005,20 +2005,20 @@
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
-          "html": "artifacts/session004-refactor-fr09-chromium/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "firefox": {
           "status": "passed",
           "runId": "session004-refactor-fr09-firefox",
-          "html": "artifacts/session004-refactor-fr09-firefox/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         },
         "webkit": {
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
-          "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
-          "errors": []
+          "errors": [],
+          "artifact_status": "Removed: superseded mocked execution; historical status only. Current real results are recorded separately."
         }
       },
       "execution_results": {

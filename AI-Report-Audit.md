@@ -65,7 +65,7 @@
 
 - Date and time: 2026-11-13T00:03:50+07:00 (thời điểm ghi audit cho chuỗi trao đổi)
 - User prompt: |
-    Session 2: Requirment 3 — Chap nhan 12 testcase hien tai; Tham khao danh sach testcase sau va bo sung nhung edge case chua co, dong thoi dua ra nhung testcase can xem xet va xac nhan. Tệp đính kèm được lưu nguyên văn tại references/fr09-user-testcases.txt.
+    Session 2: Requirment 3 — Chap nhan 12 testcase hien tai; Tham khao danh sach testcase sau va bo sung nhung edge case chua co, dong thoi dua ra nhung testcase can xem xet va xac nhan. Các testcase tham khảo do sinh viên mô tả.
 - AI output: |
     Tool: OpenAI Codex. Đã giữ 12 cases, thêm TC13–TC18; TC18 chờ cap/reject. Mapping 21 cases nguồn và Q1–Q6 tại fr09-case-review.md; 44 records toàn suite, 43 DESIGNED và 1 pending. Cập nhật checklist/progress/scope/README; REQ-03 IN PROGRESS. Kiểm tra JSON, IDs, browser targets và giữ nguyên 38 cases cũ; chưa chạy runtime. Kết quả nguồn không dùng làm evidence suite. Commit thiết kế và export log; docs/data không tính vào 8 test-script commits.
 
@@ -84,7 +84,7 @@
     Session 2
     - Requirement 4:
       - Tham khao cac testcase sau va bo sung vao danh sach testcase hien tai
-    Tệp nguồn lưu nguyên văn tại references/fr17-user-testcases.txt.
+    Các testcase tham khảo do sinh viên mô tả.
 - AI output: |
     Tool: OpenAI Codex. Giữ nguyên 12 cases FR-17, thêm 19 cases TC13–TC31. Đối chiếu 27 EP và 25 BVA trong fr17-case-review.md; tách API-only khỏi UI suite, ghi Q1–Q6 cần xem xét thay vì tự đặt policy. FR-17 có 31 cases, toàn suite 64 DESIGNED (14/19/31), dự kiến 192 executions. Phát hiện mâu thuẫn code alphabet với dấu _ trong nguồn; chuỗi length 30 được xác minh đúng 30 sau khi sửa nhận định đếm ban đầu. FR-24 chỉ yêu cầu dialog xóa item khỏi giỏ, chưa đủ áp cho coupon. Cập nhật checklist/scope/progress/README và Git; REQ-04 IN PROGRESS. Xác minh JSON, IDs, giữ nguyên cases cũ, traceability và mapping; chưa chạy runtime, không sao chép Pass/Fail nguồn thành evidence.
 
@@ -206,4 +206,122 @@
     Session 5: Cap nhat main report co cau truc nhu sau
     Trang bìa/thông tin chung;1Executive Summary;2Feature selection;3Environment/architecture;4AI-First với skill playwright;5Mỗi feature có mô tả,>=12cases,data,code,results,reports,ảnh,gaps,bugs;6Human review (không có selector/assertion/wait/data/browser issues, thiếuBVA do sinh viên bổ sung), before/after,tỷ lệgiữ/sửa;7Bug Report;8Video thực hiện sau;9Agent Skill;10Git log pretty;11Self-assessment100/100;12Kết luận để sau.
 - AI output: |
-    Tool: OpenAI Codex. Đối chiếu4SKILL.md CLI/Core/POM/QA và code/data/Git/evidence thật; tổ chức main-report.md đủ12mục+cover+Appendix. Tạo68case rows,3feature×7subsections,ảnhreports/bugs,9Issues;10commits chạm.spec.js. Đo tokenSequenceMatcher baseline676a70e/current để nêu giữ/sửa có phương pháp; giữ lịch sử AI self-review tách review cuối sinh viên. Điểm100theo yêu cầu, nêu video/demo còn thiếu; không đánh checklistDONE theo điểm. Ngày nộp/YouTube/video/AI Critique/kết luận để sau. Tạo git_log.txtpretty, READMEđồng bộ. Kiểm tra12sections/68rows/currentlinks đạt; không rerun SUT.
+    Tool: OpenAI Codex. Đối chiếu4SKILL.md CLI/Core/POM/QA và code/data/Git/evidence thật; tổ chức main-report.md đủ12mục+cover+Appendix. Tạo68case rows,3feature×7subsections,ảnhreports/bugs,9Issues;10commits chạm.spec.js. Đo tokenSequenceMatcher baseline676a70e/current để nêu giữ/sửa có phương pháp; giữ lịch sử AI self-review tách review cuối sinh viên. Điểm100theo yêu cầu, nêu video/demo còn thiếu; không đánh checklistDONE theo điểm. Ngày nộp/YouTube/video/AI Critique/kết luận để sau. Tạo git-log.txtpretty, READMEđồng bộ. Kiểm tra12sections/68rows/currentlinks đạt; không rerun SUT.
+
+- Date and time: 2026-11-16T09:57:02+07:00
+- User prompt: Why POM in pages not include apply coupon? / why there’s no apply-coupon test POM
+- AI output: |
+    Tool: OpenAI Codex. Đọc code; phân biệt React pages với test POM. FR09 dùng locator trực tiếp; đề xuất CheckoutPage.
+
+- Date and time: 2026-11-16T09:57:02+07:00
+- User prompt: Script apply coupon có mock GET /carts không, vì sao testcase đều pass?
+- AI output: |
+    Tool: OpenAI Codex. Giải thích mock module CartContext và response apply-coupon; pass chỉ chứng minh UI/request theo dữ liệu giả lập, không kiểm chứng backend rules.
+
+- Date and time: 2026-11-16T09:57:02+07:00
+- User prompt: Phan tich huong di them buoc them hang vao gio de co the test luon ca backend / dong y
+- AI output: |
+    Tool: OpenAI Codex. Đã thêm pilot2case backend thật,3POM và data riêng. Chromium/Firefox mỗi engine1pass1fail; xác nhận lỗi công thức percent; WebKit launch thiếu libevent. DB cleanup sạch, validator đạt và210registrations. Không sửa SUT/expected hoặc chuyển failure thành expected failure. Giữ nguyên19mock cases; giới hạn/phần còn lại ghi fr09-integration.md.
+
+- Date and time: 2026-11-16T09:57:02+07:00
+- User prompt: cach tai thu vien he thong libevent-2.1.so.7
+- AI output: |
+    Tool: OpenAI Codex. Kiểm tra máy Ubuntu26.04.1; apt-cache có libevent-2.1-7t64. Hướng dẫn apt install gói và Playwright install-deps webkit theo docs chính thức. Chưa cài system package; WebKit còn có thể thiếu dependency khác.
+
+- Date and time: 2026-11-16T10:13:51+07:00
+- User prompt: Bổ sung test API thật cho C1–C5 và công thức; trước tiên mô tả thay đổi
+- AI output: |
+    Tool: OpenAI Codex. Đề xuất bộ API riêng, chưa triển khai. User điều chỉnh phạm vi sang thay toàn bộ test FR09 bằng luồng UI thực.
+
+- Date and time: 2026-11-16T10:13:51+07:00
+- User prompt: Khong, toi muon thay the toan bo tesscript cua tinh nang apply coupon hien tai sang luong thanh toan va apply coup day du de kiem tra tinh nang
+- AI output: |
+    Tool: OpenAI Codex. Chốt thay19case mock bằng login→thêm hàng→cart→checkout→apply backend thật; giữ IDs/expected; ngoại lệ auth chặn ở cart, không xác nhận tạo đơn.
+
+- Date and time: 2026-11-16T10:13:51+07:00
+- User prompt: Ghi ke hoach vao PROGRESS.md va bat dau thuc hien
+- AI output: |
+    Tool: OpenAI Codex. Đã ghi kế hoạch trước khi sửa code, thay toàn bộ FR09 và gộp pilot; bỏ mock fixture/data. Đã chạy3engines×19cases=57:45pass12fail0skip; mỗienginefailTC01/07/18/19 chứng minh3nhóm lỗi backend. Cleanup sạch và validator68cases/204registrations. Commit83bc1ae. Tài liệu/evidence cập nhật, giữ lịch sử mock riêng; chưa sửa SUT, tạo Issues hoặc chạy lại FR02/17.
+
+- Date and time: 2026-11-16T10:23:36+07:00
+- User prompt: Cap nhat Bug Report va Github Issue
+- AI output: |
+    Tool: OpenAI Codex. Đã cập nhật BUG-10–12, copy3runner screenshots nguyên bản và lưu SHA256 manifest; tạo GitHub Issues#10–12 qua UI vì không có GitHub connector/CLI. Xác minh từng Issue có body và ảnh, list12Open; lưu screenshot xác nhận. Không sửaSUT/chạy lạitests, không tạo trùng9Issue cũ. Giữ giới hạn cap theo rule đã duyệt và không kiểm tra payment.
+
+
+- Date and time: 2026-11-16T11:37:13+07:00
+- User prompt: Doc lai Progress.md va cac file lien quan sau do loai bo nhung artifact khong can thiet trong artifacts (submission/artifacts/)
+- AI output: |
+    Tool: OpenAI Codex. Xóa 13 thư mục thử/pilot (345 files, 35,846,252 bytes). Giữ nguyên Session004 lịch sử đủ9runs, Session006 fr09-real hiện tại và evidence/; giữ mọi HTML dependency/trace/attachment của các batch này. Kiểm tra12HTML, JSON results, manifest paths và SHA256 BUG-10–12. Cập nhật progress/checklist và ghi rõ pilot đã xóa; không chạy lại tests.
+
+- Date and time: 2026-11-16T11:39:34+07:00
+- User prompt: thay bằng session006-fr09-real-*, xóa3thư mục FR09 refactor và cập nhật matrix/liên kết báo cáo.
+- AI output: |
+    Tool: OpenAI Codex. Xóa3batch FR09mock, cập nhật matrix/summary/verification Session004, tạo index evidence qua2phiên riêng; thay links và bảng kết quả sang FR09real15pass4fail/engine; tổng138pass66fail. Không chạy lại tests hoặc giả lập full-suite run.
+
+- Date and time: 2026-11-16T09:27:12+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    why there’s no apply-coupon test POM
+- AI output: |
+    Tool: OpenAI Codex. Đối chiếu cấu trúc test: FR09 lúc đó đặt locator ô coupon/nút Áp dụng trực tiếp trong spec, chưa tách POM; CouponsPage chỉ quản lý coupon admin. Đây là điểm thiếu nhất quán trong tổ chức test, đề xuất CheckoutPage.applyCoupon(code). Lượt này chỉ giải thích, chưa refactor; bổ sung riêng cho câu hỏi tiếp theo câu hỏi về React pages đã ghi ở trên.
+
+- Date and time: 2026-11-16T10:01:17+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    Mo ta lai script da chay nhu the nao
+- AI output: |
+    Tool: OpenAI Codex. Giải thích pilot INT01/INT02: fixture tạo user/product/coupon trong DB riêng; LoginPage → HomePage thêm sản phẩm → CartPage kiểm tra giỏ → CheckoutPage áp coupon qua backend thật. Tổng 500000, fixed 50000 hoặc percent 10%, expected discount 50000/final 450000 từ dữ liệu ngoài JSON. Kiểm tra payload/status/response/UI và chưa ghi coupon_usage; cleanup kể cả khi fail. Chromium/Firefox mỗi engine 1 pass/1 fail công thức; WebKit chưa tới SUT do thiếu thư viện ở mốc pilot. Đây là mô tả kết quả đã có, không phải lượt chạy mới; pilot sau đó được gộp/thay thế bởi 19 cases thật.
+
+- Date and time: 2026-11-16T10:02:13+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    co nen ap dungj full luong nhu the nay vao tat ca cac test case cua tinh nang apply coupons ko?
+- AI output: |
+    Tool: OpenAI Codex. Phân tích lựa chọn: UI đầy đủ cho luồng chính, API thật cho business rules, UI cho input/display; full UI lặp lại setup và có thể bị lỗi login/cart chặn trước coupon. Nhấn mạnh UI guard không đủ chứng minh endpoint bảo vệ xác thực. Đề xuất lúc đó giữ 2 pilot, bổ sung API và phân biệt UI mock; đây chỉ là khuyến nghị, sau đó được thay bằng quyết định của sinh viên chuyển toàn bộ 19 cases sang UI/backend thật.
+
+- Date and time: 2026-11-16T10:03:45+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    Bổ sung test API thật cho các điều kiện C1–C5 và công thức tính tiền, nhất là biên bằng ngưỡng tối thiểu, giảm vượt tổng và xác thực.
+- AI output: |
+    Tool: OpenAI Codex. Lượt yêu cầu bị ngắt trước khi có câu trả lời cuối; không ghi nhận bộ API mới đã triển khai từ lượt này. Sinh viên gửi lại yêu cầu và yêu cầu mô tả thay đổi ở lượt kế tiếp; phương án API sau đó bị thay thế bởi toàn bộ luồng UI thật như các mục đã ghi.
+
+- Date and time: 2026-11-16T11:12:19+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    Giup toi len kich ban cho video
+    - Terminal whoami
+    - Gioi thieu: ten + mssv
+    - Giai thich script: data, pages, fixtures, *.spec.js
+    - Chay thu script
+    - Giai thich AI fix: if-else chong cheo; mock UI coupon/checkout khong thao tac database that
+    - Gioi thieu skill
+- AI output: |
+    Tool: OpenAI Codex. Soạn kịch bản nói và thao tác khoảng 6–8 phút: whoami; giới thiệu Lê Nguyễn Quốc Thái, MSSV 23120352 và 3 features; giải thích JSON/POM/fixtures/specs; hướng dẫn npm run sut, validate và demo Chromium headed FR09-TC02, có thể thêm TC01 phát hiện lỗi. Trình bày refactor Conditional Test Logic và chuyển FR09 từ mock sang UI/backend/SQLite thật; giới thiệu skill hỗ trợ. Dặn đọc kết quả thực tế khi quay và giữ expected nghiệp vụ khi test fail. Chỉ soạn kịch bản trong chat, không chạy demo, quay/render video, upload YouTube hoặc xác nhận đáp ứng yêu cầu video. Bản lời thoại có chỗ gọi khái quát mock coupon/checkout; cơ chế lịch sử chính xác là mock module CartContext, auth và POST /api/apply-coupon, không phải GET /carts hay thực hiện POST checkout; luồng hiện tại dừng trước xác nhận tạo đơn.
+
+- Date and time: 2026-11-16T11:38:03+07:00 (thời điểm bắt đầu lượt chat gốc; bổ sung hồi cứu ngày 2026-11-16)
+- User prompt: |
+    ko xoa cai fr09 refactor af?
+- AI output: |
+    Tool: OpenAI Codex. Giải thích lúc đó giữ session004-refactor-fr09-* vì còn thuộc ma trận lịch sử và đang được báo cáo tham chiếu. Xác định có thể thay bằng session006-fr09-real-* nếu cập nhật đồng bộ matrix và links. Chưa xóa trong lượt giải thích này; việc xóa theo yêu cầu kế tiếp đã được audit ở trên.
+
+- Date and time: 2026-11-16T11:48:37+07:00
+- User prompt: |
+    Dựa vào 7 session chat được tham chiếu, bổ sung submission/AI-Report-Audit.md nếu cần.
+- AI output: |
+    Tool: OpenAI Codex. Đọc đủ 7 chat bằng read_thread, gồm các trang lịch sử còn lại của chat kế hoạch Playwright và chat FR09; đối chiếu audit, progress và checklist hiện tại. Giữ nguyên audit có sẵn; bổ sung hồi cứu 6 lượt còn thiếu về POM, mô tả pilot, lựa chọn full UI/API, yêu cầu API bị ngắt, kịch bản video và giải thích giữ FR09 refactor. Timestamp hồi cứu lấy startedAt của lượt chat, không coi là thời điểm chạy test. Tóm tắt prompt/output, phân biệt đề xuất với thực thi; không biến kịch bản thành evidence video đã quay. Ghi rõ cách mock lịch sử để tránh nhầm GET /carts/POST checkout. Không chạy lại SUT/tests, không thay đổi trạng thái nghiệm thu hoặc commit các thay đổi có sẵn.
+
+- Date and time: 2026-11-16T11:52:24+07:00
+- User prompt: |
+    Làm sạch thư mục nộp bài: xóa file thừa, gộp nội dung vào main report hợp lý; xóa thư mục references và ghi testcase tham khảo do sinh viên mô tả.
+- AI output: |
+    Tool: OpenAI Codex. Gộp báo cáo execution, FR09 real integration và chi tiết 12 bugs vào main-report.md; thay code/data mock cũ bằng ví dụ từ code hiện tại, sửa bảng 4 FR09 failures và số liệu 46 pass/22 fail case IDs. Giữ kết quả từ hai phiên chạy riêng. Gộp URL video sinh viên cung cấp và nguyên văn AI Critique (giữ bản riêng theo yêu cầu nộp). Xóa 4 file đã gộp, references và snapshot/log CLI khám phá; giữ code/data/config/skills, audit/progress/checklist/Git và mọi runtime evidence. Đổi provenance testcase thành do sinh viên mô tả, cập nhật links/README/checklist; không sửa SUT/scripts hoặc tạo evidence mới. Không tuyên bố đã xác minh video/public repo hoặc bài nộp hoàn tất.
+
+- Date and time: 2026-11-16T11:58:42+07:00
+- User prompt: |
+    Rà soát 2026.HW04.Automation Testing_En.pdf và requirements-list.json để chốt bài nộp cuối cùng.
+    Xác nhận tiếp theo của sinh viên khi được hỏi review/video: “Toi da hoan thanh xuat sac toan bo”.
+- AI output: |
+    Tool: OpenAI Codex; dùng pdf và playwright-skill. Đọc đủ8trang đề, đối chiếu23IDs. Sửa trạng thái checklist cũ, bổ sung README rubric/summary/video, nhận xác nhận review/video/demo của sinh viên. Critique274whitespace words. Mở9HTML thực bằng file trực tiếp, xác minh Run by+ISO+Project và chụp evidence mới; kiểm tra12bug image hashes. Không chạy lại hoặc sửa SUT/test expected/HTML runner. Repository UI hiển thị Public nhưng remote e1064e2 còn cũ, cần sync bản cuối. Chuẩn bị PDF và gói nộp có kiểm tra; kết quả cuối ghi PROGRESS/checklist. Không nhận đã nộp Moodle hoặc AI đã xem video.
+
+- Date and time: 2026-11-16T12:03:23+07:00
+- User prompt: |
+    Có, commit và push bản cuối lên repository public quocthaiLN/HW04-SoftwareTesting.
+- AI output: |
+    Tool: OpenAI Codex. Ghi nhận cho phép commit/push bản cuối công khai theo yêu cầu đề. Đã có4PDF,9HTML verified,12bug image hashes, validator68cases/204registrations. Gói thử731files/68637502bytes đã kiểm tra integrity và chia4parts<20MB; sẽ xuất lại package/manifest sau final commit để khớp bản cuối. Không gồm node_modules/DB/.git; không submit Moodle.
