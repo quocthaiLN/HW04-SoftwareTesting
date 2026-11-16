@@ -1,0 +1,1782 @@
+{
+  "coverage": "FR09 replacement, real UI + backend; historical FR02/17 not rerun",
+  "total": 57,
+  "passed": 45,
+  "failed": 12,
+  "skipped": 0,
+  "runs": [
+    {
+      "browser": "chromium",
+      "runId": "session006-fr09-real-chromium",
+      "passed": 15,
+      "failed": 4,
+      "cases": [
+        {
+          "id": "FR-09-TC01",
+          "status": "failed",
+          "duration": 14077,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 5,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC01",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYDFA56DBBAC8A4E83ACE03C5B4C78C7D2",
+                    "total_amount": 500000,
+                    "user_id": 3
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 5,
+                  "discount_amount": -4500000,
+                  "final_amount": 5000000,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC02",
+          "status": "passed",
+          "duration": 895,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC02",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY9A2601D7B0E54E4E85504E0AB191B7FC",
+                    "total_amount": 500000,
+                    "user_id": 5
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 7,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC07",
+          "status": "failed",
+          "duration": 9936,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 8,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC07",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY2CB13F11224F4F17A06C1ED205492FA0",
+                    "total_amount": 300000,
+                    "user_id": 6
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC08",
+          "status": "passed",
+          "duration": 1080,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC08",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY4FC360979DFE4A7892BC683F65E6B0DE",
+                    "total_amount": 300001,
+                    "user_id": 9
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 11,
+                  "discount_amount": 50000,
+                  "final_amount": 250001,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC11",
+          "status": "passed",
+          "duration": 935,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC11",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY800A7B56528644D089FF439520C713AE",
+                    "total_amount": 500000,
+                    "user_id": 10
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 12,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC15",
+          "status": "passed",
+          "duration": 881,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC15",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY0931295DC92A42E2ABAD6E2E7412D5F7",
+                    "total_amount": 500000,
+                    "user_id": 11
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 13,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC16",
+          "status": "passed",
+          "duration": 1016,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC16",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY4B449065B35243E1A50300DF60017248",
+                    "total_amount": 500000,
+                    "user_id": 12
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 14,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC17",
+          "status": "passed",
+          "duration": 880,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC17",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "FREE1002E97E4A239D74ADF9ED84D3554D05129",
+                    "total_amount": 100000,
+                    "user_id": 13
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 15,
+                  "discount_amount": 100000,
+                  "final_amount": 0,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC18",
+          "status": "failed",
+          "duration": 10147,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 16,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC18",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "OVER1003D3497866A2246B1A99FDC0F13D16921",
+                    "total_amount": 80000,
+                    "user_id": 14
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 16,
+                  "discount_amount": 100000,
+                  "final_amount": -20000,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC19",
+          "status": "failed",
+          "duration": 10441,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 23,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC19",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY23A89E8B808745E6B448A6B167A0A37B",
+                    "total_amount": 333333,
+                    "user_id": 21
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 23,
+                  "discount_amount": -2999997,
+                  "final_amount": 3333330,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC03",
+          "status": "passed",
+          "duration": 3500,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC03",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYDC07A0FABD8D4D6596D3ACF9640A0355",
+                    "total_amount": 500000,
+                    "user_id": 24
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC04",
+          "status": "passed",
+          "duration": 1385,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC04",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY68E7A467511D4032A83A3B9F9E62FA40",
+                    "total_amount": 500000,
+                    "user_id": 25
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC05",
+          "status": "passed",
+          "duration": 1069,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC05",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY11FF9DBF778A41D2ABB64A52E76C13AA",
+                    "total_amount": 500000,
+                    "user_id": 27
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Mã giảm giá đã hết hạn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC06",
+          "status": "passed",
+          "duration": 1081,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC06",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYCEEBC576C2664174B4B8B6C16633FB1F",
+                    "total_amount": 299999,
+                    "user_id": 29
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC12",
+          "status": "passed",
+          "duration": 1064,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC12",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY03C3A474DABE4065834321EAAB38837D",
+                    "total_amount": 500000,
+                    "user_id": 30
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Bạn đã sử dụng mã này 2 lần (đã đạt giới hạn)"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC13",
+          "status": "passed",
+          "duration": 669,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC13",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC14",
+          "status": "passed",
+          "duration": 668,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC14",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC09",
+          "status": "passed",
+          "duration": 462,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC09",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC10",
+          "status": "passed",
+          "duration": 464,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC10",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        }
+      ],
+      "html": "artifacts/session006-fr09-real-chromium/html/index.html"
+    },
+    {
+      "browser": "firefox",
+      "runId": "session006-fr09-real-firefox",
+      "passed": 15,
+      "failed": 4,
+      "cases": [
+        {
+          "id": "FR-09-TC01",
+          "status": "failed",
+          "duration": 13583,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 20,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC01",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYA1F7FCB4BCE648A381C9AEB60B5C5097",
+                    "total_amount": 500000,
+                    "user_id": 18
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 20,
+                  "discount_amount": -4500000,
+                  "final_amount": 5000000,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC02",
+          "status": "passed",
+          "duration": 4802,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC02",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYD725D4A081CB4CBAB5C0FFE1A9974748",
+                    "total_amount": 500000,
+                    "user_id": 23
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 25,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC07",
+          "status": "failed",
+          "duration": 11473,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 27,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC07",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYA469ECFC61F7492A954B7E9F5982D77C",
+                    "total_amount": 300000,
+                    "user_id": 26
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC08",
+          "status": "passed",
+          "duration": 2638,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC08",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYC2818842B880460EBD55CBC69956BD8F",
+                    "total_amount": 300001,
+                    "user_id": 35
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 36,
+                  "discount_amount": 50000,
+                  "final_amount": 250001,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC11",
+          "status": "passed",
+          "duration": 1555,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC11",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY9743052E0A5B430EBA60F1F92C7E2ED6",
+                    "total_amount": 500000,
+                    "user_id": 37
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 37,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC15",
+          "status": "passed",
+          "duration": 1401,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC15",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY9A205ADE57F04670895D85239EC6AECD",
+                    "total_amount": 500000,
+                    "user_id": 39
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 39,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC16",
+          "status": "passed",
+          "duration": 1177,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC16",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYDDA477CC32D54BBCA12E3F51C44260F2",
+                    "total_amount": 500000,
+                    "user_id": 41
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 41,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC17",
+          "status": "passed",
+          "duration": 1855,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC17",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "FREE1006F974C284CBC459B9C33DA46C4E9D6D4",
+                    "total_amount": 100000,
+                    "user_id": 43
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 43,
+                  "discount_amount": 100000,
+                  "final_amount": 0,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC18",
+          "status": "failed",
+          "duration": 10838,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 45,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC18",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "OVER1000AEDE602D52F41C78C8200994D1FB570",
+                    "total_amount": 80000,
+                    "user_id": 45
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 45,
+                  "discount_amount": 100000,
+                  "final_amount": -20000,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC19",
+          "status": "failed",
+          "duration": 11243,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 50,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC19",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYE52BE09205D54FF188F5B7CC1D24639B",
+                    "total_amount": 333333,
+                    "user_id": 50
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 50,
+                  "discount_amount": -2999997,
+                  "final_amount": 3333330,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC03",
+          "status": "passed",
+          "duration": 1617,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC03",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY761C8229FBEF4521B547AC6BDF048205",
+                    "total_amount": 500000,
+                    "user_id": 51
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC04",
+          "status": "passed",
+          "duration": 911,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC04",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY9CA9CA2EB48842FBABB188717E54979E",
+                    "total_amount": 500000,
+                    "user_id": 52
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC05",
+          "status": "passed",
+          "duration": 865,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC05",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY581421C619444E228B5882EB5AFFCE58",
+                    "total_amount": 500000,
+                    "user_id": 53
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Mã giảm giá đã hết hạn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC06",
+          "status": "passed",
+          "duration": 846,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC06",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYA924D474DAF447F6B615D74EC267790D",
+                    "total_amount": 299999,
+                    "user_id": 54
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC12",
+          "status": "passed",
+          "duration": 802,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC12",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY7887580C99A54628B3A50091C15776DF",
+                    "total_amount": 500000,
+                    "user_id": 55
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Bạn đã sử dụng mã này 2 lần (đã đạt giới hạn)"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC13",
+          "status": "passed",
+          "duration": 719,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC13",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC14",
+          "status": "passed",
+          "duration": 770,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC14",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC09",
+          "status": "passed",
+          "duration": 712,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC09",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC10",
+          "status": "passed",
+          "duration": 606,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC10",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        }
+      ],
+      "html": "artifacts/session006-fr09-real-firefox/html/index.html"
+    },
+    {
+      "browser": "webkit",
+      "runId": "session006-fr09-real-webkit",
+      "passed": 15,
+      "failed": 4,
+      "cases": [
+        {
+          "id": "FR-09-TC01",
+          "status": "failed",
+          "duration": 14727,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 6,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC01",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY63102DFF293F4275A6644D5BC7ED1496",
+                    "total_amount": 500000,
+                    "user_id": 4
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 6,
+                  "discount_amount": -4500000,
+                  "final_amount": 5000000,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC02",
+          "status": "passed",
+          "duration": 1665,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC02",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYAB4FAB424C714579997E3E83AEC18103",
+                    "total_amount": 500000,
+                    "user_id": 7
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 9,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC07",
+          "status": "failed",
+          "duration": 10739,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 10,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC07",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY0A227D10AAEF423BA8D979ECD227C835",
+                    "total_amount": 300000,
+                    "user_id": 8
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC08",
+          "status": "passed",
+          "duration": 2603,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC08",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY273E9C9924194783AE779F5B364BA97A",
+                    "total_amount": 300001,
+                    "user_id": 15
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 17,
+                  "discount_amount": 50000,
+                  "final_amount": 250001,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC11",
+          "status": "passed",
+          "duration": 2145,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC11",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY1E55FBD3BDDC4BD188832A4806DA54C2",
+                    "total_amount": 500000,
+                    "user_id": 16
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 18,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC15",
+          "status": "passed",
+          "duration": 2108,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC15",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY3C9A423F39CE4503BB6CAEEDDF8DA472",
+                    "total_amount": 500000,
+                    "user_id": 17
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 19,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC16",
+          "status": "passed",
+          "duration": 2116,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC16",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY8EA9542227BF4F5C9CDC22BD76CB9E29",
+                    "total_amount": 500000,
+                    "user_id": 19
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 21,
+                  "discount_amount": 50000,
+                  "final_amount": 450000,
+                  "message": "Áp dụng thành công! Giảm 50,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC17",
+          "status": "passed",
+          "duration": 2039,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC17",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "FREE100D458D230252849A48A497EA6162BA00F",
+                    "total_amount": 100000,
+                    "user_id": 20
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 22,
+                  "discount_amount": 100000,
+                  "final_amount": 0,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC18",
+          "status": "failed",
+          "duration": 13246,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 24,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC18",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "OVER100076357F3A3C7435B86E20F02F482DC70",
+                    "total_amount": 80000,
+                    "user_id": 22
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 24,
+                  "discount_amount": 100000,
+                  "final_amount": -20000,
+                  "message": "Áp dụng thành công! Giảm 100,000 ₫"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC19",
+          "status": "failed",
+          "duration": 11849,
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 29,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ],
+          "evidence": {
+            "id": "FR-09-TC19",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY01A93700C5EC43B78B06A084DC1CEF2A",
+                    "total_amount": 333333,
+                    "user_id": 28
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 200,
+                "body": {
+                  "success": true,
+                  "coupon_id": 29,
+                  "discount_amount": -2999997,
+                  "final_amount": 3333330,
+                  "message": "Áp dụng thành công! Giảm 10%"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC03",
+          "status": "passed",
+          "duration": 2110,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC03",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYCE0081F7131D45A0BFEA49BFE2E5DBCC",
+                    "total_amount": 500000,
+                    "user_id": 36
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC04",
+          "status": "passed",
+          "duration": 1598,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC04",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY2C94CA73A53D499F875DC770C77B6405",
+                    "total_amount": 500000,
+                    "user_id": 38
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 404,
+                "body": {
+                  "error": "Mã giảm giá không tồn tại hoặc đã bị vô hiệu hóa"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC05",
+          "status": "passed",
+          "duration": 1470,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC05",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY2E2E95AB810848BBA0682D31DAAAC9F7",
+                    "total_amount": 500000,
+                    "user_id": 40
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Mã giảm giá đã hết hạn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC06",
+          "status": "passed",
+          "duration": 1907,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC06",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUYC9CD8159F6404D7BBD075A3AF4227C3D",
+                    "total_amount": 299999,
+                    "user_id": 42
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC12",
+          "status": "passed",
+          "duration": 1933,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC12",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [
+                {
+                  "body": {
+                    "code": "BIGBUY67076D7EE68844868E6051E4D36FBFE9",
+                    "total_amount": 500000,
+                    "user_id": 44
+                  },
+                  "hasAuthorization": true
+                }
+              ],
+              "checkout": []
+            },
+            "responses": [
+              {
+                "status": 400,
+                "body": {
+                  "error": "Bạn đã sử dụng mã này 2 lần (đã đạt giới hạn)"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "FR-09-TC13",
+          "status": "passed",
+          "duration": 1492,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC13",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC14",
+          "status": "passed",
+          "duration": 1193,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC14",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC09",
+          "status": "passed",
+          "duration": 952,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC09",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        },
+        {
+          "id": "FR-09-TC10",
+          "status": "passed",
+          "duration": 1082,
+          "errors": [],
+          "evidence": {
+            "id": "FR-09-TC10",
+            "coverage": "real cart UI and backend; stops before order confirmation",
+            "calls": {
+              "apply": [],
+              "checkout": []
+            },
+            "responses": []
+          }
+        }
+      ],
+      "html": "artifacts/session006-fr09-real-webkit/html/index.html"
+    }
+  ]
+}

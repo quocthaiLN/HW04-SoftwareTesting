@@ -316,3 +316,13 @@ npx playwright test tests/fr17-coupons.spec.js --project=chromium --grep "FR-17-
 ## Migration evidence — Session005 cleanup
 
 Theo yêu cầu sinh viên, artifact Session003 đã xóa; bộ runtime hiện hành là Session004. Các ảnh BUG-01–09 cục bộ được copy nguyên bản từ attachments Session004 (manifest ghi nguồn và SHA256). Ảnh trên GitHub Issues vẫn là ảnh đã upload trước cleanup; không thay thế lịch sử issue. Các nhắc Session003/batch cũ ở trên là ghi chép lịch sử, không phải evidence còn giữ.
+
+## FR09 replacement run — 2026-11-16 (new backend evidence)
+
+The historical FR09 mocked pass results do not cover backend correctness. Replacement suite now reproduces three additional backend defect groups on Chromium, Firefox and WebKit:
+
+- **FR09-REAL-01 — Percentage formula:** TC01/TC19, active10% coupon with total500,000/333,333. Expected discounts50,000/33,333 and finals450,000/300,000; actual HTTP200 discounts-4,500,000/-2,999,997 and finals5,000,000/3,333,330. Both API and UI assertions fail. Backend uses total*(1-value).
+- **FR09-REAL-02 — Minimum equality rejected:** TC07, fixed50,000 coupon min300,000 and cart total300,000. Expected HTTP200/final250,000 per >= requirement; actual HTTP400 minimum-value error. Backend uses >.
+- **FR09-REAL-03 — Discount exceeds cart total:** TC18, fixed100,000 coupon and cart total80,000. Expected capped discount80,000/final0 per student-approved rule; actual HTTP200 discount100,000/final-20,000, also displayed on UI.
+
+Reproduction for each: disposable DB with unique user/product/coupon as in data/fr09.json; login UI → add seeded product from Home → cart → checkout → apply generated coupon. No mock, checkout total edit or payment submission. Each engine15pass/4fail; 57executions total45pass/12fail/0skip. See [flow, exact data, reports and cleanup](fr09-integration.md) and [execution matrix](artifacts/session006-fr09-real/execution-matrix.json). These groups have local evidence only; no new GitHub Issues created and no unsupported severity score assigned.

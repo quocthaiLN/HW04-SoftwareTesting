@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-13T17:24:42+07:00",
+  "updated_at": "2026-11-16T10:12:08+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -28,7 +28,9 @@
     "Tổng kết Session004: sinh viên chấp nhận refactor Conditional Test Logic; hạng mục sửa hoàn tất, REQ-11 tổng thể IN PROGRESS vì chưa xác nhận review toàn bộ outputs. Regression204keys0status differences; xem main-report.md.",
     "Session004: sinh viên xác nhận đồng ý selectors/assertions/waits/missing cases/gap analysis vì đã bổ sung ở testcase design. Cùng xác nhận refactor Conditional Test Logic trước đó, REQ-11 DONE theo human review; xem test-cases.json và main-report.md. Không suy thành coverage backend ngoài scope.",
     "Session005 REQ-12 DONE: 9 GitHub Issues có screenshot đã UI-verified; full Markdown reports, mapping54failures và giới hạn screenshot ghi rõ. Evidence runtime dùng lại Session003/004; không tự chuyển REQ-16/publication thành DONE.",
-    "Session005 cleanup: xóa tài liệu session-00x/implementation-notes/assertion-inventory và artifacts Session003/PoC/smoke. Main-report.md gom nội dung; test-cases execution_results lấy record thật Session004; ảnh bug local chuyển sang Session004, GitHub attachments giữ lịch sử. Verify 9 HTML Session004 attribution/ISO đạt. Audit/progress giữ tham chiếu lịch sử đến file đã xóa."
+    "Session005 cleanup: xóa tài liệu session-00x/implementation-notes/assertion-inventory và artifacts Session003/PoC/smoke. Main-report.md gom nội dung; test-cases execution_results lấy record thật Session004; ảnh bug local chuyển sang Session004, GitHub attachments giữ lịch sử. Verify 9 HTML Session004 attribution/ISO đạt. Audit/progress giữ tham chiếu lịch sử đến file đã xóa.",
+    "2026-11-16 user approved adding real cart UI + real backend FR09 coverage. Added separate INT01/INT02 pilot; original REQ-03 19 mocked cases and historical evidence retained. See fr09-integration.md. Chromium/Firefox each 1 pass/1 backend formula failure; WebKit launch blocked by missing library. Full 19-scenario migration remains pending.",
+    "2026-11-16: user explicitly replaces all FR09 mocked scripts with full UI cart-to-checkout/apply flow and real backend. 19 IDs retained, pilot merged. TC09/TC10 verify UI checkout guard; do not establish direct apply endpoint authentication. Historical mock execution preserved separately. No final order confirmation."
   ],
   "requirements": [
     {
@@ -56,13 +58,13 @@
     {
       "id": 3,
       "name": "FR-09 scope",
-      "description": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0. User đã chốt: cap discount bằng total, final=0; uppercase/trim chỉ payload; floor tiền giảm phần trăm. Không thêm case tổng 0/âm, khoảng trắng giữa mã; nghiệp vụ thanh toán ngoài scope.",
+      "description": "FR09 real UI login, add real DB product to React cart, cart → checkout → real apply API. Seed unique coupon and usage; verify monetary rules incl floor/cap. TC09/10 blocked at cart. Payment confirmation excluded.",
       "expected_output": "Scope + 19 cases FR-09 đã chốt; mapping và quyết định trong scope.md",
       "source": "User Session 01; eshop-sut/README.md FR-09",
       "mandatory": true,
-      "acceptance_criteria": "FR-09 mock hoàn toàn login/auth, cart và apply-coupon bằng page.route(); UI apply coupon là test chính, không checkout. Cart dùng mock Vite CartContext module vì frontend không fetch API cart. Kết quả chỉ chứng minh UI với response giả lập, không xác nhận backend C1–C5/công thức. Xem scope.md. Session 002: chấp nhận TC01–TC12; thêm TC13–TC18 về input rỗng/khoảng trắng, normalization và biên final_amount >=0. User đã chốt: cap discount bằng total, final=0; uppercase/trim chỉ payload; floor tiền giảm phần trăm. Không thêm case tổng 0/âm, khoảng trắng giữa mã; nghiệp vụ thanh toán ngoài scope.",
+      "acceptance_criteria": "FR09 real UI login, add real DB product to React cart, cart → checkout → real apply API. Seed unique coupon and usage; verify monetary rules incl floor/cap. TC09/10 blocked at cart. Payment confirmation excluded. Preserve19case IDs and business expected; no page.route mocks; cleanup owned data after failures; run3engines.",
       "status": "DONE",
-      "evidence": "User xác nhận Session 002; test-cases.json TC01–TC19 và scope.md. Hoàn thành scope/thiết kế; chưa automate hoặc chạy runtime (requirements 6–10)."
+      "evidence": "19 real UI/backend cases automated and executed on3engines:45pass/12fail/0skip; artifacts/session006-fr09-real/execution-matrix.json; fr09-integration.md. Failures identify3backend defect groups, not mocked passes."
     },
     {
       "id": 4,

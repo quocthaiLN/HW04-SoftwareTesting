@@ -1,3 +1,5 @@
+> Cập nhật 2026-11-16: FR09 đã thay toàn bộ19case mock bằng UI + backend thật. Các số liệu/mã mock Session004 trong tài liệu này là lịch sử. Xem [luồng và kết quả FR09 hiện tại](fr09-integration.md); không dùng57/57pass cũ để đánh giá suite mới.
+
 # Automation execution — Session 004
 
 Run by: 23120352. Batch `session004-refactor`; started 2026-11-13T09:24:37.173Z, ended 2026-11-13T09:32:10.786Z. Test revision `3cd7cc68e83c3f3417b31a02a47231df5f3e54e0`.

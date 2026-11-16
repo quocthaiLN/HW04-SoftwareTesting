@@ -1,6 +1,6 @@
 {
   "student_id": "23120352",
-  "status": "AUTOMATED AND EXECUTED — actual results per browser; failures remain",
+  "status": "FR09 real-backend migration; old execution matrix is historical",
   "cases": [
     {
       "id": "FR-02-TC01",
@@ -827,17 +827,17 @@
         9
       ],
       "title": "Percent hợp lệ",
-      "precondition": "Active, future, min=300000, 10%, usage=0; total=500000",
-      "steps": "Apply coupon UI",
-      "expected": "Giảm 50000; cuối 450000",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=450000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -856,6 +856,41 @@
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
           "errors": []
         }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "failed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 5,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "firefox": {
+          "status": "failed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 20,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "webkit": {
+          "status": "failed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 6,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        }
       }
     },
     {
@@ -869,17 +904,17 @@
         9
       ],
       "title": "Fixed hợp lệ",
-      "precondition": "Active, future, min=300000, fixed=50000; total=500000",
-      "steps": "Apply UI",
-      "expected": "Giảm 50000; cuối 450000",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=450000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -896,6 +931,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -911,17 +966,17 @@
         9
       ],
       "title": "Không tồn tại",
-      "precondition": "total=500000; mã không có DB",
-      "steps": "Apply UI",
-      "expected": "Lỗi; không hiển thị kết quả thành công",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API rejection matching không tồn tại|vô hiệu hóa",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -938,6 +993,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -953,17 +1028,17 @@
         9
       ],
       "title": "Inactive",
-      "precondition": "Coupon is_active=0; còn lại hợp lệ",
-      "steps": "Apply UI",
-      "expected": "Bị từ chối",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API rejection matching không tồn tại|vô hiệu hóa",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -980,6 +1055,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -995,17 +1090,17 @@
         9
       ],
       "title": "Hết hạn",
-      "precondition": "Coupon expired_at=2020-01-01; còn lại hợp lệ",
-      "steps": "Apply UI",
-      "expected": "Bị từ chối",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API rejection matching hết hạn",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1022,6 +1117,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1037,17 +1152,17 @@
         9
       ],
       "title": "Dưới ngưỡng 1 đồng",
-      "precondition": "min=300000; total=299999",
-      "steps": "Apply UI",
-      "expected": "Bị từ chối",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API rejection matching chưa đủ giá trị tối thiểu",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1064,6 +1179,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1079,17 +1214,17 @@
         9
       ],
       "title": "Đúng ngưỡng",
-      "precondition": "min=300000; total=300000; fixed=50000",
-      "steps": "Apply UI",
-      "expected": "Được chấp nhận; cuối 250000",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=250000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1108,6 +1243,44 @@
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
           "errors": []
         }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "failed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 8,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "firefox": {
+          "status": "failed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 27,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "webkit": {
+          "status": "failed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 10,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        }
       }
     },
     {
@@ -1121,17 +1294,17 @@
         9
       ],
       "title": "Trên ngưỡng 1 đồng",
-      "precondition": "min=300000; total=300001; fixed=50000",
-      "steps": "Apply UI",
-      "expected": "Được chấp nhận; cuối 250001",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=250001",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1148,6 +1321,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1163,17 +1356,17 @@
         9
       ],
       "title": "Chưa đăng nhập",
-      "precondition": "Cart mock hợp lệ; không token; coupon hợp lệ",
-      "steps": "Mở checkout và Apply nếu UI cho phép",
-      "expected": "Bị chặn yêu cầu login hoặc apply bị từ chối; không thành công",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Open Home without valid authentication → add product → cart → attempt checkout",
+      "expected": "Login-required alert and redirect /login; no apply-coupon request. Invalid-token case additionally verifies real /users/me 403 and cleared token.",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1190,6 +1383,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1205,17 +1418,17 @@
         9
       ],
       "title": "JWT không hợp lệ",
-      "precondition": "Token invalid; coupon và cart hợp lệ",
-      "steps": "Apply khi auth invalid; quan sát logout/users/me",
-      "expected": "Không thể áp dụng thành công",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Open Home without valid authentication → add product → cart → attempt checkout",
+      "expected": "Login-required alert and redirect /login; no apply-coupon request. Invalid-token case additionally verifies real /users/me 403 and cleared token.",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1232,6 +1445,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1247,17 +1480,17 @@
         9
       ],
       "title": "Còn một lượt",
-      "precondition": "max_uses_per_user=2; fixture usage=1; fixed=50000; total=500000",
-      "steps": "Apply UI",
-      "expected": "Thành công; cuối 450000; setup usage không qua checkout",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=450000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1274,6 +1507,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1289,17 +1542,17 @@
         9
       ],
       "title": "Hết lượt",
-      "precondition": "max_uses_per_user=2; fixture usage=2; total=500000",
-      "steps": "Apply UI",
-      "expected": "Bị từ chối; không checkout",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API rejection matching đã đạt giới hạn",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1316,6 +1569,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1331,17 +1604,17 @@
         9
       ],
       "title": "Mã coupon trống",
-      "precondition": "Cart=500000; user mock hợp lệ; context mới",
-      "steps": "Để code rỗng; quan sát nút Áp dụng",
-      "expected": "Nút disabled; không POST apply-coupon; tổng tiền giữ 500000; không kết quả thành công",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Apply disabled; no apply/checkout API call; original total remains",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1358,6 +1631,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1373,17 +1666,17 @@
         9
       ],
       "title": "Mã chỉ chứa khoảng trắng",
-      "precondition": "Cart=500000; user mock hợp lệ",
-      "steps": "Nhập ba dấu cách vào code",
-      "expected": "Nút disabled; không POST apply-coupon; tổng tiền giữ 500000",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Apply disabled; no apply/checkout API call; original total remains",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1400,6 +1693,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1415,17 +1728,17 @@
         9
       ],
       "title": "Chuẩn hóa mã chữ thường trong request",
-      "precondition": "Coupon fixed BIGBUY=50000, min=300000; total=500000; auth mock hợp lệ",
-      "steps": "Nhập bigbuy; Áp dụng; kiểm tra payload và UI",
-      "expected": "Request code=BIGBUY; fixture success discount=50000, final=450000; UI hiển thị đúng; không yêu cầu đổi DOM input value",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=450000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1442,6 +1755,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1457,17 +1790,17 @@
         9
       ],
       "title": "Trim khoảng trắng đầu/cuối trong request",
-      "precondition": "Coupon fixed BIGBUY=50000, min=300000; total=500000; auth mock hợp lệ",
-      "steps": "Nhập \"  BIGBUY  \"; Áp dụng; kiểm tra payload và UI",
-      "expected": "Request code=BIGBUY; fixture success discount=50000, final=450000; UI hiển thị đúng; không yêu cầu đổi DOM input value",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=50000, final=450000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1484,6 +1817,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1499,17 +1852,17 @@
         9
       ],
       "title": "Giảm đúng bằng tổng đơn hàng",
-      "precondition": "Coupon fixed FREE100=100000; min=0; total=100000; active, future, còn lượt; auth mock hợp lệ",
-      "steps": "Áp dụng coupon; mock success discount_amount=100000, final_amount=0",
-      "expected": "UI Tiết kiệm=100000, Thành tiền=0, Tổng thanh toán=0; không checkout",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=100000, final=0",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1526,6 +1879,26 @@
           "status": "passed",
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
+          "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "passed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": []
+        },
+        "firefox": {
+          "status": "passed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": []
+        },
+        "webkit": {
+          "status": "passed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
           "errors": []
         }
       }
@@ -1541,17 +1914,17 @@
         9
       ],
       "title": "Tiền sau áp dụng không âm khi giảm vượt tổng",
-      "precondition": "Coupon fixed OVER100=100000; min=0; total=80000; active, future, còn lượt; auth mock hợp lệ",
-      "steps": "Áp dụng coupon; mock success discount_amount=80000, final_amount=0 (chặn trần mức giảm bằng tổng tiền)",
-      "expected": "UI Tiết kiệm=80000, Thành tiền=0, Tổng thanh toán=0; không hiển thị số tiền âm; không checkout. Fixture thể hiện chính sách đã chốt, không chứng minh backend tính đúng.",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=80000, final=0",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1570,6 +1943,41 @@
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
           "errors": []
         }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "failed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 16,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "firefox": {
+          "status": "failed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 45,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "webkit": {
+          "status": "failed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 24,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        }
       }
     },
     {
@@ -1583,17 +1991,17 @@
         9
       ],
       "title": "Làm tròn xuống tiền giảm phần trăm có phần lẻ",
-      "precondition": "Coupon percent=10%; min=300000; total=333333; active, future, còn lượt; auth mock hợp lệ",
-      "steps": "Áp dụng coupon; mock success discount_amount=33333, final_amount=300000",
-      "expected": "UI Tiết kiệm=33333, Thành tiền=300000, Tổng thanh toán=300000; tiền VND nguyên theo floor(333333*10/100); không checkout. Không xác minh công thức backend bằng mock.",
+      "precondition": "Disposable real DB: unique user/product/coupon and seeded usage from data/fr09.json; no routes mocked.",
+      "steps": "Login UI → Home add product → cart verify quantity/total → checkout → apply actual coupon; no final payment",
+      "expected": "Real API success; discount=33333, final=300000",
       "status": "EXECUTED",
       "browsers": [
         "chromium",
         "firefox",
         "webkit"
       ],
-      "setup_mode": "page.route fixtures for auth/cart/apply-coupon; preconditions simulated; no backend assertion",
-      "execution_results": {
+      "setup_mode": "real-sut + coupon-real fixture; UI login/add/cart/checkout; auth cases blocked at cart",
+      "historical_mock_execution_results": {
         "chromium": {
           "status": "passed",
           "runId": "session004-refactor-fr09-chromium",
@@ -1611,6 +2019,41 @@
           "runId": "session004-refactor-fr09-webkit",
           "html": "artifacts/session004-refactor-fr09-webkit/html/index.html",
           "errors": []
+        }
+      },
+      "execution_results": {
+        "chromium": {
+          "status": "failed",
+          "runId": "session006-fr09-real-chromium",
+          "html": "artifacts/session006-fr09-real-chromium/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 23,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "firefox": {
+          "status": "failed",
+          "runId": "session006-fr09-real-firefox",
+          "html": "artifacts/session006-fr09-real-firefox/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 50,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
+        },
+        "webkit": {
+          "status": "failed",
+          "runId": "session006-fr09-real-webkit",
+          "html": "artifacts/session006-fr09-real-webkit/html/index.html",
+          "errors": [
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 29,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41",
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+          ]
         }
       }
     },
@@ -3802,7 +4245,7 @@
   ],
   "feature_execution_modes": {
     "FR-02": "real SUT",
-    "FR-09": "fully mocked with page.route; UI coverage only",
+    "FR-09": "real UI cart → checkout → apply-coupon backend; TC09/TC10 blocked at cart; no payment confirmation",
     "FR-17": "real SUT, Create/Read/Delete"
   },
   "retired_case_ids": [

@@ -1,0 +1,1369 @@
+{
+  "config": {
+    "argv": [
+      "/home/le-nguyen-quoc-thai/.nvm/versions/node/v24.21.0/bin/node",
+      "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/node_modules/.bin/playwright",
+      "test",
+      "tests/fr09-apply-coupon.spec.js",
+      "--project=firefox"
+    ],
+    "configFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/playwright.config.js",
+    "rootDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "Run by": "23120352",
+      "attribution": "Run by: 23120352",
+      "timestamp": "2026-11-16T03:10:19.915Z",
+      "runId": "session006-fr09-real-firefox",
+      "coverage": "FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-16T03:10:19.915Z",
+          "runId": "session006-fr09-real-firefox",
+          "coverage": "FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-16T03:10:19.915Z",
+          "runId": "session006-fr09-real-firefox",
+          "coverage": "FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation",
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-16T03:10:19.915Z",
+          "runId": "session006-fr09-real-firefox",
+          "coverage": "FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation",
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.js"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "Run by": "23120352",
+          "attribution": "Run by: 23120352",
+          "timestamp": "2026-11-16T03:10:19.915Z",
+          "runId": "session006-fr09-real-firefox",
+          "coverage": "FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation",
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "snapshotDir": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.js",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:5173",
+          "headless": true,
+          "locale": "vi-VN",
+          "timezoneId": "Asia/Ho_Chi_Minh",
+          "serviceWorkers": "block",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "actionTimeout": 8000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/html",
+          "open": "never",
+          "title": "Run by: 23120352 | 2026-11-16T03:10:19.915Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr09-apply-coupon.spec.js",
+      "file": "fr09-apply-coupon.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-09-TC01",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC01 success [real UI + backend]",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13583,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 20,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 20,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                          "column": 25,
+                          "line": 58
+                        },
+                        "snippet": " \u001b[90m 56 |\u001b[39m       \u001b[36mconst\u001b[39m checkout \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m authenticatedCheckout(page\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m apply(checkout\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m page\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       expect\u001b[33m.\u001b[39msoft(body)\u001b[33m.\u001b[39mtoMatchObject({ success\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m coupon_id\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcouponId\u001b[33m,\u001b[39m discount_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount\u001b[33m,\u001b[39m final_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39msavings)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39msavingsPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount))\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mfinal)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mfinalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mpayable)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mtotalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 25,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 20,\u001b[22m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 450000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -4500000,\u001b[39m\n\u001b[31m+   \"final_amount\": 5000000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 59
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m5\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-4.50\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -4.500.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 41,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 5.000.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 61
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m4\u001b[27m50.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 5\u001b[7m.00\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 5.000.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 5.000.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:10:20.674Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-890de-01-success-real-UI-backend--firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDEiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlBMUY3RkNCNEJDRTY0OEEzODFDOUFFQjYwQjVDNTA5NyIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjoxOH0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjIwLCJkaXNjb3VudF9hbW91bnQiOi00NTAwMDAwLCJmaW5hbF9hbW91bnQiOjUwMDAwMDAsIm1lc3NhZ2UiOiLDgXAgZOG7pW5nIHRow6BuaCBjw7RuZyEgR2nhuqNtIDEwJSJ9fV19"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-890de-01-success-real-UI-backend--firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-890de-01-success-real-UI-backend--firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                        "column": 25,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-53e042ce7b22e3d45119",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC02",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC02 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4802,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:10:37.472Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDIiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlENzI1RDRBMDgxQ0I0Q0JBQjVDMEZGRTFBOTk3NDc0OCIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjoyM30sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjI1LCJkaXNjb3VudF9hbW91bnQiOjUwMDAwLCJmaW5hbF9hbW91bnQiOjQ1MDAwMCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gNTAsMDAwIOKCqyJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-ee788cca607653c28100",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC07",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC07 success [real UI + backend]",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11473,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                          "column": 41,
+                          "line": 38
+                        },
+                        "snippet": " \u001b[90m 36 |\u001b[39m   \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m   state\u001b[33m.\u001b[39mresponses\u001b[33m.\u001b[39mpush({ status\u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mstatus()\u001b[33m,\u001b[39m body })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m   expect\u001b[33m.\u001b[39msoft(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mstatuses)\u001b[33m.\u001b[39mtoContain(response\u001b[33m.\u001b[39mstatus())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m   expect(state\u001b[33m.\u001b[39mcalls\u001b[33m.\u001b[39mapply\u001b[33m.\u001b[39mmap(call \u001b[33m=>\u001b[39m call\u001b[33m.\u001b[39mbody))\u001b[33m.\u001b[39mtoEqual([{ code\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcode\u001b[33m,\u001b[39m total_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39minput\u001b[33m.\u001b[39mtotal\u001b[33m,\u001b[39m user_id\u001b[33m:\u001b[39m user\u001b[33m.\u001b[39mid }])\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(key \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39mgetItem(key)\u001b[33m,\u001b[39m shared\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mtokenKey)\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m   expect(state\u001b[33m.\u001b[39mcalls\u001b[33m.\u001b[39mapply[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mauthorization)\u001b[33m.\u001b[39mtoBe(\u001b[32m`Bearer ${token}`\u001b[39m)\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 41,
+                            "line": 38
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m400\u001b[39m\nReceived array: \u001b[31m[200]\u001b[39m\n\n  36 |   const body = await response.json();\n  37 |   state.responses.push({ status: response.status(), body });\n> 38 |   expect.soft(record.expected.statuses).toContain(response.status());\n     |                                         ^\n  39 |   expect(state.calls.apply.map(call => call.body)).toEqual([{ code: state.code, total_amount: record.input.total, user_id: user.id }]);\n  40 |   const token = await page.evaluate(key => localStorage.getItem(key), shared.expected.tokenKey);\n  41 |   expect(state.calls.apply[0].authorization).toBe(`Bearer ${token}`);\n    at apply (/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:38:41)\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:57:20"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 25,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"coupon_id\": 27,\u001b[39m\n\u001b[32m-   \"discount_amount\": 50000,\u001b[39m\n\u001b[32m-   \"final_amount\": 250000,\u001b[39m\n\u001b[32m-   \"success\": true,\u001b[39m\n\u001b[31m+   \"error\": \"Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 59
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: 50.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 41,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 250.000 ₫\"\u001b[39m\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 61
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: \u001b[7m25\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m30\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 300.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 300.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:10:43.130Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-59354-07-success-real-UI-backend--firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDciLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlBNDY5RUNGQzYxRjc0OTJBOTU0QjdFOUY1OTgyRDc3QyIsInRvdGFsX2Ftb3VudCI6MzAwMDAwLCJ1c2VyX2lkIjoyNn0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwMCwiYm9keSI6eyJlcnJvciI6IsSQxqFuIGjDoG5nIGNoxrBhIMSR4bunIGdpw6EgdHLhu4sgdOG7kWkgdGhp4buDdSAzMDAsMDAwIOKCqyDEkeG7gyDDoXAgZOG7pW5nIG3DoyBuw6B5In19XX0="
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-59354-07-success-real-UI-backend--firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-59354-07-success-real-UI-backend--firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                        "column": 41,
+                        "line": 38
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-540ccaebd473aec13120",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC08",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC08 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2638,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:10:55.540Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDgiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlDMjgxODg0MkI4ODA0NjBFQkQ1NUNCQzY5OTU2QkQ4RiIsInRvdGFsX2Ftb3VudCI6MzAwMDAxLCJ1c2VyX2lkIjozNX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjM2LCJkaXNjb3VudF9hbW91bnQiOjUwMDAwLCJmaW5hbF9hbW91bnQiOjI1MDAwMSwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gNTAsMDAwIOKCqyJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-a8dc825f952b5224254c",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC11",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC11 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1555,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:10:58.672Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTEiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk5NzQzMDUyRTBBNUI0MzBFQkE2MEYxRjkyQzdFMkVENiIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjozN30sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjM3LCJkaXNjb3VudF9hbW91bnQiOjUwMDAwLCJmaW5hbF9hbW91bnQiOjQ1MDAwMCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gNTAsMDAwIOKCqyJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-73ee75095d65571dbf6a",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC15",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC15 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1401,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:00.243Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTUiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk5QTIwNUFERTU3RjA0NjcwODk1RDg1MjM5RUM2QUVDRCIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjozOX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjM5LCJkaXNjb3VudF9hbW91bnQiOjUwMDAwLCJmaW5hbF9hbW91bnQiOjQ1MDAwMCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gNTAsMDAwIOKCqyJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-17e32d3de3d66ed7bc94",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC16",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC16 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1177,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:01.659Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTYiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlEREE0NzdDQzMyRDU0QkJDQTEyRTNGNTFDNDQyNjBGMiIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjo0MX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjQxLCJkaXNjb3VudF9hbW91bnQiOjUwMDAwLCJmaW5hbF9hbW91bnQiOjQ1MDAwMCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gNTAsMDAwIOKCqyJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-26e9d069fd824c27274f",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC17",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC17 success [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1855,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:02.844Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTciLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJGUkVFMTAwNkY5NzRDMjg0Q0JDNDU5QjlDMzNEQTQ2QzRFOUQ2RDQiLCJ0b3RhbF9hbW91bnQiOjEwMDAwMCwidXNlcl9pZCI6NDN9LCJoYXNBdXRob3JpemF0aW9uIjp0cnVlfV0sImNoZWNrb3V0IjpbXX0sInJlc3BvbnNlcyI6W3sic3RhdHVzIjoyMDAsImJvZHkiOnsic3VjY2VzcyI6dHJ1ZSwiY291cG9uX2lkIjo0MywiZGlzY291bnRfYW1vdW50IjoxMDAwMDAsImZpbmFsX2Ftb3VudCI6MCwibWVzc2FnZSI6IsOBcCBk4bulbmcgdGjDoG5oIGPDtG5nISBHaeG6o20gMTAwLDAwMCDigqsifX1dfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-d9b584819a382a0ee167",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC18",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC18 success [real UI + backend]",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 10838,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 45,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 45,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                          "column": 25,
+                          "line": 58
+                        },
+                        "snippet": " \u001b[90m 56 |\u001b[39m       \u001b[36mconst\u001b[39m checkout \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m authenticatedCheckout(page\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m apply(checkout\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m page\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       expect\u001b[33m.\u001b[39msoft(body)\u001b[33m.\u001b[39mtoMatchObject({ success\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m coupon_id\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcouponId\u001b[33m,\u001b[39m discount_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount\u001b[33m,\u001b[39m final_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39msavings)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39msavingsPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount))\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mfinal)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mfinalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mpayable)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mtotalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 25,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 45,\u001b[22m\n\u001b[32m-   \"discount_amount\": 80000,\u001b[39m\n\u001b[32m-   \"final_amount\": 0,\u001b[39m\n\u001b[31m+   \"discount_amount\": 100000,\u001b[39m\n\u001b[31m+   \"final_amount\": -20000,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 59
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m8\u001b[27m0.000 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m10\u001b[27m0.000 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: 100.000 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 41,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: -20.000 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 61
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: \u001b[7m-20.00\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: -20.000 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: -20.000 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:04.714Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-3a694-18-success-real-UI-backend--firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTgiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJPVkVSMTAwMEFFREU2MDJENTJGNDFDNzhDODIwMDk5NEQxRkI1NzAiLCJ0b3RhbF9hbW91bnQiOjgwMDAwLCJ1c2VyX2lkIjo0NX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjQ1LCJkaXNjb3VudF9hbW91bnQiOjEwMDAwMCwiZmluYWxfYW1vdW50IjotMjAwMDAsIm1lc3NhZ2UiOiLDgXAgZOG7pW5nIHRow6BuaCBjw7RuZyEgR2nhuqNtIDEwMCwwMDAg4oKrIn19XX0="
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-3a694-18-success-real-UI-backend--firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-3a694-18-success-real-UI-backend--firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                        "column": 25,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-74216307581e40c46dd6",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC19",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 53,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC19 success [real UI + backend]",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11243,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 50,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 50,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25",
+                        "location": {
+                          "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                          "column": 25,
+                          "line": 58
+                        },
+                        "snippet": " \u001b[90m 56 |\u001b[39m       \u001b[36mconst\u001b[39m checkout \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m authenticatedCheckout(page\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m apply(checkout\u001b[33m,\u001b[39m state\u001b[33m,\u001b[39m record\u001b[33m,\u001b[39m page\u001b[33m,\u001b[39m testUser)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       expect\u001b[33m.\u001b[39msoft(body)\u001b[33m.\u001b[39mtoMatchObject({ success\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m coupon_id\u001b[33m:\u001b[39m state\u001b[33m.\u001b[39mcouponId\u001b[33m,\u001b[39m discount_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount\u001b[33m,\u001b[39m final_amount\u001b[33m:\u001b[39m record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39msavings)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39msavingsPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mdiscount))\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mfinal)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mfinalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m       \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(checkout\u001b[33m.\u001b[39mpayable)\u001b[33m.\u001b[39mtoHaveText(shared\u001b[33m.\u001b[39mui\u001b[33m.\u001b[39mtotalPrefix \u001b[33m+\u001b[39m currency(record\u001b[33m.\u001b[39mexpected\u001b[33m.\u001b[39mfinal))\u001b[33m;\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 25,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"coupon_id\": 50,\u001b[22m\n\u001b[32m-   \"discount_amount\": 33333,\u001b[39m\n\u001b[32m-   \"final_amount\": 300000,\u001b[39m\n\u001b[31m+   \"discount_amount\": -2999997,\u001b[39m\n\u001b[31m+   \"final_amount\": 3333330,\u001b[39m\n\u001b[2m    \"success\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  56 |       const checkout = await authenticatedCheckout(page, state, record, testUser);\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n> 58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n     |                         ^\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:58:25"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 59
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tiết kiệm:')\nExpected: \u001b[32m\"Tiết kiệm: \u001b[7m33.333\u001b[27m ₫\"\u001b[39m\nReceived: \u001b[31m\"Tiết kiệm: \u001b[7m-2.999.997\u001b[27m ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tiết kiệm:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tiết kiệm:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Tiết kiệm: -2.999.997 ₫\"\u001b[22m\n\n\n  57 |       const body = await apply(checkout, state, record, page, testUser);\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n> 59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n     |                                           ^\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:59:43"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 41,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Thành tiền:')\nExpected: \u001b[32m\"Thành tiền: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Thành tiền: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Thành tiền:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Thành tiền:')\u001b[22m\n\u001b[2m    10 × locator resolved to <p>…</p>\u001b[22m\n\u001b[2m       - unexpected value \"Thành tiền: 3.333.330 ₫\"\u001b[22m\n\n\n  58 |       expect.soft(body).toMatchObject({ success: true, coupon_id: state.couponId, discount_amount: record.expected.discount, final_amount: record.expected.final });\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n> 60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n     |                                         ^\n  61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n  62 |       await noPayment(db, state, record);\n  63 |     });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:60:41"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                            "column": 43,
+                            "line": 61
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText('Tổng thanh toán:')\nExpected: \u001b[32m\"Tổng thanh toán: 3\u001b[7m00.00\u001b[27m0 ₫\"\u001b[39m\nReceived: \u001b[31m\"Tổng thanh toán: 3\u001b[7m.333.33\u001b[27m0 ₫\"\u001b[39m\nTimeout:  3000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toHaveText\" getByText('Tổng thanh toán:') with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Tổng thanh toán:')\u001b[22m\n\u001b[2m    10 × locator resolved to <span class=\"font-bold text-xl\">Tổng thanh toán: 3.333.330 ₫</span>\u001b[22m\n\u001b[2m       - unexpected value \"Tổng thanh toán: 3.333.330 ₫\"\u001b[22m\n\n\n  59 |       await expect.soft(checkout.savings).toHaveText(shared.ui.savingsPrefix + currency(record.expected.discount));\n  60 |       await expect.soft(checkout.final).toHaveText(shared.ui.finalPrefix + currency(record.expected.final));\n> 61 |       await expect.soft(checkout.payable).toHaveText(shared.ui.totalPrefix + currency(record.expected.final));\n     |                                           ^\n  62 |       await noPayment(db, state, record);\n  63 |     });\n  64 |   });\n    at /home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js:61:43"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:16.422Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-a858e-19-success-real-UI-backend--firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTkiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlFNTJCRTA5MjA1RDU0RkYxODhGNUI3Q0MxRDI0NjM5QiIsInRvdGFsX2Ftb3VudCI6MzMzMzMzLCJ1c2VyX2lkIjo1MH0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjIwMCwiYm9keSI6eyJzdWNjZXNzIjp0cnVlLCJjb3Vwb25faWQiOjUwLCJkaXNjb3VudF9hbW91bnQiOi0yOTk5OTk3LCJmaW5hbF9hbW91bnQiOjMzMzMzMzAsIm1lc3NhZ2UiOiLDgXAgZOG7pW5nIHRow6BuaCBjw7RuZyEgR2nhuqNtIDEwJSJ9fV19"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-a858e-19-success-real-UI-backend--firefox/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/artifacts/session006-fr09-real-firefox/test-results/fr09-apply-coupon-FR-09-TC-a858e-19-success-real-UI-backend--firefox/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/le-nguyen-quoc-thai/src/school/testing/homework/hw04/submission/tests/fr09-apply-coupon.spec.js",
+                        "column": 25,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-0df389dcda42de8e9b4f",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 55,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC03",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 67,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC03 rejection [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1617,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:28.751Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDMiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk3NjFDODIyOUZCRUY0NTIxQjU0N0FDNkJERjA0ODIwNSIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjo1MX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwNCwiYm9keSI6eyJlcnJvciI6Ik3DoyBnaeG6o20gZ2nDoSBraMO0bmcgdOG7k24gdOG6oWkgaG/hurdjIMSRw6MgYuG7iyB2w7QgaGnhu4d1IGjDs2EifX1dfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-11b6e7be3f6a573f2db9",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC04",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 67,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC04 rejection [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 911,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:30.692Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDQiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk5Q0E5Q0EyRUI0ODg0MkZCQUJCMTg4NzE3RTU0OTc5RSIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjo1Mn0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwNCwiYm9keSI6eyJlcnJvciI6Ik3DoyBnaeG6o20gZ2nDoSBraMO0bmcgdOG7k24gdOG6oWkgaG/hurdjIMSRw6MgYuG7iyB2w7QgaGnhu4d1IGjDs2EifX1dfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-962745435df58f4587d5",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC05",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 67,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC05 rejection [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 865,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:31.616Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDUiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk1ODE0MjFDNjE5NDQ0RTIyOEI1ODgyRUI1QUZGQ0U1OCIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjo1M30sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwMCwiYm9keSI6eyJlcnJvciI6Ik3DoyBnaeG6o20gZ2nDoSDEkcOjIGjhur90IGjhuqFuIn19XX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-55dce5f23861c2812f1a",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC06",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 67,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC06 rejection [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 846,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:32.495Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDYiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVlBOTI0RDQ3NERBRjQ0N0Y2QjYxNUQ3NEVDMjY3NzkwRCIsInRvdGFsX2Ftb3VudCI6Mjk5OTk5LCJ1c2VyX2lkIjo1NH0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwMCwiYm9keSI6eyJlcnJvciI6IsSQxqFuIGjDoG5nIGNoxrBhIMSR4bunIGdpw6EgdHLhu4sgdOG7kWkgdGhp4buDdSAzMDAsMDAwIOKCqyDEkeG7gyDDoXAgZOG7pW5nIG3DoyBuw6B5In19XX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-61c91fe90a279564fd59",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC12",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 67,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC12 rejection [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 802,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:33.349Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTIiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbeyJib2R5Ijp7ImNvZGUiOiJCSUdCVVk3ODg3NTgwQzk5QTU0NjI4QjNBNTAwOTFDMTU3NzZERiIsInRvdGFsX2Ftb3VudCI6NTAwMDAwLCJ1c2VyX2lkIjo1NX0sImhhc0F1dGhvcml6YXRpb24iOnRydWV9XSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbeyJzdGF0dXMiOjQwMCwiYm9keSI6eyJlcnJvciI6IkLhuqFuIMSRw6Mgc+G7rSBk4bulbmcgbcOjIG7DoHkgMiBs4bqnbiAoxJHDoyDEkeG6oXQgZ2nhu5tpIGjhuqFuKSJ9fV19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-8fc53121c68b0bcf5659",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 69,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC13",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 82,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC13 empty input [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 719,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:34.157Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTMiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbXSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbXX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-9f23743858a8c4b0c0a3",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 84,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC14",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 82,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC14 empty input [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 770,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:34.881Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTQiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbXSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbXX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-df64d60861dae84ffd49",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 84,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC09",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 110,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC09 anonymous checkout blocked [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 712,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:35.657Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMDkiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbXSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbXX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-0ca3fd2a8a5a1ad7c1c9",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 112,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "FR-09-TC10",
+          "file": "fr09-apply-coupon.spec.js",
+          "line": 119,
+          "column": 8,
+          "specs": [
+            {
+              "title": "FR-09-TC10 invalid token checkout blocked [real UI + backend]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 606,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-16T03:11:36.375Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "real-coupon-coverage",
+                          "contentType": "application/json",
+                          "body": "eyJpZCI6IkZSLTA5LVRDMTAiLCJjb3ZlcmFnZSI6InJlYWwgY2FydCBVSSBhbmQgYmFja2VuZDsgc3RvcHMgYmVmb3JlIG9yZGVyIGNvbmZpcm1hdGlvbiIsImNhbGxzIjp7ImFwcGx5IjpbXSwiY2hlY2tvdXQiOltdfSwicmVzcG9uc2VzIjpbXX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a8fb714b3b0d16e842cd-150cabe737e3dfb87f6d",
+              "file": "fr09-apply-coupon.spec.js",
+              "line": 121,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-16T03:10:19.919Z",
+    "duration": 77305.48700000001,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
