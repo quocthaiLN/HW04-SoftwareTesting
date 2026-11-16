@@ -1,7 +1,7 @@
 {
   "project": "HW04",
   "version": "1.8",
-  "updated_at": "2026-11-16T10:12:08+07:00",
+  "updated_at": "2026-11-16T10:23:36+07:00",
   "status_values": [
     "DONE",
     "IN PROGRESS",
@@ -30,7 +30,8 @@
     "Session005 REQ-12 DONE: 9 GitHub Issues có screenshot đã UI-verified; full Markdown reports, mapping54failures và giới hạn screenshot ghi rõ. Evidence runtime dùng lại Session003/004; không tự chuyển REQ-16/publication thành DONE.",
     "Session005 cleanup: xóa tài liệu session-00x/implementation-notes/assertion-inventory và artifacts Session003/PoC/smoke. Main-report.md gom nội dung; test-cases execution_results lấy record thật Session004; ảnh bug local chuyển sang Session004, GitHub attachments giữ lịch sử. Verify 9 HTML Session004 attribution/ISO đạt. Audit/progress giữ tham chiếu lịch sử đến file đã xóa.",
     "2026-11-16 user approved adding real cart UI + real backend FR09 coverage. Added separate INT01/INT02 pilot; original REQ-03 19 mocked cases and historical evidence retained. See fr09-integration.md. Chromium/Firefox each 1 pass/1 backend formula failure; WebKit launch blocked by missing library. Full 19-scenario migration remains pending.",
-    "2026-11-16: user explicitly replaces all FR09 mocked scripts with full UI cart-to-checkout/apply flow and real backend. 19 IDs retained, pilot merged. TC09/TC10 verify UI checkout guard; do not establish direct apply endpoint authentication. Historical mock execution preserved separately. No final order confirmation."
+    "2026-11-16: user explicitly replaces all FR09 mocked scripts with full UI cart-to-checkout/apply flow and real backend. 19 IDs retained, pilot merged. TC09/TC10 verify UI checkout guard; do not establish direct apply endpoint authentication. Historical mock execution preserved separately. No final order confirmation.",
+    "2026-11-16 REQ-12 updated: 3 real-backend FR09 groups BUG-10–12 published as GitHub Issues #10–12 with original screenshots; verified issue bodies and list12Open. Existing9groups retained; no new runtime execution."
   ],
   "requirements": [
     {
@@ -166,7 +167,7 @@
       "mandatory": true,
       "acceptance_criteria": "Khi assertion fail do defect thật: log bug trong Markdown và GitHub Issues, mỗi issue có screenshot; phân biệt defect và lỗi script/setup.",
       "status": "DONE",
-      "evidence": "9 detailed Markdown reports in bug-reports.md and GitHub Issues #1–#9 with screenshots. Current local screenshots copied unchanged from Session004; manifest retains separate hashes for original GitHub attachment and current local image. Mapping 18IDs×3=54 failures verified. See main-report.md."
+      "evidence": "9 detailed Markdown reports in bug-reports.md and GitHub Issues #1–#9 with screenshots. Current local screenshots copied unchanged from Session004; manifest retains separate hashes for original GitHub attachment and current local image. Mapping 18IDs×3=54 failures verified. See main-report.md. Session006: bug-reports.md BUG-10–12; GitHub Issues #10–12; artifacts/evidence/session006-bug-evidence.json and session006-github-issues.png. Three new backend defect groups, not twelve new bugs; prior9groups historical."
     },
     {
       "id": 13,

@@ -23,3 +23,5 @@ Run by: 23120352. Batch `session004-refactor`; started 2026-11-13T09:24:37.173Z,
 FR-02/17: unchanged real backend and isolated SQLite. FR-09: UI/payload with mocked auth/cart/apply-coupon, no backend formula or checkout coverage. UI permission cases do not establish direct endpoint enforcement. Failures remain genuine outcomes; no expected values changed to make tests green.
 
 HTML/JSON/trace are real Playwright outputs. Session003 artifacts were removed at the student's request; Session004 is the sole retained runtime batch. GitHub Issues #1–#9 keep the screenshots originally uploaded in Session005; local BUG images now come from Session004.
+
+FR09 real-backend defect publication (2026-11-16): [BUG-10/#10](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/10), [BUG-11/#11](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/11), [BUG-12/#12](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/12). All include actual runner screenshots; [details and evidence](bug-reports.md). Historical9groups plus3newFR09groups; no new runtime execution.

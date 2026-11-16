@@ -76,4 +76,8 @@ All engines failed exactly TC01/TC07/TC18/TC19. No setup/environment failures in
 
 These are three backend defect groups: wrong percentage formula, strict `>` minimum check, no discount cap. SUT and business expected values were not changed to make tests pass. Current test-cases.json records these actual runs, with old mock results preserved under historical_mock_execution_results.
 
-Cleanup verified: zero products with owned fixture marker, zero generated test users, zero coupon_usage rows and only four original seed coupons remaining. Validator passes68cases and registration check reports57FR09tests. Failed test screenshots/traces and actual-response attachments are in runner artifacts; no new GitHub Issues were created.
+Cleanup verified: zero products with owned fixture marker, zero generated test users, zero coupon_usage rows and only four original seed coupons remaining. Validator passes68cases and registration check reports57FR09tests. Failed test screenshots/traces and actual-response attachments are in runner artifacts; GitHub publication was pending at execution time; see the subsequent publication below.
+
+## GitHub publication
+
+BUG-10 (former FR09-REAL-01): [#10 percentage formula](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/10). BUG-11 (former FR09-REAL-02): [#11 minimum equality](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/11). BUG-12 (former FR09-REAL-03): [#12 negative payable](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/12). All Open, created and UI-verified on2026-11-16 with unchanged runner screenshots; [local detailed report](bug-reports.md).

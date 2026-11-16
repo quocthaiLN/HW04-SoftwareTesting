@@ -1,6 +1,6 @@
-# Bug reports — Sessions 003–005
+# Bug reports — Sessions 003–006
 
-Findings từ Session003; GitHub Issues đã tạo và xác minh ở Session005 bên dưới; không mở rộng sang kiểm tra backend coupon apply hoặc endpoint role enforcement. Expected dựa scope/cases đã duyệt. Evidence paths cuối cùng sẽ được liên kết trong automation-report.md và artifacts/session004-refactor/execution-matrix.json. Các nhóm dưới đã xuất hiện ở cả Chromium/Firefox/WebKit trong batch đầu.
+Historical findings từ Session003; GitHub Issues đã tạo và xác minh ở Session005 bên dưới; không mở rộng sang kiểm tra backend coupon apply hoặc endpoint role enforcement. Expected dựa scope/cases đã duyệt. Evidence paths cuối cùng sẽ được liên kết trong automation-report.md và artifacts/session004-refactor/execution-matrix.json. Các nhóm dưới đã xuất hiện ở cả Chromium/Firefox/WebKit trong batch đầu.
 
 | ID | Case IDs | Expected | Actual runtime | Mức ảnh hưởng |
 | --- | --- | --- | --- | --- |
@@ -309,7 +309,7 @@ npx playwright test tests/fr17-coupons.spec.js --project=chromium --grep "FR-17-
 - 9 defect groups: assertion đối chiếu expected đã duyệt, tái xuất hiện trên 3 engines ở hai batch; evidence có counter/deadline/type/status/SQLite/row-count tương ứng. Không kết luận chỉ từ timeout.
 - Timeout FR-09-TC07/WebKit ở session003-full: execution issue chưa rõ nguyên nhân, không mở SUT defect Issue; final pass.
 - Weak currency assertion và report attribution đã sửa ở Session003: lỗi test/report của AI, không tính vào defect SUT. Conditional Test Logic refactor ở Session004 là lỗi tổ chức test, không mở SUT Issue.
-- FR-09 chỉ UI mocked, không có defect backend được khẳng định. Permission UI không chứng minh endpoint role enforcement.
+- Trong Session003–005, FR-09 chỉ UI mocked, không có defect backend được khẳng định ở các batch đó. Session006 bên dưới bổ sung3nhóm lỗi backend thật. Permission UI không chứng minh endpoint role enforcement.
 - Ảnh BUG-06 không có alert đã đóng; BUG-07–09 chỉ thấy phần đầu trang, row cần kiểm tra ở ngoài viewport. Đã ghi giới hạn ngay trên Issue; dùng runner/trace làm evidence quyết định. Không chỉnh hay tạo ảnh SUT bằng AI.
 - [Manifest cục bộ](artifacts/evidence/session005-bug-evidence.json) lưu mapping case/browser, Issue, attachment và SHA256 ảnh; các file local là nguồn evidence tự chứa, không phụ thuộc link online để mô tả bug.
 
@@ -317,12 +317,55 @@ npx playwright test tests/fr17-coupons.spec.js --project=chromium --grep "FR-17-
 
 Theo yêu cầu sinh viên, artifact Session003 đã xóa; bộ runtime hiện hành là Session004. Các ảnh BUG-01–09 cục bộ được copy nguyên bản từ attachments Session004 (manifest ghi nguồn và SHA256). Ảnh trên GitHub Issues vẫn là ảnh đã upload trước cleanup; không thay thế lịch sử issue. Các nhắc Session003/batch cũ ở trên là ghi chép lịch sử, không phải evidence còn giữ.
 
-## FR09 replacement run — 2026-11-16 (new backend evidence)
+## Session 006 — FR09 backend defects
 
-The historical FR09 mocked pass results do not cover backend correctness. Replacement suite now reproduces three additional backend defect groups on Chromium, Firefox and WebKit:
+The replacement suite uses real UI login → Home add → cart → checkout → apply coupon. No API/module mock, no edited checkout total and no final payment submission. Unique user/product/coupon/usage seeded in disposable SQLite; cleanup verified. 2026-11-16: Chromium/Firefox/WebKit each15pass/4fail; total45pass/12fail/0skip. These12failures represent3defect groups, not12bugs. The previous9groups remain historical, giving12known groups across the recorded batches; this is not a fresh full-suite run.
 
-- **FR09-REAL-01 — Percentage formula:** TC01/TC19, active10% coupon with total500,000/333,333. Expected discounts50,000/33,333 and finals450,000/300,000; actual HTTP200 discounts-4,500,000/-2,999,997 and finals5,000,000/3,333,330. Both API and UI assertions fail. Backend uses total*(1-value).
-- **FR09-REAL-02 — Minimum equality rejected:** TC07, fixed50,000 coupon min300,000 and cart total300,000. Expected HTTP200/final250,000 per >= requirement; actual HTTP400 minimum-value error. Backend uses >.
-- **FR09-REAL-03 — Discount exceeds cart total:** TC18, fixed100,000 coupon and cart total80,000. Expected capped discount80,000/final0 per student-approved rule; actual HTTP200 discount100,000/final-20,000, also displayed on UI.
+Source of expected: FR09 C3 >= minimum and percent/fixed formulas in eshop-sut/README.md; integer-VND floor and cap discount at total were approved by the student in testcase design (TC18/TC19). Severity below is proposed pending maintainer triage. Test code83bc1ae; evidence9cab75f. No SUT fixes or expected-value adjustments.
 
-Reproduction for each: disposable DB with unique user/product/coupon as in data/fr09.json; login UI → add seeded product from Home → cart → checkout → apply generated coupon. No mock, checkout total edit or payment submission. Each engine15pass/4fail; 57executions total45pass/12fail/0skip. See [flow, exact data, reports and cleanup](fr09-integration.md) and [execution matrix](artifacts/session006-fr09-real/execution-matrix.json). These groups have local evidence only; no new GitHub Issues created and no unsupported severity score assigned.
+| Bug | Previous local ID | Cases | Suggested severity | GitHub |
+| --- | --- | --- | --- | --- |
+| BUG-10 | FR09-REAL-01 | FR-09-TC01, TC19 | High | [#10](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/10) — Open |
+| BUG-11 | FR09-REAL-02 | FR-09-TC07 | Medium | [#11](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/11) — Open |
+| BUG-12 | FR09-REAL-03 | FR-09-TC18 | High | [#12](https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/12) — Open |
+
+### Shared reproduction and evidence
+
+1. In submission/, start the isolated SUT with `npm run sut`.
+2. Fixture coupon-real creates a unique real user/product/coupon and existing usage from data/fr09.json. Login through UI, add the product on Home, open cart and verify quantity1/amount.
+3. Proceed to checkout through UI; enter the generated coupon and click Apply.
+4. Inspect actual HTTP response in real-coupon-coverage attachment and the displayed amounts/error. Do not edit total or submit final payment.
+
+Run one case with `PW_HEADLESS=true npm run test:fr09 -- --project=chromium --grep FR-09-TC07`; choose TC01/TC19/TC18 or another project as needed. Future runs create new evidence; this update reuses existing real run without rerunning tests.
+
+[Matrix](artifacts/session006-fr09-real/execution-matrix.json), [Chromium report](artifacts/session006-fr09-real-chromium/html/index.html), [Firefox report](artifacts/session006-fr09-real-firefox/html/index.html), [WebKit report](artifacts/session006-fr09-real-webkit/html/index.html). Per-engine results.json retains real-response attachments. Screenshots below are byte-for-byte copies of Chromium runner outputs; source/hash mapping in artifacts/evidence/session006-bug-evidence.json. They show relevant UI directly; HTTP evidence comes from runner JSON, not inferred from screenshots.
+
+### BUG-10 — Percentage coupon increases payable amount
+
+- Preconditions: active percent10coupon, min300000, expiry2099-12-31, maxUses1, uses0.
+- TC01 cart500000: expected HTTP200 discount50000/final450000; actual HTTP200 discount-4500000/final5000000.
+- TC19 cart333333: expected floored discount33333/final300000; actual HTTP200 discount-2999997/final3333330.
+- UI displays the same incorrect values. Reproduced on all3engines. Impact: payable amount increases after applying a discount.
+- Source inspection: backend/server.js uses `Math.floor(total_amount * (1 - coupon.discount_value))` in both branches.
+
+![BUG-10 actual checkout screenshot](artifacts/evidence/BUG-10.png)
+
+### BUG-11 — Coupon rejects order exactly at minimum
+
+- Preconditions: active fixed50000coupon, min300000, expiry2099-12-31, maxUses1, uses0; cart300000.
+- Expected C3: total>=minimum, HTTP200 discount50000/final250000.
+- Actual: HTTP400 error `Đơn hàng chưa đủ giá trị tối thiểu 300,000 ₫ để áp dụng mã này`; UI displays rejection and total300000.
+- Reproduced on all3engines. Impact: eligible customers cannot apply coupon at advertised minimum. Source inspection: backend uses strict `>`.
+
+![BUG-11 actual checkout screenshot](artifacts/evidence/BUG-11.png)
+
+### BUG-12 — Fixed discount exceeds total and produces negative payable
+
+- Preconditions: active fixed100000coupon, min0, expiry2099-12-31, maxUses1, uses0; cart80000.
+- Expected approved cap rule: HTTP200 discount80000/final0.
+- Actual: HTTP200 discount100000/final-20000; UI displays negative final/payable. Reproduced on all3engines.
+- Impact: invalid negative amount in checkout. Source inspection: backend subtracts full fixed discount without capping at total. No final payment was submitted, so downstream order/payment impact is not established.
+
+![BUG-12 actual checkout screenshot](artifacts/evidence/BUG-12.png)
+
+Publication verified 2026-11-16T10:23:36+07:00: Issues #10–#12 each show the expected body and uploaded runner image. [GitHub list confirmation](artifacts/evidence/session006-github-issues.png). [Screenshot source/hash/asset manifest](artifacts/evidence/session006-bug-evidence.json). Existing Issues #1–#9 were retained.

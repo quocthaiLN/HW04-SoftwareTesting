@@ -1,0 +1,41 @@
+[
+  {
+    "bug": "BUG-10",
+    "case": "FR-09-TC01",
+    "source": "artifacts/session006-fr09-real-chromium/test-results/fr09-apply-coupon-FR-09-TC-890de-01-success-real-UI-backend--chromium/test-failed-1.png",
+    "screenshot": "artifacts/evidence/BUG-10.png",
+    "sha256": "65c7ae6df6eb0a8faabe2a8b4553e620ace552b98004a3567ebf1a8ecf0d9a99",
+    "issue": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/10",
+    "status": "Open; published and UI verified",
+    "browser": "chromium",
+    "runId": "session006-fr09-real-chromium",
+    "uploadedAsset": "https://github.com/user-attachments/assets/e9b078f7-bd07-4aa0-9723-a08f32184fd0",
+    "verified_at": "2026-11-16T10:23:36+07:00"
+  },
+  {
+    "bug": "BUG-11",
+    "case": "FR-09-TC07",
+    "source": "artifacts/session006-fr09-real-chromium/test-results/fr09-apply-coupon-FR-09-TC-59354-07-success-real-UI-backend--chromium/test-failed-1.png",
+    "screenshot": "artifacts/evidence/BUG-11.png",
+    "sha256": "01a111115e69aeaa0d172ab1015cbac4f80078681a334ceaa1c52ff045c7c620",
+    "issue": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/11",
+    "status": "Open; published and UI verified",
+    "browser": "chromium",
+    "runId": "session006-fr09-real-chromium",
+    "uploadedAsset": "https://github.com/user-attachments/assets/1cd3de20-56f0-4d2d-bf4c-85051c54cd0e",
+    "verified_at": "2026-11-16T10:23:36+07:00"
+  },
+  {
+    "bug": "BUG-12",
+    "case": "FR-09-TC18",
+    "source": "artifacts/session006-fr09-real-chromium/test-results/fr09-apply-coupon-FR-09-TC-3a694-18-success-real-UI-backend--chromium/test-failed-1.png",
+    "screenshot": "artifacts/evidence/BUG-12.png",
+    "sha256": "35d1ca8ee1f7f004b7e530ab250b01f9330b9d279db981cba3f8599147c7ef55",
+    "issue": "https://github.com/quocthaiLN/HW04-SoftwareTesting/issues/12",
+    "status": "Open; published and UI verified",
+    "browser": "chromium",
+    "runId": "session006-fr09-real-chromium",
+    "uploadedAsset": "https://github.com/user-attachments/assets/fa74b427-105d-4bcd-b0d8-fc7abd949bc7",
+    "verified_at": "2026-11-16T10:23:36+07:00"
+  }
+]
