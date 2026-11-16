@@ -1,1 +1,16 @@
-{"name":"hw04-automation","version":"1.0.0","private":true,"scripts":{"validate":"node scripts/validate-test-data.js","test":"playwright test","matrix":"node scripts/run-matrix.js","sut":"node scripts/start-sut.js"},"devDependencies":{"@playwright/cli":"0.1.24","@playwright/test":"1.65.0"}}
+{
+  "name": "hw04-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate-test-data.js",
+    "test": "playwright test",
+    "matrix": "node scripts/run-matrix.js",
+    "sut": "node scripts/start-sut.js",
+    "test:fr09": "playwright test tests/fr09-apply-coupon.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/cli": "0.1.24",
+    "@playwright/test": "1.65.0"
+  }
+}

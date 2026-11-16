@@ -7,7 +7,7 @@ module.exports = defineConfig({
   testDir: './tests', testMatch: '**/*.spec.js', fullyParallel: false,
   workers: 1, retries: 0, forbidOnly: true, timeout: 60000,
   expect: { timeout: 3000 },
-  metadata: { 'Run by': '23120352', attribution: 'Run by: 23120352', timestamp: startedAt, runId, coverage: 'FR-09 UI mocked; FR-02/17 real isolated backend' },
+  metadata: { 'Run by': '23120352', attribution: 'Run by: 23120352', timestamp: startedAt, runId, coverage: 'FR-02/09/17 real isolated backend; FR09 UI cart to coupon, no payment confirmation' },
   outputDir: path.join(artifactDir, 'test-results'),
   reporter: [['list'], ['html', { outputFolder: path.join(artifactDir, 'html'), open: 'never', title: `Run by: 23120352 | ${startedAt}` }], ['json', { outputFile: path.join(artifactDir, 'results.json') }]],
   use: { baseURL: process.env.WEB_URL || 'http://localhost:5173', headless: process.env.PW_HEADLESS === 'true', locale: 'vi-VN', timezoneId: 'Asia/Ho_Chi_Minh', serviceWorkers: 'block', trace: 'retain-on-failure', screenshot: 'only-on-failure', actionTimeout: 8000 },

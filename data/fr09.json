@@ -8,40 +8,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 450000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": 50000,
       "final": 450000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "percent",
@@ -50,7 +27,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -62,40 +45,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 450000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": 50000,
       "final": 450000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -104,7 +64,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -116,37 +82,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Mã không tồn tại"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": "Mã không tồn tại",
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        404
+      ],
+      "errorPattern": "không tồn tại|vô hiệu hóa"
     },
     "policy": {
       "kind": "fixed",
@@ -155,7 +101,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": false
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -167,37 +119,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Mã không hoạt động"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": "Mã không hoạt động",
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        404
+      ],
+      "errorPattern": "không tồn tại|vô hiệu hóa"
     },
     "policy": {
       "kind": "fixed",
@@ -206,7 +138,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": false,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -218,37 +156,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Mã hết hạn"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": "Mã hết hạn",
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        400
+      ],
+      "errorPattern": "hết hạn"
     },
     "policy": {
       "kind": "fixed",
@@ -257,7 +175,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2020-01-01"
+      "expiry": "2020-01-01",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -269,37 +193,17 @@
       "total": 299999
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 299999,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Đơn hàng chưa đủ giá trị tối thiểu"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 299999,
-      "user_id": 77,
       "discount": null,
       "final": 299999,
-      "error": "Đơn hàng chưa đủ giá trị tối thiểu",
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        400
+      ],
+      "errorPattern": "chưa đủ giá trị tối thiểu"
     },
     "policy": {
       "kind": "fixed",
@@ -308,7 +212,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 299999,
+      "quantity": 1
     }
   },
   {
@@ -320,40 +230,17 @@
       "total": 300000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 300000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 250000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 300000,
-      "user_id": 77,
       "discount": 50000,
       "final": 250000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -362,7 +249,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 300000,
+      "quantity": 1
     }
   },
   {
@@ -374,40 +267,17 @@
       "total": 300001
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 300001,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 250001,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 300001,
-      "user_id": 77,
       "discount": 50000,
       "final": 250001,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -416,49 +286,33 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 300001,
+      "quantity": 1
     }
   },
   {
     "id": "FR-09-TC09",
     "feature": "FR-09",
-    "scenario": "error",
+    "scenario": "auth-blocked",
     "input": {
       "code": "BIGBUY",
       "total": 500000
     },
     "authMode": "absent",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 401,
-      "body": {
-        "error": "Cần đăng nhập"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": null,
       "discount": null,
       "final": 500000,
-      "error": "Cần đăng nhập",
-      "applyCount": 1,
+      "applyCount": 0,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -467,49 +321,33 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
     "id": "FR-09-TC10",
     "feature": "FR-09",
-    "scenario": "error",
+    "scenario": "auth-blocked",
     "input": {
       "code": "BIGBUY",
       "total": 500000
     },
     "authMode": "invalid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 401,
-      "body": {
-        "error": "Token không hợp lệ"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": null,
       "discount": null,
       "final": 500000,
-      "error": "Token không hợp lệ",
-      "applyCount": 1,
+      "applyCount": 0,
       "checkoutCount": 0,
-      "authStatus": 401
+      "statuses": [],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -518,7 +356,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -530,40 +374,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 450000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": 50000,
       "final": 450000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -572,7 +393,13 @@
       "uses": 1,
       "maxUses": 2,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -584,37 +411,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Đã đạt giới hạn sử dụng"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": "Đã đạt giới hạn sử dụng",
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        400
+      ],
+      "errorPattern": "đã đạt giới hạn"
     },
     "policy": {
       "kind": "fixed",
@@ -623,7 +430,13 @@
       "uses": 2,
       "maxUses": 2,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -635,37 +448,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Không áp dụng"
-      }
-    },
     "expected": {
       "code": "",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": null,
       "applyCount": 0,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        400
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -674,7 +467,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -686,37 +485,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 400,
-      "body": {
-        "error": "Không áp dụng"
-      }
-    },
     "expected": {
       "code": "",
       "total": 500000,
-      "user_id": 77,
       "discount": null,
       "final": 500000,
-      "error": null,
       "applyCount": 0,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        400
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -725,7 +504,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -737,40 +522,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 450000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": 50000,
       "final": 450000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -779,7 +541,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -791,40 +559,17 @@
       "total": 500000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 500000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 50000,
-        "final_amount": 450000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 500000,
-      "user_id": 77,
       "discount": 50000,
       "final": 450000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -833,7 +578,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 500000,
+      "quantity": 1
     }
   },
   {
@@ -845,40 +596,17 @@
       "total": 100000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 100000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 100000,
-        "final_amount": 0,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "FREE100",
       "total": 100000,
-      "user_id": 77,
       "discount": 100000,
       "final": 0,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -887,7 +615,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 100000,
+      "quantity": 1
     }
   },
   {
@@ -899,40 +633,17 @@
       "total": 80000
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 80000,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 80000,
-        "final_amount": 0,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "OVER100",
       "total": 80000,
-      "user_id": 77,
       "discount": 80000,
       "final": 0,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "fixed",
@@ -941,7 +652,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 80000,
+      "quantity": 1
     }
   },
   {
@@ -953,40 +670,17 @@
       "total": 333333
     },
     "authMode": "valid",
-    "token": "mock-valid-token",
-    "invalidToken": "mock-invalid-token",
-    "user": {
-      "id": 77,
-      "name": "Mock Coupon User",
-      "role": "user"
-    },
-    "cart": [
-      {
-        "id": 88,
-        "name": "Mock cart item",
-        "price": 333333,
-        "quantity": 1
-      }
-    ],
-    "response": {
-      "status": 200,
-      "body": {
-        "coupon_id": 99,
-        "discount_amount": 33333,
-        "final_amount": 300000,
-        "message": "Áp dụng thành công!"
-      }
-    },
     "expected": {
       "code": "BIGBUY",
       "total": 333333,
-      "user_id": 77,
       "discount": 33333,
       "final": 300000,
-      "error": null,
       "applyCount": 1,
       "checkoutCount": 0,
-      "authStatus": 200
+      "statuses": [
+        200
+      ],
+      "errorPattern": null
     },
     "policy": {
       "kind": "percent",
@@ -995,7 +689,13 @@
       "uses": 0,
       "maxUses": 1,
       "active": true,
-      "expiry": "2099-12-31"
+      "expiry": "2099-12-31",
+      "exists": true
+    },
+    "product": {
+      "name": "FR09 cart product",
+      "price": 333333,
+      "quantity": 1
     }
   }
 ]

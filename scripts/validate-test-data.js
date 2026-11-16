@@ -7,7 +7,7 @@ assert.equal(new Set(rows.map(r => r.id)).size, rows.length);
 assert.deepEqual(rows.map(r => r.id).sort(), design.map(r => r.id).sort());
 const handlers = {
   'FR-02': new Set(['success','wrong','missing','empty-email','empty-password','format','two-then-success','lock','lock-deadline','unlock','reset','jwt','mask','heading']),
-  'FR-09': new Set(['success','empty','error']),
+  'FR-09': new Set(['success','empty','error','auth-blocked']),
   'FR-17': new Set(['create','read','delete','duplicate','reject','uppercase','reset','user-permission','anonymous']),
 };
 function requireKeys(object, keys, label) {
@@ -25,14 +25,17 @@ for (const row of rows) {
     requireKeys(row.expected,['persist','expired','htmlOnly','rowCount'],row.id);
   }
   if (row.feature === 'FR-09') {
-    for (const key of ['input', 'cart', 'user', 'response', 'expected', 'authMode']) assert.ok(Object.hasOwn(row, key), `${row.id}: missing ${key}`);
-    requireKeys(row.input,['code','total'],row.id);
-    requireKeys(row.response,['status','body'],row.id);
-    requireKeys(row.expected,['code','total','user_id','discount','final','error','applyCount','checkoutCount','authStatus'],row.id);
-    assert.equal(typeof row.input.total, 'number');
+    requireKeys(row, ['input', 'product', 'policy', 'expected', 'authMode'], row.id);
+    assert.equal(row.product.price * row.product.quantity, row.input.total);
+    assert.equal(row.product.quantity, 1);
+    assert.ok(!Object.hasOwn(row, 'response'), 'FR09 must not contain canned responses');
+    requireKeys(row.policy, ['exists','kind','value','min','uses','maxUses','active','expiry'], row.id);
+    requireKeys(row.expected, ['statuses','discount','final','applyCount','checkoutCount','errorPattern'], row.id);
     if (row.scenario === 'success') {
-      assert.equal(row.response.body.discount_amount, row.expected.discount);
-      assert.equal(row.response.body.final_amount, row.expected.final);
+      const discount = Math.min(row.input.total, row.policy.kind === 'percent'
+        ? Math.floor(row.input.total * row.policy.value / 100) : row.policy.value);
+      assert.equal(row.expected.discount, discount);
+      assert.equal(row.expected.final, row.input.total - discount);
     }
   }
 }
